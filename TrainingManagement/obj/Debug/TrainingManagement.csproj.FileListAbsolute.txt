@@ -1,0 +1,10 @@
+C:\Users\user\source\repos\OOAD Project\TrainingManagement\TrainingManagement\bin\Debug\TrainingManagement.exe.config
+C:\Users\user\source\repos\OOAD Project\TrainingManagement\TrainingManagement\bin\Debug\TrainingManagement.exe
+C:\Users\user\source\repos\OOAD Project\TrainingManagement\TrainingManagement\bin\Debug\TrainingManagement.pdb
+C:\Users\user\source\repos\OOAD Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\OOAD Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\source\repos\OOAD Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.Properties.Resources.resources
+C:\Users\user\source\repos\OOAD Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.GenerateResource.cache
+C:\Users\user\source\repos\OOAD Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\OOAD Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.exe
+C:\Users\user\source\repos\OOAD Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.pdb
