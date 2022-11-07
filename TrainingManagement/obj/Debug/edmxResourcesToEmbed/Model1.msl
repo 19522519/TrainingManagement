@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TrainingManagementModelStoreContainer" CdmEntityContainer="TrainingManagementEntities">
+    <EntitySetMapping Name="class_module">
+      <EntityTypeMapping TypeName="TrainingManagementModel.class_module">
+        <MappingFragment StoreEntitySet="class_module">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ID_Class_module" ColumnName="ID_Class_module" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="start_date" ColumnName="start_date" />
+          <ScalarProperty Name="end_date" ColumnName="end_date" />
+          <ScalarProperty Name="module_id" ColumnName="module_id" />
+          <ScalarProperty Name="semester_id" ColumnName="semester_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="classrooms">
+      <EntityTypeMapping TypeName="TrainingManagementModel.classroom">
+        <MappingFragment StoreEntitySet="classroom">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="function_name" ColumnName="function_name" />
+          <ScalarProperty Name="max_size" ColumnName="max_size" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="curricula">
+      <EntityTypeMapping TypeName="TrainingManagementModel.curriculum">
+        <MappingFragment StoreEntitySet="curriculum">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="training_system" ColumnName="training_system" />
+          <ScalarProperty Name="major" ColumnName="major" />
+          <ScalarProperty Name="training_type" ColumnName="training_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="departments">
+      <EntityTypeMapping TypeName="TrainingManagementModel.department">
+        <MappingFragment StoreEntitySet="department">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="users_id" ColumnName="users_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lecturers">
+      <EntityTypeMapping TypeName="TrainingManagementModel.lecturer">
+        <MappingFragment StoreEntitySet="lecturer">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="contract" ColumnName="contract" />
+          <ScalarProperty Name="major" ColumnName="major" />
+          <ScalarProperty Name="level" ColumnName="level" />
+          <ScalarProperty Name="department_id" ColumnName="department_id" />
+          <ScalarProperty Name="users_id" ColumnName="users_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lessons">
+      <EntityTypeMapping TypeName="TrainingManagementModel.lesson">
+        <MappingFragment StoreEntitySet="lesson">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="day_in_week" ColumnName="day_in_week" />
+          <ScalarProperty Name="start_time" ColumnName="start_time" />
+          <ScalarProperty Name="end_time" ColumnName="end_time" />
+          <ScalarProperty Name="classroom_id" ColumnName="classroom_id" />
+          <ScalarProperty Name="teaching_id" ColumnName="teaching_id" />
+          <ScalarProperty Name="class_module_id" ColumnName="class_module_id" />
+          <ScalarProperty Name="week_in_term_id" ColumnName="week_in_term_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="majors">
+      <EntityTypeMapping TypeName="TrainingManagementModel.major">
+        <MappingFragment StoreEntitySet="major">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="department_id" ColumnName="department_id" />
+          <ScalarProperty Name="curriculum_id" ColumnName="curriculum_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="modules">
+      <EntityTypeMapping TypeName="TrainingManagementModel.module">
+        <MappingFragment StoreEntitySet="module">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ID_Module" ColumnName="ID_Module" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="theory_credits" ColumnName="theory_credits" />
+          <ScalarProperty Name="practice_credits" ColumnName="practice_credits" />
+          <ScalarProperty Name="self_study_credits" ColumnName="self_study_credits" />
+          <ScalarProperty Name="visiting_credits" ColumnName="visiting_credits" />
+          <ScalarProperty Name="curriculum_id" ColumnName="curriculum_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="school_year">
+      <EntityTypeMapping TypeName="TrainingManagementModel.school_year">
+        <MappingFragment StoreEntitySet="school_year">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="semesters">
+      <EntityTypeMapping TypeName="TrainingManagementModel.semester">
+        <MappingFragment StoreEntitySet="semester">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="school_year_id" ColumnName="school_year_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="students">
+      <EntityTypeMapping TypeName="TrainingManagementModel.student">
+        <MappingFragment StoreEntitySet="student">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ID_Student" ColumnName="ID_Student" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="birth_place" ColumnName="birth_place" />
+          <ScalarProperty Name="household" ColumnName="household" />
+          <ScalarProperty Name="is_in_dormitory" ColumnName="is_in_dormitory" />
+          <ScalarProperty Name="is_deleted" ColumnName="is_deleted" />
+          <ScalarProperty Name="avatar" ColumnName="avatar" />
+          <ScalarProperty Name="department_id" ColumnName="department_id" />
+          <ScalarProperty Name="users_id" ColumnName="users_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="studyings">
+      <EntityTypeMapping TypeName="TrainingManagementModel.studying">
+        <MappingFragment StoreEntitySet="studying">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="score" ColumnName="score" />
+          <ScalarProperty Name="student_id" ColumnName="student_id" />
+          <ScalarProperty Name="class_module_id" ColumnName="class_module_id" />
+          <ScalarProperty Name="semester_id" ColumnName="semester_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="teachings">
+      <EntityTypeMapping TypeName="TrainingManagementModel.teaching">
+        <MappingFragment StoreEntitySet="teaching">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="class_module_id" ColumnName="class_module_id" />
+          <ScalarProperty Name="lecturer_id" ColumnName="lecturer_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="teaching_assignment">
+      <EntityTypeMapping TypeName="TrainingManagementModel.teaching_assignment">
+        <MappingFragment StoreEntitySet="teaching_assignment">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="module_id" ColumnName="module_id" />
+          <ScalarProperty Name="lecturer_id" ColumnName="lecturer_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="TrainingManagementModel.user">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="role_name" ColumnName="role_name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="access_right" ColumnName="access_right" />
+          <ScalarProperty Name="avatar" ColumnName="avatar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="week_in_term">
+      <EntityTypeMapping TypeName="TrainingManagementModel.week_in_term">
+        <MappingFragment StoreEntitySet="week_in_term">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="week_number" ColumnName="week_number" />
+          <ScalarProperty Name="term_number" ColumnName="term_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

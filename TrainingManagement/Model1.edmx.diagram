@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c11a36c4cb2c409a89a7a178bc7bd6f5" Name="Diagram1" ZoomLevel="47">
+        <EntityTypeShape EntityType="TrainingManagementModel.class_module" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrainingManagementModel.classroom" Width="1.5" PointX="8.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrainingManagementModel.curriculum" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrainingManagementModel.department" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrainingManagementModel.lecturer" Width="1.5" PointX="5.25" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrainingManagementModel.lesson" Width="1.5" PointX="10.5" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrainingManagementModel.major" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrainingManagementModel.module" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrainingManagementModel.school_year" Width="1.5" PointX="0.75" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrainingManagementModel.semester" Width="1.5" PointX="3" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrainingManagementModel.student" Width="1.5" PointX="5.25" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrainingManagementModel.studying" Width="1.5" PointX="7.5" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrainingManagementModel.teaching" Width="1.5" PointX="7.5" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrainingManagementModel.teaching_assignment" Width="1.5" PointX="8.25" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrainingManagementModel.user" Width="1.5" PointX="1.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TrainingManagementModel.week_in_term" Width="1.5" PointX="8.25" PointY="18.625" IsExpanded="true" />
+        <AssociationConnector Association="TrainingManagementModel.FK__class_mod__modul__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="TrainingManagementModel.FK__class_mod__semes__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="TrainingManagementModel.FK__lesson__class_mo__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="TrainingManagementModel.FK__studying__class___5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="TrainingManagementModel.FK__teaching__class___5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="TrainingManagementModel.FK__lesson__classroo__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="TrainingManagementModel.FK__major__curriculu__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="TrainingManagementModel.FK__module__curricul__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="TrainingManagementModel.FK__departmen__users__6754599E" ManuallyRouted="false" />
+        <AssociationConnector Association="TrainingManagementModel.FK__lecturer__depart__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="TrainingManagementModel.FK__major__departmen__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="TrainingManagementModel.FK__student__departm__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="TrainingManagementModel.FK__lecturer__users___66603565" ManuallyRouted="false" />
+        <AssociationConnector Association="TrainingManagementModel.FK__teaching___lectu__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="TrainingManagementModel.FK__teaching__lectur__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="TrainingManagementModel.FK__lesson__teaching__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="TrainingManagementModel.FK__lesson__week_in___628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="TrainingManagementModel.FK__teaching___modul__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="TrainingManagementModel.FK__semester__school__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="TrainingManagementModel.FK__studying__semest__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="TrainingManagementModel.FK__student__users_i__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="TrainingManagementModel.FK__studying__studen__571DF1D5" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
