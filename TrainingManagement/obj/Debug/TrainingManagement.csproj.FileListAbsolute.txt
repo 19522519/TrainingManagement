@@ -24,3 +24,21 @@ C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement
 C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.AssemblyReference.cache
 C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.CopyComplete
+D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\bin\Debug\TrainingManagement.exe.config
+D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\bin\Debug\TrainingManagement.exe
+D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\bin\Debug\TrainingManagement.pdb
+D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\bin\Debug\EntityFramework.dll
+D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\bin\Debug\EntityFramework.SqlServer.dll
+D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\bin\Debug\EntityFramework.xml
+D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\bin\Debug\EntityFramework.SqlServer.xml
+D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.AssemblyReference.cache
+D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.SuggestedBindingRedirects.cache
+D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.Login.resources
+D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.Properties.Resources.resources
+D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.Register.resources
+D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.LecturerManagement.resources
+D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.GenerateResource.cache
+D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.CoreCompileInputs.cache
+D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.CopyComplete
+D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.exe
+D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.pdb
