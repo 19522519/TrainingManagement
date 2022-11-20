@@ -29,6 +29,7 @@ namespace TrainingManagement
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             this.panel = new System.Windows.Forms.Panel();
             this.picAvatar = new System.Windows.Forms.PictureBox();
             this.labelĐK = new System.Windows.Forms.Label();
@@ -66,6 +67,7 @@ namespace TrainingManagement
             // 
             // picAvatar
             // 
+            this.picAvatar.Image = ((System.Drawing.Image)(resources.GetObject("picAvatar.Image")));
             this.picAvatar.Location = new System.Drawing.Point(34, 116);
             this.picAvatar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picAvatar.Name = "picAvatar";

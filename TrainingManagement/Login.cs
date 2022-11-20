@@ -59,7 +59,7 @@ namespace TrainingManagement
 
             foreach (byte b in mang)
             {
-                str_md5 += b.ToString("X2");
+                str_md5 += b.ToString("X2");    // Convert to upper case
             }
 
             return str_md5;
@@ -67,7 +67,7 @@ namespace TrainingManagement
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            int id = userController.login(txtUsername.Text, txtPassword.Text);
+            int id = userController.login(txtUsername.Text, getMD5(txtPassword.Text));
             // MessageBox.Show(id.ToString());
             if (id != -1)
             {
