@@ -36,12 +36,12 @@ namespace TrainingManagement
             this.btnExit = new System.Windows.Forms.Button();
             this.groupBoxTTCN = new System.Windows.Forms.GroupBox();
             this.cmbRight = new System.Windows.Forms.ComboBox();
-            this.txtRePasswork = new System.Windows.Forms.TextBox();
+            this.txtRePassword = new System.Windows.Forms.TextBox();
             this.labelNLMK = new System.Windows.Forms.Label();
             this.labelTND = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.txtNameLogin = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.labelMK = new System.Windows.Forms.Label();
             this.labelQTC = new System.Windows.Forms.Label();
             this.labelTĐN = new System.Windows.Forms.Label();
@@ -104,12 +104,12 @@ namespace TrainingManagement
             // groupBoxTTCN
             // 
             this.groupBoxTTCN.Controls.Add(this.cmbRight);
-            this.groupBoxTTCN.Controls.Add(this.txtRePasswork);
+            this.groupBoxTTCN.Controls.Add(this.txtRePassword);
             this.groupBoxTTCN.Controls.Add(this.labelNLMK);
             this.groupBoxTTCN.Controls.Add(this.labelTND);
             this.groupBoxTTCN.Controls.Add(this.txtPassword);
             this.groupBoxTTCN.Controls.Add(this.txtUsername);
-            this.groupBoxTTCN.Controls.Add(this.txtNameLogin);
+            this.groupBoxTTCN.Controls.Add(this.txtEmail);
             this.groupBoxTTCN.Controls.Add(this.labelMK);
             this.groupBoxTTCN.Controls.Add(this.labelQTC);
             this.groupBoxTTCN.Controls.Add(this.labelTĐN);
@@ -132,14 +132,14 @@ namespace TrainingManagement
             this.cmbRight.Size = new System.Drawing.Size(223, 28);
             this.cmbRight.TabIndex = 8;
             // 
-            // txtRePasswork
+            // txtRePassword
             // 
-            this.txtRePasswork.Location = new System.Drawing.Point(191, 128);
-            this.txtRePasswork.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtRePasswork.Name = "txtRePasswork";
-            this.txtRePasswork.Size = new System.Drawing.Size(223, 27);
-            this.txtRePasswork.TabIndex = 10;
-            this.txtRePasswork.UseSystemPasswordChar = true;
+            this.txtRePassword.Location = new System.Drawing.Point(191, 128);
+            this.txtRePassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtRePassword.Name = "txtRePassword";
+            this.txtRePassword.Size = new System.Drawing.Size(223, 27);
+            this.txtRePassword.TabIndex = 10;
+            this.txtRePassword.UseSystemPasswordChar = true;
             // 
             // labelNLMK
             // 
@@ -180,13 +180,13 @@ namespace TrainingManagement
             this.txtUsername.Size = new System.Drawing.Size(223, 27);
             this.txtUsername.TabIndex = 6;
             // 
-            // txtNameLogin
+            // txtEmail
             // 
-            this.txtNameLogin.Location = new System.Drawing.Point(191, 28);
-            this.txtNameLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtNameLogin.Name = "txtNameLogin";
-            this.txtNameLogin.Size = new System.Drawing.Size(223, 27);
-            this.txtNameLogin.TabIndex = 5;
+            this.txtEmail.Location = new System.Drawing.Point(191, 28);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(223, 27);
+            this.txtEmail.TabIndex = 5;
             // 
             // labelMK
             // 
@@ -217,9 +217,9 @@ namespace TrainingManagement
             this.labelTĐN.ForeColor = System.Drawing.Color.DarkCyan;
             this.labelTĐN.Location = new System.Drawing.Point(7, 32);
             this.labelTĐN.Name = "labelTĐN";
-            this.labelTĐN.Size = new System.Drawing.Size(141, 19);
+            this.labelTĐN.Size = new System.Drawing.Size(62, 19);
             this.labelTĐN.TabIndex = 0;
-            this.labelTĐN.Text = "Tên Đăng Nhập: ";
+            this.labelTĐN.Text = "Email: ";
             // 
             // btnRegister
             // 
@@ -232,6 +232,7 @@ namespace TrainingManagement
             this.btnRegister.TabIndex = 5;
             this.btnRegister.Text = "Đăng Kí";
             this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // Register
             // 
@@ -258,12 +259,12 @@ namespace TrainingManagement
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.GroupBox groupBoxTTCN;
         private System.Windows.Forms.ComboBox cmbRight;
-        private System.Windows.Forms.TextBox txtRePasswork;
+        private System.Windows.Forms.TextBox txtRePassword;
         private System.Windows.Forms.Label labelNLMK;
         private System.Windows.Forms.Label labelTND;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.TextBox txtNameLogin;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label labelMK;
         private System.Windows.Forms.Label labelQTC;
         private System.Windows.Forms.Label labelTĐN;

@@ -101,6 +101,8 @@ create table student (
 	birth_place nvarchar(50),
 	household nvarchar (200),
 	is_in_dormitory nvarchar(50),
+	phone nvarchar(50),
+	citizen_id nvarchar(50),
 	is_deleted nvarchar(50),
 	avatar nvarchar(50)
 )
@@ -208,9 +210,9 @@ INSERT INTO teaching VALUES
 		(3,2);
 
 INSERT INTO student VALUES 
-       ('19522015',N'Đông Phong',N'Võ','Nam',N'Phù Cát',N'Bình Định',N'Có',N'Không','',1,1),
-	   ('19522115',N'Thanh Tuấn',N'Nguyễn','Nam',N'Huế',N'Hà Nội',N'Không',N'Không','',1,1),
-	   ('20522134',N'Thanh Nghị',N'Lê','Nữ',N'Huế',N'Quảng Nam',N'Không',N'Không','',2,1);
+       ('19522015',N'Đông Phong',N'Võ','Nam',N'Phù Cát',N'Bình Định',N'Có',N'0909123456',N'123456',N'Không','',1,1),
+	   ('19522115',N'Thanh Tuấn',N'Nguyễn','Nam',N'Huế',N'Hà Nội',N'Không',N'0909654321',N'654321',N'Không','',1,1),
+	   ('20522134',N'Thanh Nghị',N'Lê','Nữ',N'Huế',N'Quảng Nam',N'Không',N'09092468',N'2468',N'Không','',2,1);
 
 INSERT INTO studying VALUES
        (7,1,1,1),

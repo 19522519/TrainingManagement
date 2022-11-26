@@ -32,6 +32,8 @@ namespace TrainingManagement
         public string avatar { get; set; }
         public Nullable<int> department_id { get; set; }
         public Nullable<int> users_id { get; set; }
+        public string phone { get; set; }
+        public string citizen_id { get; set; }
     
         public virtual department department { get; set; }
         public virtual user user { get; set; }

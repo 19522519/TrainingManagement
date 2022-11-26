@@ -49,5 +49,11 @@ namespace TrainingManagement.Controller
             }
             return -1;
         }
+
+        public void addUser(user user)
+        {
+            entities.users.Add(user);
+            entities.SaveChanges();
+        }
     }
 }

@@ -118,6 +118,8 @@
           <Property Name="birth_place" Type="nvarchar" MaxLength="50" />
           <Property Name="household" Type="nvarchar" MaxLength="200" />
           <Property Name="is_in_dormitory" Type="nvarchar" MaxLength="50" />
+          <Property Name="phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="citizen_id" Type="nvarchar" MaxLength="50" />
           <Property Name="is_deleted" Type="nvarchar" MaxLength="50" />
           <Property Name="avatar" Type="nvarchar" MaxLength="50" />
           <Property Name="department_id" Type="int" />
@@ -692,6 +694,8 @@
           <NavigationProperty Name="department" Relationship="Self.FK__student__departm__5441852A" FromRole="student" ToRole="department" />
           <NavigationProperty Name="user" Relationship="Self.FK__student__users_i__656C112C" FromRole="student" ToRole="users" />
           <NavigationProperty Name="studyings" Relationship="Self.FK__studying__studen__571DF1D5" FromRole="student" ToRole="studying" />
+          <Property Name="phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="citizen_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="studying">
           <Key>
@@ -1241,6 +1245,8 @@
           <EntitySetMapping Name="students">
             <EntityTypeMapping TypeName="TrainingManagementModel.student">
               <MappingFragment StoreEntitySet="student">
+                <ScalarProperty Name="citizen_id" ColumnName="citizen_id" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="ID_Student" ColumnName="ID_Student" />
                 <ScalarProperty Name="first_name" ColumnName="first_name" />

@@ -8,11 +8,13 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TrainingManagement.Controller;
 
 namespace TrainingManagement
 {
     public partial class Register : Form
     {
+        UserController userController = new UserController();
         Bitmap bitmap = new Bitmap(Properties.Resources.avatar);
         Bitmap avatar;
         int avatarIndex = 0;
@@ -21,8 +23,13 @@ namespace TrainingManagement
         public Register()
         {
             InitializeComponent();
+            HEIGHT = bitmap.Height / 3;
+            WIDTH = bitmap.Width / 3;
+            avatar = new Bitmap(WIDTH, HEIGHT);
+            changeAvatar(0);
+            LoadAccess();
         }
-        
+
         void LoadAccess()
         {
             cmbRight.Items.Add("Training Staff");
@@ -72,9 +79,44 @@ namespace TrainingManagement
             return true;
         }
 
+        void resetTextBox()
+        {
+            txtEmail.Text = "";
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+            txtRePassword.Text = "";
+        }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            if (!checkEmpty())
+            {
+                MessageBox.Show("Please fill out all information!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txtPassword.Text != txtRePassword.Text)
+            {
+                MessageBox.Show("Password is not correct!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            user user = new user()
+            {
+                avatar = avatarIndex,
+                username = txtUsername.Text,
+                password = GetMD5(txtPassword.Text),
+                access_right = cmbRight.Text,
+                email = txtEmail.Text
+            };
+
+            userController.addUser(user);
+            MessageBox.Show("Add new user successfully!", "Notify", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            resetTextBox();
         }
 
         public string GetMD5(string chuoi)
