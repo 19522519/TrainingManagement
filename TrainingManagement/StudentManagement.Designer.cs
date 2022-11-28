@@ -42,7 +42,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.picAvatar = new System.Windows.Forms.PictureBox();
             this.rdbtnKTX = new System.Windows.Forms.RadioButton();
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -67,11 +66,12 @@
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvData = new System.Windows.Forms.DataGridView();
+            this.picAvatar = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -213,14 +213,6 @@
             this.label7.TabIndex = 29;
             this.label7.Text = "First Name";
             // 
-            // picAvatar
-            // 
-            this.picAvatar.Location = new System.Drawing.Point(20, 37);
-            this.picAvatar.Name = "picAvatar";
-            this.picAvatar.Size = new System.Drawing.Size(100, 114);
-            this.picAvatar.TabIndex = 27;
-            this.picAvatar.TabStop = false;
-            // 
             // rdbtnKTX
             // 
             this.rdbtnKTX.AutoSize = true;
@@ -318,6 +310,7 @@
             this.txtCitizenID.ReadOnly = true;
             this.txtCitizenID.Size = new System.Drawing.Size(133, 22);
             this.txtCitizenID.TabIndex = 2;
+            this.txtCitizenID.TextChanged += new System.EventHandler(this.txtCitizenID_TextChanged);
             // 
             // label3
             // 
@@ -446,6 +439,7 @@
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Student list";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // dgvData
             // 
@@ -456,6 +450,14 @@
             this.dgvData.RowTemplate.Height = 24;
             this.dgvData.Size = new System.Drawing.Size(774, 640);
             this.dgvData.TabIndex = 0;
+            // 
+            // picAvatar
+            // 
+            this.picAvatar.Location = new System.Drawing.Point(20, 37);
+            this.picAvatar.Name = "picAvatar";
+            this.picAvatar.Size = new System.Drawing.Size(100, 114);
+            this.picAvatar.TabIndex = 27;
+            this.picAvatar.TabStop = false;
             // 
             // StudentManagement
             // 
@@ -471,11 +473,11 @@
             this.Text = " Student Management";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

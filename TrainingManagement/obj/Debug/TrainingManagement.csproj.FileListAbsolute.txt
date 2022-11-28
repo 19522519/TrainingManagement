@@ -43,3 +43,22 @@ D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\obj
 D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.exe
 D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.pdb
 C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.StudentManagement.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\TrainingManagement.exe.config
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\TrainingManagement.exe
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\TrainingManagement.pdb
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\EntityFramework.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\EntityFramework.xml
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.AssemblyReference.cache
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.Login.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.HomeMinistry.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.Properties.Resources.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.Register.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.SoftwareEngirneering.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.StudentManagement.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.GenerateResource.cache
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.CoreCompileInputs.cache
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.CopyComplete
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.exe
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.pdb

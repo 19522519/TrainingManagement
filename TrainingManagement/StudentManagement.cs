@@ -60,5 +60,15 @@ namespace TrainingManagement
         {
             loadData();
         }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCitizenID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
