@@ -28,14 +28,13 @@ namespace TrainingManagement
         public string birth_place { get; set; }
         public string household { get; set; }
         public string is_in_dormitory { get; set; }
-        public string is_deleted { get; set; }
-        public string avatar { get; set; }
-        public Nullable<int> department_id { get; set; }
-        public Nullable<int> users_id { get; set; }
         public string phone { get; set; }
         public string citizen_id { get; set; }
+        public string is_deleted { get; set; }
+        public Nullable<int> major_id { get; set; }
+        public Nullable<int> users_id { get; set; }
     
-        public virtual department department { get; set; }
+        public virtual major major { get; set; }
         public virtual user user { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<studying> studyings { get; set; }

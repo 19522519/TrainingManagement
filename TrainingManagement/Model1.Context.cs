@@ -33,13 +33,10 @@ namespace TrainingManagement
         public virtual DbSet<lesson> lessons { get; set; }
         public virtual DbSet<major> majors { get; set; }
         public virtual DbSet<module> modules { get; set; }
-        public virtual DbSet<school_year> school_year { get; set; }
-        public virtual DbSet<semester> semesters { get; set; }
         public virtual DbSet<student> students { get; set; }
         public virtual DbSet<studying> studyings { get; set; }
         public virtual DbSet<teaching> teachings { get; set; }
         public virtual DbSet<teaching_assignment> teaching_assignment { get; set; }
         public virtual DbSet<user> users { get; set; }
-        public virtual DbSet<week_in_term> week_in_term { get; set; }
     }
 }

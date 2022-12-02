@@ -24,11 +24,10 @@ namespace TrainingManagement.Controller
                               Gender = c.gender,
                               Phone = c.phone,                        
                               BirthPlace = c.birth_place,
-                              Department = c.department,
                               IsInDorm = c.is_in_dormitory,
                               Household = c.household,
                               Username = c.user.username,
-                              Password = c.user.password,
+                              Password = c.user.pass,
                               Right = c.user.access_right,
                               Avatar = c.user.avatar
                           };

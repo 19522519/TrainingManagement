@@ -18,10 +18,8 @@ namespace TrainingManagement
         public Nullable<double> score { get; set; }
         public Nullable<int> student_id { get; set; }
         public Nullable<int> class_module_id { get; set; }
-        public Nullable<int> semester_id { get; set; }
     
         public virtual class_module class_module { get; set; }
-        public virtual semester semester { get; set; }
         public virtual student student { get; set; }
     }
 }

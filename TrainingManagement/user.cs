@@ -17,21 +17,17 @@ namespace TrainingManagement
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public user()
         {
-            this.departments = new HashSet<department>();
             this.lecturers = new HashSet<lecturer>();
             this.students = new HashSet<student>();
         }
     
         public int id { get; set; }
-        public string role_name { get; set; }
         public string email { get; set; }
-        public string password { get; set; }
+        public string pass { get; set; }
         public string username { get; set; }
         public string access_right { get; set; }
         public Nullable<int> avatar { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<department> departments { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<lecturer> lecturers { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -109,7 +109,7 @@ namespace TrainingManagement
             {
                 avatar = avatarIndex,
                 username = txtUsername.Text,
-                password = GetMD5(txtPassword.Text),
+                pass = GetMD5(txtPassword.Text),
                 access_right = cmbRight.Text,
                 email = txtEmail.Text
             };

@@ -6,11 +6,11 @@
         <MappingFragment StoreEntitySet="class_module">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ID_Class_module" ColumnName="ID_Class_module" />
-          <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="start_date" ColumnName="start_date" />
           <ScalarProperty Name="end_date" ColumnName="end_date" />
+          <ScalarProperty Name="semester" ColumnName="semester" />
+          <ScalarProperty Name="school_year" ColumnName="school_year" />
           <ScalarProperty Name="module_id" ColumnName="module_id" />
-          <ScalarProperty Name="semester_id" ColumnName="semester_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -41,7 +41,6 @@
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="phone" ColumnName="phone" />
           <ScalarProperty Name="address" ColumnName="address" />
-          <ScalarProperty Name="users_id" ColumnName="users_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -49,10 +48,10 @@
       <EntityTypeMapping TypeName="TrainingManagementModel.lecturer">
         <MappingFragment StoreEntitySet="lecturer">
           <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="contract" ColumnName="contract" />
-          <ScalarProperty Name="major" ColumnName="major" />
           <ScalarProperty Name="level" ColumnName="level" />
-          <ScalarProperty Name="department_id" ColumnName="department_id" />
+          <ScalarProperty Name="major_id" ColumnName="major_id" />
           <ScalarProperty Name="users_id" ColumnName="users_id" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -67,7 +66,6 @@
           <ScalarProperty Name="classroom_id" ColumnName="classroom_id" />
           <ScalarProperty Name="teaching_id" ColumnName="teaching_id" />
           <ScalarProperty Name="class_module_id" ColumnName="class_module_id" />
-          <ScalarProperty Name="week_in_term_id" ColumnName="week_in_term_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -95,23 +93,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="school_year">
-      <EntityTypeMapping TypeName="TrainingManagementModel.school_year">
-        <MappingFragment StoreEntitySet="school_year">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="name" ColumnName="name" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="semesters">
-      <EntityTypeMapping TypeName="TrainingManagementModel.semester">
-        <MappingFragment StoreEntitySet="semester">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="school_year_id" ColumnName="school_year_id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="students">
       <EntityTypeMapping TypeName="TrainingManagementModel.student">
         <MappingFragment StoreEntitySet="student">
@@ -123,9 +104,10 @@
           <ScalarProperty Name="birth_place" ColumnName="birth_place" />
           <ScalarProperty Name="household" ColumnName="household" />
           <ScalarProperty Name="is_in_dormitory" ColumnName="is_in_dormitory" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="citizen_id" ColumnName="citizen_id" />
           <ScalarProperty Name="is_deleted" ColumnName="is_deleted" />
-          <ScalarProperty Name="avatar" ColumnName="avatar" />
-          <ScalarProperty Name="department_id" ColumnName="department_id" />
+          <ScalarProperty Name="major_id" ColumnName="major_id" />
           <ScalarProperty Name="users_id" ColumnName="users_id" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -137,7 +119,6 @@
           <ScalarProperty Name="score" ColumnName="score" />
           <ScalarProperty Name="student_id" ColumnName="student_id" />
           <ScalarProperty Name="class_module_id" ColumnName="class_module_id" />
-          <ScalarProperty Name="semester_id" ColumnName="semester_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -163,21 +144,11 @@
       <EntityTypeMapping TypeName="TrainingManagementModel.user">
         <MappingFragment StoreEntitySet="users">
           <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="role_name" ColumnName="role_name" />
           <ScalarProperty Name="email" ColumnName="email" />
-          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
           <ScalarProperty Name="username" ColumnName="username" />
           <ScalarProperty Name="access_right" ColumnName="access_right" />
           <ScalarProperty Name="avatar" ColumnName="avatar" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="week_in_term">
-      <EntityTypeMapping TypeName="TrainingManagementModel.week_in_term">
-        <MappingFragment StoreEntitySet="week_in_term">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="week_number" ColumnName="week_number" />
-          <ScalarProperty Name="term_number" ColumnName="term_number" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
