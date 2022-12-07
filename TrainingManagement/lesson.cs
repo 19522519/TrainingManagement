@@ -21,11 +21,9 @@ namespace TrainingManagement
         public Nullable<int> classroom_id { get; set; }
         public Nullable<int> teaching_id { get; set; }
         public Nullable<int> class_module_id { get; set; }
-        public Nullable<int> week_in_term_id { get; set; }
     
         public virtual class_module class_module { get; set; }
         public virtual classroom classroom { get; set; }
         public virtual teaching teaching { get; set; }
-        public virtual week_in_term week_in_term { get; set; }
     }
 }

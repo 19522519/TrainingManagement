@@ -42,7 +42,7 @@ namespace TrainingManagement.Controller
 
             if (existingUser != null)
             {
-                if (existingUser.password.Equals(password))
+                if (existingUser.pass.Equals(password))
                     return existingUser.id;
                 else
                     return -1;

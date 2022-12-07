@@ -15,10 +15,12 @@ namespace TrainingManagement
     public partial class Login : Form
     {
         UserController userController = new UserController();
+        StudentController studentController = new StudentController();
 
         public Login()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -65,20 +67,43 @@ namespace TrainingManagement
             return str_md5;
         }
 
+ 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             int id = userController.login(txtUsername.Text, getMD5(txtPassword.Text));
             // MessageBox.Show(id.ToString());
             if (id != -1)
             {
-
                 MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK,
                    MessageBoxIcon.Information);
+
+                String role = userController.getUserById(id).access_right;
+                switch(role)
+                {
+                    case "Sinh viên":
+                        // Lấy id student từ user id                     
+                        var student = studentController.getStudentByUserId(id);
+                        int stuId = student.Id;
+                        StudentHomePage studentHomePage = new StudentHomePage(stuId);
+
+                        studentHomePage.ShowDialog();
+                        break;
+                    case "Giảng viên":
+                        // Lấy id lecturer từ user id
+
+                        break;
+                    case "Quản lý khoa":
+                        // Lấy id department manager từ user id
+                        DepartmentManagerHomePage departmentManagerHomePage = new DepartmentManagerHomePage();
+                        departmentManagerHomePage.Show();
+                        break;
+                }
+
+                txtUsername.Text = "";
                 txtPassword.Text = "";
             }
-
             else
-                MessageBox.Show("Đăng nhập thất bại. Vui lòng thử lại sau!", "Thông báo",
+                MessageBox.Show("Login failed. Please try again!", "Notification",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }

@@ -14,6 +14,13 @@ namespace TrainingManagement
     
     public partial class major
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public major()
+        {
+            this.lecturers = new HashSet<lecturer>();
+            this.students = new HashSet<student>();
+        }
+    
         public int id { get; set; }
         public string name { get; set; }
         public Nullable<int> department_id { get; set; }
@@ -21,5 +28,9 @@ namespace TrainingManagement
     
         public virtual curriculum curriculum { get; set; }
         public virtual department department { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<lecturer> lecturers { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<student> students { get; set; }
     }
 }

@@ -64,7 +64,10 @@
     <Compile Include="class_module.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controller\ClassModuleController.cs" />
+    <Compile Include="Controller\LecturerController.cs" />
     <Compile Include="Controller\StudentController.cs" />
+    <Compile Include="Controller\StudyingController.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="curriculum.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -72,11 +75,11 @@
     <Compile Include="department.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="DepartmentManagerHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="DepartmentManagerHomePage.Designer.cs">
+      <DependentUpon>DepartmentManagerHomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -84,17 +87,11 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="SoftwareEngirneering.cs">
+    <Compile Include="ClassModulesManagement.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SoftwareEngirneering.Designer.cs">
-      <DependentUpon>SoftwareEngirneering.cs</DependentUpon>
-    </Compile>
-    <Compile Include="StudentManagement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StudentManagement.Designer.cs">
-      <DependentUpon>StudentManagement.cs</DependentUpon>
+    <Compile Include="ClassModulesManagement.Designer.cs">
+      <DependentUpon>ClassModulesManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="lecturer.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -102,18 +99,12 @@
     <Compile Include="lesson.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
     <Compile Include="major.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
-      <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
       <DependentUpon>Model1.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="Model1.cs">
@@ -122,12 +113,33 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="module.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="student.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StudentHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentHomePage.Designer.cs">
+      <DependentUpon>StudentHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentManagement.Designer.cs">
+      <DependentUpon>StudentManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -137,14 +149,11 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="school_year.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="StudentProfile.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="semester.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="student.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="StudentProfile.Designer.cs">
+      <DependentUpon>StudentProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="studying.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -158,14 +167,23 @@
     <Compile Include="user.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="week_in_term.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
+    <Compile Include="ViewScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewScore.Designer.cs">
+      <DependentUpon>ViewScore.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepartmentManagerHomePage.resx">
+      <DependentUpon>DepartmentManagerHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassModulesManagement.resx">
+      <DependentUpon>ClassModulesManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -180,11 +198,17 @@
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SoftwareEngirneering.resx">
-      <DependentUpon>SoftwareEngirneering.cs</DependentUpon>
+    <EmbeddedResource Include="StudentHomePage.resx">
+      <DependentUpon>StudentHomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentManagement.resx">
       <DependentUpon>StudentManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentProfile.resx">
+      <DependentUpon>StudentProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewScore.resx">
+      <DependentUpon>ViewScore.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -211,6 +235,9 @@
     <None Include="Resources\avatar.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -221,9 +248,6 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

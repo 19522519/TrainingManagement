@@ -8,22 +8,6 @@ C:\Users\user\source\repos\OOAD Project\TrainingManagement\TrainingManagement\ob
 C:\Users\user\source\repos\OOAD Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.CoreCompileInputs.cache
 C:\Users\user\source\repos\OOAD Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.exe
 C:\Users\user\source\repos\OOAD Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.pdb
-C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\bin\Debug\TrainingManagement.exe.config
-C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\bin\Debug\TrainingManagement.exe
-C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\bin\Debug\TrainingManagement.pdb
-C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.Login.resources
-C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.Properties.Resources.resources
-C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.GenerateResource.cache
-C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.CoreCompileInputs.cache
-C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.exe
-C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.pdb
-C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.Register.resources
-C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\bin\Debug\EntityFramework.dll
-C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\bin\Debug\EntityFramework.xml
-C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.AssemblyReference.cache
-C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.CopyComplete
 D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\bin\Debug\TrainingManagement.exe.config
 D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\bin\Debug\TrainingManagement.exe
 D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\bin\Debug\TrainingManagement.pdb
@@ -42,4 +26,26 @@ D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\obj
 D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.CopyComplete
 D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.exe
 D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.pdb
+C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.AssemblyReference.cache
+C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.Login.resources
+C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.HomeMinistry.resources
+C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.DepartmentManagerHomePage.resources
+C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.ClassModulesManagement.resources
+C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.Properties.Resources.resources
+C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.Register.resources
+C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.StudentHomePage.resources
 C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.StudentManagement.resources
+C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.StudentProfile.resources
+C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.GenerateResource.cache
+C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.CoreCompileInputs.cache
+C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\bin\Debug\TrainingManagement.exe.config
+C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\bin\Debug\TrainingManagement.exe
+C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\bin\Debug\TrainingManagement.pdb
+C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\bin\Debug\EntityFramework.dll
+C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\bin\Debug\EntityFramework.xml
+C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.CopyComplete
+C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.exe
+C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.pdb
+C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.ViewScore.resources
