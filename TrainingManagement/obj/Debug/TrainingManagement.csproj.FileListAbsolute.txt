@@ -26,6 +26,7 @@ D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\obj
 D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.CopyComplete
 D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.exe
 D:\The Liddo\HOC KY 05\OOAD\6. Project\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.pdb
+<<<<<<< HEAD
 C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\bin\Debug\TrainingManagement.exe.config
 C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\bin\Debug\TrainingManagement.exe
 C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\bin\Debug\TrainingManagement.pdb
@@ -48,3 +49,74 @@ C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement
 C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.exe
 C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.pdb
 C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.AssemblyReference.cache
+=======
+C:\Users\Tan Viet\Desktop\Projects\WinForm\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.StudentManagement.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\TrainingManagement.exe.config
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\TrainingManagement.exe
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\TrainingManagement.pdb
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\EntityFramework.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\EntityFramework.xml
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.AssemblyReference.cache
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.Login.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.HomeMinistry.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.Properties.Resources.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.Register.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.SoftwareEngirneering.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.StudentManagement.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.GenerateResource.cache
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.CoreCompileInputs.cache
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.CopyComplete
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.exe
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.pdb
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\DevExpress.Data.Desktop.v21.1.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\DevExpress.Data.v21.1.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\DevExpress.Printing.v21.1.Core.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\DevExpress.Sparkline.v21.1.Core.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\DevExpress.Utils.v21.1.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\DevExpress.XtraEditors.v21.1.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\DevExpress.Pdf.v21.1.Core.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\DevExpress.Pdf.v21.1.Drawing.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\DevExpress.Data.Desktop.v21.1.xml
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\DevExpress.Data.v21.1.xml
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\DevExpress.Printing.v21.1.Core.xml
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\DevExpress.Sparkline.v21.1.Core.xml
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\DevExpress.Utils.v21.1.xml
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\DevExpress.XtraEditors.v21.1.xml
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\DevExpress.Pdf.v21.1.Core.xml
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\DevExpress.Pdf.v21.1.Drawing.xml
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\de\DevExpress.Data.v21.1.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\es\DevExpress.Data.v21.1.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\ja\DevExpress.Data.v21.1.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\ru\DevExpress.Data.v21.1.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\de\DevExpress.Printing.v21.1.Core.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\es\DevExpress.Printing.v21.1.Core.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\ja\DevExpress.Printing.v21.1.Core.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\ru\DevExpress.Printing.v21.1.Core.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\de\DevExpress.Sparkline.v21.1.Core.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\es\DevExpress.Sparkline.v21.1.Core.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\ja\DevExpress.Sparkline.v21.1.Core.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\ru\DevExpress.Sparkline.v21.1.Core.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\de\DevExpress.Utils.v21.1.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\es\DevExpress.Utils.v21.1.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\ja\DevExpress.Utils.v21.1.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\ru\DevExpress.Utils.v21.1.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\de\DevExpress.XtraEditors.v21.1.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\es\DevExpress.XtraEditors.v21.1.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\ja\DevExpress.XtraEditors.v21.1.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\ru\DevExpress.XtraEditors.v21.1.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\de\DevExpress.Pdf.v21.1.Core.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\es\DevExpress.Pdf.v21.1.Core.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\ja\DevExpress.Pdf.v21.1.Core.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\ru\DevExpress.Pdf.v21.1.Core.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.LecturerManagement.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\DevExpress.XtraBars.v21.1.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\DevExpress.XtraBars.v21.1.xml
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\de\DevExpress.XtraBars.v21.1.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\es\DevExpress.XtraBars.v21.1.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\ja\DevExpress.XtraBars.v21.1.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\ru\DevExpress.XtraBars.v21.1.resources.dll
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.ManageDepartmentType.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.exe.licenses
+>>>>>>> 9a003b97d9d767d1d886a08fcdc6096daeeb052f

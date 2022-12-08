@@ -37,13 +37,13 @@ namespace TrainingManagement
             cmbMajor.DataBindings.Clear();
             cmbLevel.DataBindings.Clear();
             cmbContract.DataBindings.Clear();
-
+            
             txtID.DataBindings.Add("Text", dgvData.DataSource, "ID", true, DataSourceUpdateMode.Never);
             txtName.DataBindings.Add("Text", dgvData.DataSource, "Name", true, DataSourceUpdateMode.Never);
             cmbMajor.DataBindings.Add("Text", dgvData.DataSource, "Major", true, DataSourceUpdateMode.Never);
             cmbLevel.DataBindings.Add("Text", dgvData.DataSource, "Level", true, DataSourceUpdateMode.Never);
             cmbContract.DataBindings.Add("Text", dgvData.DataSource, "Contract", true, DataSourceUpdateMode.Never);
-
+          
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

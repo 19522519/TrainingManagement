@@ -29,6 +29,7 @@ namespace TrainingManagement
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LecturerManagement));
             this.dgvData = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbContract = new System.Windows.Forms.ComboBox();
@@ -60,19 +61,21 @@ namespace TrainingManagement
             // dgvData
             // 
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvData.Location = new System.Drawing.Point(0, 22);
+            this.dgvData.Location = new System.Drawing.Point(0, 27);
+            this.dgvData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvData.Name = "dgvData";
             this.dgvData.RowHeadersWidth = 51;
             this.dgvData.RowTemplate.Height = 24;
-            this.dgvData.Size = new System.Drawing.Size(744, 430);
+            this.dgvData.Size = new System.Drawing.Size(992, 529);
             this.dgvData.TabIndex = 0;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(23, 39);
+            this.label7.Location = new System.Drawing.Point(31, 48);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.Size = new System.Drawing.Size(45, 16);
             this.label7.TabIndex = 4;
             this.label7.Text = "Name";
             // 
@@ -83,61 +86,67 @@ namespace TrainingManagement
             "Giảng viên chính thức",
             "Giảng viên thỉnh giảng",
             "Giảng viên mời giảng"});
-            this.cmbContract.Location = new System.Drawing.Point(26, 199);
+            this.cmbContract.Location = new System.Drawing.Point(35, 245);
+            this.cmbContract.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbContract.Name = "cmbContract";
-            this.cmbContract.Size = new System.Drawing.Size(479, 21);
+            this.cmbContract.Size = new System.Drawing.Size(637, 24);
             this.cmbContract.TabIndex = 13;
             // 
             // txtName
             // 
             this.txtName.BackColor = System.Drawing.Color.White;
-            this.txtName.Location = new System.Drawing.Point(275, 60);
-            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtName.Location = new System.Drawing.Point(367, 74);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(230, 20);
+            this.txtName.Size = new System.Drawing.Size(305, 22);
             this.txtName.TabIndex = 12;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(23, 179);
+            this.label6.Location = new System.Drawing.Point(31, 220);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 13);
+            this.label6.Size = new System.Drawing.Size(57, 16);
             this.label6.TabIndex = 10;
             this.label6.Text = "Contract";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(272, 106);
+            this.label5.Location = new System.Drawing.Point(363, 130);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 13);
+            this.label5.Size = new System.Drawing.Size(42, 16);
             this.label5.TabIndex = 9;
             this.label5.Text = "Major";
             // 
             // cmbMajor
             // 
             this.cmbMajor.FormattingEnabled = true;
-            this.cmbMajor.Location = new System.Drawing.Point(275, 126);
+            this.cmbMajor.Location = new System.Drawing.Point(367, 155);
+            this.cmbMajor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbMajor.Name = "cmbMajor";
-            this.cmbMajor.Size = new System.Drawing.Size(230, 21);
+            this.cmbMajor.Size = new System.Drawing.Size(305, 24);
             this.cmbMajor.TabIndex = 8;
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(272, 38);
+            this.lblName.Location = new System.Drawing.Point(363, 47);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(35, 13);
+            this.lblName.Size = new System.Drawing.Size(45, 16);
             this.lblName.TabIndex = 7;
             this.lblName.Text = "Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 106);
+            this.label3.Location = new System.Drawing.Point(31, 130);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 13);
+            this.label3.Size = new System.Drawing.Size(41, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Level";
             // 
@@ -149,34 +158,38 @@ namespace TrainingManagement
             "Thạc sĩ",
             "Tiến sĩ",
             "Giáo sư"});
-            this.cmbLevel.Location = new System.Drawing.Point(26, 126);
+            this.cmbLevel.Location = new System.Drawing.Point(35, 155);
+            this.cmbLevel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbLevel.Name = "cmbLevel";
-            this.cmbLevel.Size = new System.Drawing.Size(182, 21);
+            this.cmbLevel.Size = new System.Drawing.Size(241, 24);
             this.cmbLevel.TabIndex = 4;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(26, 113);
+            this.btnUpdate.Location = new System.Drawing.Point(35, 139);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(94, 29);
+            this.btnUpdate.Size = new System.Drawing.Size(125, 36);
             this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(262, 113);
+            this.btnAdd.Location = new System.Drawing.Point(349, 139);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(97, 29);
+            this.btnAdd.Size = new System.Drawing.Size(129, 36);
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
             // btnFind
             // 
-            this.btnFind.Location = new System.Drawing.Point(381, 51);
+            this.btnFind.Location = new System.Drawing.Point(508, 63);
+            this.btnFind.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(124, 29);
+            this.btnFind.Size = new System.Drawing.Size(165, 36);
             this.btnFind.TabIndex = 6;
             this.btnFind.Text = "Find";
             this.btnFind.UseVisualStyleBackColor = true;
@@ -184,27 +197,28 @@ namespace TrainingManagement
             // txtFind
             // 
             this.txtFind.BackColor = System.Drawing.Color.White;
-            this.txtFind.Location = new System.Drawing.Point(26, 58);
-            this.txtFind.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtFind.Location = new System.Drawing.Point(35, 71);
+            this.txtFind.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtFind.Name = "txtFind";
-            this.txtFind.Size = new System.Drawing.Size(333, 20);
+            this.txtFind.Size = new System.Drawing.Size(443, 22);
             this.txtFind.TabIndex = 5;
             // 
             // txtID
             // 
             this.txtID.BackColor = System.Drawing.SystemColors.Control;
-            this.txtID.Location = new System.Drawing.Point(26, 60);
-            this.txtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtID.Location = new System.Drawing.Point(35, 74);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(182, 20);
+            this.txtID.Size = new System.Drawing.Size(241, 22);
             this.txtID.TabIndex = 3;
             // 
             // btnExport
             // 
-            this.btnExport.Location = new System.Drawing.Point(381, 113);
+            this.btnExport.Location = new System.Drawing.Point(508, 139);
+            this.btnExport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(124, 29);
+            this.btnExport.Size = new System.Drawing.Size(165, 36);
             this.btnExport.TabIndex = 16;
             this.btnExport.Text = "Export Excel files";
             this.btnExport.UseVisualStyleBackColor = true;
@@ -218,18 +232,21 @@ namespace TrainingManagement
             this.groupBox2.Controls.Add(this.btnFind);
             this.groupBox2.Controls.Add(this.txtFind);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Location = new System.Drawing.Point(19, 358);
+            this.groupBox2.Location = new System.Drawing.Point(25, 441);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(525, 169);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(700, 208);
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Main function";
             // 
             // btnReload
             // 
-            this.btnReload.Location = new System.Drawing.Point(149, 113);
+            this.btnReload.Location = new System.Drawing.Point(199, 139);
+            this.btnReload.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(93, 29);
+            this.btnReload.Size = new System.Drawing.Size(124, 36);
             this.btnReload.TabIndex = 9;
             this.btnReload.Text = "Reload";
             this.btnReload.UseVisualStyleBackColor = true;
@@ -237,18 +254,21 @@ namespace TrainingManagement
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 41);
+            this.label1.Location = new System.Drawing.Point(31, 50);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
+            this.label1.Size = new System.Drawing.Size(21, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "ID";
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dgvData);
-            this.groupBox3.Location = new System.Drawing.Point(566, 75);
+            this.groupBox3.Location = new System.Drawing.Point(755, 92);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(744, 452);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Size = new System.Drawing.Size(992, 556);
             this.groupBox3.TabIndex = 20;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Lecturer list";
@@ -265,9 +285,11 @@ namespace TrainingManagement
             this.groupBox1.Controls.Add(this.cmbLevel);
             this.groupBox1.Controls.Add(this.txtID);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(19, 75);
+            this.groupBox1.Location = new System.Drawing.Point(25, 92);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(525, 220);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(700, 271);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Lecturer information";
@@ -277,7 +299,8 @@ namespace TrainingManagement
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(540, 27);
+            this.label2.Location = new System.Drawing.Point(720, 33);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(272, 24);
             this.label2.TabIndex = 17;
@@ -285,13 +308,15 @@ namespace TrainingManagement
             // 
             // LecturerManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1319, 539);
+            this.ClientSize = new System.Drawing.Size(1759, 663);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LecturerManagement";
             this.Text = "LecturerManagement";
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
@@ -307,16 +332,24 @@ namespace TrainingManagement
 
         #endregion
 
+<<<<<<< HEAD
         private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbContract;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label6;
+=======
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtID;
+>>>>>>> 9a003b97d9d767d1d886a08fcdc6096daeeb052f
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbMajor;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbLevel;
+<<<<<<< HEAD
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnFind;
@@ -329,5 +362,20 @@ namespace TrainingManagement
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label2;
+=======
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtFind;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnFind;
+        private System.Windows.Forms.Button btnReload;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.DataGridView dgvData;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.ComboBox cmbContract;
+>>>>>>> 9a003b97d9d767d1d886a08fcdc6096daeeb052f
     }
 }

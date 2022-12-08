@@ -68,11 +68,11 @@ namespace TrainingManagement
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvData = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // txtFindStudentId
@@ -457,6 +457,14 @@ namespace TrainingManagement
             this.dgvData.Size = new System.Drawing.Size(774, 640);
             this.dgvData.TabIndex = 0;
             // 
+            // picAvatar
+            // 
+            this.picAvatar.Location = new System.Drawing.Point(20, 37);
+            this.picAvatar.Name = "picAvatar";
+            this.picAvatar.Size = new System.Drawing.Size(100, 114);
+            this.picAvatar.TabIndex = 27;
+            this.picAvatar.TabStop = false;
+            // 
             // StudentManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -476,6 +484,7 @@ namespace TrainingManagement
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
