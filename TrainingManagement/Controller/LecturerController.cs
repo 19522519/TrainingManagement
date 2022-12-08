@@ -20,5 +20,67 @@ namespace TrainingManagement.Controller
                        };
             return data;
         }
+
+        public dynamic getAll()
+        {
+            var lecturer = from c in entities.lecturers
+                           select new
+                           {
+                               ID = c.id,
+                               Name = c.name,
+                               Major = c.major.name,
+                               Level = c.level,
+                               Contract = c.contract
+                           };
+            return lecturer.ToList();
+        }
+
+        public int insertLecturer(lecturer lecturer)
+        {
+            entities.lecturers.Add(lecturer);
+            entities.SaveChanges();
+            return lecturer.id;
+        }
+
+        public void updateLecturer(lecturer lecturer)
+        {
+            lecturer l = entities.lecturers.Find(lecturer.id);
+            l.name = lecturer.name;
+            l.major_id = lecturer.major_id;
+            l.level = l.level;
+            l.contract = l.contract;
+            entities.SaveChanges();
+        }
+
+        public void deleteLecturer(int ID)
+        {
+            lecturer lecturer = entities.lecturers.Find(ID);
+            if (lecturer != null)
+            {
+                entities.lecturers.Remove(lecturer);
+                entities.SaveChanges();
+            }
+        }
+
+        public dynamic findLecturer(string lecturerName)
+        {
+            var result = from c in entities.lecturers
+                         select c;
+            if (lecturerName != "")
+                result = from c in result
+                         where c.name.Contains(lecturerName)
+                         select c;
+
+            var data = from c in result
+                       select new
+                       {
+                           ID = c.id,
+                           Name = c.name,
+                           Major = c.major.name,
+                           Level = c.level,
+                           Contract = c.contract,
+                       };
+            return data.ToList();
+        }
     }
 }

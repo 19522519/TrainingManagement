@@ -65,7 +65,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Controller\ClassModuleController.cs" />
+    <Compile Include="Controller\DepartmentTypeController.cs" />
     <Compile Include="Controller\LecturerController.cs" />
+    <Compile Include="Controller\MajorController.cs" />
     <Compile Include="Controller\StudentController.cs" />
     <Compile Include="Controller\StudyingController.cs" />
     <Compile Include="Controller\UserController.cs" />
@@ -81,6 +83,12 @@
     <Compile Include="DepartmentManagerHomePage.Designer.cs">
       <DependentUpon>DepartmentManagerHomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="DepartmentTypeManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartmentTypeManagement.Designer.cs">
+      <DependentUpon>DepartmentTypeManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +103,12 @@
     </Compile>
     <Compile Include="lecturer.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LecturerManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecturerManagement.Designer.cs">
+      <DependentUpon>LecturerManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="lesson.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -129,12 +143,6 @@
     <Compile Include="StudentHomePage.Designer.cs">
       <DependentUpon>StudentHomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudentManagement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StudentManagement.Designer.cs">
-      <DependentUpon>StudentManagement.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +156,12 @@
     </Compile>
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentManagement.Designer.cs">
+      <DependentUpon>StudentManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="StudentProfile.cs">
       <SubType>Form</SubType>
@@ -173,6 +187,12 @@
     <Compile Include="ViewScore.Designer.cs">
       <DependentUpon>ViewScore.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DepartmentTypeManagement.resx">
+      <DependentUpon>DepartmentTypeManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecturerManagement.resx">
+      <DependentUpon>LecturerManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

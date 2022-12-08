@@ -14,6 +14,7 @@ namespace TrainingManagement
     public partial class StudentManagement : Form
     {
         StudentController studentController = new StudentController();
+
         public StudentManagement()
         {
             InitializeComponent();
@@ -54,11 +55,6 @@ namespace TrainingManagement
             txtHousehold.DataBindings.Add("Text", dgvData.DataSource, "Household", true, DataSourceUpdateMode.Never);
             txtUsername.DataBindings.Add("Text", dgvData.DataSource, "Username", true, DataSourceUpdateMode.Never);
             txtPassword.DataBindings.Add("Text", dgvData.DataSource, "Password", true, DataSourceUpdateMode.Never);
-        }
-
-        private void btnReload_Click(object sender, EventArgs e)
-        {
-            loadData();
         }
     }
 }
