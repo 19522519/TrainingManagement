@@ -54,56 +54,56 @@ namespace TrainingManagement
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(969, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(969, 30);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // classesToolStripMenuItem
             // 
             this.classesToolStripMenuItem.Name = "classesToolStripMenuItem";
-            this.classesToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
+            this.classesToolStripMenuItem.Size = new System.Drawing.Size(70, 26);
             this.classesToolStripMenuItem.Text = "Classes";
             // 
             // timetableToolStripMenuItem
             // 
             this.timetableToolStripMenuItem.Name = "timetableToolStripMenuItem";
-            this.timetableToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
+            this.timetableToolStripMenuItem.Size = new System.Drawing.Size(90, 26);
             this.timetableToolStripMenuItem.Text = "Timetable";
             // 
             // registerModulesToolStripMenuItem
             // 
             this.registerModulesToolStripMenuItem.Name = "registerModulesToolStripMenuItem";
-            this.registerModulesToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
+            this.registerModulesToolStripMenuItem.Size = new System.Drawing.Size(138, 26);
             this.registerModulesToolStripMenuItem.Text = "Register Modules";
             // 
             // profileToolStripMenuItem
             // 
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
-            this.profileToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
+            this.profileToolStripMenuItem.Size = new System.Drawing.Size(66, 26);
             this.profileToolStripMenuItem.Text = "Profile";
             this.profileToolStripMenuItem.Click += new System.EventHandler(this.profileToolStripMenuItem_Click);
             // 
             // điểmToolStripMenuItem
             // 
             this.điểmToolStripMenuItem.Name = "điểmToolStripMenuItem";
-            this.điểmToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
+            this.điểmToolStripMenuItem.Size = new System.Drawing.Size(59, 26);
             this.điểmToolStripMenuItem.Text = "Điểm";
             this.điểmToolStripMenuItem.Click += new System.EventHandler(this.điểmToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // pnlContent
             // 
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContent.Location = new System.Drawing.Point(0, 28);
+            this.pnlContent.Location = new System.Drawing.Point(0, 30);
             this.pnlContent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(969, 554);
+            this.pnlContent.Size = new System.Drawing.Size(969, 552);
             this.pnlContent.TabIndex = 6;
             // 
             // StudentHomePage

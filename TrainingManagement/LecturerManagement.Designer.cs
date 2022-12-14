@@ -332,50 +332,29 @@ namespace TrainingManagement
 
         #endregion
 
-<<<<<<< HEAD
+
         private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbContract;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label6;
-=======
+
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtID;
->>>>>>> 9a003b97d9d767d1d886a08fcdc6096daeeb052f
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbMajor;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbLevel;
-<<<<<<< HEAD
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnFind;
         private System.Windows.Forms.TextBox txtFind;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnReload;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
-=======
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtFind;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnFind;
-        private System.Windows.Forms.Button btnReload;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnExport;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView dgvData;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.ComboBox cmbContract;
->>>>>>> 9a003b97d9d767d1d886a08fcdc6096daeeb052f
     }
 }

@@ -112,21 +112,33 @@
     <Compile Include="lecturer.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="LecturerHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecturerHomePage.Designer.cs">
+      <DependentUpon>LecturerHomePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="LecturerManagement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LecturerManagement.Designer.cs">
       <DependentUpon>LecturerManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="major.cs">
+    <Compile Include="LecturerProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecturerProfile.Designer.cs">
+      <DependentUpon>LecturerProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lesson.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="major.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
-      <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>Model1.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="Model1.cs">
@@ -135,8 +147,8 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model1.Designer.cs">
-      <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="module.cs">
@@ -198,8 +210,14 @@
     <EmbeddedResource Include="DepartmentTypeManagement.resx">
       <DependentUpon>DepartmentTypeManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LecturerHomePage.resx">
+      <DependentUpon>LecturerHomePage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LecturerManagement.resx">
       <DependentUpon>LecturerManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecturerProfile.resx">
+      <DependentUpon>LecturerProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

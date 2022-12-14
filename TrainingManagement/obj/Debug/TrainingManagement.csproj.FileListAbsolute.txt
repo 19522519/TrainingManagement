@@ -120,3 +120,11 @@ C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\bin\Debug\ru\DevExp
 C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.ManageDepartmentType.resources
 C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.exe.licenses
 >>>>>>> 9a003b97d9d767d1d886a08fcdc6096daeeb052f
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.DepartmentTypeManagement.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.DepartmentManagerHomePage.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.ClassModulesManagement.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.StudentHomePage.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.StudentProfile.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.ViewScore.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.LecturerHomePage.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.LecturerProfile.resources

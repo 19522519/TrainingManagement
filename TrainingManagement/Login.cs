@@ -16,6 +16,7 @@ namespace TrainingManagement
     {
         UserController userController = new UserController();
         StudentController studentController = new StudentController();
+        LecturerController lecturerController = new LecturerController();
 
         public Login()
         {
@@ -90,6 +91,10 @@ namespace TrainingManagement
                         break;
                     case "Giảng viên":
                         // Lấy id lecturer từ user id
+                        var lecturer = lecturerController.getLecturerByUserId(id);
+                        int lecId = lecturer.ID;
+                        LecturerHomePage lecturerHomePage = new LecturerHomePage(lecId);
+                        lecturerHomePage.ShowDialog();
 
                         break;
                     case "Quản lý khoa":

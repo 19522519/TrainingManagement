@@ -42,6 +42,28 @@ namespace TrainingManagement.Controller
             return lecturer.id;
         }
 
+        public lecturer getLecturerById(int id)
+        {
+            return entities.lecturers.Find(id);
+        }
+
+        public dynamic getLecturerByUserId(int userId)
+        {
+            var lecturer = from c in entities.lecturers
+                          where c.users_id == userId
+                          select new
+                          {
+                              ID = c.id,
+                              Name = c.name,
+                              Major = c.major.name,
+                              Level = c.level,
+                              Contract = c.contract
+
+                          };
+            return lecturer.FirstOrDefault();
+        }
+
+
         public void updateLecturer(lecturer lecturer)
         {
             lecturer l = entities.lecturers.Find(lecturer.id);
