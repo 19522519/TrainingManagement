@@ -128,3 +128,5 @@ C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingM
 C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.ViewScore.resources
 C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.LecturerHomePage.resources
 C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.LecturerProfile.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.ChangePasswordForm.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.InputScore.resources

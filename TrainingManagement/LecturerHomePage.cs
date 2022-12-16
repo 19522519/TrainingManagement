@@ -33,5 +33,16 @@ namespace TrainingManagement
             this.pnlContent.Controls.Add(lecturerProfile);
             lecturerProfile.Show();
         }
+
+        private void điểmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            InputScore inputScore = new InputScore(lecturerId);
+            inputScore.TopLevel = false;
+            inputScore.AutoScroll = true;
+            inputScore.Dock = DockStyle.Fill;
+            inputScore.FormBorderStyle = FormBorderStyle.None;
+            this.pnlContent.Controls.Add(inputScore);
+            inputScore.Show();
+        }
     }
 }

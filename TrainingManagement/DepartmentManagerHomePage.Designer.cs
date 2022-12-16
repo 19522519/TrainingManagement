@@ -48,6 +48,7 @@ namespace TrainingManagement
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.departmentToolStripMenuItem,
             this.studentsToolStripMenuItem,
@@ -56,8 +57,8 @@ namespace TrainingManagement
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(819, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1092, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -67,7 +68,7 @@ namespace TrainingManagement
             this.softwareEngirneeringToolStripMenuItem,
             this.informationSystemToolStripMenuItem});
             this.departmentToolStripMenuItem.Name = "departmentToolStripMenuItem";
-            this.departmentToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.departmentToolStripMenuItem.Size = new System.Drawing.Size(87, 26);
             this.departmentToolStripMenuItem.Text = "Học phần";
             // 
             // softwareEngirneeringToolStripMenuItem
@@ -75,13 +76,13 @@ namespace TrainingManagement
             this.softwareEngirneeringToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.côngNghệPhầnMềmToolStripMenuItem});
             this.softwareEngirneeringToolStripMenuItem.Name = "softwareEngirneeringToolStripMenuItem";
-            this.softwareEngirneeringToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.softwareEngirneeringToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
             this.softwareEngirneeringToolStripMenuItem.Text = "Công nghệ phần mềm";
             // 
             // côngNghệPhầnMềmToolStripMenuItem
             // 
             this.côngNghệPhầnMềmToolStripMenuItem.Name = "côngNghệPhầnMềmToolStripMenuItem";
-            this.côngNghệPhầnMềmToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.côngNghệPhầnMềmToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
             this.côngNghệPhầnMềmToolStripMenuItem.Text = "Công nghệ phần mềm";
             this.côngNghệPhầnMềmToolStripMenuItem.Click += new System.EventHandler(this.côngNghệPhầnMềmToolStripMenuItem_Click);
             // 
@@ -90,13 +91,13 @@ namespace TrainingManagement
             this.informationSystemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hệThốngThôngTinToolStripMenuItem});
             this.informationSystemToolStripMenuItem.Name = "informationSystemToolStripMenuItem";
-            this.informationSystemToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.informationSystemToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
             this.informationSystemToolStripMenuItem.Text = "Hệ thống thông tin";
             // 
             // hệThốngThôngTinToolStripMenuItem
             // 
             this.hệThốngThôngTinToolStripMenuItem.Name = "hệThốngThôngTinToolStripMenuItem";
-            this.hệThốngThôngTinToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.hệThốngThôngTinToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
             this.hệThốngThôngTinToolStripMenuItem.Text = "Hệ thống thông tin";
             this.hệThốngThôngTinToolStripMenuItem.Click += new System.EventHandler(this.hệThốngThôngTinToolStripMenuItem_Click);
             // 
@@ -106,59 +107,59 @@ namespace TrainingManagement
             this.softwareEngirneeringToolStripMenuItem1,
             this.informationSystemToolStripMenuItem1});
             this.studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
-            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
+            this.studentsToolStripMenuItem.Size = new System.Drawing.Size(82, 26);
             this.studentsToolStripMenuItem.Text = "Sinh viên";
             // 
             // softwareEngirneeringToolStripMenuItem1
             // 
             this.softwareEngirneeringToolStripMenuItem1.Name = "softwareEngirneeringToolStripMenuItem1";
-            this.softwareEngirneeringToolStripMenuItem1.Size = new System.Drawing.Size(190, 22);
+            this.softwareEngirneeringToolStripMenuItem1.Size = new System.Drawing.Size(239, 26);
             this.softwareEngirneeringToolStripMenuItem1.Text = "Software Engirneering";
             // 
             // informationSystemToolStripMenuItem1
             // 
             this.informationSystemToolStripMenuItem1.Name = "informationSystemToolStripMenuItem1";
-            this.informationSystemToolStripMenuItem1.Size = new System.Drawing.Size(190, 22);
+            this.informationSystemToolStripMenuItem1.Size = new System.Drawing.Size(239, 26);
             this.informationSystemToolStripMenuItem1.Text = "Information System";
             // 
             // classesToolStripMenuItem
             // 
             this.classesToolStripMenuItem.Name = "classesToolStripMenuItem";
-            this.classesToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.classesToolStripMenuItem.Size = new System.Drawing.Size(48, 26);
             this.classesToolStripMenuItem.Text = "Lớp";
             // 
             // lecturersToolStripMenuItem
             // 
             this.lecturersToolStripMenuItem.Name = "lecturersToolStripMenuItem";
-            this.lecturersToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.lecturersToolStripMenuItem.Size = new System.Drawing.Size(93, 26);
             this.lecturersToolStripMenuItem.Text = "Giảng viên";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // pnlContent
             // 
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContent.Location = new System.Drawing.Point(0, 24);
-            this.pnlContent.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlContent.Location = new System.Drawing.Point(0, 30);
+            this.pnlContent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(819, 526);
+            this.pnlContent.Size = new System.Drawing.Size(1092, 647);
             this.pnlContent.TabIndex = 1;
             // 
             // DepartmentManagerHomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 550);
+            this.ClientSize = new System.Drawing.Size(1092, 677);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DepartmentManagerHomePage";
             this.Text = "Home";
             this.menuStrip1.ResumeLayout(false);

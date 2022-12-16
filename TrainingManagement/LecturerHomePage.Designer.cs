@@ -86,6 +86,7 @@ namespace TrainingManagement
             this.điểmToolStripMenuItem.Name = "điểmToolStripMenuItem";
             this.điểmToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
             this.điểmToolStripMenuItem.Text = "Điểm";
+            this.điểmToolStripMenuItem.Click += new System.EventHandler(this.điểmToolStripMenuItem_Click);
             // 
             // exitsToolStripMenuItem
             // 
@@ -97,7 +98,7 @@ namespace TrainingManagement
             // 
             this.pnlContent.Location = new System.Drawing.Point(0, 32);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(993, 516);
+            this.pnlContent.Size = new System.Drawing.Size(969, 516);
             this.pnlContent.TabIndex = 1;
             // 
             // LecturerHomePage

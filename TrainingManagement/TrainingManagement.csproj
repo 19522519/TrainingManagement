@@ -66,6 +66,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="classroom.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -78,6 +84,7 @@
     <Compile Include="Controller\MajorController.cs" />
     <Compile Include="Controller\StudentController.cs" />
     <Compile Include="Controller\StudyingController.cs" />
+    <Compile Include="Controller\TeachingController.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="curriculum.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -108,6 +115,12 @@
     </Compile>
     <Compile Include="ClassModulesManagement.Designer.cs">
       <DependentUpon>ClassModulesManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputScore.Designer.cs">
+      <DependentUpon>InputScore.cs</DependentUpon>
     </Compile>
     <Compile Include="lecturer.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -207,8 +220,14 @@
     <Compile Include="ViewScore.Designer.cs">
       <DependentUpon>ViewScore.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DepartmentTypeManagement.resx">
       <DependentUpon>DepartmentTypeManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputScore.resx">
+      <DependentUpon>InputScore.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LecturerHomePage.resx">
       <DependentUpon>LecturerHomePage.cs</DependentUpon>

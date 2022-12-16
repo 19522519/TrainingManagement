@@ -69,8 +69,8 @@ namespace TrainingManagement.Controller
             lecturer l = entities.lecturers.Find(lecturer.id);
             l.name = lecturer.name;
             l.major_id = lecturer.major_id;
-            l.level = l.level;
-            l.contract = l.contract;
+            l.level = lecturer.level;
+            l.contract = lecturer.contract;
             entities.SaveChanges();
         }
 

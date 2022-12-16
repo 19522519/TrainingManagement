@@ -231,6 +231,7 @@ namespace TrainingManagement
             this.btnChangePassword.TabIndex = 78;
             this.btnChangePassword.Text = "Đổi mật khẩu";
             this.btnChangePassword.UseVisualStyleBackColor = true;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
             // btnExit
             // 
