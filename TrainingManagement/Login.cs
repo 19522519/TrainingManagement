@@ -22,6 +22,7 @@ namespace TrainingManagement
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            label1.Click += new System.EventHandler(this.label1_Click);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -110,6 +111,18 @@ namespace TrainingManagement
             else
                 MessageBox.Show("Login failed. Please try again!", "Notification",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            ForgotPassword forgotPassword = new ForgotPassword();
+            this.Hide();
+            // forgotPassword.TopLevel = false;
+            // forgotPassword.AutoScroll = true;
+            // forgotPassword.Dock = DockStyle.Fill;
+            // forgotPassword.FormBorderStyle = FormBorderStyle.None;
+            forgotPassword.ShowDialog();
+            this.Close();
         }
     }
 }

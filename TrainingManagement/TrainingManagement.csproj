@@ -104,6 +104,12 @@
     <Compile Include="DepartmentTypeManagement.Designer.cs">
       <DependentUpon>DepartmentTypeManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="ForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.Designer.cs">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DepartmentTypeManagement.resx">
       <DependentUpon>DepartmentTypeManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPassword.resx">
+      <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InputScore.resx">
       <DependentUpon>InputScore.cs</DependentUpon>

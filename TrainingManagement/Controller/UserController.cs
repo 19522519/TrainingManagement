@@ -55,5 +55,15 @@ namespace TrainingManagement.Controller
             entities.users.Add(user);
             entities.SaveChanges();
         }
+
+        public user getUserByUsername(String username)
+        {
+            var existingUser = entities.users.FirstOrDefault(m => m.username.Equals(username));
+
+            if (existingUser != null)
+                return this.getUserById(existingUser.id);
+            else
+                return null;
+        }
     }
 }
