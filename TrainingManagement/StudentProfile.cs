@@ -33,12 +33,12 @@ namespace TrainingManagement
             txtBirthPlace.Text = student.birth_place;
             txtHousehold.Text = student.household;
 
-            txtEmail.Text = student.user.email;
-            txtUsername.Text = student.user.username;
+            txtEmail.Text = student.users.email;
+            txtUsername.Text = student.users.username;
             txtDepartment.Text = student.major.name;
             cmbIsInDorm.Text = student.is_in_dormitory;
 
-            setAvatar(student.user.avatar.Value);
+            setAvatar(student.users.avatar.Value);
             loadGenders();
             loadIsInDorm();
         }

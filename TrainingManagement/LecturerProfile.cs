@@ -26,8 +26,8 @@ namespace TrainingManagement
             txtLevel.Text = lecturer.level;
             txtContract.Text = lecturer.contract;
             txtMajor.Text = lecturer.major.name;
-            txtEmail.Text = lecturer.user.email;
-            txtUsername.Text = lecturer.user.username;
+            txtEmail.Text = lecturer.users.email;
+            txtUsername.Text = lecturer.users.username;
 
         }
 

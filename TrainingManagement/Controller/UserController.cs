@@ -31,7 +31,7 @@ namespace TrainingManagement.Controller
             return data.ToList();
         }
 
-        public user getUserById(int id)
+        public users getUserById(int id)
         {
             return entities.users.Find(id);
         }
@@ -50,13 +50,13 @@ namespace TrainingManagement.Controller
             return -1;
         }
 
-        public void addUser(user user)
+        public void addUser(users user)
         {
             entities.users.Add(user);
             entities.SaveChanges();
         }
 
-        public user getUserByUsername(String username)
+        public users getUserByUsername(String username)
         {
             var existingUser = entities.users.FirstOrDefault(m => m.username.Equals(username));
 

@@ -12,7 +12,7 @@ namespace TrainingManagement.Controller
 
         public dynamic getAll()
         {
-            var data = from c in entities.majors
+            var data = from c in entities.major
                        select new
                        {
                            ID = c.id,

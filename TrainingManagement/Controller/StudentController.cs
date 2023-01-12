@@ -12,7 +12,7 @@ namespace TrainingManagement.Controller
 
         public dynamic getAll()
         {
-            var student = from c in entities.students
+            var student = from c in entities.student
                           select new
                           {
                               Id = c.id,
@@ -20,37 +20,37 @@ namespace TrainingManagement.Controller
                               CitizenId = c.citizen_id,
                               LastName = c.last_name,
                               FirstName = c.first_name,
-                              Email = c.user.email,
+                              Email = c.users.email,
                               Gender = c.gender,
                               Phone = c.phone,                        
                               BirthPlace = c.birth_place,
                               Major = c.major.name,
                               IsInDorm = c.is_in_dormitory,
                               Household = c.household,
-                              Username = c.user.username,
-                              Password = c.user.pass,
-                              Right = c.user.access_right,
-                              Avatar = c.user.avatar
+                              Username = c.users.username,
+                              Password = c.users.pass,
+                              Right = c.users.access_right,
+                              Avatar = c.users.avatar
                           };
             return student.ToList();
         }
 
         public int insertStudent(student student)
         {
-            entities.students.Add(student);
+            entities.student.Add(student);
             entities.SaveChanges();
             return student.id;
         }
 
         public student getStudentById(int id)
         {
-            return entities.students.Find(id);
+            return entities.student.Find(id);
         }
 
         public dynamic getStudentByUserId(int userId)
         {
-            var student = from c in entities.students
-                          where c.users_id == userId
+            var student = from c in entities.student
+                          where c.users.id == userId
                           select new
                           {
                               Id = c.id,
@@ -58,24 +58,24 @@ namespace TrainingManagement.Controller
                               CitizenId = c.citizen_id,
                               LastName = c.last_name,
                               FirstName = c.first_name,
-                              Email = c.user.email,
+                              Email = c.users.email,
                               Gender = c.gender,
                               Phone = c.phone,
                               BirthPlace = c.birth_place,
                               Major = c.major.name,
                               IsInDorm = c.is_in_dormitory,
                               Household = c.household,
-                              Username = c.user.username,
-                              Password = c.user.pass,
-                              Right = c.user.access_right,
-                              Avatar = c.user.avatar
+                              Username = c.users.username,
+                              Password = c.users.pass,
+                              Right = c.users.access_right,
+                              Avatar = c.users.avatar
                           };
             return student.FirstOrDefault();
         }
 
         public void updateStudent(student stu)
         {
-            student student = entities.students.Find(stu.id);
+            student student = entities.student.Find(stu.id);
             student.gender = stu.gender;
             student.phone = stu.phone;
             student.citizen_id = stu.citizen_id;

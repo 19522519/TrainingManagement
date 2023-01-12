@@ -31,7 +31,7 @@ namespace TrainingManagement
                 MessageBox.Show("Vui lòng nhập tên người dùng tại ô nhập username!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
-                user user = userController.getUserByUsername(txtUsername.Text);
+                users user = userController.getUserByUsername(txtUsername.Text);
                 if (user != null)
                 {
                     // MessageBox.Show(user.email);
@@ -79,7 +79,7 @@ namespace TrainingManagement
         {
             if (randomcode == (txtCode.Text).ToString())
             {
-                user user = userController.getUserByUsername(txtUsername.Text);
+                users user = userController.getUserByUsername(txtUsername.Text);
                 ChangePasswordForm changePasswordForm = new ChangePasswordForm(user.id);
                 this.Close();
                 changePasswordForm.ShowDialog();

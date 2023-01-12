@@ -79,9 +79,11 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Controller\ClassModuleController.cs" />
+    <Compile Include="Controller\CurriculumController.cs" />
     <Compile Include="Controller\DepartmentTypeController.cs" />
     <Compile Include="Controller\LecturerController.cs" />
     <Compile Include="Controller\MajorController.cs" />
+    <Compile Include="Controller\ModuleController.cs" />
     <Compile Include="Controller\StudentController.cs" />
     <Compile Include="Controller\StudyingController.cs" />
     <Compile Include="Controller\TeachingController.cs" />
@@ -89,14 +91,38 @@
     <Compile Include="curriculum.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="CurriculumManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CurriculumManagement.Designer.cs">
+      <DependentUpon>CurriculumManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartmentHomePage.Designer.cs">
+      <DependentUpon>DepartmentHomePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="department.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="DepartmentManagerHomePage.cs">
+    <Compile Include="sp_helpdiagramdefinition1_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams1_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TrainingManagerHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DepartmentManagerHomePage.Designer.cs">
-      <DependentUpon>DepartmentManagerHomePage.cs</DependentUpon>
+    <Compile Include="TrainingManagerHomePage.Designer.cs">
+      <DependentUpon>TrainingManagerHomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="DepartmentTypeManagement.cs">
       <SubType>Form</SubType>
@@ -109,12 +135,6 @@
     </Compile>
     <Compile Include="ForgotPassword.Designer.cs">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Home.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassModulesManagement.cs">
       <SubType>Form</SubType>
@@ -173,6 +193,15 @@
     <Compile Include="module.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="ModuleManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleManagement.Designer.cs">
+      <DependentUpon>ModuleManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="module_list.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="student.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -214,10 +243,7 @@
     <Compile Include="teaching.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="teaching_assignment.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="user.cs">
+    <Compile Include="users.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="ViewScore.cs">
@@ -228,6 +254,12 @@
     </Compile>
     <EmbeddedResource Include="ChangePasswordForm.resx">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CurriculumManagement.resx">
+      <DependentUpon>CurriculumManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepartmentHomePage.resx">
+      <DependentUpon>DepartmentHomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DepartmentTypeManagement.resx">
       <DependentUpon>DepartmentTypeManagement.cs</DependentUpon>
@@ -250,14 +282,14 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DepartmentManagerHomePage.resx">
-      <DependentUpon>DepartmentManagerHomePage.cs</DependentUpon>
+    <EmbeddedResource Include="TrainingManagerHomePage.resx">
+      <DependentUpon>TrainingManagerHomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClassModulesManagement.resx">
       <DependentUpon>ClassModulesManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModuleManagement.resx">
+      <DependentUpon>ModuleManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

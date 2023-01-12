@@ -1,5 +1,166 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="TrainingManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="TrainingManagementEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(TrainingManagementModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(TrainingManagementModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="sp_alterdiagram1">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram1">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram1">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition1" ReturnType="Collection(TrainingManagementModel.sp_helpdiagramdefinition1_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams1" ReturnType="Collection(TrainingManagementModel.sp_helpdiagrams1_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram1">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams1" />
+    <EntitySet Name="class_module" EntityType="TrainingManagementModel.class_module" />
+    <EntitySet Name="classroom" EntityType="TrainingManagementModel.classroom" />
+    <EntitySet Name="curriculum" EntityType="TrainingManagementModel.curriculum" />
+    <EntitySet Name="department" EntityType="TrainingManagementModel.department" />
+    <EntitySet Name="lecturer" EntityType="TrainingManagementModel.lecturer" />
+    <EntitySet Name="lesson" EntityType="TrainingManagementModel.lesson" />
+    <EntitySet Name="major" EntityType="TrainingManagementModel.major" />
+    <EntitySet Name="module" EntityType="TrainingManagementModel.module" />
+    <EntitySet Name="module_list" EntityType="TrainingManagementModel.module_list" />
+    <EntitySet Name="student" EntityType="TrainingManagementModel.student" />
+    <EntitySet Name="studying" EntityType="TrainingManagementModel.studying" />
+    <EntitySet Name="teaching" EntityType="TrainingManagementModel.teaching" />
+    <EntitySet Name="users" EntityType="TrainingManagementModel.users" />
+    <AssociationSet Name="FK__class_mod__modul__5070F446" Association="TrainingManagementModel.FK__class_mod__modul__5070F446">
+      <End Role="module" EntitySet="module" />
+      <End Role="class_module" EntitySet="class_module" />
+    </AssociationSet>
+    <AssociationSet Name="FK__lesson__class_mo__5812160E" Association="TrainingManagementModel.FK__lesson__class_mo__5812160E">
+      <End Role="class_module" EntitySet="class_module" />
+      <End Role="lesson" EntitySet="lesson" />
+    </AssociationSet>
+    <AssociationSet Name="FK__studying__class___5535A963" Association="TrainingManagementModel.FK__studying__class___5535A963">
+      <End Role="class_module" EntitySet="class_module" />
+      <End Role="studying" EntitySet="studying" />
+    </AssociationSet>
+    <AssociationSet Name="FK__teaching__class___52593CB8" Association="TrainingManagementModel.FK__teaching__class___52593CB8">
+      <End Role="class_module" EntitySet="class_module" />
+      <End Role="teaching" EntitySet="teaching" />
+    </AssociationSet>
+    <AssociationSet Name="FK__lesson__classroo__5629CD9C" Association="TrainingManagementModel.FK__lesson__classroo__5629CD9C">
+      <End Role="classroom" EntitySet="classroom" />
+      <End Role="lesson" EntitySet="lesson" />
+    </AssociationSet>
+    <AssociationSet Name="FK__curriculu__major__4D94879B" Association="TrainingManagementModel.FK__curriculu__major__4D94879B">
+      <End Role="major" EntitySet="major" />
+      <End Role="curriculum" EntitySet="curriculum" />
+    </AssociationSet>
+    <AssociationSet Name="FK__module__curricul__4E88ABD4" Association="TrainingManagementModel.FK__module__curricul__4E88ABD4">
+      <End Role="curriculum" EntitySet="curriculum" />
+      <End Role="module" EntitySet="module" />
+    </AssociationSet>
+    <AssociationSet Name="FK__major__departmen__4F7CD00D" Association="TrainingManagementModel.FK__major__departmen__4F7CD00D">
+      <End Role="department" EntitySet="department" />
+      <End Role="major" EntitySet="major" />
+    </AssociationSet>
+    <AssociationSet Name="FK__lecturer__major___5165187F" Association="TrainingManagementModel.FK__lecturer__major___5165187F">
+      <End Role="major" EntitySet="major" />
+      <End Role="lecturer" EntitySet="lecturer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__lecturer__users___5AEE82B9" Association="TrainingManagementModel.FK__lecturer__users___5AEE82B9">
+      <End Role="users" EntitySet="users" />
+      <End Role="lecturer" EntitySet="lecturer" />
+    </AssociationSet>
+    <AssociationSet Name="FK__teaching__lectur__534D60F1" Association="TrainingManagementModel.FK__teaching__lectur__534D60F1">
+      <End Role="lecturer" EntitySet="lecturer" />
+      <End Role="teaching" EntitySet="teaching" />
+    </AssociationSet>
+    <AssociationSet Name="FK__lesson__teaching__571DF1D5" Association="TrainingManagementModel.FK__lesson__teaching__571DF1D5">
+      <End Role="teaching" EntitySet="teaching" />
+      <End Role="lesson" EntitySet="lesson" />
+    </AssociationSet>
+    <AssociationSet Name="FK__module_li__major__5BE2A6F2" Association="TrainingManagementModel.FK__module_li__major__5BE2A6F2">
+      <End Role="major" EntitySet="major" />
+      <End Role="module_list" EntitySet="module_list" />
+    </AssociationSet>
+    <AssociationSet Name="FK__student__major_i__59063A47" Association="TrainingManagementModel.FK__student__major_i__59063A47">
+      <End Role="major" EntitySet="major" />
+      <End Role="student" EntitySet="student" />
+    </AssociationSet>
+    <AssociationSet Name="FK__student__users_i__59FA5E80" Association="TrainingManagementModel.FK__student__users_i__59FA5E80">
+      <End Role="users" EntitySet="users" />
+      <End Role="student" EntitySet="student" />
+    </AssociationSet>
+    <AssociationSet Name="FK__studying__studen__5441852A" Association="TrainingManagementModel.FK__studying__studen__5441852A">
+      <End Role="student" EntitySet="student" />
+      <End Role="studying" EntitySet="studying" />
+    </AssociationSet>
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition1_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams1_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
   <EntityType Name="class_module">
     <Key>
       <PropertyRef Name="id" />
@@ -11,10 +172,10 @@
     <Property Name="semester" Type="Int32" />
     <Property Name="school_year" Type="Int32" />
     <Property Name="module_id" Type="Int32" />
-    <NavigationProperty Name="module" Relationship="Self.FK__class_mod__modul__412EB0B6" FromRole="class_module" ToRole="module" />
-    <NavigationProperty Name="lessons" Relationship="Self.FK__lesson__class_mo__59063A47" FromRole="class_module" ToRole="lesson" />
-    <NavigationProperty Name="studyings" Relationship="Self.FK__studying__class___52593CB8" FromRole="class_module" ToRole="studying" />
-    <NavigationProperty Name="teachings" Relationship="Self.FK__teaching__class___4AB81AF0" FromRole="class_module" ToRole="teaching" />
+    <NavigationProperty Name="module" Relationship="TrainingManagementModel.FK__class_mod__modul__5070F446" FromRole="class_module" ToRole="module" />
+    <NavigationProperty Name="lesson" Relationship="TrainingManagementModel.FK__lesson__class_mo__5812160E" FromRole="class_module" ToRole="lesson" />
+    <NavigationProperty Name="studying" Relationship="TrainingManagementModel.FK__studying__class___5535A963" FromRole="class_module" ToRole="studying" />
+    <NavigationProperty Name="teaching" Relationship="TrainingManagementModel.FK__teaching__class___52593CB8" FromRole="class_module" ToRole="teaching" />
   </EntityType>
   <EntityType Name="classroom">
     <Key>
@@ -23,7 +184,7 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="function_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="max_size" Type="Int32" />
-    <NavigationProperty Name="lessons" Relationship="Self.FK__lesson__classroo__571DF1D5" FromRole="classroom" ToRole="lesson" />
+    <NavigationProperty Name="lesson" Relationship="TrainingManagementModel.FK__lesson__classroo__5629CD9C" FromRole="classroom" ToRole="lesson" />
   </EntityType>
   <EntityType Name="curriculum">
     <Key>
@@ -32,10 +193,11 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="training_system" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="major" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="training_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="majors" Relationship="Self.FK__major__curriculu__3E52440B" FromRole="curriculum" ToRole="major" />
-    <NavigationProperty Name="modules" Relationship="Self.FK__module__curricul__38996AB5" FromRole="curriculum" ToRole="module" />
+    <Property Name="school_year" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="major_id" Type="Int32" />
+    <NavigationProperty Name="major" Relationship="TrainingManagementModel.FK__curriculu__major__4D94879B" FromRole="curriculum" ToRole="major" />
+    <NavigationProperty Name="module" Relationship="TrainingManagementModel.FK__module__curricul__4E88ABD4" FromRole="curriculum" ToRole="module" />
   </EntityType>
   <EntityType Name="department">
     <Key>
@@ -45,7 +207,7 @@
     <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="majors" Relationship="Self.FK__major__departmen__3D5E1FD2" FromRole="department" ToRole="major" />
+    <NavigationProperty Name="major" Relationship="TrainingManagementModel.FK__major__departmen__4F7CD00D" FromRole="department" ToRole="major" />
   </EntityType>
   <EntityType Name="lecturer">
     <Key>
@@ -57,10 +219,9 @@
     <Property Name="level" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="major_id" Type="Int32" />
     <Property Name="users_id" Type="Int32" />
-    <NavigationProperty Name="major" Relationship="Self.FK__lecturer__major___440B1D61" FromRole="lecturer" ToRole="major" />
-    <NavigationProperty Name="user" Relationship="Self.FK__lecturer__users___5CD6CB2B" FromRole="lecturer" ToRole="users" />
-    <NavigationProperty Name="teaching_assignment" Relationship="Self.FK__teaching___lectu__47DBAE45" FromRole="lecturer" ToRole="teaching_assignment" />
-    <NavigationProperty Name="teachings" Relationship="Self.FK__teaching__lectur__4BAC3F29" FromRole="lecturer" ToRole="teaching" />
+    <NavigationProperty Name="major" Relationship="TrainingManagementModel.FK__lecturer__major___5165187F" FromRole="lecturer" ToRole="major" />
+    <NavigationProperty Name="users" Relationship="TrainingManagementModel.FK__lecturer__users___5AEE82B9" FromRole="lecturer" ToRole="users" />
+    <NavigationProperty Name="teaching" Relationship="TrainingManagementModel.FK__teaching__lectur__534D60F1" FromRole="lecturer" ToRole="teaching" />
   </EntityType>
   <EntityType Name="lesson">
     <Key>
@@ -73,22 +234,23 @@
     <Property Name="classroom_id" Type="Int32" />
     <Property Name="teaching_id" Type="Int32" />
     <Property Name="class_module_id" Type="Int32" />
-    <NavigationProperty Name="class_module" Relationship="Self.FK__lesson__class_mo__59063A47" FromRole="lesson" ToRole="class_module" />
-    <NavigationProperty Name="classroom" Relationship="Self.FK__lesson__classroo__571DF1D5" FromRole="lesson" ToRole="classroom" />
-    <NavigationProperty Name="teaching" Relationship="Self.FK__lesson__teaching__5812160E" FromRole="lesson" ToRole="teaching" />
+    <NavigationProperty Name="class_module" Relationship="TrainingManagementModel.FK__lesson__class_mo__5812160E" FromRole="lesson" ToRole="class_module" />
+    <NavigationProperty Name="classroom" Relationship="TrainingManagementModel.FK__lesson__classroo__5629CD9C" FromRole="lesson" ToRole="classroom" />
+    <NavigationProperty Name="teaching" Relationship="TrainingManagementModel.FK__lesson__teaching__571DF1D5" FromRole="lesson" ToRole="teaching" />
   </EntityType>
   <EntityType Name="major">
     <Key>
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="department_id" Type="Int32" />
-    <Property Name="curriculum_id" Type="Int32" />
-    <NavigationProperty Name="curriculum" Relationship="Self.FK__major__curriculu__3E52440B" FromRole="major" ToRole="curriculum" />
-    <NavigationProperty Name="department" Relationship="Self.FK__major__departmen__3D5E1FD2" FromRole="major" ToRole="department" />
-    <NavigationProperty Name="lecturers" Relationship="Self.FK__lecturer__major___440B1D61" FromRole="major" ToRole="lecturer" />
-    <NavigationProperty Name="students" Relationship="Self.FK__student__major_i__4E88ABD4" FromRole="major" ToRole="student" />
+    <NavigationProperty Name="curriculum" Relationship="TrainingManagementModel.FK__curriculu__major__4D94879B" FromRole="major" ToRole="curriculum" />
+    <NavigationProperty Name="department" Relationship="TrainingManagementModel.FK__major__departmen__4F7CD00D" FromRole="major" ToRole="department" />
+    <NavigationProperty Name="lecturer" Relationship="TrainingManagementModel.FK__lecturer__major___5165187F" FromRole="major" ToRole="lecturer" />
+    <NavigationProperty Name="module_list" Relationship="TrainingManagementModel.FK__module_li__major__5BE2A6F2" FromRole="major" ToRole="module_list" />
+    <NavigationProperty Name="student" Relationship="TrainingManagementModel.FK__student__major_i__59063A47" FromRole="major" ToRole="student" />
   </EntityType>
   <EntityType Name="module">
     <Key>
@@ -97,14 +259,24 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ID_Module" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="theory_credits" Type="Int32" />
-    <Property Name="practice_credits" Type="Int32" />
-    <Property Name="self_study_credits" Type="Int32" />
-    <Property Name="visiting_credits" Type="Int32" />
+    <Property Name="theory_lessons" Type="Int32" />
+    <Property Name="practice_lessons" Type="Int32" />
+    <Property Name="self_study_lessons" Type="Int32" />
+    <Property Name="visiting_lessons" Type="Int32" />
     <Property Name="curriculum_id" Type="Int32" />
-    <NavigationProperty Name="class_module" Relationship="Self.FK__class_mod__modul__412EB0B6" FromRole="module" ToRole="class_module" />
-    <NavigationProperty Name="curriculum" Relationship="Self.FK__module__curricul__38996AB5" FromRole="module" ToRole="curriculum" />
-    <NavigationProperty Name="teaching_assignment" Relationship="Self.FK__teaching___modul__46E78A0C" FromRole="module" ToRole="teaching_assignment" />
+    <NavigationProperty Name="class_module" Relationship="TrainingManagementModel.FK__class_mod__modul__5070F446" FromRole="module" ToRole="class_module" />
+    <NavigationProperty Name="curriculum" Relationship="TrainingManagementModel.FK__module__curricul__4E88ABD4" FromRole="module" ToRole="curriculum" />
+  </EntityType>
+  <EntityType Name="module_list">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="credits" Type="Int32" />
+    <Property Name="major_id" Type="Int32" />
+    <NavigationProperty Name="major" Relationship="TrainingManagementModel.FK__module_li__major__5BE2A6F2" FromRole="module_list" ToRole="major" />
   </EntityType>
   <EntityType Name="student">
     <Key>
@@ -123,9 +295,9 @@
     <Property Name="is_deleted" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="major_id" Type="Int32" />
     <Property Name="users_id" Type="Int32" />
-    <NavigationProperty Name="major" Relationship="Self.FK__student__major_i__4E88ABD4" FromRole="student" ToRole="major" />
-    <NavigationProperty Name="user" Relationship="Self.FK__student__users_i__5BE2A6F2" FromRole="student" ToRole="users" />
-    <NavigationProperty Name="studyings" Relationship="Self.FK__studying__studen__5165187F" FromRole="student" ToRole="studying" />
+    <NavigationProperty Name="major" Relationship="TrainingManagementModel.FK__student__major_i__59063A47" FromRole="student" ToRole="major" />
+    <NavigationProperty Name="users" Relationship="TrainingManagementModel.FK__student__users_i__59FA5E80" FromRole="student" ToRole="users" />
+    <NavigationProperty Name="studying" Relationship="TrainingManagementModel.FK__studying__studen__5441852A" FromRole="student" ToRole="studying" />
   </EntityType>
   <EntityType Name="studying">
     <Key>
@@ -135,8 +307,8 @@
     <Property Name="score" Type="Double" />
     <Property Name="student_id" Type="Int32" />
     <Property Name="class_module_id" Type="Int32" />
-    <NavigationProperty Name="class_module" Relationship="Self.FK__studying__class___52593CB8" FromRole="studying" ToRole="class_module" />
-    <NavigationProperty Name="student" Relationship="Self.FK__studying__studen__5165187F" FromRole="studying" ToRole="student" />
+    <NavigationProperty Name="class_module" Relationship="TrainingManagementModel.FK__studying__class___5535A963" FromRole="studying" ToRole="class_module" />
+    <NavigationProperty Name="student" Relationship="TrainingManagementModel.FK__studying__studen__5441852A" FromRole="studying" ToRole="student" />
   </EntityType>
   <EntityType Name="teaching">
     <Key>
@@ -145,21 +317,11 @@
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="class_module_id" Type="Int32" />
     <Property Name="lecturer_id" Type="Int32" />
-    <NavigationProperty Name="class_module" Relationship="Self.FK__teaching__class___4AB81AF0" FromRole="teaching" ToRole="class_module" />
-    <NavigationProperty Name="lecturer" Relationship="Self.FK__teaching__lectur__4BAC3F29" FromRole="teaching" ToRole="lecturer" />
-    <NavigationProperty Name="lessons" Relationship="Self.FK__lesson__teaching__5812160E" FromRole="teaching" ToRole="lesson" />
+    <NavigationProperty Name="class_module" Relationship="TrainingManagementModel.FK__teaching__class___52593CB8" FromRole="teaching" ToRole="class_module" />
+    <NavigationProperty Name="lecturer" Relationship="TrainingManagementModel.FK__teaching__lectur__534D60F1" FromRole="teaching" ToRole="lecturer" />
+    <NavigationProperty Name="lesson" Relationship="TrainingManagementModel.FK__lesson__teaching__571DF1D5" FromRole="teaching" ToRole="lesson" />
   </EntityType>
-  <EntityType Name="teaching_assignment">
-    <Key>
-      <PropertyRef Name="id" />
-    </Key>
-    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="module_id" Type="Int32" />
-    <Property Name="lecturer_id" Type="Int32" />
-    <NavigationProperty Name="lecturer" Relationship="Self.FK__teaching___lectu__47DBAE45" FromRole="teaching_assignment" ToRole="lecturer" />
-    <NavigationProperty Name="module" Relationship="Self.FK__teaching___modul__46E78A0C" FromRole="teaching_assignment" ToRole="module" />
-  </EntityType>
-  <EntityType Name="user">
+  <EntityType Name="users">
     <Key>
       <PropertyRef Name="id" />
     </Key>
@@ -169,12 +331,12 @@
     <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="access_right" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="avatar" Type="Int32" />
-    <NavigationProperty Name="lecturers" Relationship="Self.FK__lecturer__users___5CD6CB2B" FromRole="users" ToRole="lecturer" />
-    <NavigationProperty Name="students" Relationship="Self.FK__student__users_i__5BE2A6F2" FromRole="users" ToRole="student" />
+    <NavigationProperty Name="lecturer" Relationship="TrainingManagementModel.FK__lecturer__users___5AEE82B9" FromRole="users" ToRole="lecturer" />
+    <NavigationProperty Name="student" Relationship="TrainingManagementModel.FK__student__users_i__59FA5E80" FromRole="users" ToRole="student" />
   </EntityType>
-  <Association Name="FK__class_mod__modul__412EB0B6">
-    <End Role="module" Type="Self.module" Multiplicity="0..1" />
-    <End Role="class_module" Type="Self.class_module" Multiplicity="*" />
+  <Association Name="FK__class_mod__modul__5070F446">
+    <End Type="TrainingManagementModel.module" Role="module" Multiplicity="0..1" />
+    <End Type="TrainingManagementModel.class_module" Role="class_module" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="module">
         <PropertyRef Name="id" />
@@ -184,9 +346,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__lesson__class_mo__59063A47">
-    <End Role="class_module" Type="Self.class_module" Multiplicity="0..1" />
-    <End Role="lesson" Type="Self.lesson" Multiplicity="*" />
+  <Association Name="FK__lesson__class_mo__5812160E">
+    <End Type="TrainingManagementModel.class_module" Role="class_module" Multiplicity="0..1" />
+    <End Type="TrainingManagementModel.lesson" Role="lesson" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="class_module">
         <PropertyRef Name="id" />
@@ -196,9 +358,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__studying__class___52593CB8">
-    <End Role="class_module" Type="Self.class_module" Multiplicity="0..1" />
-    <End Role="studying" Type="Self.studying" Multiplicity="*" />
+  <Association Name="FK__studying__class___5535A963">
+    <End Type="TrainingManagementModel.class_module" Role="class_module" Multiplicity="0..1" />
+    <End Type="TrainingManagementModel.studying" Role="studying" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="class_module">
         <PropertyRef Name="id" />
@@ -208,9 +370,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__teaching__class___4AB81AF0">
-    <End Role="class_module" Type="Self.class_module" Multiplicity="0..1" />
-    <End Role="teaching" Type="Self.teaching" Multiplicity="*" />
+  <Association Name="FK__teaching__class___52593CB8">
+    <End Type="TrainingManagementModel.class_module" Role="class_module" Multiplicity="0..1" />
+    <End Type="TrainingManagementModel.teaching" Role="teaching" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="class_module">
         <PropertyRef Name="id" />
@@ -220,9 +382,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__lesson__classroo__571DF1D5">
-    <End Role="classroom" Type="Self.classroom" Multiplicity="0..1" />
-    <End Role="lesson" Type="Self.lesson" Multiplicity="*" />
+  <Association Name="FK__lesson__classroo__5629CD9C">
+    <End Type="TrainingManagementModel.classroom" Role="classroom" Multiplicity="0..1" />
+    <End Type="TrainingManagementModel.lesson" Role="lesson" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="classroom">
         <PropertyRef Name="id" />
@@ -232,21 +394,21 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__major__curriculu__3E52440B">
-    <End Role="curriculum" Type="Self.curriculum" Multiplicity="0..1" />
-    <End Role="major" Type="Self.major" Multiplicity="*" />
+  <Association Name="FK__curriculu__major__4D94879B">
+    <End Type="TrainingManagementModel.major" Role="major" Multiplicity="0..1" />
+    <End Type="TrainingManagementModel.curriculum" Role="curriculum" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="curriculum">
+      <Principal Role="major">
         <PropertyRef Name="id" />
       </Principal>
-      <Dependent Role="major">
-        <PropertyRef Name="curriculum_id" />
+      <Dependent Role="curriculum">
+        <PropertyRef Name="major_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__module__curricul__38996AB5">
-    <End Role="curriculum" Type="Self.curriculum" Multiplicity="0..1" />
-    <End Role="module" Type="Self.module" Multiplicity="*" />
+  <Association Name="FK__module__curricul__4E88ABD4">
+    <End Type="TrainingManagementModel.curriculum" Role="curriculum" Multiplicity="0..1" />
+    <End Type="TrainingManagementModel.module" Role="module" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="curriculum">
         <PropertyRef Name="id" />
@@ -256,9 +418,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__major__departmen__3D5E1FD2">
-    <End Role="department" Type="Self.department" Multiplicity="0..1" />
-    <End Role="major" Type="Self.major" Multiplicity="*" />
+  <Association Name="FK__major__departmen__4F7CD00D">
+    <End Type="TrainingManagementModel.department" Role="department" Multiplicity="0..1" />
+    <End Type="TrainingManagementModel.major" Role="major" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="department">
         <PropertyRef Name="id" />
@@ -268,9 +430,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__lecturer__major___440B1D61">
-    <End Role="major" Type="Self.major" Multiplicity="0..1" />
-    <End Role="lecturer" Type="Self.lecturer" Multiplicity="*" />
+  <Association Name="FK__lecturer__major___5165187F">
+    <End Type="TrainingManagementModel.major" Role="major" Multiplicity="0..1" />
+    <End Type="TrainingManagementModel.lecturer" Role="lecturer" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="major">
         <PropertyRef Name="id" />
@@ -280,9 +442,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__lecturer__users___5CD6CB2B">
-    <End Role="users" Type="Self.user" Multiplicity="0..1" />
-    <End Role="lecturer" Type="Self.lecturer" Multiplicity="*" />
+  <Association Name="FK__lecturer__users___5AEE82B9">
+    <End Type="TrainingManagementModel.users" Role="users" Multiplicity="0..1" />
+    <End Type="TrainingManagementModel.lecturer" Role="lecturer" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="users">
         <PropertyRef Name="id" />
@@ -292,21 +454,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__teaching___lectu__47DBAE45">
-    <End Role="lecturer" Type="Self.lecturer" Multiplicity="0..1" />
-    <End Role="teaching_assignment" Type="Self.teaching_assignment" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="lecturer">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="teaching_assignment">
-        <PropertyRef Name="lecturer_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__teaching__lectur__4BAC3F29">
-    <End Role="lecturer" Type="Self.lecturer" Multiplicity="0..1" />
-    <End Role="teaching" Type="Self.teaching" Multiplicity="*" />
+  <Association Name="FK__teaching__lectur__534D60F1">
+    <End Type="TrainingManagementModel.lecturer" Role="lecturer" Multiplicity="0..1" />
+    <End Type="TrainingManagementModel.teaching" Role="teaching" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="lecturer">
         <PropertyRef Name="id" />
@@ -316,9 +466,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__lesson__teaching__5812160E">
-    <End Role="teaching" Type="Self.teaching" Multiplicity="0..1" />
-    <End Role="lesson" Type="Self.lesson" Multiplicity="*" />
+  <Association Name="FK__lesson__teaching__571DF1D5">
+    <End Type="TrainingManagementModel.teaching" Role="teaching" Multiplicity="0..1" />
+    <End Type="TrainingManagementModel.lesson" Role="lesson" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="teaching">
         <PropertyRef Name="id" />
@@ -328,9 +478,21 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__student__major_i__4E88ABD4">
-    <End Role="major" Type="Self.major" Multiplicity="0..1" />
-    <End Role="student" Type="Self.student" Multiplicity="*" />
+  <Association Name="FK__module_li__major__5BE2A6F2">
+    <End Type="TrainingManagementModel.major" Role="major" Multiplicity="0..1" />
+    <End Type="TrainingManagementModel.module_list" Role="module_list" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="major">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="module_list">
+        <PropertyRef Name="major_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__student__major_i__59063A47">
+    <End Type="TrainingManagementModel.major" Role="major" Multiplicity="0..1" />
+    <End Type="TrainingManagementModel.student" Role="student" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="major">
         <PropertyRef Name="id" />
@@ -340,21 +502,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__teaching___modul__46E78A0C">
-    <End Role="module" Type="Self.module" Multiplicity="0..1" />
-    <End Role="teaching_assignment" Type="Self.teaching_assignment" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="module">
-        <PropertyRef Name="id" />
-      </Principal>
-      <Dependent Role="teaching_assignment">
-        <PropertyRef Name="module_id" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__student__users_i__5BE2A6F2">
-    <End Role="users" Type="Self.user" Multiplicity="0..1" />
-    <End Role="student" Type="Self.student" Multiplicity="*" />
+  <Association Name="FK__student__users_i__59FA5E80">
+    <End Type="TrainingManagementModel.users" Role="users" Multiplicity="0..1" />
+    <End Type="TrainingManagementModel.student" Role="student" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="users">
         <PropertyRef Name="id" />
@@ -364,9 +514,9 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__studying__studen__5165187F">
-    <End Role="student" Type="Self.student" Multiplicity="0..1" />
-    <End Role="studying" Type="Self.studying" Multiplicity="*" />
+  <Association Name="FK__studying__studen__5441852A">
+    <End Type="TrainingManagementModel.student" Role="student" Multiplicity="0..1" />
+    <End Type="TrainingManagementModel.studying" Role="studying" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="student">
         <PropertyRef Name="id" />
@@ -376,87 +526,4 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="TrainingManagementEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="class_module" EntityType="Self.class_module" />
-    <EntitySet Name="classrooms" EntityType="Self.classroom" />
-    <EntitySet Name="curricula" EntityType="Self.curriculum" />
-    <EntitySet Name="departments" EntityType="Self.department" />
-    <EntitySet Name="lecturers" EntityType="Self.lecturer" />
-    <EntitySet Name="lessons" EntityType="Self.lesson" />
-    <EntitySet Name="majors" EntityType="Self.major" />
-    <EntitySet Name="modules" EntityType="Self.module" />
-    <EntitySet Name="students" EntityType="Self.student" />
-    <EntitySet Name="studyings" EntityType="Self.studying" />
-    <EntitySet Name="teachings" EntityType="Self.teaching" />
-    <EntitySet Name="teaching_assignment" EntityType="Self.teaching_assignment" />
-    <EntitySet Name="users" EntityType="Self.user" />
-    <AssociationSet Name="FK__class_mod__modul__412EB0B6" Association="Self.FK__class_mod__modul__412EB0B6">
-      <End Role="module" EntitySet="modules" />
-      <End Role="class_module" EntitySet="class_module" />
-    </AssociationSet>
-    <AssociationSet Name="FK__lesson__class_mo__59063A47" Association="Self.FK__lesson__class_mo__59063A47">
-      <End Role="class_module" EntitySet="class_module" />
-      <End Role="lesson" EntitySet="lessons" />
-    </AssociationSet>
-    <AssociationSet Name="FK__studying__class___52593CB8" Association="Self.FK__studying__class___52593CB8">
-      <End Role="class_module" EntitySet="class_module" />
-      <End Role="studying" EntitySet="studyings" />
-    </AssociationSet>
-    <AssociationSet Name="FK__teaching__class___4AB81AF0" Association="Self.FK__teaching__class___4AB81AF0">
-      <End Role="class_module" EntitySet="class_module" />
-      <End Role="teaching" EntitySet="teachings" />
-    </AssociationSet>
-    <AssociationSet Name="FK__lesson__classroo__571DF1D5" Association="Self.FK__lesson__classroo__571DF1D5">
-      <End Role="classroom" EntitySet="classrooms" />
-      <End Role="lesson" EntitySet="lessons" />
-    </AssociationSet>
-    <AssociationSet Name="FK__major__curriculu__3E52440B" Association="Self.FK__major__curriculu__3E52440B">
-      <End Role="curriculum" EntitySet="curricula" />
-      <End Role="major" EntitySet="majors" />
-    </AssociationSet>
-    <AssociationSet Name="FK__module__curricul__38996AB5" Association="Self.FK__module__curricul__38996AB5">
-      <End Role="curriculum" EntitySet="curricula" />
-      <End Role="module" EntitySet="modules" />
-    </AssociationSet>
-    <AssociationSet Name="FK__major__departmen__3D5E1FD2" Association="Self.FK__major__departmen__3D5E1FD2">
-      <End Role="department" EntitySet="departments" />
-      <End Role="major" EntitySet="majors" />
-    </AssociationSet>
-    <AssociationSet Name="FK__lecturer__major___440B1D61" Association="Self.FK__lecturer__major___440B1D61">
-      <End Role="major" EntitySet="majors" />
-      <End Role="lecturer" EntitySet="lecturers" />
-    </AssociationSet>
-    <AssociationSet Name="FK__lecturer__users___5CD6CB2B" Association="Self.FK__lecturer__users___5CD6CB2B">
-      <End Role="users" EntitySet="users" />
-      <End Role="lecturer" EntitySet="lecturers" />
-    </AssociationSet>
-    <AssociationSet Name="FK__teaching___lectu__47DBAE45" Association="Self.FK__teaching___lectu__47DBAE45">
-      <End Role="lecturer" EntitySet="lecturers" />
-      <End Role="teaching_assignment" EntitySet="teaching_assignment" />
-    </AssociationSet>
-    <AssociationSet Name="FK__teaching__lectur__4BAC3F29" Association="Self.FK__teaching__lectur__4BAC3F29">
-      <End Role="lecturer" EntitySet="lecturers" />
-      <End Role="teaching" EntitySet="teachings" />
-    </AssociationSet>
-    <AssociationSet Name="FK__lesson__teaching__5812160E" Association="Self.FK__lesson__teaching__5812160E">
-      <End Role="teaching" EntitySet="teachings" />
-      <End Role="lesson" EntitySet="lessons" />
-    </AssociationSet>
-    <AssociationSet Name="FK__student__major_i__4E88ABD4" Association="Self.FK__student__major_i__4E88ABD4">
-      <End Role="major" EntitySet="majors" />
-      <End Role="student" EntitySet="students" />
-    </AssociationSet>
-    <AssociationSet Name="FK__teaching___modul__46E78A0C" Association="Self.FK__teaching___modul__46E78A0C">
-      <End Role="module" EntitySet="modules" />
-      <End Role="teaching_assignment" EntitySet="teaching_assignment" />
-    </AssociationSet>
-    <AssociationSet Name="FK__student__users_i__5BE2A6F2" Association="Self.FK__student__users_i__5BE2A6F2">
-      <End Role="users" EntitySet="users" />
-      <End Role="student" EntitySet="students" />
-    </AssociationSet>
-    <AssociationSet Name="FK__studying__studen__5165187F" Association="Self.FK__studying__studen__5165187F">
-      <End Role="student" EntitySet="students" />
-      <End Role="studying" EntitySet="studyings" />
-    </AssociationSet>
-  </EntityContainer>
 </Schema>

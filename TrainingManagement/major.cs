@@ -17,20 +17,25 @@ namespace TrainingManagement
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public major()
         {
-            this.lecturers = new HashSet<lecturer>();
-            this.students = new HashSet<student>();
+            this.curriculum = new HashSet<curriculum>();
+            this.lecturer = new HashSet<lecturer>();
+            this.module_list = new HashSet<module_list>();
+            this.student = new HashSet<student>();
         }
     
         public int id { get; set; }
+        public string code { get; set; }
         public string name { get; set; }
         public Nullable<int> department_id { get; set; }
-        public Nullable<int> curriculum_id { get; set; }
     
-        public virtual curriculum curriculum { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<curriculum> curriculum { get; set; }
         public virtual department department { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<lecturer> lecturers { get; set; }
+        public virtual ICollection<lecturer> lecturer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<student> students { get; set; }
+        public virtual ICollection<module_list> module_list { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<student> student { get; set; }
     }
 }

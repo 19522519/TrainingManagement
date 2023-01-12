@@ -105,7 +105,7 @@ namespace TrainingManagement
                 return;
             }
 
-            user user = new user()
+            users user = new users()
             {
                 avatar = avatarIndex,
                 username = txtUsername.Text,

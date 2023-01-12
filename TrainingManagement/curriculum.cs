@@ -17,19 +17,18 @@ namespace TrainingManagement
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public curriculum()
         {
-            this.majors = new HashSet<major>();
-            this.modules = new HashSet<module>();
+            this.module = new HashSet<module>();
         }
     
         public int id { get; set; }
         public string name { get; set; }
         public string training_system { get; set; }
-        public string major { get; set; }
         public string training_type { get; set; }
+        public string school_year { get; set; }
+        public Nullable<int> major_id { get; set; }
     
+        public virtual major major { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<major> majors { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<module> modules { get; set; }
+        public virtual ICollection<module> module { get; set; }
     }
 }

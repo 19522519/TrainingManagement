@@ -82,7 +82,7 @@ namespace TrainingManagement
                 String role = userController.getUserById(id).access_right;
                 switch(role)
                 {
-                    case "Sinh viên":
+                    case "Student":
                         // Lấy id student từ user id                     
                         var student = studentController.getStudentByUserId(id);
                         int stuId = student.Id;
@@ -90,7 +90,7 @@ namespace TrainingManagement
 
                         studentHomePage.ShowDialog();
                         break;
-                    case "Giảng viên":
+                    case "Lecturer":
                         // Lấy id lecturer từ user id
                         var lecturer = lecturerController.getLecturerByUserId(id);
                         int lecId = lecturer.ID;
@@ -98,10 +98,25 @@ namespace TrainingManagement
                         lecturerHomePage.ShowDialog();
 
                         break;
-                    case "Quản lý khoa":
+                    case "HeadOfTraining":
                         // Lấy id department manager từ user id
-                        DepartmentManagerHomePage departmentManagerHomePage = new DepartmentManagerHomePage();
+                        TrainingManagerHomePage departmentManagerHomePage = new TrainingManagerHomePage();
                         departmentManagerHomePage.Show();
+                        break;
+
+                    case "SEDean":
+                        DepartmentHomePage deanHomePage = new DepartmentHomePage("Software Engirneering");
+                        deanHomePage.Show();
+                        break;
+
+                    case "CSDean":
+                        deanHomePage = new DepartmentHomePage("Computer Science");
+                        deanHomePage.Show();
+                        break;
+
+                    case "ISDean":
+                        deanHomePage = new DepartmentHomePage("Information System");
+                        deanHomePage.Show();
                         break;
                 }
 

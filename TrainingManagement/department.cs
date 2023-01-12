@@ -17,7 +17,7 @@ namespace TrainingManagement
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public department()
         {
-            this.majors = new HashSet<major>();
+            this.major = new HashSet<major>();
         }
     
         public int id { get; set; }
@@ -26,6 +26,6 @@ namespace TrainingManagement
         public string address { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<major> majors { get; set; }
+        public virtual ICollection<major> major { get; set; }
     }
 }

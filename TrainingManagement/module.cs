@@ -18,22 +18,19 @@ namespace TrainingManagement
         public module()
         {
             this.class_module = new HashSet<class_module>();
-            this.teaching_assignment = new HashSet<teaching_assignment>();
         }
     
         public int id { get; set; }
         public string ID_Module { get; set; }
         public string name { get; set; }
-        public Nullable<int> theory_credits { get; set; }
-        public Nullable<int> practice_credits { get; set; }
-        public Nullable<int> self_study_credits { get; set; }
-        public Nullable<int> visiting_credits { get; set; }
+        public Nullable<int> theory_lessons { get; set; }
+        public Nullable<int> practice_lessons { get; set; }
+        public Nullable<int> self_study_lessons { get; set; }
+        public Nullable<int> visiting_lessons { get; set; }
         public Nullable<int> curriculum_id { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<class_module> class_module { get; set; }
         public virtual curriculum curriculum { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<teaching_assignment> teaching_assignment { get; set; }
     }
 }

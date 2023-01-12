@@ -17,7 +17,7 @@ namespace TrainingManagement
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public teaching()
         {
-            this.lessons = new HashSet<lesson>();
+            this.lesson = new HashSet<lesson>();
         }
     
         public int id { get; set; }
@@ -27,6 +27,6 @@ namespace TrainingManagement
         public virtual class_module class_module { get; set; }
         public virtual lecturer lecturer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<lesson> lessons { get; set; }
+        public virtual ICollection<lesson> lesson { get; set; }
     }
 }

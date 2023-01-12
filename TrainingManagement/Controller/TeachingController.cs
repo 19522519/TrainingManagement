@@ -12,7 +12,7 @@ namespace TrainingManagement.Controller
 
         public dynamic getAllScore(int semester, int schoolYear, string classMoule)
         {
-            var data = from c in entities.studyings
+            var data = from c in entities.studying
                        where c.class_module.semester == semester && c.class_module.school_year == schoolYear
                        select new
                        {
@@ -29,7 +29,7 @@ namespace TrainingManagement.Controller
 
         public dynamic getAllSchoolYear(int lecId)
         {
-            var data = entities.teachings
+            var data = entities.teaching
                 .Where(x => x.lecturer_id == lecId)
                 .GroupBy(x => x.class_module.school_year)
                 .Select(g => g.FirstOrDefault().class_module.school_year)
@@ -39,7 +39,7 @@ namespace TrainingManagement.Controller
 
         public dynamic getAllClassModule(int semester, int schoolYear, int lecId)
         {
-            var data = entities.teachings
+            var data = entities.teaching
                 .Where(x => x.class_module.semester == semester && x.class_module.school_year == schoolYear && x.lecturer_id == lecId)
                 .GroupBy(x => x.class_module.ID_Class_module)
                 .Select(g => g.FirstOrDefault().class_module.ID_Class_module)
@@ -49,7 +49,7 @@ namespace TrainingManagement.Controller
 
         public void updateScore(studying studying)
         {
-            studying ls = entities.studyings.Find(studying.id);
+            studying ls = entities.studying.Find(studying.id);
             ls.score = studying.score;
             entities.SaveChanges();
         }
