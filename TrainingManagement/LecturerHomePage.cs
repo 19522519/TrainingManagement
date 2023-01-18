@@ -44,5 +44,16 @@ namespace TrainingManagement
             this.pnlContent.Controls.Add(inputScore);
             inputScore.Show();
         }
+
+        private void timeableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LecturerTimeable lecturerTimeable = new LecturerTimeable(lecturerId);
+            lecturerTimeable.TopLevel = false;
+            lecturerTimeable.AutoScroll = true;
+            lecturerTimeable.Dock = DockStyle.Fill;
+            lecturerTimeable.FormBorderStyle = FormBorderStyle.None;
+            this.pnlContent.Controls.Add(lecturerTimeable);
+            lecturerTimeable.Show();
+        }
     }
 }
