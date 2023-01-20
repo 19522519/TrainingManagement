@@ -67,6 +67,7 @@ namespace TrainingManagement
             this.timeableToolStripMenuItem.Name = "timeableToolStripMenuItem";
             this.timeableToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.timeableToolStripMenuItem.Text = "Timeable";
+            this.timeableToolStripMenuItem.Click += new System.EventHandler(this.timeableToolStripMenuItem_Click);
             // 
             // confirmModulesToolStripMenuItem
             // 

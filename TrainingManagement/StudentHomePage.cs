@@ -26,6 +26,7 @@ namespace TrainingManagement
 
         private void profileToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            pnlContent.Controls.Clear();
             StudentProfile studentProfile = new StudentProfile(studentId);
             studentProfile.TopLevel = false;
             studentProfile.AutoScroll = true;
@@ -42,6 +43,7 @@ namespace TrainingManagement
 
         private void điểmToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            pnlContent.Controls.Clear();
             ViewScore viewScore = new ViewScore(studentId);
             viewScore.TopLevel = false;
             viewScore.AutoScroll = true;
