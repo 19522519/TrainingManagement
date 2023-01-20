@@ -47,7 +47,7 @@ namespace TrainingManagement
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1224, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(1201, 31);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -77,14 +77,14 @@ namespace TrainingManagement
             this.pnlContent.Location = new System.Drawing.Point(0, 33);
             this.pnlContent.Margin = new System.Windows.Forms.Padding(4);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(1224, 523);
+            this.pnlContent.Size = new System.Drawing.Size(1200, 800);
             this.pnlContent.TabIndex = 1;
             // 
             // DepartmentHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1224, 556);
+            this.ClientSize = new System.Drawing.Size(1201, 835);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

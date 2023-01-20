@@ -80,7 +80,7 @@ namespace TrainingManagement
                    MessageBoxIcon.Information);
 
                 String role = userController.getUserById(id).access_right;
-                switch(role)
+                switch (role)
                 {
                     case "Student":
                         // Lấy id student từ user id                     
@@ -124,8 +124,11 @@ namespace TrainingManagement
                 txtPassword.Text = "";
             }
             else
+            {
                 MessageBox.Show("Login failed. Please try again!", "Notification",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+ MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtPassword.Text = "";
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)

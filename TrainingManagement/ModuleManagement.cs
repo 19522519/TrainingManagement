@@ -15,6 +15,9 @@ namespace TrainingManagement
     {
         string right; 
         CurriculumController curriculumController = new CurriculumController();
+        ModuleListController moduleListController = new ModuleListController();
+        ModuleController moduleController = new ModuleController();
+        ClassModuleController classModuleController = new ClassModuleController();
 
         public ModuleManagement(string role)
         {
@@ -24,6 +27,9 @@ namespace TrainingManagement
             changeRoleName();
 
             loadSchoolYear();
+
+            dgvModuleList.DataSource = moduleListController.getAllModule(right, txbModuleCode.Text, txbModuleName.Text);
+            addBiding();
         }
 
         // Đổi từ SEDean sang Software Engirneering / CSDean sang Computer Science / ISDean sang Information System
@@ -52,30 +58,152 @@ namespace TrainingManagement
 
         void loadCurriculumBasedOnSchoolYear()
         {
-            int val = 0;
-            bool result = int.TryParse(cmbSchoolYear.Text, out val);
-            if (!result)
-            {
-                try
-                {
-                    cmbCurriculum.DataSource = curriculumController.getAllCurriculumNameOnYearAndMajor(Convert.ToInt32(cmbSchoolYear.Text), right);
-                    cmbCurriculum.DisplayMember = "Name";
-                } catch (Exception ex)
-                {
-                    Console.WriteLine(ex);
-                }
-            } else
-            {
-                // MessageBox.Show(cmbSchoolYear.Text);
-                cmbCurriculum.DataSource = curriculumController.getAllCurriculumNameOnYearAndMajor(Convert.ToInt32(cmbSchoolYear.Text), right);
-                cmbCurriculum.DisplayMember = "Name";
-            }
-
+            cmbCurriculum.DataSource = curriculumController.getAllCurriculumNameOnYearAndMajor(cmbSchoolYear.Text, right);
+            cmbCurriculum.DisplayMember = "Name";
+            cmbCurriculum.SelectedIndex = 0;
         }
 
         private void cmbSchoolYear_SelectedIndexChanged(object sender, EventArgs e)
         {
             loadCurriculumBasedOnSchoolYear();
+        }
+
+        private void cmbCurriculum_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dynamic value = curriculumController.getAllCurriculumBasedOnMajorAndNameAndSchoolYear(right, cmbCurriculum.Text, cmbSchoolYear.Text);
+            if (value != null)
+            {
+                txbCurriculumId.Text = value.Id.ToString();
+                txbTrainingType.Text = value.TrainingType;
+                txbTrainingSystem.Text = value.TrainingSystem;
+                loadDataModule();
+            }
+            
+        }
+
+        public void addBiding()
+        {
+            txbModuleCode.DataBindings.Clear();
+            txbModuleName.DataBindings.Clear();
+
+            txbCode.DataBindings.Clear();
+            txbName.DataBindings.Clear();
+            txbCredits.DataBindings.Clear();
+
+            txbModuleCode.DataBindings.Add("Text", dgvModuleList.DataSource, "Code", true, DataSourceUpdateMode.Never);
+            txbModuleName.DataBindings.Add("Text", dgvModuleList.DataSource, "Name", true, DataSourceUpdateMode.Never);
+
+            txbCode.DataBindings.Add("Text", dgvModuleList.DataSource, "Code", true, DataSourceUpdateMode.Never);
+            txbName.DataBindings.Add("Text", dgvModuleList.DataSource, "Name", true, DataSourceUpdateMode.Never);
+            txbCredits.DataBindings.Add("Text", dgvModuleList.DataSource, "Credits", true, DataSourceUpdateMode.Never);
+        }
+
+        public void addBidingModule()
+        {
+            txbModuleId.DataBindings.Clear();
+            txbCode.DataBindings.Clear();
+            txbName.DataBindings.Clear();
+/*            dtpStartDate.DataBindings.Clear();
+            dtpEndDate.DataBindings.Clear();*/
+            txbTheoryLessons.DataBindings.Clear();
+            txbPracticeLessons.DataBindings.Clear();
+            txbSelfStudyLessons.DataBindings.Clear();
+            txbVisitingLessons.DataBindings.Clear();
+            /*            txbSemester.DataBindings.Clear();
+                        txbSchoolYear.DataBindings.Clear();*/
+
+            txbModuleId.DataBindings.Add("Text", dgvModule.DataSource, "Id", true, DataSourceUpdateMode.Never);
+            txbCode.DataBindings.Add("Text", dgvModule.DataSource, "Code", true, DataSourceUpdateMode.Never);
+            txbName.DataBindings.Add("Text", dgvModule.DataSource, "Name", true, DataSourceUpdateMode.Never);
+/*            dtpStartDate.DataBindings.Add("Text", dgvModule.DataSource, "StartDate", true, DataSourceUpdateMode.Never);
+            dtpEndDate.DataBindings.Add("Text", dgvModule.DataSource, "EndDate", true, DataSourceUpdateMode.Never);*/
+            txbTheoryLessons.DataBindings.Add("Text", dgvModule.DataSource, "TheoryLessons", true, DataSourceUpdateMode.Never);
+            txbPracticeLessons.DataBindings.Add("Text", dgvModule.DataSource, "PracticeLessons", true, DataSourceUpdateMode.Never);
+            txbSelfStudyLessons.DataBindings.Add("Text", dgvModule.DataSource, "SelfStudyLessons", true, DataSourceUpdateMode.Never);
+            txbVisitingLessons.DataBindings.Add("Text", dgvModule.DataSource, "VisitingLessons", true, DataSourceUpdateMode.Never);
+/*            txbSemester.DataBindings.Add("Text", dgvModule.DataSource, "Semester", true, DataSourceUpdateMode.Never);
+            txbSchoolYear.DataBindings.Add("Text", dgvModule.DataSource, "SchoolYear", true, DataSourceUpdateMode.Never);*/
+        }
+
+        public void loadDataModule()
+        {
+            dgvModule.DataSource = moduleController.getAllModuleBaseOnCurriculum(Convert.ToInt32(txbCurriculumId.Text));
+            addBidingModule();
+        }
+
+        private void btnSearchModule_Click(object sender, EventArgs e)
+        {
+            dgvModuleList.DataSource = moduleListController.getAllModule(right, txbModuleCode.Text, txbModuleName.Text);
+            addBiding();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txbModuleName.Text = "";
+            txbModuleCode.Text = "";
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            // Create module
+            module module = new module
+            {
+                ID_Module = txbCode.Text,
+                name = txbName.Text,
+                theory_lessons = Convert.ToInt32(txbTheoryLessons.Text),
+                practice_lessons = Convert.ToInt32(txbPracticeLessons.Text),
+                self_study_lessons = Convert.ToInt32(txbSelfStudyLessons.Text),
+                visiting_lessons = Convert.ToInt32(txbVisitingLessons.Text)
+            };
+            int moduleId = moduleController.insertModule(Convert.ToInt32(txbCurriculumId.Text), module);
+
+            /*            // Create class module
+                        class_module class_Module = new class_module
+                        {
+                            start_date = dtpStartDate.Value,
+                            end_date = dtpEndDate.Value,
+                            semester = Convert.ToInt32(txbSemester.Text),
+                            school_year = Convert.ToInt32(txbSchoolYear.Text)
+                        };
+                        classModuleController.insertClassModule(moduleId, class_Module);*/
+            loadDataModule();
+            MessageBox.Show("Create successfully!");
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            module module = new module()
+            {
+                id = Convert.ToInt32(txbModuleId.Text),
+                ID_Module = txbCode.Text,
+                name = txbName.Text,
+                theory_lessons = Convert.ToInt32(txbTheoryLessons.Text),
+                practice_lessons = Convert.ToInt32(txbPracticeLessons.Text),
+                self_study_lessons = Convert.ToInt32(txbSelfStudyLessons.Text),
+                visiting_lessons = Convert.ToInt32(txbVisitingLessons.Text)
+            };
+            moduleController.updateModule(module);
+            loadDataModule();
+            MessageBox.Show("Update successfully!");
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you want to remove this module", "Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                moduleController.deleteModule(Convert.ToInt32(txbModuleId.Text));
+                loadDataModule();
+            }
+        }
+
+        private void dgvModuleList_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            addBiding();
+        }
+
+        private void dgvModule_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            addBidingModule();
         }
     }
 }

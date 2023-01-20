@@ -35,19 +35,19 @@ namespace TrainingManagement
 
         void loadLecturer(String major)
         {
-            cmbTheoryLecturer.DataSource = lecturerController.getAll(major);
-            cmbPracticeLecturer.DataSource = lecturerController.getAll(major);
+            // cmbTheoryLecturer.DataSource = lecturerController.getAll(major);
+            // cmbPracticeLecturer.DataSource = lecturerController.getAll(major);
         }
 
         void loadData()
         {
-            dgvData.DataSource = classModuleController.getAllByMajor(majorParam);
+            // dgvData.DataSource = classModuleController.getAllByMajor(majorParam);
             addBiding();
         }
 
         void addBiding()
         {
-            txtSchoolYear.DataBindings.Clear();
+            /*txtSchoolYear.DataBindings.Clear();
             cmbSemester.DataBindings.Clear();
             txtModuleCode.DataBindings.Clear();
             txtClassModuleName.DataBindings.Clear();
@@ -63,7 +63,7 @@ namespace TrainingManagement
             dtpStartDate.DataBindings.Add("Value", dgvData.DataSource, "Start_Date", true, DataSourceUpdateMode.Never);
             dtpEndDate.DataBindings.Add("Value", dgvData.DataSource, "End_Date", true, DataSourceUpdateMode.Never);
             //cmbTheoryLecturer.DataBindings.Add("Text", dgvData.DataSource, "Theory_Lecturer", true, DataSourceUpdateMode.Never);
-            //cmbPracticeLecturer.DataBindings.Add("Text", dgvData.DataSource, "Practice_Lecturer", true, DataSourceUpdateMode.Never);
+            //cmbPracticeLecturer.DataBindings.Add("Text", dgvData.DataSource, "Practice_Lecturer", true, DataSourceUpdateMode.Never);*/
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

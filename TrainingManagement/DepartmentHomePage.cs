@@ -22,6 +22,7 @@ namespace TrainingManagement
 
         private void moduleToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            pnlContent.Controls.Clear();
             ModuleManagement moduleManagement = new ModuleManagement(major);
             moduleManagement.TopLevel = false;
             moduleManagement.AutoScroll = true;
@@ -33,6 +34,7 @@ namespace TrainingManagement
 
         private void curriculumToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            pnlContent.Controls.Clear();
             CurriculumManagement curriculumManagement = new CurriculumManagement(major);
             curriculumManagement.TopLevel = false;
             curriculumManagement.AutoScroll = true;

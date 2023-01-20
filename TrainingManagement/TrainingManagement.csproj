@@ -84,6 +84,7 @@
     <Compile Include="Controller\LecturerController.cs" />
     <Compile Include="Controller\MajorController.cs" />
     <Compile Include="Controller\ModuleController.cs" />
+    <Compile Include="Controller\ModuleListController.cs" />
     <Compile Include="Controller\StudentController.cs" />
     <Compile Include="Controller\StudyingController.cs" />
     <Compile Include="Controller\TeachingController.cs" />

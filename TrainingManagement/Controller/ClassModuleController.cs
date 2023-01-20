@@ -26,5 +26,12 @@ namespace TrainingManagement.Controller
             return cm.ToList();
         }  
 
+        public int insertClassModule(int moduleId, class_module class_Module)
+        {
+            class_Module.id = moduleId;
+            entities.class_module.Add(class_Module);
+            entities.SaveChanges();
+            return class_Module.id;
+        }
     }
 }

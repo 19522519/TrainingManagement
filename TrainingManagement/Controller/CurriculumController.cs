@@ -55,7 +55,7 @@ namespace TrainingManagement.Controller
             return data.ToList();
         }
 
-        public dynamic getAllCurriculumNameOnYearAndMajor(int year, string right)
+        public dynamic getAllCurriculumNameOnYearAndMajor(string year, string right)
         {
             var data = from c in entities.curriculum
                        where c.major.name.Equals(right) && c.school_year.Equals(year)
@@ -64,6 +64,19 @@ namespace TrainingManagement.Controller
                            Name = c.name
                        };
             return data.ToList();
+        }
+
+        public dynamic getAllCurriculumBasedOnMajorAndNameAndSchoolYear(string right, string name, string schoolYear)
+        {
+            var data = from c in entities.curriculum
+                       where c.major.name.Equals(right) && c.name.Equals(name) && c.school_year.Equals(schoolYear)
+                       select new
+                       {
+                           Id = c.id,
+                           TrainingType = c.training_type,
+                           TrainingSystem = c.training_system
+                       };
+            return data.ToList().FirstOrDefault();
         }
     }
 }
