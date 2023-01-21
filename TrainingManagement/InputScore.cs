@@ -90,9 +90,9 @@ namespace TrainingManagement
 
         private void btnLoadClassModule_Click(object sender, EventArgs e)
         {
-            int semester = Convert.ToInt32(cmbSemester.Text);
-            int schoolYear = Convert.ToInt32(cmbSchoolYear.SelectedValue.ToString());
-            cmbClassModule.DataSource = teachingController.getAllClassModule(semester, schoolYear, lecId);
+            //int semester = Convert.ToInt32(cmbSemester.Text);
+            //int schoolYear = Convert.ToInt32(cmbSchoolYear.SelectedValue.ToString());
+            //cmbClassModule.DataSource = teachingController.getAllClassModule(semester, schoolYear, lecId);
         }
 
         private void btnViewScore_Click(object sender, EventArgs e)
@@ -120,6 +120,13 @@ namespace TrainingManagement
             dgvData.DataSource = teachingController.getAllScore(semester, schoolYear, classModule);
             addBinding();
 
+        }
+
+        private void cmbClassModule_Click(object sender, EventArgs e)
+        {
+            int semester = Convert.ToInt32(cmbSemester.Text);
+            int schoolYear = Convert.ToInt32(cmbSchoolYear.SelectedValue.ToString());
+            cmbClassModule.DataSource = teachingController.getAllClassModule(semester, schoolYear, lecId);
         }
     }
 }

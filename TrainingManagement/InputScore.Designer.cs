@@ -35,7 +35,6 @@ namespace TrainingManagement
             this.cmbSemester = new System.Windows.Forms.ComboBox();
             this.cmbSchoolYear = new System.Windows.Forms.ComboBox();
             this.cmbClassModule = new System.Windows.Forms.ComboBox();
-            this.btnLoadClassModule = new System.Windows.Forms.Button();
             this.btnInputScore = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.txbScore = new System.Windows.Forms.TextBox();
@@ -47,7 +46,7 @@ namespace TrainingManagement
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 36);
+            this.label1.Location = new System.Drawing.Point(59, 40);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 17);
@@ -57,7 +56,7 @@ namespace TrainingManagement
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(255, 36);
+            this.label2.Location = new System.Drawing.Point(323, 39);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 17);
@@ -67,7 +66,7 @@ namespace TrainingManagement
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(521, 39);
+            this.label3.Location = new System.Drawing.Point(621, 35);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 17);
@@ -77,7 +76,7 @@ namespace TrainingManagement
             // cmbSemester
             // 
             this.cmbSemester.FormattingEnabled = true;
-            this.cmbSemester.Location = new System.Drawing.Point(110, 32);
+            this.cmbSemester.Location = new System.Drawing.Point(156, 36);
             this.cmbSemester.Name = "cmbSemester";
             this.cmbSemester.Size = new System.Drawing.Size(121, 24);
             this.cmbSemester.TabIndex = 4;
@@ -85,7 +84,7 @@ namespace TrainingManagement
             // cmbSchoolYear
             // 
             this.cmbSchoolYear.FormattingEnabled = true;
-            this.cmbSchoolYear.Location = new System.Drawing.Point(365, 33);
+            this.cmbSchoolYear.Location = new System.Drawing.Point(433, 33);
             this.cmbSchoolYear.Name = "cmbSchoolYear";
             this.cmbSchoolYear.Size = new System.Drawing.Size(121, 24);
             this.cmbSchoolYear.TabIndex = 5;
@@ -93,25 +92,16 @@ namespace TrainingManagement
             // cmbClassModule
             // 
             this.cmbClassModule.FormattingEnabled = true;
-            this.cmbClassModule.Location = new System.Drawing.Point(608, 33);
+            this.cmbClassModule.Location = new System.Drawing.Point(696, 29);
             this.cmbClassModule.Name = "cmbClassModule";
             this.cmbClassModule.Size = new System.Drawing.Size(189, 24);
             this.cmbClassModule.TabIndex = 6;
             this.cmbClassModule.SelectedIndexChanged += new System.EventHandler(this.cmbClassModule_SelectedIndexChanged);
-            // 
-            // btnLoadClassModule
-            // 
-            this.btnLoadClassModule.Location = new System.Drawing.Point(819, 31);
-            this.btnLoadClassModule.Name = "btnLoadClassModule";
-            this.btnLoadClassModule.Size = new System.Drawing.Size(145, 24);
-            this.btnLoadClassModule.TabIndex = 7;
-            this.btnLoadClassModule.Text = "Load danh sách lớp";
-            this.btnLoadClassModule.UseVisualStyleBackColor = true;
-            this.btnLoadClassModule.Click += new System.EventHandler(this.btnLoadClassModule_Click);
+            this.cmbClassModule.Click += new System.EventHandler(this.cmbClassModule_Click);
             // 
             // btnInputScore
             // 
-            this.btnInputScore.Location = new System.Drawing.Point(258, 86);
+            this.btnInputScore.Location = new System.Drawing.Point(307, 90);
             this.btnInputScore.Name = "btnInputScore";
             this.btnInputScore.Size = new System.Drawing.Size(133, 24);
             this.btnInputScore.TabIndex = 8;
@@ -122,7 +112,7 @@ namespace TrainingManagement
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 90);
+            this.label4.Location = new System.Drawing.Point(59, 90);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 17);
@@ -131,7 +121,7 @@ namespace TrainingManagement
             // 
             // txbScore
             // 
-            this.txbScore.Location = new System.Drawing.Point(110, 87);
+            this.txbScore.Location = new System.Drawing.Point(156, 90);
             this.txbScore.Name = "txbScore";
             this.txbScore.Size = new System.Drawing.Size(121, 22);
             this.txbScore.TabIndex = 10;
@@ -148,7 +138,7 @@ namespace TrainingManagement
             // 
             // btnViewScore
             // 
-            this.btnViewScore.Location = new System.Drawing.Point(456, 90);
+            this.btnViewScore.Location = new System.Drawing.Point(520, 90);
             this.btnViewScore.Name = "btnViewScore";
             this.btnViewScore.Size = new System.Drawing.Size(133, 24);
             this.btnViewScore.TabIndex = 12;
@@ -167,7 +157,6 @@ namespace TrainingManagement
             this.Controls.Add(this.txbScore);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnInputScore);
-            this.Controls.Add(this.btnLoadClassModule);
             this.Controls.Add(this.cmbClassModule);
             this.Controls.Add(this.cmbSchoolYear);
             this.Controls.Add(this.cmbSemester);
@@ -192,7 +181,6 @@ namespace TrainingManagement
         private System.Windows.Forms.ComboBox cmbSemester;
         private System.Windows.Forms.ComboBox cmbSchoolYear;
         private System.Windows.Forms.ComboBox cmbClassModule;
-        private System.Windows.Forms.Button btnLoadClassModule;
         private System.Windows.Forms.Button btnInputScore;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txbScore;

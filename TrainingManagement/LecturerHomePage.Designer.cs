@@ -94,6 +94,7 @@ namespace TrainingManagement
             this.exitsToolStripMenuItem.Name = "exitsToolStripMenuItem";
             this.exitsToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
             this.exitsToolStripMenuItem.Text = "Exit";
+            this.exitsToolStripMenuItem.Click += new System.EventHandler(this.exitsToolStripMenuItem_Click);
             // 
             // pnlContent
             // 
