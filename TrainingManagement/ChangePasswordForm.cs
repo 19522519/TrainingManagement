@@ -14,15 +14,19 @@ namespace TrainingManagement
 {
     public partial class ChangePasswordForm : Form
     {
-        LecturerController lecturerController = new LecturerController();
-        lecturer lecturer;
-        int lecId;
+        UserController userController = new UserController();
+        users users;
+        int uid;
         public ChangePasswordForm(int id)
         {
-            lecId = id;
+
+            uid = id;
             InitializeComponent();
-            lecturer = lecturerController.getLecturerById(id);
+            this.StartPosition = FormStartPosition.CenterScreen;
+            users = userController.getUserById(id);
         }
+
+        
 
         public string GetMD5(string chuoi)
         {
@@ -42,9 +46,48 @@ namespace TrainingManagement
 
 
 
+       
+
+        private void btnSaveSecurity_Click(object sender, EventArgs e)
+        {
+            if (txbNewPass.Text != txbConfirmNewPass.Text)
+            {
+                MessageBox.Show("Xác nhận mật khẩu mới không đúng, vui lòng xác nhận lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txbConfirmNewPass.Focus();
+            }
+            else if (GetMD5(txbCurrentPass.Text) != users.pass)
+            {
+                MessageBox.Show("Mật khẩu hiện tại không đúng, vui lòng nhập lại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txbCurrentPass.Focus();
+            }
+            else
+            {
+                users users = new users()
+                {
+                    id = uid,
+                    pass = GetMD5(txbNewPass.Text)
+                };
+                userController.UpdatePassword(users);
+                MessageBox.Show("Lưu thay đổi thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void ChangePasswordForm_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ForgotPassword forgotPassword = new ForgotPassword();
+            forgotPassword.ShowDialog();
+            this.Close();
+        }
+
         private void btnShowNewPass_Click(object sender, EventArgs e)
         {
-            if (txbNewPass.PasswordChar == '*')
+            if(txbNewPass.PasswordChar == '*')
             {
                 btnHideNewPass.BringToFront();
                 txbNewPass.PasswordChar = '\0';
@@ -53,20 +96,10 @@ namespace TrainingManagement
 
         private void btnHideNewPass_Click(object sender, EventArgs e)
         {
-
             if (txbNewPass.PasswordChar == '\0')
             {
                 btnShowNewPass.BringToFront();
                 txbNewPass.PasswordChar = '*';
-            }
-        }
-
-        private void btnHideConfirmNewPass_Click(object sender, EventArgs e)
-        {
-            if (txbConfirmNewPass.PasswordChar == '\0')
-            {
-                btnShowConfirmNewPass.BringToFront();
-                txbConfirmNewPass.PasswordChar = '*';
             }
         }
 
@@ -79,9 +112,13 @@ namespace TrainingManagement
             }
         }
 
-        private void btnSaveSecurity_Click(object sender, EventArgs e)
+        private void btnHideConfirmNewPass_Click(object sender, EventArgs e)
         {
-            
+            if (txbConfirmNewPass.PasswordChar == '\0')
+            {
+                btnShowConfirmNewPass.BringToFront();
+                txbConfirmNewPass.PasswordChar = '*';
+            }
         }
     }
 }

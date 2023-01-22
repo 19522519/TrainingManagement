@@ -30,10 +30,19 @@ namespace TrainingManagement.Controller
                                Name = c.name,
                                Major = c.major.name,
                                Level = c.level,
-                               Contract = c.contract
+                               Contract = c.contract,
+                               IDUserCode = c.users_id
                            };
             return lecturer.ToList();
         }
+
+        public dynamic All()
+        {
+            var data = entities.lecturer;
+            return data.ToList();
+        }
+
+      
 
         public int insertLecturer(lecturer lecturer)
         {

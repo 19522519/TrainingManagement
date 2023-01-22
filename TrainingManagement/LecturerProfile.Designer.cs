@@ -46,8 +46,6 @@ namespace TrainingManagement
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.btnChangePassword = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelPersionalInformation
@@ -222,36 +220,12 @@ namespace TrainingManagement
             this.txtUsername.Size = new System.Drawing.Size(155, 22);
             this.txtUsername.TabIndex = 76;
             // 
-            // btnChangePassword
-            // 
-            this.btnChangePassword.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChangePassword.Location = new System.Drawing.Point(328, 437);
-            this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(143, 34);
-            this.btnChangePassword.TabIndex = 78;
-            this.btnChangePassword.Text = "Đổi mật khẩu";
-            this.btnChangePassword.UseVisualStyleBackColor = true;
-            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(544, 437);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(143, 34);
-            this.btnExit.TabIndex = 79;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // LecturerProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(969, 520);
             this.ControlBox = false;
-            this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.btnChangePassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtEmail);
@@ -296,7 +270,5 @@ namespace TrainingManagement
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.Button btnChangePassword;
-        private System.Windows.Forms.Button btnExit;
     }
 }

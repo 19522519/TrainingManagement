@@ -365,6 +365,11 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Show 16px.png" />
+    <None Include="Resources\showpw.png" />
+    <None Include="Resources\hidepw.png" />
+    <None Include="Resources\Eye.png" />
+    <None Include="Resources\Hide.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
