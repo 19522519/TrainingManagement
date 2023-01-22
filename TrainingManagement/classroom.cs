@@ -21,6 +21,7 @@ namespace TrainingManagement
         }
     
         public int id { get; set; }
+        public string name { get; set; }
         public string function_name { get; set; }
         public Nullable<int> max_size { get; set; }
     

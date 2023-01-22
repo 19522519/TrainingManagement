@@ -69,8 +69,7 @@ namespace TrainingManagement
 
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
-            ChangePasswordForm changePasswordForm = new ChangePasswordForm(lecId);
-            changePasswordForm.Show();
+          
         }
     }
 }

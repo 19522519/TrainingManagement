@@ -25,6 +25,7 @@ namespace TrainingManagement
 
         private void profileToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            pnlContent.Controls.Clear();
             LecturerProfile lecturerProfile = new LecturerProfile(lecturerId);
             lecturerProfile.TopLevel = false;
             lecturerProfile.AutoScroll = true;
@@ -36,6 +37,7 @@ namespace TrainingManagement
 
         private void điểmToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            pnlContent.Controls.Clear();
             InputScore inputScore = new InputScore(lecturerId);
             inputScore.TopLevel = false;
             inputScore.AutoScroll = true;
@@ -47,6 +49,7 @@ namespace TrainingManagement
 
         private void timeableToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            pnlContent.Controls.Clear();
             LecturerTimeable lecturerTimeable = new LecturerTimeable(lecturerId);
             lecturerTimeable.TopLevel = false;
             lecturerTimeable.AutoScroll = true;
@@ -54,6 +57,11 @@ namespace TrainingManagement
             lecturerTimeable.FormBorderStyle = FormBorderStyle.None;
             this.pnlContent.Controls.Add(lecturerTimeable);
             lecturerTimeable.Show();
+        }
+
+        private void exitsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

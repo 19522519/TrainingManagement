@@ -182,6 +182,7 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="function_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="max_size" Type="Int32" />
     <NavigationProperty Name="lesson" Relationship="TrainingManagementModel.FK__lesson__classroo__5629CD9C" FromRole="classroom" ToRole="lesson" />
@@ -229,8 +230,8 @@
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="day_in_week" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="start_time" Type="DateTime" Precision="0" />
-    <Property Name="end_time" Type="DateTime" Precision="0" />
+    <Property Name="start_time" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="end_time" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="classroom_id" Type="Int32" />
     <Property Name="teaching_id" Type="Int32" />
     <Property Name="class_module_id" Type="Int32" />

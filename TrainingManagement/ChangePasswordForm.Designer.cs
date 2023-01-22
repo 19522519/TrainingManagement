@@ -29,21 +29,20 @@ namespace TrainingManagement
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangePasswordForm));
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.labelSecurity = new System.Windows.Forms.Label();
             this.labelNewPass = new System.Windows.Forms.Label();
             this.txbNewPass = new System.Windows.Forms.TextBox();
-            this.btnHideNewPass = new System.Windows.Forms.Button();
             this.labelConfirmNewPass = new System.Windows.Forms.Label();
             this.txbConfirmNewPass = new System.Windows.Forms.TextBox();
-            this.btnHideConfirmNewPass = new System.Windows.Forms.Button();
             this.labelCurrentPass = new System.Windows.Forms.Label();
             this.txbCurrentPass = new System.Windows.Forms.TextBox();
             this.btnSaveSecurity = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnShowNewPass = new System.Windows.Forms.Button();
             this.btnShowConfirmNewPass = new System.Windows.Forms.Button();
+            this.btnHideNewPass = new System.Windows.Forms.Button();
+            this.btnHideConfirmNewPass = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -86,16 +85,6 @@ namespace TrainingManagement
             this.txbNewPass.Size = new System.Drawing.Size(220, 22);
             this.txbNewPass.TabIndex = 19;
             // 
-            // btnHideNewPass
-            // 
-            this.btnHideNewPass.Image = ((System.Drawing.Image)(resources.GetObject("btnHideNewPass.Image")));
-            this.btnHideNewPass.Location = new System.Drawing.Point(395, 103);
-            this.btnHideNewPass.Name = "btnHideNewPass";
-            this.btnHideNewPass.Size = new System.Drawing.Size(27, 24);
-            this.btnHideNewPass.TabIndex = 23;
-            this.btnHideNewPass.UseVisualStyleBackColor = true;
-            this.btnHideNewPass.Click += new System.EventHandler(this.btnHideNewPass_Click);
-            // 
             // labelConfirmNewPass
             // 
             this.labelConfirmNewPass.AutoSize = true;
@@ -113,15 +102,6 @@ namespace TrainingManagement
             this.txbConfirmNewPass.Name = "txbConfirmNewPass";
             this.txbConfirmNewPass.Size = new System.Drawing.Size(220, 22);
             this.txbConfirmNewPass.TabIndex = 25;
-            // 
-            // btnHideConfirmNewPass
-            // 
-            this.btnHideConfirmNewPass.Image = ((System.Drawing.Image)(resources.GetObject("btnHideConfirmNewPass.Image")));
-            this.btnHideConfirmNewPass.Location = new System.Drawing.Point(396, 171);
-            this.btnHideConfirmNewPass.Name = "btnHideConfirmNewPass";
-            this.btnHideConfirmNewPass.Size = new System.Drawing.Size(26, 24);
-            this.btnHideConfirmNewPass.TabIndex = 26;
-            this.btnHideConfirmNewPass.UseVisualStyleBackColor = true;
             // 
             // labelCurrentPass
             // 
@@ -162,24 +142,47 @@ namespace TrainingManagement
             this.btnExit.TabIndex = 30;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnShowNewPass
             // 
-            this.btnShowNewPass.Image = ((System.Drawing.Image)(resources.GetObject("btnShowNewPass.Image")));
-            this.btnShowNewPass.Location = new System.Drawing.Point(395, 103);
+            this.btnShowNewPass.Image = global::TrainingManagement.Properties.Resources.Show_16px;
+            this.btnShowNewPass.Location = new System.Drawing.Point(395, 101);
             this.btnShowNewPass.Name = "btnShowNewPass";
             this.btnShowNewPass.Size = new System.Drawing.Size(27, 24);
             this.btnShowNewPass.TabIndex = 31;
             this.btnShowNewPass.UseVisualStyleBackColor = true;
+            this.btnShowNewPass.Click += new System.EventHandler(this.btnShowNewPass_Click);
             // 
             // btnShowConfirmNewPass
             // 
-            this.btnShowConfirmNewPass.Image = ((System.Drawing.Image)(resources.GetObject("btnShowConfirmNewPass.Image")));
-            this.btnShowConfirmNewPass.Location = new System.Drawing.Point(396, 171);
+            this.btnShowConfirmNewPass.Image = global::TrainingManagement.Properties.Resources.Show_16px;
+            this.btnShowConfirmNewPass.Location = new System.Drawing.Point(395, 171);
             this.btnShowConfirmNewPass.Name = "btnShowConfirmNewPass";
-            this.btnShowConfirmNewPass.Size = new System.Drawing.Size(26, 24);
+            this.btnShowConfirmNewPass.Size = new System.Drawing.Size(27, 24);
             this.btnShowConfirmNewPass.TabIndex = 32;
             this.btnShowConfirmNewPass.UseVisualStyleBackColor = true;
+            this.btnShowConfirmNewPass.Click += new System.EventHandler(this.btnShowConfirmNewPass_Click);
+            // 
+            // btnHideNewPass
+            // 
+            this.btnHideNewPass.Image = global::TrainingManagement.Properties.Resources.Hide;
+            this.btnHideNewPass.Location = new System.Drawing.Point(395, 101);
+            this.btnHideNewPass.Name = "btnHideNewPass";
+            this.btnHideNewPass.Size = new System.Drawing.Size(27, 24);
+            this.btnHideNewPass.TabIndex = 33;
+            this.btnHideNewPass.UseVisualStyleBackColor = true;
+            this.btnHideNewPass.Click += new System.EventHandler(this.btnHideNewPass_Click);
+            // 
+            // btnHideConfirmNewPass
+            // 
+            this.btnHideConfirmNewPass.Image = global::TrainingManagement.Properties.Resources.Hide;
+            this.btnHideConfirmNewPass.Location = new System.Drawing.Point(395, 171);
+            this.btnHideConfirmNewPass.Name = "btnHideConfirmNewPass";
+            this.btnHideConfirmNewPass.Size = new System.Drawing.Size(27, 24);
+            this.btnHideConfirmNewPass.TabIndex = 34;
+            this.btnHideConfirmNewPass.UseVisualStyleBackColor = true;
+            this.btnHideConfirmNewPass.Click += new System.EventHandler(this.btnHideConfirmNewPass_Click);
             // 
             // ChangePasswordForm
             // 
@@ -187,22 +190,23 @@ namespace TrainingManagement
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(629, 450);
             this.ControlBox = false;
+            this.Controls.Add(this.btnHideConfirmNewPass);
+            this.Controls.Add(this.btnHideNewPass);
             this.Controls.Add(this.btnShowConfirmNewPass);
             this.Controls.Add(this.btnShowNewPass);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnSaveSecurity);
             this.Controls.Add(this.txbCurrentPass);
             this.Controls.Add(this.labelCurrentPass);
-            this.Controls.Add(this.btnHideConfirmNewPass);
             this.Controls.Add(this.txbConfirmNewPass);
             this.Controls.Add(this.labelConfirmNewPass);
-            this.Controls.Add(this.btnHideNewPass);
             this.Controls.Add(this.txbNewPass);
             this.Controls.Add(this.labelNewPass);
             this.Controls.Add(this.labelSecurity);
             this.Controls.Add(this.listBox1);
             this.Name = "ChangePasswordForm";
             this.Text = "ChangePasswordForm";
+            this.Load += new System.EventHandler(this.ChangePasswordForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,15 +218,15 @@ namespace TrainingManagement
         private System.Windows.Forms.Label labelSecurity;
         private System.Windows.Forms.Label labelNewPass;
         private System.Windows.Forms.TextBox txbNewPass;
-        private System.Windows.Forms.Button btnHideNewPass;
         private System.Windows.Forms.Label labelConfirmNewPass;
         private System.Windows.Forms.TextBox txbConfirmNewPass;
-        private System.Windows.Forms.Button btnHideConfirmNewPass;
         private System.Windows.Forms.Label labelCurrentPass;
         private System.Windows.Forms.TextBox txbCurrentPass;
         private System.Windows.Forms.Button btnSaveSecurity;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnShowNewPass;
         private System.Windows.Forms.Button btnShowConfirmNewPass;
+        private System.Windows.Forms.Button btnHideNewPass;
+        private System.Windows.Forms.Button btnHideConfirmNewPass;
     }
 }

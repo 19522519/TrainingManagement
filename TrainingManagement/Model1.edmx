@@ -22,6 +22,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
           <Property Name="function_name" Type="nvarchar" MaxLength="100" />
           <Property Name="max_size" Type="int" />
         </EntityType>
@@ -62,8 +63,8 @@
           </Key>
           <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="day_in_week" Type="nvarchar" MaxLength="50" />
-          <Property Name="start_time" Type="date" />
-          <Property Name="end_time" Type="date" />
+          <Property Name="start_time" Type="nvarchar" MaxLength="50" />
+          <Property Name="end_time" Type="nvarchar" MaxLength="50" />
           <Property Name="classroom_id" Type="int" />
           <Property Name="teaching_id" Type="int" />
           <Property Name="class_module_id" Type="int" />
@@ -603,6 +604,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="function_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="max_size" Type="Int32" />
           <NavigationProperty Name="lesson" Relationship="TrainingManagementModel.FK__lesson__classroo__5629CD9C" FromRole="classroom" ToRole="lesson" />
@@ -650,8 +652,8 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="day_in_week" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="start_time" Type="DateTime" Precision="0" />
-          <Property Name="end_time" Type="DateTime" Precision="0" />
+          <Property Name="start_time" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="end_time" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="classroom_id" Type="Int32" />
           <Property Name="teaching_id" Type="Int32" />
           <Property Name="class_module_id" Type="Int32" />
@@ -971,6 +973,7 @@
               <MappingFragment StoreEntitySet="classroom">
                 <ScalarProperty Name="max_size" ColumnName="max_size" />
                 <ScalarProperty Name="function_name" ColumnName="function_name" />
+                <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>

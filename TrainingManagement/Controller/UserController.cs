@@ -31,6 +31,13 @@ namespace TrainingManagement.Controller
             return data.ToList();
         }
 
+        public void UpdatePassword(users user)
+        {
+            users p = entities.users.Find(user.id);
+            p.pass = user.pass;
+            entities.SaveChanges();
+        }
+
         public users getUserById(int id)
         {
             return entities.users.Find(id);

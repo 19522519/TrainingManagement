@@ -16,8 +16,8 @@ namespace TrainingManagement
     {
         public int id { get; set; }
         public string day_in_week { get; set; }
-        public Nullable<System.DateTime> start_time { get; set; }
-        public Nullable<System.DateTime> end_time { get; set; }
+        public string start_time { get; set; }
+        public string end_time { get; set; }
         public Nullable<int> classroom_id { get; set; }
         public Nullable<int> teaching_id { get; set; }
         public Nullable<int> class_module_id { get; set; }

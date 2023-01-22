@@ -117,7 +117,8 @@ namespace TrainingManagement
                 citizen_id = txtCititzenId.Text,
                 birth_place = txtBirthPlace.Text,
                 household = txtHousehold.Text,
-                is_in_dormitory = cmbIsInDorm.Text
+                is_in_dormitory = cmbIsInDorm.Text,
+                
             };
             studentController.updateStudent(student);
             MessageBox.Show("Save information successfully!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
