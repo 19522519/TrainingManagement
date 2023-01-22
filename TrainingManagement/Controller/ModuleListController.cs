@@ -37,5 +37,16 @@ namespace TrainingManagement.Controller
 
             return data.ToList();
         }
+
+        public dynamic getCreditsByCode(string moduleName, string right, string moduleCode)
+        {
+            var data = from c in entities.module_list
+                       where c.name.Equals(moduleName) && c.major.name.Equals(right) && c.code.Equals(moduleCode)
+                       select new
+                       {
+                           Credits = c.credits
+                       };
+            return data.ToList().FirstOrDefault();
+        }
     }
 }

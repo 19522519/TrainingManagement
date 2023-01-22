@@ -56,5 +56,22 @@ namespace TrainingManagement.Controller
                 entities.SaveChanges();
             }
         }
+
+        public dynamic getAllModulesBasedOnShoolYear(string schoolYear)
+        {
+            var data = from c in entities.module
+                       where c.curriculum.school_year.Equals(schoolYear)
+                       select new
+                       {
+                           Id = c.id,
+                           Code = c.ID_Module,
+                           Name = c.name,
+                           TheoryLessons = c.theory_lessons,
+                           PracticeLessons = c.practice_lessons,
+                           SelfStudyLessons = c.self_study_lessons,
+                           VisitingLessons = c.visiting_lessons
+                       };
+            return data.ToList();
+        }
     }
 }

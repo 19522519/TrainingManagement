@@ -87,6 +87,7 @@ create table studying (
 -- Chức năng: phòng học lý thuyết, phòng học thực hành, phòng hội thảo
 create table classroom (
 	id int identity(1,1) primary key,
+	name nvarchar(50),
 	function_name nvarchar(100),
 	max_size int
 )
@@ -94,8 +95,8 @@ create table classroom (
 create table lesson (
 	id int identity(1,1) primary key,
 	day_in_week nvarchar(50),
-	start_time date,
-	end_time date
+	start_time nvarchar(50),
+	end_time nvarchar(50)
 )
 
 create table users (
@@ -164,25 +165,25 @@ INSERT INTO curriculum VALUES
 
 INSERT INTO module VALUES 
       ('SE104', N'Nhập môn công nghệ phần mềm',3,1,1,1,1),
-	  ('SE208', N'Kiểm chứng phần mềm',2,1,1,1,1),
-	  ('SE102', N'Nhập môn phát triển game',3,1,1,1,1),
+	  ('SE113', N'Kiểm chứng phần mềm',2,1,1,1,1),
+	  ('SE121', N'Đồ án 1',3,1,1,1,1),
 	  ('IS216', N'Lập trình Java',3,1,1,1,2),
 	  ('IS252', N'Khai thác dữ liệu',3,1,1,1,2);
 
 INSERT INTO class_module VALUES
         (N'SE104.M11','5/9/2021','31/12/2021',1,2019,1),
 		(N'SE104.M13','5/9/2021','31/12/2021',1,2020,1),
-		(N'SE208.M11','28/2/2022','30/6/2022',2,2019,2),
-		(N'SE208.M12','28/2/2022','30/6/2022',2,2020,2),
+		(N'SE113.M11','28/2/2022','30/6/2022',2,2019,2),
+		(N'SE113.M12','28/2/2022','30/6/2022',2,2020,2),
         (N'SE216.M11','5/9/2021','31/12/2021',1,2019,1),
 		(N'SE216.M13','5/9/2021','31/12/2021',1,2020,1),
 		(N'SE252.M11','28/2/2022','30/6/2022',2,2019,2),
 		(N'SE252.M12','28/2/2022','30/6/2022',2,2020,2);
 
 INSERT INTO lecturer VALUES 
-        (N'Nguyễn Văn A',N'hợp đồng chính thức',N'thạc sĩ',1,2),
-		(N'Nguyễn Văn B',N'giảng viên thỉnh giảng',N'thạc sĩ',2,3),
-		(N'Nguyễn Văn C',N'Kỹ thuật máy tính',N'thạc sĩ',2,4);
+        (N'Nguyễn Văn A',N'Hợp đồng chính thức',N'Master',1,2),
+		(N'Nguyễn Văn B',N'Giảng viên thỉnh giảng',N'Doctor',2,3),
+		(N'Nguyễn Văn C',N'Giảng viên mời giảng',N'University',2,4);
 
 INSERT INTO teaching VALUES
         (1,1),
@@ -203,43 +204,50 @@ INSERT INTO studying VALUES
 	   (9,2,3);
 
 INSERT INTO classroom VALUES
-      (N'phòng lý thuyết',45),
-	  (N'phòng thực hành',150);
+	(N'C101', N'Lecture Room',45),
+	(N'C201', N'Lecture Room',45),
+	(N'B101', N'Lecture Room',45),
+	(N'B201', N'Lecture Room',45),
+	(N'E101', N'Self-study Room',50),
+	(N'E201', N'Self-study Room',50),
+	(N'A301', N'Practice Room',40),
+	(N'A201', N'Practice Room',40),
+	(N'A101', N'Practice Room',40);
 
 INSERT INTO lesson VALUES
-       (N'Thứ 2','','',1,1,1),
-	   (N'Thứ 3','','',1,1,1);
+       (N'Monday', N'7h30', N'9h30',1,1,1),
+	   (N'Tuesday', N'13h', N'14h',1,1,1);
 
 insert into module_list values
-	(N'SE104', N'Nhập môn công nghệ phần mềm', 1),
-	(N'SE100', N'Phương pháp phát triển phần mềm hướng đối tượng', 1),
-	(N'SE330', N'Ngôn ngữ lập trình Java', 1),
-	(N'SE113', N'Kiểm chứng phần mềm', 1),
-	(N'SE106', N'Đặc tả hình thức', 1),
-	(N'SE347', N'Công nghệ Web và ứng dụng', 1),
-	(N'SE104', N'Nhập môn công nghệ phần mềm', 1),
-	(N'SE356', N'Kiến trúc phần mềm', 1),
-	(N'SE121', N'Đồ án 1', 1),
-	(N'SE122', N'Đồ án 2', 1),
+	(N'SE104', N'Nhập môn công nghệ phần mềm', 4, 1),
+	(N'SE100', N'Phương pháp phát triển phần mềm hướng đối tượng', 4, 1),
+	(N'SE330', N'Ngôn ngữ lập trình Java', 4, 1),
+	(N'SE113', N'Kiểm chứng phần mềm', 4, 1),
+	(N'SE106', N'Đặc tả hình thức', 4, 1),
+	(N'SE347', N'Công nghệ Web và ứng dụng', 4, 1),
+	(N'SE104', N'Nhập môn công nghệ phần mềm', 4, 1),
+	(N'SE356', N'Kiến trúc phần mềm', 4, 1),
+	(N'SE121', N'Đồ án 1', 2, 1),
+	(N'SE122', N'Đồ án 2', 2, 1),
 
-	(N'CS217', N'Các hệ cơ sở tri thức', 3),
-	(N'CS315', N'Máy học nâng cao', 3),
-	(N'CS106', N'Trí tuệ nhân tạo', 3),
+	(N'CS217', N'Các hệ cơ sở tri thức', 4, 3),
+	(N'CS315', N'Máy học nâng cao', 4, 3),
+	(N'CS106', N'Trí tuệ nhân tạo', 4, 3),
 	(N'CS114', N'Máy học', 3, 3),
 	(N'CS325', N'Dịch máy', 3, 3),
-	(N'CS105', N'Đồ hoạ máy tính', 3),
-	(N'CS338', N'Nhận dạng', 3),
-	(N'CS312', N'Hệ thống đa tác tử', 3),
-	(N'CS313', N'Khai thác dữ liệu và ứng dụng', 3),
-	(N'CS221', N'Xử lý ngôn ngữ tự nhiên', 3),
+	(N'CS105', N'Đồ hoạ máy tính', 4, 3),
+	(N'CS338', N'Nhận dạng', 4, 3),
+	(N'CS312', N'Hệ thống đa tác tử', 4, 3),
+	(N'CS313', N'Khai thác dữ liệu và ứng dụng', 4, 3),
+	(N'CS221', N'Xử lý ngôn ngữ tự nhiên', 4, 3),
 
-	(N'IS220', N'Xây dựng HTTT trên các framework', 2),
-	(N'IS210', N'Hệ quản trị cơ sở dữ liệu', 2),
-	(N'IS216', N'Lập trình Java', 2),
-	(N'IS336', N'Hoạch định nguồn lực doanh nghiệp', 2),
-	(N'IS207', N'Phát triển ứng dụng Web', 2),
-	(N'IS211', N'Cơ sở dữ liệu phân tán', 2),
-	(N'IS252', N'Khai thác dữ liệu', 2),
-	(N'IS217', N'Kho dữ liệu và OLAP', 2),
-	(N'IS403', N'Phân tích dữ liệu kinh doanh', 2),
-	(N'IS334', N'Thương mại điện tử', 2);
+	(N'IS220', N'Xây dựng HTTT trên các framework', 4, 2),
+	(N'IS210', N'Hệ quản trị cơ sở dữ liệu', 4, 2),
+	(N'IS216', N'Lập trình Java', 4, 2),
+	(N'IS336', N'Hoạch định nguồn lực doanh nghiệp', 4, 2),
+	(N'IS207', N'Phát triển ứng dụng Web', 4, 2),
+	(N'IS211', N'Cơ sở dữ liệu phân tán', 4, 2),
+	(N'IS252', N'Khai thác dữ liệu', 4, 2),
+	(N'IS217', N'Kho dữ liệu và OLAP', 4, 2),
+	(N'IS403', N'Phân tích dữ liệu kinh doanh', 4, 2),
+	(N'IS334', N'Thương mại điện tử', 4, 2);

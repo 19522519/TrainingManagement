@@ -35,6 +35,7 @@ namespace TrainingManagement
             this.curriculumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlContent = new System.Windows.Forms.Panel();
+            this.classModuleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,10 +45,11 @@ namespace TrainingManagement
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.moduleToolStripMenuItem,
             this.curriculumToolStripMenuItem,
+            this.classModuleToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1201, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(1404, 31);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -77,14 +79,21 @@ namespace TrainingManagement
             this.pnlContent.Location = new System.Drawing.Point(0, 33);
             this.pnlContent.Margin = new System.Windows.Forms.Padding(4);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(1200, 800);
+            this.pnlContent.Size = new System.Drawing.Size(1400, 750);
             this.pnlContent.TabIndex = 1;
+            // 
+            // classModuleToolStripMenuItem
+            // 
+            this.classModuleToolStripMenuItem.Name = "classModuleToolStripMenuItem";
+            this.classModuleToolStripMenuItem.Size = new System.Drawing.Size(125, 27);
+            this.classModuleToolStripMenuItem.Text = "Class Module";
+            this.classModuleToolStripMenuItem.Click += new System.EventHandler(this.classModuleToolStripMenuItem_Click);
             // 
             // DepartmentHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1201, 835);
+            this.ClientSize = new System.Drawing.Size(1404, 783);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -106,5 +115,6 @@ namespace TrainingManagement
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Panel pnlContent;
         private System.Windows.Forms.ToolStripMenuItem curriculumToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem classModuleToolStripMenuItem;
     }
 }

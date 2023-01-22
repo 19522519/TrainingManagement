@@ -13,67 +13,118 @@ namespace TrainingManagement
 {
     public partial class ClassModulesManagement : Form
     {
+        CurriculumController curriculumController = new CurriculumController();
+        ModuleController moduleController = new ModuleController();
         ClassModuleController classModuleController = new ClassModuleController();
         LecturerController lecturerController = new LecturerController();
-        String majorParam;
+        string right;
 
-        public ClassModulesManagement(String major)
+        public ClassModulesManagement(string role)
         {
-            majorParam = major;
             InitializeComponent();
-            loadData();
-            loadSemester();
-            // loadLecturer(major);
+
+            right = role;
+            changeRoleName();
+
+            loadSchoolYear();
+            
+            loadLecturer();
         }
 
-        void loadSemester()
+        // Đổi từ SEDean sang Software Engirneering / CSDean sang Computer Science / ISDean sang Information System
+        public void changeRoleName()
         {
-            cmbSemester.Items.Add("Học kỳ 1");
-            cmbSemester.Items.Add("Học kỳ 2");
-            cmbSemester.SelectedIndex = 0;
+            switch (right)
+            {
+                case "SEDean":
+                    right = "Software Engirneering";
+                    break;
+                case "CSDean":
+                    right = "Computer Science";
+                    break;
+                case "ISDean":
+                    right = "Information System";
+                    break;
+            }
         }
 
-        void loadLecturer(String major)
+        public void loadSchoolYear()
         {
-            // cmbTheoryLecturer.DataSource = lecturerController.getAll(major);
-            // cmbPracticeLecturer.DataSource = lecturerController.getAll(major);
+            cmbSchoolYear.DataSource = curriculumController.getAllSchoolYearOnMajor(right);
+            cmbSchoolYear.DisplayMember = "SchoolYear";
+            cmbSchoolYear.SelectedIndex = 0;
         }
 
-        void loadData()
+        void loadLecturer()
         {
-            // dgvData.DataSource = classModuleController.getAllByMajor(majorParam);
-            addBiding();
+            dgvLecturer.DataSource = lecturerController.getAllLecturerBasedOnMajor(right);
+            addBidingLecturer();
         }
 
-        void addBiding()
+        public void addBidingLecturer()
         {
-            /*txtSchoolYear.DataBindings.Clear();
-            cmbSemester.DataBindings.Clear();
-            txtModuleCode.DataBindings.Clear();
-            txtClassModuleName.DataBindings.Clear();
-            dtpStartDate.DataBindings.Clear();
-            dtpEndDate.DataBindings.Clear();
-            //cmbTheoryLecturer.DataBindings.Clear();
-            //cmbPracticeLecturer.DataBindings.Clear();
-
-            txtSchoolYear.DataBindings.Add("Text", dgvData.DataSource, "School_Year", true, DataSourceUpdateMode.Never);
-            cmbSemester.DataBindings.Add("Text", dgvData.DataSource, "Semester", true, DataSourceUpdateMode.Never);
-            txtModuleCode.DataBindings.Add("Text", dgvData.DataSource, "ID", true, DataSourceUpdateMode.Never);
-            txtClassModuleName.DataBindings.Add("Text", dgvData.DataSource, "Name", true, DataSourceUpdateMode.Never);
-            dtpStartDate.DataBindings.Add("Value", dgvData.DataSource, "Start_Date", true, DataSourceUpdateMode.Never);
-            dtpEndDate.DataBindings.Add("Value", dgvData.DataSource, "End_Date", true, DataSourceUpdateMode.Never);
-            //cmbTheoryLecturer.DataBindings.Add("Text", dgvData.DataSource, "Theory_Lecturer", true, DataSourceUpdateMode.Never);
-            //cmbPracticeLecturer.DataBindings.Add("Text", dgvData.DataSource, "Practice_Lecturer", true, DataSourceUpdateMode.Never);*/
+            txbLecturerId.DataBindings.Clear();
+            txbLecturerName.DataBindings.Clear();
+            cmbLevel.DataBindings.Clear();
+            txbLecturerId.DataBindings.Add("Text", dgvLecturer.DataSource, "Id", true, DataSourceUpdateMode.Never);
+            txbLecturerName.DataBindings.Add("Text", dgvLecturer.DataSource, "Name", true, DataSourceUpdateMode.Never);
+            cmbLevel.DataBindings.Add("Text", dgvLecturer.DataSource, "Level", true, DataSourceUpdateMode.Never);
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        public void loadDataModule()
+        {
+            dgvModule.DataSource = moduleController.getAllModulesBasedOnShoolYear(cmbSchoolYear.Text);
+            addBidingModule();
+        }
+
+        void addBidingModule()
+        {
+            txbModuleId.DataBindings.Clear();
+            txbClassModuleCode.DataBindings.Clear();
+            txbClassModuleName.DataBindings.Clear();
+
+            txbModuleId.DataBindings.Add("Text", dgvModule.DataSource, "Id", true, DataSourceUpdateMode.Never);
+            txbClassModuleCode.DataBindings.Add("Text", dgvModule.DataSource, "Code", true, DataSourceUpdateMode.Never);
+            txbClassModuleName.DataBindings.Add("Text", dgvModule.DataSource, "Name", true, DataSourceUpdateMode.Never);
+        }
+
+        public void loadDataClassModule()
         {
 
         }
 
-        private void btnReload_Click(object sender, EventArgs e)
+        public void addBidingClassModule()
         {
-            loadData();
+
+        }
+
+        private void btnSearchModule_Click(object sender, EventArgs e)
+        {
+            loadDataModule();
+        }
+
+        private void btnSearchLecturer_Click(object sender, EventArgs e)
+        {
+            dgvLecturer.DataSource = lecturerController.findLecturerOnNameAndLevel(txbLecturerName.Text, cmbLevel.Text, right);
+            addBidingLecturer();
+        }
+
+        private void cmbSchoolYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txbSchoolYear.Text = cmbSchoolYear.Text;
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            class_module class_Module = new class_module()
+            {
+                ID_Class_module = txbClassModuleCode.Text,
+                start_date = dtpStartDate.Value,
+                end_date = dtpEndDate.Value,
+                semester = Convert.ToInt32(txbSemester.Text),
+                school_year = Convert.ToInt32(txbSchoolYear.Text)
+            };
+            classModuleController.insertClassModule(Convert.ToInt32(txbModuleId.Text), class_Module);
         }
     }
 }

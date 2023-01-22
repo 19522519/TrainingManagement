@@ -48,5 +48,17 @@ namespace TrainingManagement
         {
             Close();
         }
+
+        private void classModuleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnlContent.Controls.Clear();
+            ClassModulesManagement classModulesManagement = new ClassModulesManagement(major);
+            classModulesManagement.TopLevel = false;
+            classModulesManagement.AutoScroll = true;
+            classModulesManagement.Dock = DockStyle.Fill;
+            classModulesManagement.FormBorderStyle = FormBorderStyle.None;
+            pnlContent.Controls.Add(classModulesManagement);
+            classModulesManagement.Show();
+        }
     }
 }

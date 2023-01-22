@@ -10,15 +10,18 @@ namespace TrainingManagement.Controller
     {
         TrainingManagementEntities entities = new TrainingManagementEntities();
 
-        public dynamic getAll(String major)
+        public dynamic getAllLecturerBasedOnMajor(String major)
         {
             var data = from c in entities.lecturer
                        where c.major.name.Equals(major)
                        select new
                        {
-                           name = c.name
+                           Id = c.id,
+                           Name = c.name,
+                           Contract = c.contract,
+                           Level = c.level
                        };
-            return data;
+            return data.ToList();
         }
 
         public dynamic getAll()
@@ -58,7 +61,6 @@ namespace TrainingManagement.Controller
                               Major = c.major.name,
                               Level = c.level,
                               Contract = c.contract
-
                           };
             return lecturer.FirstOrDefault();
         }
@@ -101,6 +103,34 @@ namespace TrainingManagement.Controller
                            Major = c.major.name,
                            Level = c.level,
                            Contract = c.contract,
+                       };
+            return data.ToList();
+        }
+
+        public dynamic findLecturerOnNameAndLevel(string lecturerName, string level, string major)
+        {
+            var result = from c in entities.lecturer
+                         select c;
+
+            if (lecturerName != "")
+                result = from c in entities.lecturer
+                         where c.name.Contains(lecturerName)
+                         select c;
+
+            if (level != "")
+                result = from c in entities.lecturer
+                         where c.level.Equals(level)
+                         select c;
+
+            var data = from c in result
+                       where c.major.name.Equals(major)
+                       select new
+                       {
+                           ID = c.id,
+                           Name = c.name,
+                           Major = c.major.name,
+                           Level = c.level,
+                           Contract = c.contract
                        };
             return data.ToList();
         }

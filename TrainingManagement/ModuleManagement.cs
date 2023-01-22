@@ -121,8 +121,8 @@ namespace TrainingManagement
             txbPracticeLessons.DataBindings.Add("Text", dgvModule.DataSource, "PracticeLessons", true, DataSourceUpdateMode.Never);
             txbSelfStudyLessons.DataBindings.Add("Text", dgvModule.DataSource, "SelfStudyLessons", true, DataSourceUpdateMode.Never);
             txbVisitingLessons.DataBindings.Add("Text", dgvModule.DataSource, "VisitingLessons", true, DataSourceUpdateMode.Never);
-/*            txbSemester.DataBindings.Add("Text", dgvModule.DataSource, "Semester", true, DataSourceUpdateMode.Never);
-            txbSchoolYear.DataBindings.Add("Text", dgvModule.DataSource, "SchoolYear", true, DataSourceUpdateMode.Never);*/
+            /*            txbSemester.DataBindings.Add("Text", dgvModule.DataSource, "Semester", true, DataSourceUpdateMode.Never);
+                        txbSchoolYear.DataBindings.Add("Text", dgvModule.DataSource, "SchoolYear", true, DataSourceUpdateMode.Never);*/
         }
 
         public void loadDataModule()
@@ -204,6 +204,12 @@ namespace TrainingManagement
         private void dgvModule_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             addBidingModule();
+            dynamic value = moduleListController.getCreditsByCode(txbName.Text, right, txbCode.Text);
+            if (value != null)
+            {
+                txbCredits.Text = value.Credits.ToString();
+            }
+
         }
     }
 }
