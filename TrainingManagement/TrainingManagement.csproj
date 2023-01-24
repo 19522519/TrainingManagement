@@ -79,6 +79,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Controller\ClassModuleController.cs" />
+    <Compile Include="Controller\ClassroomController.cs" />
     <Compile Include="Controller\CurriculumController.cs" />
     <Compile Include="Controller\DepartmentTypeController.cs" />
     <Compile Include="Controller\LecturerController.cs" />

@@ -10,28 +10,52 @@ namespace TrainingManagement.Controller
     {
         TrainingManagementEntities entities = new TrainingManagementEntities();
 
-        public dynamic getAllByMajor(String major)
+/*        public dynamic getAllByMajor(String major)
         {
-            var cm = from c in entities.class_module
-                     where c.module.curriculum.major.Equals(major)
+            var data = from c in entities.class_module
+                     where c.module.curriculum.major.name.Equals(major)
+                     orderby c.ID_Class_module ascending
                      select new
                      {
+                         Id = c.id,
                          Semester = c.semester,
-                         School_Year = c.school_year,
-                         ID = c.ID_Class_module,
+                         SchoolYear = c.school_year,
+                         ClassCode = c.ID_Class_module,
                          Name = c.module.name,
-                         Start_Date = c.start_date,
-                         End_Date = c.end_date
+                         StartDate = c.start_date,
+                         EndDate = c.end_date
                      };
-            return cm.ToList();
-        }  
+            return data.ToList();
+        }*/  
 
         public int insertClassModule(int moduleId, class_module class_Module)
         {
-            class_Module.id = moduleId;
+            class_Module.module_id = moduleId;
             entities.class_module.Add(class_Module);
             entities.SaveChanges();
             return class_Module.id;
+        }
+
+        public void deleteClassModule(int classModuleId)
+        {
+            class_module class_Module = entities.class_module.Find(classModuleId);
+            if (class_Module != null)
+            {
+                entities.class_module.Remove(class_Module);
+                entities.SaveChanges();
+            }
+        }
+
+        public void updateClassModule(int moduleId, class_module class_Module)
+        {
+            class_module class_Module1 = entities.class_module.Find(class_Module.id);
+            class_Module1.ID_Class_module = class_Module.ID_Class_module;
+            class_Module1.school_year = class_Module.school_year;
+            class_Module1.semester = class_Module.semester;
+            class_Module1.start_date = class_Module.start_date;
+            class_Module1.end_date = class_Module.end_date;
+            class_Module1.module_id = moduleId;
+            entities.SaveChanges();
         }
     }
 }

@@ -78,7 +78,6 @@ namespace TrainingManagement
                 txbTrainingSystem.Text = value.TrainingSystem;
                 loadDataModule();
             }
-            
         }
 
         public void addBiding()
@@ -103,26 +102,18 @@ namespace TrainingManagement
             txbModuleId.DataBindings.Clear();
             txbCode.DataBindings.Clear();
             txbName.DataBindings.Clear();
-/*            dtpStartDate.DataBindings.Clear();
-            dtpEndDate.DataBindings.Clear();*/
             txbTheoryLessons.DataBindings.Clear();
             txbPracticeLessons.DataBindings.Clear();
             txbSelfStudyLessons.DataBindings.Clear();
             txbVisitingLessons.DataBindings.Clear();
-            /*            txbSemester.DataBindings.Clear();
-                        txbSchoolYear.DataBindings.Clear();*/
 
             txbModuleId.DataBindings.Add("Text", dgvModule.DataSource, "Id", true, DataSourceUpdateMode.Never);
             txbCode.DataBindings.Add("Text", dgvModule.DataSource, "Code", true, DataSourceUpdateMode.Never);
             txbName.DataBindings.Add("Text", dgvModule.DataSource, "Name", true, DataSourceUpdateMode.Never);
-/*            dtpStartDate.DataBindings.Add("Text", dgvModule.DataSource, "StartDate", true, DataSourceUpdateMode.Never);
-            dtpEndDate.DataBindings.Add("Text", dgvModule.DataSource, "EndDate", true, DataSourceUpdateMode.Never);*/
             txbTheoryLessons.DataBindings.Add("Text", dgvModule.DataSource, "TheoryLessons", true, DataSourceUpdateMode.Never);
             txbPracticeLessons.DataBindings.Add("Text", dgvModule.DataSource, "PracticeLessons", true, DataSourceUpdateMode.Never);
             txbSelfStudyLessons.DataBindings.Add("Text", dgvModule.DataSource, "SelfStudyLessons", true, DataSourceUpdateMode.Never);
-            txbVisitingLessons.DataBindings.Add("Text", dgvModule.DataSource, "VisitingLessons", true, DataSourceUpdateMode.Never);
-            /*            txbSemester.DataBindings.Add("Text", dgvModule.DataSource, "Semester", true, DataSourceUpdateMode.Never);
-                        txbSchoolYear.DataBindings.Add("Text", dgvModule.DataSource, "SchoolYear", true, DataSourceUpdateMode.Never);*/
+            txbVisitingLessons.DataBindings.Add("Text", dgvModule.DataSource, "VisitingLessons", true, DataSourceUpdateMode.Never);       
         }
 
         public void loadDataModule()
@@ -157,15 +148,6 @@ namespace TrainingManagement
             };
             int moduleId = moduleController.insertModule(Convert.ToInt32(txbCurriculumId.Text), module);
 
-            /*            // Create class module
-                        class_module class_Module = new class_module
-                        {
-                            start_date = dtpStartDate.Value,
-                            end_date = dtpEndDate.Value,
-                            semester = Convert.ToInt32(txbSemester.Text),
-                            school_year = Convert.ToInt32(txbSchoolYear.Text)
-                        };
-                        classModuleController.insertClassModule(moduleId, class_Module);*/
             loadDataModule();
             MessageBox.Show("Create successfully!");
         }
@@ -209,7 +191,6 @@ namespace TrainingManagement
             {
                 txbCredits.Text = value.Credits.ToString();
             }
-
         }
     }
 }

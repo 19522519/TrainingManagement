@@ -54,8 +54,31 @@ namespace TrainingManagement.Controller
             entities.SaveChanges();
         }
 
+        public int insertTeaching(int classModuleId, int lecturerId, teaching teaching)
+        {
+            teaching.class_module_id = classModuleId;
+            teaching.lecturer_id = lecturerId;
+            entities.teaching.Add(teaching);
+            entities.SaveChanges();
+            return teaching.id;
+        }
 
+        public void deleteTeaching(int teachingId)
+        {
+            teaching teaching = entities.teaching.Find(teachingId);
+            if(teaching != null)
+            {
+                entities.teaching.Remove(teaching);
+                entities.SaveChanges();
+            }
+        }
 
+        public void updateTeaching(int lecturerId, teaching teaching)
+        {
+            teaching teaching1 = entities.teaching.Find(teaching.id);
+            teaching1.lecturer_id = lecturerId;
+            entities.SaveChanges();
+        }
     }
 
 

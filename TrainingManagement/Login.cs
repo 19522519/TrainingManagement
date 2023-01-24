@@ -76,7 +76,7 @@ namespace TrainingManagement
             // MessageBox.Show(id.ToString());
             if (id != -1)
             {
-                MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK,
+                MessageBox.Show("Login successfully!", "Notification", MessageBoxButtons.OK,
                    MessageBoxIcon.Information);
 
                 String role = userController.getUserById(id).access_right;

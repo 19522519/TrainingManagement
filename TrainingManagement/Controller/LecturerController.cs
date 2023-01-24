@@ -116,6 +116,17 @@ namespace TrainingManagement.Controller
             return data.ToList();
         }
 
+        public dynamic findAllLevelOnMajor(string major)
+        {
+            var data = from c in entities.lecturer
+                       where c.major.name.Equals(major)
+                       select new
+                       {
+                           Level = c.level
+                       };
+            return data.ToList();
+        }
+
         public dynamic findLecturerOnNameAndLevel(string lecturerName, string level, string major)
         {
             var result = from c in entities.lecturer
