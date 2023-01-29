@@ -55,9 +55,9 @@ namespace TrainingManagement
             this.labelPersionalInformation.ForeColor = System.Drawing.Color.Teal;
             this.labelPersionalInformation.Location = new System.Drawing.Point(360, 27);
             this.labelPersionalInformation.Name = "labelPersionalInformation";
-            this.labelPersionalInformation.Size = new System.Drawing.Size(228, 32);
+            this.labelPersionalInformation.Size = new System.Drawing.Size(263, 32);
             this.labelPersionalInformation.TabIndex = 29;
-            this.labelPersionalInformation.Text = "Thông tin cá nhân";
+            this.labelPersionalInformation.Text = "Personal information";
             // 
             // listBox1
             // 
@@ -79,7 +79,7 @@ namespace TrainingManagement
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(174, 23);
             this.label3.TabIndex = 61;
-            this.label3.Text = "Thông tin giảng viên";
+            this.label3.Text = "Lecturer information";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label1
@@ -89,9 +89,9 @@ namespace TrainingManagement
             this.label1.ForeColor = System.Drawing.Color.Teal;
             this.label1.Location = new System.Drawing.Point(198, 124);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 20);
+            this.label1.Size = new System.Drawing.Size(54, 20);
             this.label1.TabIndex = 62;
-            this.label1.Text = "Họ tên:";
+            this.label1.Text = "Name:";
             // 
             // label2
             // 
@@ -100,9 +100,9 @@ namespace TrainingManagement
             this.label2.ForeColor = System.Drawing.Color.Teal;
             this.label2.Location = new System.Drawing.Point(198, 207);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 20);
+            this.label2.Size = new System.Drawing.Size(55, 20);
             this.label2.TabIndex = 63;
-            this.label2.Text = "Chuyên ngành:";
+            this.label2.Text = "Major:";
             // 
             // label4
             // 
@@ -111,9 +111,9 @@ namespace TrainingManagement
             this.label4.ForeColor = System.Drawing.Color.Teal;
             this.label4.Location = new System.Drawing.Point(198, 168);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 20);
+            this.label4.Size = new System.Drawing.Size(71, 20);
             this.label4.TabIndex = 64;
-            this.label4.Text = "Hợp đồng:";
+            this.label4.Text = "Contract:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
@@ -123,9 +123,9 @@ namespace TrainingManagement
             this.label5.ForeColor = System.Drawing.Color.Teal;
             this.label5.Location = new System.Drawing.Point(540, 124);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 20);
+            this.label5.Size = new System.Drawing.Size(48, 20);
             this.label5.TabIndex = 65;
-            this.label5.Text = "Trình độ:";
+            this.label5.Text = "Level:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtMajor
@@ -178,9 +178,9 @@ namespace TrainingManagement
             this.label6.ForeColor = System.Drawing.Color.Teal;
             this.label6.Location = new System.Drawing.Point(414, 291);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(167, 23);
+            this.label6.Size = new System.Drawing.Size(173, 23);
             this.label6.TabIndex = 72;
-            this.label6.Text = "Thông tin tài khoản";
+            this.label6.Text = "Account information";
             // 
             // label7
             // 
