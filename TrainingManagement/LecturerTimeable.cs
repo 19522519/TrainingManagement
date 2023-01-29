@@ -49,39 +49,38 @@ namespace TrainingManagement
             dgvData.AutoGenerateColumns = false;
             DataGridViewTextBoxColumn col1 = new DataGridViewTextBoxColumn();
             col1.DataPropertyName = "ClassModuleID";
-            col1.HeaderText = "Mã môn học";
+            col1.HeaderText = "Module code";
 
             DataGridViewTextBoxColumn col2 = new DataGridViewTextBoxColumn();
             col2.DataPropertyName = "Name";
-            col2.HeaderText = "Tên môn học";
+            col2.HeaderText = "Module name";
 
             DataGridViewTextBoxColumn col3 = new DataGridViewTextBoxColumn();
-            col3.DataPropertyName = "DayInWeek";
-            col3.HeaderText = "Thứ";
+            col3.DataPropertyName = "StartTime";
+            col3.HeaderText = "Start time";
 
             DataGridViewTextBoxColumn col4 = new DataGridViewTextBoxColumn();
-            col4.DataPropertyName = "StartTime";
-            col4.HeaderText = "Tiết bắt đầu";
-
+            col4.DataPropertyName = "EndTime";
+            col4.HeaderText = "End time";
 
             DataGridViewTextBoxColumn col5 = new DataGridViewTextBoxColumn();
-            col5.DataPropertyName = "EndTime";
-            col5.HeaderText = "Tiết kết thúc";
+            col5.DataPropertyName = "DayInWeek";
+            col5.HeaderText = "Day";
 
 
             DataGridViewTextBoxColumn col6 = new DataGridViewTextBoxColumn();
-            col6.DataPropertyName = "MaxSize";
-            col6.HeaderText = "Số lượng";
+            col6.DataPropertyName = "RoomName";
+            col6.HeaderText = "Room";
 
 
             DataGridViewTextBoxColumn col7 = new DataGridViewTextBoxColumn();
             col7.DataPropertyName = "StartDay";
-            col7.HeaderText = "Ngày Bắt đầu";
+            col7.HeaderText = "Start day";
 
 
             DataGridViewTextBoxColumn col8 = new DataGridViewTextBoxColumn();
             col8.DataPropertyName = "EndDay";
-            col8.HeaderText = "Ngày Kết thúc";
+            col8.HeaderText = "End day";
 
             dgvData.Columns.Add(col0);
             dgvData.Columns.Add(col1);

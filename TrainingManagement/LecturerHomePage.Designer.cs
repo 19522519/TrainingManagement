@@ -29,6 +29,7 @@ namespace TrainingManagement
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LecturerHomePage));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.classesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timeableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,47 +53,47 @@ namespace TrainingManagement
             this.exitsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(969, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(969, 31);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // classesToolStripMenuItem
             // 
             this.classesToolStripMenuItem.Name = "classesToolStripMenuItem";
-            this.classesToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
+            this.classesToolStripMenuItem.Size = new System.Drawing.Size(78, 27);
             this.classesToolStripMenuItem.Text = "Classes";
             // 
             // timeableToolStripMenuItem
             // 
             this.timeableToolStripMenuItem.Name = "timeableToolStripMenuItem";
-            this.timeableToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.timeableToolStripMenuItem.Size = new System.Drawing.Size(93, 27);
             this.timeableToolStripMenuItem.Text = "Timeable";
             this.timeableToolStripMenuItem.Click += new System.EventHandler(this.timeableToolStripMenuItem_Click);
             // 
             // confirmModulesToolStripMenuItem
             // 
             this.confirmModulesToolStripMenuItem.Name = "confirmModulesToolStripMenuItem";
-            this.confirmModulesToolStripMenuItem.Size = new System.Drawing.Size(137, 24);
+            this.confirmModulesToolStripMenuItem.Size = new System.Drawing.Size(155, 27);
             this.confirmModulesToolStripMenuItem.Text = "Confirm Modules";
             // 
             // profileToolStripMenuItem
             // 
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
-            this.profileToolStripMenuItem.Size = new System.Drawing.Size(66, 24);
+            this.profileToolStripMenuItem.Size = new System.Drawing.Size(72, 27);
             this.profileToolStripMenuItem.Text = "Profile";
             this.profileToolStripMenuItem.Click += new System.EventHandler(this.profileToolStripMenuItem_Click);
             // 
             // điểmToolStripMenuItem
             // 
             this.điểmToolStripMenuItem.Name = "điểmToolStripMenuItem";
-            this.điểmToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
-            this.điểmToolStripMenuItem.Text = "Điểm";
+            this.điểmToolStripMenuItem.Size = new System.Drawing.Size(66, 27);
+            this.điểmToolStripMenuItem.Text = "Score";
             this.điểmToolStripMenuItem.Click += new System.EventHandler(this.điểmToolStripMenuItem_Click);
             // 
             // exitsToolStripMenuItem
             // 
             this.exitsToolStripMenuItem.Name = "exitsToolStripMenuItem";
-            this.exitsToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
+            this.exitsToolStripMenuItem.Size = new System.Drawing.Size(51, 27);
             this.exitsToolStripMenuItem.Text = "Exit";
             this.exitsToolStripMenuItem.Click += new System.EventHandler(this.exitsToolStripMenuItem_Click);
             // 
@@ -110,9 +111,10 @@ namespace TrainingManagement
             this.ClientSize = new System.Drawing.Size(969, 582);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "LecturerHomePage";
-            this.Text = "LecturerHomePage";
+            this.Text = "Home";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

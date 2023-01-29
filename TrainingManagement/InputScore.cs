@@ -50,7 +50,7 @@ namespace TrainingManagement
             dgvData.AutoGenerateColumns = false;
             DataGridViewTextBoxColumn col1 = new DataGridViewTextBoxColumn();
             col1.DataPropertyName = "StudentID";
-            col1.HeaderText = "MSSV";
+            col1.HeaderText = "Student ID";
 
             DataGridViewTextBoxColumn col2 = new DataGridViewTextBoxColumn();
             col2.DataPropertyName = "LastName";
@@ -62,7 +62,7 @@ namespace TrainingManagement
 
             DataGridViewTextBoxColumn col4 = new DataGridViewTextBoxColumn();
             col4.DataPropertyName = "AvgScore";
-            col4.HeaderText = "DTB";
+            col4.HeaderText = "Average score";
 
             dgvData.Columns.Add(col0);
             dgvData.Columns.Add(col1);

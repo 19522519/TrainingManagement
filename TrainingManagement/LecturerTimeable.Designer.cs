@@ -44,9 +44,9 @@ namespace TrainingManagement
             this.label1.Location = new System.Drawing.Point(91, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 17);
+            this.label1.Size = new System.Drawing.Size(72, 17);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Chọn học kỳ:";
+            this.label1.Text = "Semester:";
             // 
             // label2
             // 
@@ -54,9 +54,9 @@ namespace TrainingManagement
             this.label2.Location = new System.Drawing.Point(375, 31);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 17);
+            this.label2.Size = new System.Drawing.Size(87, 17);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Chọn năm học:";
+            this.label2.Text = "School year:";
             // 
             // cmbSemester
             // 
@@ -80,7 +80,7 @@ namespace TrainingManagement
             this.btnTimeable.Name = "btnTimeable";
             this.btnTimeable.Size = new System.Drawing.Size(159, 30);
             this.btnTimeable.TabIndex = 5;
-            this.btnTimeable.Text = "Xem thời khóa biểu";
+            this.btnTimeable.Text = "View timeable";
             this.btnTimeable.UseVisualStyleBackColor = true;
             this.btnTimeable.Click += new System.EventHandler(this.btnTimeable_Click);
             // 

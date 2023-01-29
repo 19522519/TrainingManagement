@@ -22,7 +22,7 @@ namespace TrainingManagement.Controller
                               DayInWeek = c.day_in_week,
                               StartTime = c.start_time,
                               EndTime = c.end_time,
-                              MaxSize = c.classroom.max_size,
+                              RoomName = c.classroom.name,
                               StartDay = c.class_module.start_date,
                               EndDay = c.class_module.end_date,
                           };
