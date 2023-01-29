@@ -53,7 +53,7 @@ namespace TrainingManagement
         {
             cmbSchoolYear.DataSource = curriculumController.getAllSchoolYearOnMajor(right);
             cmbSchoolYear.DisplayMember = "SchoolYear";
-            cmbSchoolYear.SelectedIndex = 0;
+            // cmbSchoolYear.SelectedIndex = 0;
         }
 
         void loadCurriculumBasedOnSchoolYear()
@@ -141,6 +141,7 @@ namespace TrainingManagement
             {
                 ID_Module = txbCode.Text,
                 name = txbName.Text,
+                credits = Convert.ToInt32(txbCredits.Text),
                 theory_lessons = Convert.ToInt32(txbTheoryLessons.Text),
                 practice_lessons = Convert.ToInt32(txbPracticeLessons.Text),
                 self_study_lessons = Convert.ToInt32(txbSelfStudyLessons.Text),
@@ -159,6 +160,7 @@ namespace TrainingManagement
                 id = Convert.ToInt32(txbModuleId.Text),
                 ID_Module = txbCode.Text,
                 name = txbName.Text,
+                credits = Convert.ToInt32(txbCredits.Text),
                 theory_lessons = Convert.ToInt32(txbTheoryLessons.Text),
                 practice_lessons = Convert.ToInt32(txbPracticeLessons.Text),
                 self_study_lessons = Convert.ToInt32(txbSelfStudyLessons.Text),

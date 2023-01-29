@@ -5,22 +5,21 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="87829d46c0584feba890b11852ae0c9d" Name="Diagram1" ZoomLevel="63">
-        <EntityTypeShape EntityType="TrainingManagementModel.class_module" Width="1.5" PointX="9.75" PointY="20.875" />
-        <EntityTypeShape EntityType="TrainingManagementModel.classroom" Width="1.5" PointX="12" PointY="20.25" />
-        <EntityTypeShape EntityType="TrainingManagementModel.curriculum" Width="1.5" PointX="5.25" PointY="21.125" />
-        <EntityTypeShape EntityType="TrainingManagementModel.department" Width="1.5" PointX="0.75" PointY="11.25" />
-        <EntityTypeShape EntityType="TrainingManagementModel.lecturer" Width="1.5" PointX="8.25" PointY="10.875" />
-        <EntityTypeShape EntityType="TrainingManagementModel.lesson" Width="1.5" PointX="14.25" PointY="18.75" />
-        <EntityTypeShape EntityType="TrainingManagementModel.major" Width="1.5" PointX="3" PointY="10.875" />
-        <EntityTypeShape EntityType="TrainingManagementModel.module" Width="1.5" PointX="7.5" PointY="21" />
-        <EntityTypeShape EntityType="TrainingManagementModel.module_list" Width="1.5" PointX="5.25" PointY="14.25" />
-        <EntityTypeShape EntityType="TrainingManagementModel.student" Width="1.5" PointX="5.25" PointY="9.125" />
-        <EntityTypeShape EntityType="TrainingManagementModel.studying" Width="1.5" PointX="12" PointY="12.5" />
-        <EntityTypeShape EntityType="TrainingManagementModel.teaching" Width="1.5" PointX="12" PointY="16.375" />
-        <EntityTypeShape EntityType="TrainingManagementModel.users" Width="1.5" PointX="3" PointY="7" />
+        <EntityTypeShape EntityType="TrainingManagementModel.class_module" Width="1.5" PointX="9.75" PointY="16.25" />
+        <EntityTypeShape EntityType="TrainingManagementModel.classroom" Width="1.5" PointX="12" PointY="16.375" />
+        <EntityTypeShape EntityType="TrainingManagementModel.curriculum" Width="1.5" PointX="5.25" PointY="16.625" />
+        <EntityTypeShape EntityType="TrainingManagementModel.department" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="TrainingManagementModel.lecturer" Width="1.5" PointX="5.25" PointY="9.25" />
+        <EntityTypeShape EntityType="TrainingManagementModel.lesson" Width="1.5" PointX="14.25" PointY="14.75" />
+        <EntityTypeShape EntityType="TrainingManagementModel.major" Width="1.5" PointX="3" PointY="9.25" />
+        <EntityTypeShape EntityType="TrainingManagementModel.module" Width="1.5" PointX="7.5" PointY="16.25" />
+        <EntityTypeShape EntityType="TrainingManagementModel.module_list" Width="1.5" PointX="5.25" PointY="20.25" />
+        <EntityTypeShape EntityType="TrainingManagementModel.student" Width="1.5" PointX="8.25" PointY="8.625" />
+        <EntityTypeShape EntityType="TrainingManagementModel.studying" Width="1.5" PointX="16.5" PointY="12.25" />
+        <EntityTypeShape EntityType="TrainingManagementModel.teaching" Width="1.5" PointX="12" PointY="13.25" />
+        <EntityTypeShape EntityType="TrainingManagementModel.users" Width="1.5" PointX="3" PointY="5.375" />
         <AssociationConnector Association="TrainingManagementModel.FK__class_mod__modul__5070F446" />
         <AssociationConnector Association="TrainingManagementModel.FK__lesson__class_mo__5812160E" />
-        <AssociationConnector Association="TrainingManagementModel.FK__studying__class___5535A963" />
         <AssociationConnector Association="TrainingManagementModel.FK__teaching__class___52593CB8" />
         <AssociationConnector Association="TrainingManagementModel.FK__lesson__classroo__5629CD9C" />
         <AssociationConnector Association="TrainingManagementModel.FK__curriculu__major__4D94879B" />
@@ -30,6 +29,7 @@
         <AssociationConnector Association="TrainingManagementModel.FK__lecturer__users___5AEE82B9" />
         <AssociationConnector Association="TrainingManagementModel.FK__teaching__lectur__534D60F1" />
         <AssociationConnector Association="TrainingManagementModel.FK__lesson__teaching__571DF1D5" />
+        <AssociationConnector Association="TrainingManagementModel.FK__studying__lesson__5535A963" />
         <AssociationConnector Association="TrainingManagementModel.FK__module_li__major__5BE2A6F2" />
         <AssociationConnector Association="TrainingManagementModel.FK__student__major_i__59063A47" />
         <AssociationConnector Association="TrainingManagementModel.FK__student__users_i__59FA5E80" />

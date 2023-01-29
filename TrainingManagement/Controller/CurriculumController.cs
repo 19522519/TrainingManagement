@@ -14,6 +14,7 @@ namespace TrainingManagement.Controller
         public dynamic getAll(String major)
         {
             var data = from c in entities.curriculum
+                       orderby c.school_year ascending
                        where c.major.name.Equals(major)
                        select new
                        {
@@ -50,6 +51,15 @@ namespace TrainingManagement.Controller
         {
             var data = entities.curriculum
                 .Where(x => x.major.name.Equals(right))
+                .GroupBy(x => x.school_year)
+                .Select(g => g.FirstOrDefault().school_year);
+            return data.ToList();
+        }
+
+
+        public dynamic getAllSchoolYear()
+        {
+            var data = entities.curriculum
                 .GroupBy(x => x.school_year)
                 .Select(g => g.FirstOrDefault().school_year);
             return data.ToList();

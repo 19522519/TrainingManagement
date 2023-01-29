@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrainingManagement.Controller;
@@ -51,6 +52,18 @@ namespace TrainingManagement
             viewScore.FormBorderStyle = FormBorderStyle.None;
             this.pnlContent.Controls.Add(viewScore);
             viewScore.Show();
+        }
+
+        private void registerModulesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnlContent.Controls.Clear();
+            StudentModuleRegister studentModuleRegister = new StudentModuleRegister(studentId);
+            studentModuleRegister.TopLevel = false;
+            studentModuleRegister.AutoScroll = true;
+            studentModuleRegister.Dock = DockStyle.Fill;
+            studentModuleRegister.FormBorderStyle = FormBorderStyle.None;
+            this.pnlContent.Controls.Add(studentModuleRegister);
+            studentModuleRegister.Show();
         }
     }
 }

@@ -23,6 +23,7 @@ namespace TrainingManagement
         public int id { get; set; }
         public string ID_Module { get; set; }
         public string name { get; set; }
+        public Nullable<int> credits { get; set; }
         public Nullable<int> theory_lessons { get; set; }
         public Nullable<int> practice_lessons { get; set; }
         public Nullable<int> self_study_lessons { get; set; }

@@ -10,6 +10,7 @@
     <Property Name="end_date" Type="date" />
     <Property Name="semester" Type="int" />
     <Property Name="school_year" Type="int" />
+    <Property Name="register" Type="nvarchar" MaxLength="50" />
     <Property Name="module_id" Type="int" />
   </EntityType>
   <EntityType Name="classroom">
@@ -80,6 +81,7 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ID_Module" Type="nvarchar" MaxLength="20" />
     <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="credits" Type="int" />
     <Property Name="theory_lessons" Type="int" />
     <Property Name="practice_lessons" Type="int" />
     <Property Name="self_study_lessons" Type="int" />
@@ -121,7 +123,7 @@
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="score" Type="float" />
     <Property Name="student_id" Type="int" />
-    <Property Name="class_module_id" Type="int" />
+    <Property Name="lesson_id" Type="int" />
   </EntityType>
   <EntityType Name="teaching">
     <Key>
@@ -286,15 +288,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__studying__class___5535A963">
-    <End Role="class_module" Type="Self.class_module" Multiplicity="0..1" />
+  <Association Name="FK__studying__lesson__5535A963">
+    <End Role="lesson" Type="Self.lesson" Multiplicity="0..1" />
     <End Role="studying" Type="Self.studying" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="class_module">
+      <Principal Role="lesson">
         <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="studying">
-        <PropertyRef Name="class_module_id" />
+        <PropertyRef Name="lesson_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -396,8 +398,8 @@
       <End Role="users" EntitySet="users" />
       <End Role="student" EntitySet="student" />
     </AssociationSet>
-    <AssociationSet Name="FK__studying__class___5535A963" Association="Self.FK__studying__class___5535A963">
-      <End Role="class_module" EntitySet="class_module" />
+    <AssociationSet Name="FK__studying__lesson__5535A963" Association="Self.FK__studying__lesson__5535A963">
+      <End Role="lesson" EntitySet="lesson" />
       <End Role="studying" EntitySet="studying" />
     </AssociationSet>
     <AssociationSet Name="FK__studying__studen__5441852A" Association="Self.FK__studying__studen__5441852A">

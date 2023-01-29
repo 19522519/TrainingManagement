@@ -22,6 +22,7 @@ namespace TrainingManagement.Controller
         {
             var data = from c in entities.module
                        where c.curriculum_id == curriculumId
+                       orderby c.ID_Module ascending
                        select new
                        {
                            Id = c.id,

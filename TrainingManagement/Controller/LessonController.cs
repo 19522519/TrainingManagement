@@ -51,14 +51,79 @@ namespace TrainingManagement.Controller
             return data.ToList();
         }
 
+        public dynamic getAllLessons(int semester, int schoolYear)
+        {
+            var data = from c in entities.lesson
+                       where c.class_module.semester == semester && c.class_module.school_year == schoolYear
+                       select new
+                       {
+                           Id = c.id,
+                           TrainingType = c.class_module.module.curriculum.training_type,
+                           TrainingSystem = c.class_module.module.curriculum.training_system,
+                           Curriculum = c.class_module.module.curriculum.name,
+                           Semester = c.class_module.semester,
+                           SchoolYear = c.class_module.school_year,
+                           ClassCode = c.class_module.ID_Class_module,
+                           ClassName = c.class_module.module.name,
+                           Credits = c.class_module.module.credits,
+                           TheoryLessons = c.class_module.module.theory_lessons,
+                           PracticeLessons = c.class_module.module.practice_lessons,
+                           SelfStudyLessons = c.class_module.module.self_study_lessons,
+                           VisitingLessons = c.class_module.module.visiting_lessons,
+                           Day = c.day_in_week,
+                           StartTime = c.start_time,
+                           EndTime = c.end_time,
+                           StartDate = c.class_module.start_date,
+                           EndDate = c.class_module.end_date,
+                           Room = c.classroom.name,
+                           Size = c.classroom.max_size,
+                           Lecturer = c.teaching.lecturer.name,
+                           Register = c.class_module.register
+                       };
+            return data.ToList();
+        }
+
+        public dynamic getAllLessonsWithOpen()
+        {
+            var data = from c in entities.lesson
+                       where c.class_module.register.Equals("open")
+                       select new
+                       {
+                           Id = c.id,
+                           TrainingType = c.class_module.module.curriculum.training_type,
+                           TrainingSystem = c.class_module.module.curriculum.training_system,
+                           Curriculum = c.class_module.module.curriculum.name,
+                           Semester = c.class_module.semester,
+                           SchoolYear = c.class_module.school_year,
+                           ClassCode = c.class_module.ID_Class_module,
+                           ClassName = c.class_module.module.name,
+                           Credits = c.class_module.module.credits,
+                           TheoryLessons = c.class_module.module.theory_lessons,
+                           PracticeLessons = c.class_module.module.practice_lessons,
+                           SelfStudyLessons = c.class_module.module.self_study_lessons,
+                           VisitingLessons = c.class_module.module.visiting_lessons,
+                           Day = c.day_in_week,
+                           StartTime = c.start_time,
+                           EndTime = c.end_time,
+                           StartDate = c.class_module.start_date,
+                           EndDate = c.class_module.end_date,
+                           Room = c.classroom.name,
+                           Size = c.classroom.max_size,
+                           Lecturer = c.teaching.lecturer.name,
+                           Register = c.class_module.register
+                       };
+            return data.ToList();
+        }
+
         public dynamic getAllLessonsBasedOnSemesterAndSchoolYear(int semester, int schoolYear, string major)
         {
             var result = from c in entities.lesson
                          select c;
 
-            result = from c in entities.lesson
-                        where c.class_module.semester == semester
-                        select c;
+            if(semester.ToString() != "")
+                result = from c in entities.lesson
+                         where c.class_module.semester == semester
+                         select c;
 
             var data = from c in result
                        where c.class_module.school_year == schoolYear && c.class_module.module.curriculum.major.name.Equals(major)

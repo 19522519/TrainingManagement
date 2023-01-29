@@ -14,6 +14,12 @@ namespace TrainingManagement
     
     public partial class lesson
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public lesson()
+        {
+            this.studying = new HashSet<studying>();
+        }
+    
         public int id { get; set; }
         public string day_in_week { get; set; }
         public string start_time { get; set; }
@@ -25,5 +31,7 @@ namespace TrainingManagement
         public virtual class_module class_module { get; set; }
         public virtual classroom classroom { get; set; }
         public virtual teaching teaching { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<studying> studying { get; set; }
     }
 }

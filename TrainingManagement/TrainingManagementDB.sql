@@ -18,6 +18,7 @@ create table module (
 	id int identity(1,1) primary key,
 	ID_Module nvarchar(20),
 	name nvarchar(50),
+	credits int,
 	theory_lessons int,
 	practice_lessons int,
 	self_study_lessons int,
@@ -45,7 +46,8 @@ create table class_module (
 	start_date date,
 	end_date date,
 	semester int,
-	school_year int
+	school_year int,
+	register nvarchar(50)
 )
 
 -- Hợp đồng: hợp đồng chính thức, giảng viên thỉnh giảng, giảng viên mời giảng
@@ -124,7 +126,7 @@ alter table lecturer add major_id int references major (id)
 alter table teaching add class_module_id int references class_module (id)
 alter table teaching add lecturer_id int references lecturer (id)
 alter table studying add student_id int references student (id)
-alter table studying add class_module_id int references class_module (id)
+alter table studying add lesson_id int references lesson (id)
 alter table lesson add classroom_id int references classroom (id)
 alter table lesson add teaching_id int references teaching (id)
 alter table lesson add class_module_id int references class_module (id)
@@ -164,31 +166,43 @@ INSERT INTO curriculum VALUES
 	  (N'Cử nhân ngành hệ thống thông tin', N'hệ cao đẳng', N'liên thông', 2020, 2);
 
 INSERT INTO module VALUES 
-      ('SE104', N'Nhập môn công nghệ phần mềm',3,1,1,1,1),
-	  ('SE113', N'Kiểm chứng phần mềm',2,1,1,1,1),
-	  ('SE121', N'Đồ án 1',3,1,1,1,1),
-	  ('IS216', N'Lập trình Java',3,1,1,1,2),
-	  ('IS252', N'Khai thác dữ liệu',3,1,1,1,2);
+	('SE104', N'Nhập môn công nghệ phần mềm',4,3,1,1,1,1),
+	('SE113', N'Kiểm chứng phần mềm',4,2,1,1,1,1),
+	('SE122', N'Đồ án 2',2,3,1,1,1,1),
+	('IS216', N'Lập trình Java',4,3,1,1,1,2),
+	('IS252', N'Khai thác dữ liệu',4,3,1,1,1,2),
+	('SE330', N'Ngôn ngữ lập trình Java',4,10,10,10,5,1);
 
 INSERT INTO class_module VALUES
-        (N'SE104.M11','5/9/2021','31/12/2021',1,2019,1),
-		(N'SE104.M13','5/9/2021','31/12/2021',1,2020,1),
-		(N'SE113.M11','28/2/2022','30/6/2022',2,2019,2),
-		(N'SE113.M12','28/2/2022','30/6/2022',2,2020,2),
-        (N'SE216.M11','5/9/2021','31/12/2021',1,2019,1),
-		(N'SE216.M13','5/9/2021','31/12/2021',1,2020,1),
-		(N'SE252.M11','28/2/2022','30/6/2022',2,2019,2),
-		(N'SE252.M12','28/2/2022','30/6/2022',2,2020,2);
+	(N'SE104.M11','5/9/2021','31/12/2021',1,2019,1),
+	(N'SE104.M13','5/9/2021','31/12/2021',1,2020,1),
+	(N'SE113.M11','28/2/2022','30/6/2022',1,2019,2),
+	(N'SE113.M12','28/2/2022','30/6/2022',1,2020,2),
+	(N'IS216.M11','5/9/2021','31/12/2021',1,2019,4),
+	(N'IS216.M13','5/9/2021','31/12/2021',1,2020,4),
+	(N'IS252.M11','28/2/2022','30/6/2022',2,2019,5),
+	(N'IS252.M12','28/2/2022','30/6/2022',2,2020,5),
+	(N'SE122.PMCL','28/2/2022','30/6/2022',2,2020,3),
+	(N'SE330.M14','28/2/2022','30/6/2022',2,2020,6),
+	(N'SE330.PMCL','28/2/2022','30/6/2022',2,2020,6);
 
 INSERT INTO lecturer VALUES 
-        (N'Nguyễn Văn A',N'Hợp đồng chính thức',N'Master',1,2),
-		(N'Nguyễn Văn B',N'Giảng viên thỉnh giảng',N'Doctor',2,3),
-		(N'Nguyễn Văn C',N'Giảng viên mời giảng',N'University',2,4);
+	(N'Nguyễn Văn A',N'Hợp đồng chính thức',N'Master',1,2),
+	(N'Nguyễn Văn B',N'Giảng viên thỉnh giảng',N'Doctor',1,3),
+	(N'Nguyễn Văn C',N'Giảng viên mời giảng',N'University',2,4);
 
 INSERT INTO teaching VALUES
-        (1,1),
-		(2,2),
-		(3,3);
+	(1,1),
+	(2,2),
+	(3,1),
+	(4,2),
+	(5,3),
+	(6,3),
+	(7,3),
+	(8,3),
+	(9,1),
+	(10,2),
+	(11,1);
 
 INSERT INTO student VALUES 
        ('19522015',N'Đông Phong',N'Võ','Nam',N'Phù Cát',N'Bình Định',N'Có',N'0909123456',N'123456',N'Không',1,1),
@@ -197,26 +211,31 @@ INSERT INTO student VALUES
 	   ('19522115',N'Thanh Tuấn',N'Nguyễn','Nam',N'Huế',N'Hà Nội',N'Không',N'0909654321',N'654321',N'Không',2,8),
 	   ('20522134',N'Thanh Nghị',N'Lê','Nữ',N'Huế',N'Quảng Nam',N'Không',N'09092468',N'2468',N'Không',2,9);
 
-INSERT INTO studying VALUES
-       (7,1,1),
-	   (8,1,2),
-	   (9,2,1),
-	   (9,2,3);
 
 INSERT INTO classroom VALUES
 	(N'C101', N'Lecture Room',45),
 	(N'C201', N'Lecture Room',45),
 	(N'B101', N'Lecture Room',45),
 	(N'B201', N'Lecture Room',45),
-	(N'E101', N'Self-study Room',50),
-	(N'E201', N'Self-study Room',50),
 	(N'A301', N'Practice Room',40),
 	(N'A201', N'Practice Room',40),
 	(N'A101', N'Practice Room',40);
 
 INSERT INTO lesson VALUES
-       (N'Monday', N'7h30', N'9h30',1,1,1),
-	   (N'Tuesday', N'13h', N'14h',1,1,1);
+	(N'Monday', N'7h30', N'9h30',1,1,1),
+	(N'Tuesday', N'8h', N'10h30',2,2,2),
+	(N'Wednesday', N'14h', N'16h30',3,3,3),
+	(N'Thursday', N'9h', N'11h30',4,4,4),
+	(N'Friday', N'13h', N'16h',1,5,9),
+	(N'Wednesday', N'14h', N'15h15',2,6,10),
+	(N'Saturday', N'13h', N'14h',3,7,11);
+
+INSERT INTO studying VALUES
+	(7,1,1),
+	(8,1,3),
+	(10,1,3),
+	(9,2,1),
+	(9,2,2);
 
 insert into module_list values
 	(N'SE104', N'Nhập môn công nghệ phần mềm', 4, 1),
@@ -225,7 +244,7 @@ insert into module_list values
 	(N'SE113', N'Kiểm chứng phần mềm', 4, 1),
 	(N'SE106', N'Đặc tả hình thức', 4, 1),
 	(N'SE347', N'Công nghệ Web và ứng dụng', 4, 1),
-	(N'SE104', N'Nhập môn công nghệ phần mềm', 4, 1),
+	(N'SE310', N'Công nghệ .NET', 4, 1),
 	(N'SE356', N'Kiến trúc phần mềm', 4, 1),
 	(N'SE121', N'Đồ án 1', 2, 1),
 	(N'SE122', N'Đồ án 2', 2, 1),

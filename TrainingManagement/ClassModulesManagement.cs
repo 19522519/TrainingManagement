@@ -63,7 +63,7 @@ namespace TrainingManagement
         {
             cmbSchoolYear.DataSource = curriculumController.getAllSchoolYearOnMajor(right);
             cmbSchoolYear.DisplayMember = "SchoolYear";
-            cmbSchoolYear.SelectedIndex = 0;
+            // cmbSchoolYear.SelectedIndex = 0;
         }
 
         void loadLecturer()
@@ -87,7 +87,7 @@ namespace TrainingManagement
             dgvModule.DataSource = moduleController.getAllModulesBasedOnShoolYear(cmbSchoolYear.Text);
             addBidingModule();
         }
-
+        
         void addBidingModule()
         {
             txbModuleId.DataBindings.Clear();
@@ -97,7 +97,7 @@ namespace TrainingManagement
             txbModuleId.DataBindings.Add("Text", dgvModule.DataSource, "Id", true, DataSourceUpdateMode.Never);
             txbClassModuleCode.DataBindings.Add("Text", dgvModule.DataSource, "Code", true, DataSourceUpdateMode.Never);
             txbClassModuleName.DataBindings.Add("Text", dgvModule.DataSource, "Name", true, DataSourceUpdateMode.Never);
-        }
+        } 
 
         public void loadDataClassModule()
         {
@@ -148,11 +148,6 @@ namespace TrainingManagement
             cmbLevel.SelectedIndex = 0;
         }
 
-        private void btnSearchModule_Click(object sender, EventArgs e)
-        {
-            loadDataModule();
-        }
-
         private void btnSearchLecturer_Click(object sender, EventArgs e)
         {
             dgvLecturer.DataSource = lecturerController.findLecturerOnNameAndLevel(txbLecturerName.Text, cmbLevel.Text, right);
@@ -161,6 +156,7 @@ namespace TrainingManagement
 
         private void cmbSchoolYear_SelectedIndexChanged(object sender, EventArgs e)
         {
+            loadDataModule();
             txbSchoolYear.Text = cmbSchoolYear.Text;
         }
 
@@ -237,12 +233,6 @@ namespace TrainingManagement
                 txbClassroomId.Text = result.Id.ToString();
         }
 
-        private void btnSearchClassModule_Click(object sender, EventArgs e)
-        {
-            dgvClassModule.DataSource = lessonController.getAllLessonsBasedOnSemesterAndSchoolYear(Convert.ToInt32(cmbSemester.Text), Convert.ToInt32(txbSchoolYear.Text), right);
-            addBidingClassModule();
-        }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Do you want to remove this class module", "Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -297,6 +287,12 @@ namespace TrainingManagement
             txbClassModuleId.Text = lessonController.findClassModuleBasedOnLesson(Convert.ToInt32(txbLessonId.Text)).ToString();
             txbTeachingId.Text = lessonController.findTeachingBasedOnLesson(Convert.ToInt32(txbLessonId.Text)).ToString();
             txbClassroomId.Text = lessonController.findClassroomBasedOnLesson(Convert.ToInt32(txbLessonId.Text)).ToString();
+        }
+
+        private void btnSearchClassModule_Click(object sender, EventArgs e)
+        {
+            dgvClassModule.DataSource = lessonController.getAllLessonsBasedOnSemesterAndSchoolYear(Convert.ToInt32(cmbSemester.Text), Convert.ToInt32(txbSchoolYear.Text), right);
+            addBidingClassModule();
         }
     }
 }

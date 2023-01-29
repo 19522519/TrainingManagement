@@ -13,7 +13,7 @@ namespace TrainingManagement.Controller
         public dynamic getAllScore(int semester, int schoolYear, string classMoule)
         {
             var data = from c in entities.studying
-                       where c.class_module.semester == semester && c.class_module.school_year == schoolYear
+                       where c.lesson.class_module.semester == semester && c.lesson.class_module.school_year == schoolYear
                        select new
                        {
                            ID = c.id,

@@ -57,5 +57,13 @@ namespace TrainingManagement.Controller
             class_Module1.module_id = moduleId;
             entities.SaveChanges();
         }
+
+        public void setRegister(int lessonId, string register)
+        {
+            lesson lesson = entities.lesson.Find(lessonId);
+            class_module class_Module = lesson.class_module;
+            class_Module.register = register;
+            entities.SaveChanges();
+        }
     }
 }

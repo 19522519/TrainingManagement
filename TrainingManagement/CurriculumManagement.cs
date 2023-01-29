@@ -38,6 +38,7 @@ namespace TrainingManagement
             cmbTrainingType.Items.Add("Formal Program");         // Chương trình chính quy
             cmbTrainingType.Items.Add("Bridge Program");        // Chương trình liên thông
             cmbTrainingType.Items.Add("Work-Study Program");    // Chương trình vừa học vừa làm
+            cmbTrainingType.SelectedIndex = 0;
         }
 
         void loadData()

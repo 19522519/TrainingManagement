@@ -149,3 +149,5 @@ C:\Users\Tan Viet\Desktop\Projects\WinForm\Training Management LTS\TrainingManag
 C:\Users\Tan Viet\Desktop\Projects\WinForm\Training Management LTS\TrainingManagement\TrainingManagement\bin\Debug\ja\DevExpress.Pdf.v21.1.Core.resources.dll
 C:\Users\Tan Viet\Desktop\Projects\WinForm\Training Management LTS\TrainingManagement\TrainingManagement\bin\Debug\ru\DevExpress.Pdf.v21.1.Core.resources.dll
 C:\Users\Tan Viet\Desktop\Projects\WinForm\Training Management LTS\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.LecturerTimeable.resources
+C:\Users\Tan Viet\Desktop\Projects\WinForm\Training Management LTS\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.StudentModuleRegister.resources
+C:\Users\Tan Viet\Desktop\Projects\WinForm\Training Management LTS\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.OpenRegisterModules.resources

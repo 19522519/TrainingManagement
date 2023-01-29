@@ -5,6 +5,7 @@
       <EntityTypeMapping TypeName="TrainingManagementModel.class_module">
         <MappingFragment StoreEntitySet="class_module">
           <ScalarProperty Name="module_id" ColumnName="module_id" />
+          <ScalarProperty Name="register" ColumnName="register" />
           <ScalarProperty Name="school_year" ColumnName="school_year" />
           <ScalarProperty Name="semester" ColumnName="semester" />
           <ScalarProperty Name="end_date" ColumnName="end_date" />
@@ -89,6 +90,7 @@
           <ScalarProperty Name="self_study_lessons" ColumnName="self_study_lessons" />
           <ScalarProperty Name="practice_lessons" ColumnName="practice_lessons" />
           <ScalarProperty Name="theory_lessons" ColumnName="theory_lessons" />
+          <ScalarProperty Name="credits" ColumnName="credits" />
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="ID_Module" ColumnName="ID_Module" />
           <ScalarProperty Name="id" ColumnName="id" />
@@ -128,7 +130,7 @@
     <EntitySetMapping Name="studying">
       <EntityTypeMapping TypeName="TrainingManagementModel.studying">
         <MappingFragment StoreEntitySet="studying">
-          <ScalarProperty Name="class_module_id" ColumnName="class_module_id" />
+          <ScalarProperty Name="lesson_id" ColumnName="lesson_id" />
           <ScalarProperty Name="student_id" ColumnName="student_id" />
           <ScalarProperty Name="score" ColumnName="score" />
           <ScalarProperty Name="id" ColumnName="id" />

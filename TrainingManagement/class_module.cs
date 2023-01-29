@@ -18,7 +18,6 @@ namespace TrainingManagement
         public class_module()
         {
             this.lesson = new HashSet<lesson>();
-            this.studying = new HashSet<studying>();
             this.teaching = new HashSet<teaching>();
         }
     
@@ -28,13 +27,12 @@ namespace TrainingManagement
         public Nullable<System.DateTime> end_date { get; set; }
         public Nullable<int> semester { get; set; }
         public Nullable<int> school_year { get; set; }
+        public string register { get; set; }
         public Nullable<int> module_id { get; set; }
     
         public virtual module module { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<lesson> lesson { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<studying> studying { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<teaching> teaching { get; set; }
     }

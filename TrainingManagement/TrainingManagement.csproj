@@ -115,6 +115,12 @@
     <Compile Include="LecturerTimeable.Designer.cs">
       <DependentUpon>LecturerTimeable.cs</DependentUpon>
     </Compile>
+    <Compile Include="OpenRegisterModules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenRegisterModules.Designer.cs">
+      <DependentUpon>OpenRegisterModules.cs</DependentUpon>
+    </Compile>
     <Compile Include="sp_helpdiagramdefinition1_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -126,6 +132,12 @@
     </Compile>
     <Compile Include="sp_helpdiagrams_Result.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StudentModuleRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentModuleRegister.Designer.cs">
+      <DependentUpon>StudentModuleRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="TrainingManagerHomePage.cs">
       <SubType>Form</SubType>
@@ -293,6 +305,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenRegisterModules.resx">
+      <DependentUpon>OpenRegisterModules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentModuleRegister.resx">
+      <DependentUpon>StudentModuleRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TrainingManagerHomePage.resx">
       <DependentUpon>TrainingManagerHomePage.cs</DependentUpon>

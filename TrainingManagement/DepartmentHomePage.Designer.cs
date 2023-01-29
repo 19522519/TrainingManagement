@@ -31,11 +31,11 @@ namespace TrainingManagement
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DepartmentHomePage));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.moduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.curriculumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.moduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.classModuleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlContent = new System.Windows.Forms.Panel();
-            this.classModuleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,8 +43,8 @@ namespace TrainingManagement
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.moduleToolStripMenuItem,
             this.curriculumToolStripMenuItem,
+            this.moduleToolStripMenuItem,
             this.classModuleToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -53,6 +53,13 @@ namespace TrainingManagement
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // curriculumToolStripMenuItem
+            // 
+            this.curriculumToolStripMenuItem.Name = "curriculumToolStripMenuItem";
+            this.curriculumToolStripMenuItem.Size = new System.Drawing.Size(108, 27);
+            this.curriculumToolStripMenuItem.Text = "Curriculum";
+            this.curriculumToolStripMenuItem.Click += new System.EventHandler(this.curriculumToolStripMenuItem_Click);
+            // 
             // moduleToolStripMenuItem
             // 
             this.moduleToolStripMenuItem.Name = "moduleToolStripMenuItem";
@@ -60,12 +67,12 @@ namespace TrainingManagement
             this.moduleToolStripMenuItem.Text = "Module";
             this.moduleToolStripMenuItem.Click += new System.EventHandler(this.moduleToolStripMenuItem_Click);
             // 
-            // curriculumToolStripMenuItem
+            // classModuleToolStripMenuItem
             // 
-            this.curriculumToolStripMenuItem.Name = "curriculumToolStripMenuItem";
-            this.curriculumToolStripMenuItem.Size = new System.Drawing.Size(108, 27);
-            this.curriculumToolStripMenuItem.Text = "Curriculum";
-            this.curriculumToolStripMenuItem.Click += new System.EventHandler(this.curriculumToolStripMenuItem_Click);
+            this.classModuleToolStripMenuItem.Name = "classModuleToolStripMenuItem";
+            this.classModuleToolStripMenuItem.Size = new System.Drawing.Size(125, 27);
+            this.classModuleToolStripMenuItem.Text = "Class Module";
+            this.classModuleToolStripMenuItem.Click += new System.EventHandler(this.classModuleToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -81,13 +88,6 @@ namespace TrainingManagement
             this.pnlContent.Name = "pnlContent";
             this.pnlContent.Size = new System.Drawing.Size(1400, 750);
             this.pnlContent.TabIndex = 1;
-            // 
-            // classModuleToolStripMenuItem
-            // 
-            this.classModuleToolStripMenuItem.Name = "classModuleToolStripMenuItem";
-            this.classModuleToolStripMenuItem.Size = new System.Drawing.Size(125, 27);
-            this.classModuleToolStripMenuItem.Text = "Class Module";
-            this.classModuleToolStripMenuItem.Click += new System.EventHandler(this.classModuleToolStripMenuItem_Click);
             // 
             // DepartmentHomePage
             // 
