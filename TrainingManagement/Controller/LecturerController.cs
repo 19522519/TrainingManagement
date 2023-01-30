@@ -34,7 +34,6 @@ namespace TrainingManagement.Controller
                                Major = c.major.name,
                                Level = c.level,
                                Contract = c.contract,
-                               IDUserCode = c.users_id
                            };
             return lecturer.ToList();
         }

@@ -151,3 +151,5 @@ C:\Users\Tan Viet\Desktop\Projects\WinForm\Training Management LTS\TrainingManag
 C:\Users\Tan Viet\Desktop\Projects\WinForm\Training Management LTS\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.LecturerTimeable.resources
 C:\Users\Tan Viet\Desktop\Projects\WinForm\Training Management LTS\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.StudentModuleRegister.resources
 C:\Users\Tan Viet\Desktop\Projects\WinForm\Training Management LTS\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.OpenRegisterModules.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.OpenRegisterModules.resources
+C:\Users\vodon\Desktop\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.StudentModuleRegister.resources
