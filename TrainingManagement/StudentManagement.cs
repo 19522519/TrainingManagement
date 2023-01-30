@@ -19,6 +19,7 @@ namespace TrainingManagement
         public StudentManagement()
         {
             InitializeComponent();
+            loadData();
             loadGender();
             cmbMajor.DataSource = majorController.getAll();
             cmbMajor.DisplayMember = "Name";

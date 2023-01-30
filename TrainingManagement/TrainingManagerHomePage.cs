@@ -35,5 +35,29 @@ namespace TrainingManagement
             pnlContent.Controls.Add(openRegisterModules);
             openRegisterModules.Show();
         }
+
+        private void lecturerManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnlContent.Controls.Clear();
+            LecturerManagement lecturerManagement = new LecturerManagement();
+            lecturerManagement.TopLevel = false;
+            lecturerManagement.AutoScroll = true;
+            lecturerManagement.Dock = DockStyle.Fill;
+            lecturerManagement.FormBorderStyle = FormBorderStyle.None;
+            pnlContent.Controls.Add(lecturerManagement);
+            lecturerManagement.Show();
+        }
+
+        private void studentManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnlContent.Controls.Clear();
+            StudentManagement studentManagement = new StudentManagement();
+            studentManagement.TopLevel = false;
+            studentManagement.AutoScroll = true;
+            studentManagement.Dock = DockStyle.Fill;
+            studentManagement.FormBorderStyle = FormBorderStyle.None;
+            pnlContent.Controls.Add(studentManagement);
+            studentManagement.Show();
+        }
     }
 }
