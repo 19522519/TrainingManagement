@@ -139,6 +139,12 @@
     <Compile Include="StudentModuleRegister.Designer.cs">
       <DependentUpon>StudentModuleRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentTimetable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentTimetable.Designer.cs">
+      <DependentUpon>StudentTimetable.cs</DependentUpon>
+    </Compile>
     <Compile Include="TrainingManagerHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -312,6 +318,9 @@
     <EmbeddedResource Include="StudentModuleRegister.resx">
       <DependentUpon>StudentModuleRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StudentTimetable.resx">
+      <DependentUpon>StudentTimetable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TrainingManagerHomePage.resx">
       <DependentUpon>TrainingManagerHomePage.cs</DependentUpon>
     </EmbeddedResource>
@@ -389,6 +398,35 @@
     <None Include="Resources\hidepw.png" />
     <None Include="Resources\Eye.png" />
     <None Include="Resources\Hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

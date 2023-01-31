@@ -16,6 +16,7 @@ namespace TrainingManagement
         int stuId = 0;
         LessonController lessonController = new LessonController();
         StudyingController studyingController = new StudyingController();
+        ClassModuleController classModuleController = new ClassModuleController();
 
         public StudentModuleRegister(int id)
         {
@@ -129,7 +130,7 @@ namespace TrainingManagement
 
         public void loadAllClassModulesRegistered()
         {
-            dgvClassModules.AutoGenerateColumns = false;
+            dgvClassModulesRegistered.AutoGenerateColumns = false;
             DataGridViewTextBoxColumn col1 = new DataGridViewTextBoxColumn();
             col1.DataPropertyName = "Id";
             col1.HeaderText = "Id";
@@ -194,34 +195,68 @@ namespace TrainingManagement
             col16.DataPropertyName = "TrainingSystem";
             col16.HeaderText = "Training system";
 
-            dgvClassModules.Columns.Add(col1);
-            dgvClassModules.Columns.Add(col2);
-            dgvClassModules.Columns.Add(col3);
-            dgvClassModules.Columns.Add(col4);
-            dgvClassModules.Columns.Add(col5);
-            dgvClassModules.Columns.Add(col6);
-            dgvClassModules.Columns.Add(col7);
-            dgvClassModules.Columns.Add(col8);
-            dgvClassModules.Columns.Add(col9);
-            dgvClassModules.Columns.Add(col10);
-            dgvClassModules.Columns.Add(col11);
-            dgvClassModules.Columns.Add(col12);
-            dgvClassModules.Columns.Add(col13);
-            dgvClassModules.Columns.Add(col14);
-            dgvClassModules.Columns.Add(col15);
-            dgvClassModules.Columns.Add(col16);
+            dgvClassModulesRegistered.Columns.Add(col1);
+            dgvClassModulesRegistered.Columns.Add(col2);
+            dgvClassModulesRegistered.Columns.Add(col3);
+            dgvClassModulesRegistered.Columns.Add(col4);
+            dgvClassModulesRegistered.Columns.Add(col5);
+            dgvClassModulesRegistered.Columns.Add(col6);
+            dgvClassModulesRegistered.Columns.Add(col7);
+            dgvClassModulesRegistered.Columns.Add(col8);
+            dgvClassModulesRegistered.Columns.Add(col9);
+            dgvClassModulesRegistered.Columns.Add(col10);
+            dgvClassModulesRegistered.Columns.Add(col11);
+            dgvClassModulesRegistered.Columns.Add(col12);
+            dgvClassModulesRegistered.Columns.Add(col13);
+            dgvClassModulesRegistered.Columns.Add(col14);
+            dgvClassModulesRegistered.Columns.Add(col15);
+            dgvClassModulesRegistered.Columns.Add(col16);
 
             dgvClassModulesRegistered.DataSource = studyingController.getAllStudyingWithoutScore();
             addBidingClassModuleRegistered();
+
+            // Calculate total of credits of class module registered by student
+            int totalCredits = 0;
+            foreach (var data in studyingController.getAllStudyingWithoutScore())
+            {
+                totalCredits += data.Credits;
+            }
+            txbTotalCredtis.Text = totalCredits.ToString();
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            bool isExist = false;
             studying studying = new studying();
             int lessonId = Convert.ToInt32(txbLessonId.Text);
-            int studyingId = studyingController.insertStudying(stuId, lessonId, studying);
+
+            // Check class module is registered before
+            foreach (var data in studyingController.getAllStudying(stuId))
+            {
+                if(data.LessonId == lessonId)
+                {
+                    isExist = true;
+                }
+            }
+            if(isExist == false)
+            {
+                int studyingId = studyingController.insertStudying(stuId, lessonId, studying);
+                loadAllClassModulesRegistered();
+                int classModuleId = lessonController.findClassModuleBasedOnLesson(lessonId);
+                string className = classModuleController.getClassModuleById(classModuleId);
+                MessageBox.Show("Regiter class module " + className + " successfully!");
+            } else
+            {
+                int classModuleId = lessonController.findClassModuleBasedOnLesson(lessonId);
+                string className = classModuleController.getClassModuleById(classModuleId);
+                MessageBox.Show("You have registered " + className + " before!");
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            studyingController.deleteStudying(Convert.ToInt32(txbStudyingId.Text));
             loadAllClassModulesRegistered();
-            MessageBox.Show("Regiter class module successfully!");
         }
     }
 }

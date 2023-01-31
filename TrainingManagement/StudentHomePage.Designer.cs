@@ -69,6 +69,7 @@ namespace TrainingManagement
             this.timetableToolStripMenuItem.Name = "timetableToolStripMenuItem";
             this.timetableToolStripMenuItem.Size = new System.Drawing.Size(99, 27);
             this.timetableToolStripMenuItem.Text = "Timetable";
+            this.timetableToolStripMenuItem.Click += new System.EventHandler(this.timetableToolStripMenuItem_Click);
             // 
             // registerModulesToolStripMenuItem
             // 

@@ -113,5 +113,18 @@ namespace TrainingManagement.Controller
                        };
             return data.ToList();
         }
+
+        public dynamic getAllStudying(int studentId)
+        {
+            var data = from c in entities.studying
+                       where c.score.Value.ToString() == "" && c.student_id == studentId
+                       select new
+                       {
+                           Id = c.id,
+                           StudentId = c.student_id,
+                           LessonId = c.lesson_id
+                       };
+            return data.ToList();
+        }
     }
 }

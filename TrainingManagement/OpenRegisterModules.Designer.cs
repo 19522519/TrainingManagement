@@ -144,6 +144,7 @@ namespace TrainingManagement
             this.btnExportExcel.TabIndex = 25;
             this.btnExportExcel.Text = "Export excel";
             this.btnExportExcel.UseVisualStyleBackColor = false;
+            this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
             // 
             // btnSearch
             // 
@@ -172,6 +173,7 @@ namespace TrainingManagement
             this.label3.Size = new System.Drawing.Size(117, 18);
             this.label3.TabIndex = 27;
             this.label3.Text = "Set time closing:";
+            this.label3.Visible = false;
             // 
             // nudTimer
             // 
@@ -184,6 +186,7 @@ namespace TrainingManagement
             0,
             0,
             0});
+            this.nudTimer.Visible = false;
             // 
             // label4
             // 
@@ -194,6 +197,7 @@ namespace TrainingManagement
             this.label4.Size = new System.Drawing.Size(16, 18);
             this.label4.TabIndex = 29;
             this.label4.Text = "s";
+            this.label4.Visible = false;
             // 
             // OpenRegisterModules
             // 

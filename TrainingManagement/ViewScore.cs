@@ -14,6 +14,7 @@ namespace TrainingManagement
     public partial class ViewScore : Form
     {
         StudyingController studyingController = new StudyingController();
+        StudentController studentController = new StudentController();
         int stuId;
 
         public ViewScore(int id)
@@ -24,6 +25,19 @@ namespace TrainingManagement
             loadSchoolYear();
             loadData();
             dgvData.DataSource = studyingController.getAllScore(stuId);
+
+            lbTimetableTitle.Text = "LEARNING RESULT SEMESTER " + cmbSemester.Text + " SCHOOL YEAR " + cmbSchoolYear.Text;
+
+            loadStudentDetail();
+        }
+
+        public void loadStudentDetail()
+        {
+            student student = studentController.getStudentById(stuId);
+            txbName.Text = student.last_name + " " + student.first_name;
+            txbStudentId.Text = student.ID_Student;
+            txbBirthPlace.Text = student.birth_place;
+            txbMajor.Text = student.major.name;
         }
 
         void loadSemester()

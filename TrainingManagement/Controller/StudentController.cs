@@ -84,5 +84,38 @@ namespace TrainingManagement.Controller
             student.is_in_dormitory = student.is_in_dormitory;
             entities.SaveChanges();
         }
+
+        public string getStudentCodeById (int stuId)
+        {
+            student student = entities.student.Find(stuId);
+            return student.ID_Student;
+        }
+
+        public dynamic getAllSchoolYearBasedOnStudentId(int studentId)
+        {
+            var data = entities.studying
+                .Where(x => x.id == studentId)
+                .GroupBy(x => x.lesson.class_module.school_year)
+                .Select(g => g.FirstOrDefault().lesson.class_module.school_year);
+            return data.ToList();
+        }
+
+        public dynamic getTimetableBasedOnStudentId(int studentId, int schoolYear, int semester)
+        {
+            var data = from c in entities.studying
+                       where c.lesson.class_module.school_year == schoolYear && c.lesson.class_module.semester == semester && c.student_id == studentId
+                       select new
+                       {
+                           ClassCode = c.lesson.class_module.ID_Class_module,
+                           ClassName = c.lesson.class_module.module.name,
+                           Room = c.lesson.classroom.name,
+                           StartTime = c.lesson.start_time,
+                           EndTime = c.lesson.end_time,
+                           StartDate = c.lesson.class_module.start_date,
+                           EndDate = c.lesson.class_module.end_date,
+                           Lecturer = c.lesson.teaching.lecturer.name
+                       };
+            return data.ToList();
+        }
     }
 }

@@ -150,7 +150,7 @@ namespace TrainingManagement
             int moduleId = moduleController.insertModule(Convert.ToInt32(txbCurriculumId.Text), module);
 
             loadDataModule();
-            MessageBox.Show("Create successfully!");
+            MessageBox.Show("Create module " + module.ID_Module + " successfully!");
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -168,7 +168,7 @@ namespace TrainingManagement
             };
             moduleController.updateModule(module);
             loadDataModule();
-            MessageBox.Show("Update successfully!");
+            MessageBox.Show("Update module " + module.ID_Module + " successfully!");
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

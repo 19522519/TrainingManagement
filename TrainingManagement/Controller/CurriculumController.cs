@@ -56,15 +56,6 @@ namespace TrainingManagement.Controller
             return data.ToList();
         }
 
-
-        public dynamic getAllSchoolYear()
-        {
-            var data = entities.curriculum
-                .GroupBy(x => x.school_year)
-                .Select(g => g.FirstOrDefault().school_year);
-            return data.ToList();
-        }
-
         public dynamic getAllCurriculumNameOnYearAndMajor(string year, string right)
         {
             var data = from c in entities.curriculum

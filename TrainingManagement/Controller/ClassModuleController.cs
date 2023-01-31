@@ -31,6 +31,7 @@ namespace TrainingManagement.Controller
         public int insertClassModule(int moduleId, class_module class_Module)
         {
             class_Module.module_id = moduleId;
+            class_Module.register = "close";
             entities.class_module.Add(class_Module);
             entities.SaveChanges();
             return class_Module.id;
@@ -64,6 +65,20 @@ namespace TrainingManagement.Controller
             class_module class_Module = lesson.class_module;
             class_Module.register = register;
             entities.SaveChanges();
+        }
+
+        public string getClassModuleById(int classModuleId)
+        {
+            class_module class_Module = entities.class_module.Find(classModuleId);
+            return class_Module.ID_Class_module;
+        }
+
+        public dynamic getAllSchoolYear()
+        {
+            var data = entities.class_module
+                .GroupBy(x => x.school_year)
+                .Select(g => g.FirstOrDefault().school_year);
+            return data.ToList();
         }
     }
 }

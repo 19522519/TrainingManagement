@@ -187,7 +187,7 @@ namespace TrainingManagement
             lessonController.insertLesson(Convert.ToInt32(txbClassroomId.Text), teachingId, classModuleId, lesson);
             
             loadDataClassModule();
-            MessageBox.Show("Insert class module successfully!");
+            MessageBox.Show("Insert class module " + class_Module.ID_Class_module + " successfully!");
         }
 
         private void txbLecturerName_TextChanged(object sender, EventArgs e)
@@ -279,7 +279,7 @@ namespace TrainingManagement
             lessonController.updateLesson(Convert.ToInt32(txbClassroomId.Text), lesson);
 
             loadDataClassModule();
-            MessageBox.Show("Update class module successfully!");
+            MessageBox.Show("Update class module " + class_Module.ID_Class_module + " successfully!");
         }
 
         private void txbLessonId_TextChanged(object sender, EventArgs e)

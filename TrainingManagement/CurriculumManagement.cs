@@ -73,7 +73,7 @@ namespace TrainingManagement
             };
 
             curriculumController.insertCurriculum(curriculum, major);
-            MessageBox.Show("Create successfully!");
+            MessageBox.Show("Create curriculum successfully!");
             loadData();
         }
 
@@ -89,7 +89,7 @@ namespace TrainingManagement
             };
             curriculumController.updateCurriculum(curriculum);
 
-            MessageBox.Show("Update successfully!");
+            MessageBox.Show("Update curriculum successfully!");
             loadData();
         }
 

@@ -65,5 +65,17 @@ namespace TrainingManagement
             this.pnlContent.Controls.Add(studentModuleRegister);
             studentModuleRegister.Show();
         }
+
+        private void timetableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnlContent.Controls.Clear();
+            StudentTimetable studentTimetable = new StudentTimetable(studentId);
+            studentTimetable.TopLevel = false;
+            studentTimetable.AutoScroll = true;
+            studentTimetable.Dock = DockStyle.Fill;
+            studentTimetable.FormBorderStyle = FormBorderStyle.None;
+            this.pnlContent.Controls.Add(studentTimetable);
+            studentTimetable.Show();
+        }
     }
 }
