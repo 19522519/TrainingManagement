@@ -99,11 +99,6 @@ namespace TrainingManagement
             imgAvatar.Image = avatar;
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
             student student = new student()

@@ -13,22 +13,43 @@ namespace TrainingManagement
 {
     public partial class LecturerManagement : Form
     {
-        LecturerController LecturerController = new LecturerController();
-        MajorController MajorController = new MajorController();
+        LecturerController lecturerController = new LecturerController();
+        MajorController majorController = new MajorController();
         public LecturerManagement()
         {
             InitializeComponent();
             LoadData();
-            cmbMajor.DataSource = MajorController.getAll();
+            loadLevel();
+            loadContract();
+            cmbMajor.DataSource = majorController.getAll();
             cmbMajor.DisplayMember = "Name";
             cmbMajor.ValueMember = "ID";
         }
 
         void LoadData()
         {
-            dgvData.DataSource = LecturerController.getAll();
+            dgvData.DataSource = lecturerController.getAll();
             addBinding();
         }
+
+        public void loadLevel()
+        {
+            cmbLevel.Items.Add("bachelor");
+            cmbLevel.Items.Add("master");
+            cmbLevel.Items.Add("doctor");
+            cmbLevel.Items.Add("professor");
+            cmbLevel.SelectedIndex = 0;
+        }
+
+        public void loadContract()
+        {
+            cmbContract.Items.Add("Hợp đồng chính thức ");
+            cmbContract.Items.Add("Giảng viên mời giảng");
+            cmbContract.Items.Add("Giảng viên thỉnh giảng");
+            cmbContract.SelectedIndex = 0;
+        }
+
+      
 
         void addBinding()
         {
@@ -66,8 +87,10 @@ namespace TrainingManagement
 
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+
+        private void btnUpdate_Click_1(object sender, EventArgs e)
         {
+
             lecturer lecturer = new lecturer()
             {
                 id = Convert.ToInt32(txtID.Text),
@@ -76,11 +99,16 @@ namespace TrainingManagement
                 level = cmbLevel.Text,
                 contract = cmbContract.Text,
             };
-            LecturerController.updateLecturer(lecturer);
+            lecturerController.updateLecturer(lecturer);
             LoadData();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnReload_Click_1(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void btnAdd_Click_1(object sender, EventArgs e)
         {
 
             lecturer lecturer = new lecturer()
@@ -90,18 +118,22 @@ namespace TrainingManagement
                 level = cmbLevel.Text,
                 contract = cmbContract.Text,
             };
-            LecturerController.insertLecturer(lecturer);
+            lecturerController.insertLecturer(lecturer);
             LoadData();
         }
 
-        private void btnReload_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            LoadData();
+            if (MessageBox.Show("Do you want to remove this lecturer", "Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                lecturerController.deleteLecturer(Int32.Parse(txtID.Text));
+                LoadData();
+            }
         }
 
         private void btnFind_Click(object sender, EventArgs e)
         {
-            dgvData.DataSource = LecturerController.findLecturer(txtFind.Text);
+            dgvData.DataSource = lecturerController.findLecturer(txtFind.Text);
             addBinding();
         }
     }

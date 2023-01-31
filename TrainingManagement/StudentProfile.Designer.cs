@@ -59,7 +59,6 @@ namespace TrainingManagement
             this.label15 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
             this.cmbGender = new System.Windows.Forms.ComboBox();
             this.cmbIsInDorm = new System.Windows.Forms.ComboBox();
             this.imgAvatar = new System.Windows.Forms.PictureBox();
@@ -71,46 +70,57 @@ namespace TrainingManagement
             this.labelPersionalInformation.AutoSize = true;
             this.labelPersionalInformation.Font = new System.Drawing.Font("Segoe UI Black", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPersionalInformation.ForeColor = System.Drawing.Color.Teal;
-            this.labelPersionalInformation.Location = new System.Drawing.Point(323, 20);
+            this.labelPersionalInformation.Location = new System.Drawing.Point(407, 18);
             this.labelPersionalInformation.Name = "labelPersionalInformation";
-            this.labelPersionalInformation.Size = new System.Drawing.Size(228, 32);
+            this.labelPersionalInformation.Size = new System.Drawing.Size(264, 32);
             this.labelPersionalInformation.TabIndex = 28;
-            this.labelPersionalInformation.Text = "Thông tin cá nhân";
+            this.labelPersionalInformation.Text = "Personal Information";
             // 
             // btnSave
             // 
+            this.btnSave.BackColor = System.Drawing.Color.Teal;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(282, 483);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(511, 519);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(143, 34);
             this.btnSave.TabIndex = 29;
-            this.btnSave.Text = "Lưu thay đổi";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(659, 143);
+            this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFirstName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstName.Location = new System.Drawing.Point(818, 154);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.ReadOnly = true;
-            this.txtFirstName.Size = new System.Drawing.Size(117, 22);
+            this.txtFirstName.Size = new System.Drawing.Size(181, 20);
             this.txtFirstName.TabIndex = 35;
+            this.txtFirstName.Text = "abcdef";
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(387, 143);
+            this.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLastName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastName.Location = new System.Drawing.Point(413, 154);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.ReadOnly = true;
-            this.txtLastName.Size = new System.Drawing.Size(117, 22);
+            this.txtLastName.Size = new System.Drawing.Size(181, 20);
             this.txtLastName.TabIndex = 30;
+            this.txtLastName.Text = "abcdef";
             // 
             // txtStudentId
             // 
-            this.txtStudentId.Location = new System.Drawing.Point(387, 103);
+            this.txtStudentId.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtStudentId.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStudentId.Location = new System.Drawing.Point(413, 107);
             this.txtStudentId.Name = "txtStudentId";
             this.txtStudentId.ReadOnly = true;
-            this.txtStudentId.Size = new System.Drawing.Size(117, 22);
+            this.txtStudentId.Size = new System.Drawing.Size(181, 20);
             this.txtStudentId.TabIndex = 34;
+            this.txtStudentId.Text = "abcdef";
             // 
             // listBoxAcountInformation
             // 
@@ -120,14 +130,15 @@ namespace TrainingManagement
             this.listBoxAcountInformation.ItemHeight = 16;
             this.listBoxAcountInformation.Location = new System.Drawing.Point(251, 74);
             this.listBoxAcountInformation.Name = "listBoxAcountInformation";
-            this.listBoxAcountInformation.Size = new System.Drawing.Size(550, 228);
+            this.listBoxAcountInformation.Size = new System.Drawing.Size(785, 260);
             this.listBoxAcountInformation.TabIndex = 36;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(387, 184);
+            this.txtPhone.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.Location = new System.Drawing.Point(413, 198);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(117, 22);
+            this.txtPhone.Size = new System.Drawing.Size(181, 27);
             this.txtPhone.TabIndex = 40;
             // 
             // label2
@@ -135,22 +146,22 @@ namespace TrainingManagement
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(550, 144);
+            this.label2.Location = new System.Drawing.Point(678, 154);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 20);
+            this.label2.Size = new System.Drawing.Size(84, 20);
             this.label2.TabIndex = 42;
-            this.label2.Text = "Tên:";
+            this.label2.Text = "First name:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(274, 147);
+            this.label1.Location = new System.Drawing.Point(274, 154);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 20);
+            this.label1.Size = new System.Drawing.Size(81, 20);
             this.label1.TabIndex = 43;
-            this.label1.Text = "Họ:";
+            this.label1.Text = "Last name:";
             // 
             // label4
             // 
@@ -159,26 +170,27 @@ namespace TrainingManagement
             this.label4.ForeColor = System.Drawing.Color.Teal;
             this.label4.Location = new System.Drawing.Point(274, 107);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 20);
+            this.label4.Size = new System.Drawing.Size(85, 20);
             this.label4.TabIndex = 44;
-            this.label4.Text = "Mã sinh viên:";
+            this.label4.Text = "Student ID:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Teal;
-            this.label6.Location = new System.Drawing.Point(550, 104);
+            this.label6.Location = new System.Drawing.Point(678, 107);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 20);
+            this.label6.Size = new System.Drawing.Size(64, 20);
             this.label6.TabIndex = 46;
-            this.label6.Text = "Giới tính:";
+            this.label6.Text = "Gender:";
             // 
             // txtBirthPlace
             // 
-            this.txtBirthPlace.Location = new System.Drawing.Point(387, 222);
+            this.txtBirthPlace.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBirthPlace.Location = new System.Drawing.Point(413, 243);
             this.txtBirthPlace.Name = "txtBirthPlace";
-            this.txtBirthPlace.Size = new System.Drawing.Size(389, 22);
+            this.txtBirthPlace.Size = new System.Drawing.Size(586, 27);
             this.txtBirthPlace.TabIndex = 49;
             // 
             // label7
@@ -186,28 +198,29 @@ namespace TrainingManagement
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Teal;
-            this.label7.Location = new System.Drawing.Point(274, 226);
+            this.label7.Location = new System.Drawing.Point(274, 244);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 20);
+            this.label7.Size = new System.Drawing.Size(104, 20);
             this.label7.TabIndex = 50;
-            this.label7.Text = "Nơi sinh:";
+            this.label7.Text = "Place of birth:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Teal;
-            this.label8.Location = new System.Drawing.Point(274, 188);
+            this.label8.Location = new System.Drawing.Point(274, 200);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(103, 20);
+            this.label8.Size = new System.Drawing.Size(57, 20);
             this.label8.TabIndex = 53;
-            this.label8.Text = "Số điện thoại:";
+            this.label8.Text = "Phone:";
             // 
             // txtHousehold
             // 
-            this.txtHousehold.Location = new System.Drawing.Point(387, 258);
+            this.txtHousehold.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHousehold.Location = new System.Drawing.Point(413, 286);
             this.txtHousehold.Name = "txtHousehold";
-            this.txtHousehold.Size = new System.Drawing.Size(389, 22);
+            this.txtHousehold.Size = new System.Drawing.Size(586, 27);
             this.txtHousehold.TabIndex = 55;
             // 
             // label5
@@ -215,28 +228,29 @@ namespace TrainingManagement
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Teal;
-            this.label5.Location = new System.Drawing.Point(274, 262);
+            this.label5.Location = new System.Drawing.Point(274, 288);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 20);
+            this.label5.Size = new System.Drawing.Size(67, 20);
             this.label5.TabIndex = 56;
-            this.label5.Text = "Địa chỉ:";
+            this.label5.Text = "Address:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Teal;
-            this.label9.Location = new System.Drawing.Point(550, 188);
+            this.label9.Location = new System.Drawing.Point(678, 203);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 20);
+            this.label9.Size = new System.Drawing.Size(78, 20);
             this.label9.TabIndex = 58;
-            this.label9.Text = "CCCD/CMND:";
+            this.label9.Text = "Citizen ID:";
             // 
             // txtCititzenId
             // 
-            this.txtCititzenId.Location = new System.Drawing.Point(659, 184);
+            this.txtCititzenId.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCititzenId.Location = new System.Drawing.Point(818, 198);
             this.txtCititzenId.Name = "txtCititzenId";
-            this.txtCititzenId.Size = new System.Drawing.Size(117, 22);
+            this.txtCititzenId.Size = new System.Drawing.Size(181, 27);
             this.txtCititzenId.TabIndex = 59;
             // 
             // label3
@@ -244,45 +258,54 @@ namespace TrainingManagement
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Teal;
-            this.label3.Location = new System.Drawing.Point(465, 63);
+            this.label3.Location = new System.Drawing.Point(567, 62);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 23);
+            this.label3.Size = new System.Drawing.Size(142, 23);
             this.label3.TabIndex = 60;
-            this.label3.Text = "Sơ yếu lý lịch";
+            this.label3.Text = "Curriculum vitae";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Teal;
-            this.label16.Location = new System.Drawing.Point(274, 375);
+            this.label16.Location = new System.Drawing.Point(274, 413);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(0, 20);
             this.label16.TabIndex = 68;
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(659, 371);
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(818, 411);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.ReadOnly = true;
-            this.txtUsername.Size = new System.Drawing.Size(117, 22);
+            this.txtUsername.Size = new System.Drawing.Size(181, 20);
             this.txtUsername.TabIndex = 63;
+            this.txtUsername.Text = "abcdef";
             // 
             // txtDepartment
             // 
-            this.txtDepartment.Location = new System.Drawing.Point(387, 411);
+            this.txtDepartment.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDepartment.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDepartment.Location = new System.Drawing.Point(413, 453);
             this.txtDepartment.Name = "txtDepartment";
             this.txtDepartment.ReadOnly = true;
-            this.txtDepartment.Size = new System.Drawing.Size(117, 22);
+            this.txtDepartment.Size = new System.Drawing.Size(181, 20);
             this.txtDepartment.TabIndex = 61;
+            this.txtDepartment.Text = "abcdef";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(387, 371);
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(413, 413);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
-            this.txtEmail.Size = new System.Drawing.Size(117, 22);
+            this.txtEmail.Size = new System.Drawing.Size(181, 20);
             this.txtEmail.TabIndex = 62;
+            this.txtEmail.Text = "abcdef";
             // 
             // listBox1
             // 
@@ -290,9 +313,9 @@ namespace TrainingManagement
             this.listBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(251, 342);
+            this.listBox1.Location = new System.Drawing.Point(251, 380);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(550, 116);
+            this.listBox1.Size = new System.Drawing.Size(785, 116);
             this.listBox1.TabIndex = 64;
             // 
             // label19
@@ -300,18 +323,18 @@ namespace TrainingManagement
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Teal;
-            this.label19.Location = new System.Drawing.Point(451, 331);
+            this.label19.Location = new System.Drawing.Point(613, 366);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(167, 23);
+            this.label19.Size = new System.Drawing.Size(74, 23);
             this.label19.TabIndex = 79;
-            this.label19.Text = "Thông tin tài khoản";
+            this.label19.Text = "Account";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Teal;
-            this.label20.Location = new System.Drawing.Point(550, 375);
+            this.label20.Location = new System.Drawing.Point(678, 411);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(82, 20);
             this.label20.TabIndex = 82;
@@ -322,7 +345,7 @@ namespace TrainingManagement
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Teal;
-            this.label15.Location = new System.Drawing.Point(274, 375);
+            this.label15.Location = new System.Drawing.Point(274, 413);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(50, 20);
             this.label15.TabIndex = 83;
@@ -333,48 +356,39 @@ namespace TrainingManagement
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Teal;
-            this.label10.Location = new System.Drawing.Point(274, 415);
+            this.label10.Location = new System.Drawing.Point(274, 453);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(48, 20);
+            this.label10.Size = new System.Drawing.Size(61, 20);
             this.label10.TabIndex = 84;
-            this.label10.Text = "Khoa:";
+            this.label10.Text = "Faculty:";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Teal;
-            this.label17.Location = new System.Drawing.Point(550, 415);
+            this.label17.Location = new System.Drawing.Point(678, 451);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(90, 20);
+            this.label17.Size = new System.Drawing.Size(114, 20);
             this.label17.TabIndex = 85;
-            this.label17.Text = "Ở ký túc xá:";
-            // 
-            // btnExit
-            // 
-            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(469, 483);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(143, 34);
-            this.btnExit.TabIndex = 86;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.label17.Text = "Is in dormitory:";
             // 
             // cmbGender
             // 
+            this.cmbGender.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbGender.FormattingEnabled = true;
-            this.cmbGender.Location = new System.Drawing.Point(659, 100);
+            this.cmbGender.Location = new System.Drawing.Point(818, 102);
             this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(117, 24);
+            this.cmbGender.Size = new System.Drawing.Size(181, 28);
             this.cmbGender.TabIndex = 87;
             // 
             // cmbIsInDorm
             // 
+            this.cmbIsInDorm.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbIsInDorm.FormattingEnabled = true;
-            this.cmbIsInDorm.Location = new System.Drawing.Point(659, 411);
+            this.cmbIsInDorm.Location = new System.Drawing.Point(818, 448);
             this.cmbIsInDorm.Name = "cmbIsInDorm";
-            this.cmbIsInDorm.Size = new System.Drawing.Size(117, 24);
+            this.cmbIsInDorm.Size = new System.Drawing.Size(181, 28);
             this.cmbIsInDorm.TabIndex = 88;
             // 
             // imgAvatar
@@ -392,10 +406,9 @@ namespace TrainingManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 529);
+            this.ClientSize = new System.Drawing.Size(1064, 575);
             this.Controls.Add(this.cmbIsInDorm);
             this.Controls.Add(this.cmbGender);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label15);
@@ -469,7 +482,6 @@ namespace TrainingManagement
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.ComboBox cmbGender;
         private System.Windows.Forms.ComboBox cmbIsInDorm;
     }

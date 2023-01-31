@@ -45,8 +45,8 @@ namespace TrainingManagement
             this.btnFind = new System.Windows.Forms.Button();
             this.txtFind = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.btnExport = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.btnReload = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -62,11 +62,11 @@ namespace TrainingManagement
             // 
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData.Location = new System.Drawing.Point(0, 27);
-            this.dgvData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvData.Margin = new System.Windows.Forms.Padding(4);
             this.dgvData.Name = "dgvData";
             this.dgvData.RowHeadersWidth = 51;
             this.dgvData.RowTemplate.Height = 24;
-            this.dgvData.Size = new System.Drawing.Size(992, 529);
+            this.dgvData.Size = new System.Drawing.Size(708, 529);
             this.dgvData.TabIndex = 0;
             // 
             // label7
@@ -75,19 +75,15 @@ namespace TrainingManagement
             this.label7.Location = new System.Drawing.Point(31, 48);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 16);
+            this.label7.Size = new System.Drawing.Size(45, 17);
             this.label7.TabIndex = 4;
             this.label7.Text = "Name";
             // 
             // cmbContract
             // 
             this.cmbContract.FormattingEnabled = true;
-            this.cmbContract.Items.AddRange(new object[] {
-            "Giảng viên chính thức",
-            "Giảng viên thỉnh giảng",
-            "Giảng viên mời giảng"});
             this.cmbContract.Location = new System.Drawing.Point(35, 245);
-            this.cmbContract.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbContract.Margin = new System.Windows.Forms.Padding(4);
             this.cmbContract.Name = "cmbContract";
             this.cmbContract.Size = new System.Drawing.Size(637, 24);
             this.cmbContract.TabIndex = 13;
@@ -107,7 +103,7 @@ namespace TrainingManagement
             this.label6.Location = new System.Drawing.Point(31, 220);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 16);
+            this.label6.Size = new System.Drawing.Size(61, 17);
             this.label6.TabIndex = 10;
             this.label6.Text = "Contract";
             // 
@@ -117,7 +113,7 @@ namespace TrainingManagement
             this.label5.Location = new System.Drawing.Point(363, 130);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 16);
+            this.label5.Size = new System.Drawing.Size(43, 17);
             this.label5.TabIndex = 9;
             this.label5.Text = "Major";
             // 
@@ -125,7 +121,7 @@ namespace TrainingManagement
             // 
             this.cmbMajor.FormattingEnabled = true;
             this.cmbMajor.Location = new System.Drawing.Point(367, 155);
-            this.cmbMajor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbMajor.Margin = new System.Windows.Forms.Padding(4);
             this.cmbMajor.Name = "cmbMajor";
             this.cmbMajor.Size = new System.Drawing.Size(305, 24);
             this.cmbMajor.TabIndex = 8;
@@ -136,7 +132,7 @@ namespace TrainingManagement
             this.lblName.Location = new System.Drawing.Point(363, 47);
             this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(45, 16);
+            this.lblName.Size = new System.Drawing.Size(45, 17);
             this.lblName.TabIndex = 7;
             this.lblName.Text = "Name";
             // 
@@ -146,53 +142,60 @@ namespace TrainingManagement
             this.label3.Location = new System.Drawing.Point(31, 130);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 16);
+            this.label3.Size = new System.Drawing.Size(42, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Level";
             // 
             // cmbLevel
             // 
             this.cmbLevel.FormattingEnabled = true;
-            this.cmbLevel.Items.AddRange(new object[] {
-            "Cử nhân",
-            "Thạc sĩ",
-            "Tiến sĩ",
-            "Giáo sư"});
             this.cmbLevel.Location = new System.Drawing.Point(35, 155);
-            this.cmbLevel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbLevel.Margin = new System.Windows.Forms.Padding(4);
             this.cmbLevel.Name = "cmbLevel";
             this.cmbLevel.Size = new System.Drawing.Size(241, 24);
             this.cmbLevel.TabIndex = 4;
             // 
             // btnUpdate
             // 
+            this.btnUpdate.BackColor = System.Drawing.Color.Teal;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.Location = new System.Drawing.Point(35, 139);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(125, 36);
+            this.btnUpdate.Size = new System.Drawing.Size(136, 35);
             this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(349, 139);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.BackColor = System.Drawing.Color.Teal;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(376, 139);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(129, 36);
+            this.btnAdd.Size = new System.Drawing.Size(136, 35);
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
             // 
             // btnFind
             // 
+            this.btnFind.BackColor = System.Drawing.Color.Teal;
+            this.btnFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFind.ForeColor = System.Drawing.Color.White;
             this.btnFind.Location = new System.Drawing.Point(508, 63);
-            this.btnFind.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFind.Margin = new System.Windows.Forms.Padding(4);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(165, 36);
             this.btnFind.TabIndex = 6;
             this.btnFind.Text = "Find";
-            this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.UseVisualStyleBackColor = false;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // txtFind
             // 
@@ -213,19 +216,9 @@ namespace TrainingManagement
             this.txtID.Size = new System.Drawing.Size(241, 22);
             this.txtID.TabIndex = 3;
             // 
-            // btnExport
-            // 
-            this.btnExport.Location = new System.Drawing.Point(508, 139);
-            this.btnExport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(165, 36);
-            this.btnExport.TabIndex = 16;
-            this.btnExport.Text = "Export Excel files";
-            this.btnExport.UseVisualStyleBackColor = true;
-            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnExport);
+            this.groupBox2.Controls.Add(this.btnDelete);
             this.groupBox2.Controls.Add(this.btnReload);
             this.groupBox2.Controls.Add(this.btnUpdate);
             this.groupBox2.Controls.Add(this.btnAdd);
@@ -233,23 +226,40 @@ namespace TrainingManagement
             this.groupBox2.Controls.Add(this.txtFind);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Location = new System.Drawing.Point(25, 441);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(700, 208);
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Main function";
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Teal;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(536, 139);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(136, 35);
+            this.btnDelete.TabIndex = 10;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.button1_Click);
+            // 
             // btnReload
             // 
-            this.btnReload.Location = new System.Drawing.Point(199, 139);
-            this.btnReload.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReload.BackColor = System.Drawing.Color.Teal;
+            this.btnReload.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReload.ForeColor = System.Drawing.Color.White;
+            this.btnReload.Location = new System.Drawing.Point(205, 139);
+            this.btnReload.Margin = new System.Windows.Forms.Padding(4);
             this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(124, 36);
+            this.btnReload.Size = new System.Drawing.Size(136, 35);
             this.btnReload.TabIndex = 9;
             this.btnReload.Text = "Reload";
-            this.btnReload.UseVisualStyleBackColor = true;
+            this.btnReload.UseVisualStyleBackColor = false;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click_1);
             // 
             // label1
             // 
@@ -257,7 +267,7 @@ namespace TrainingManagement
             this.label1.Location = new System.Drawing.Point(31, 50);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 16);
+            this.label1.Size = new System.Drawing.Size(21, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "ID";
             // 
@@ -265,10 +275,10 @@ namespace TrainingManagement
             // 
             this.groupBox3.Controls.Add(this.dgvData);
             this.groupBox3.Location = new System.Drawing.Point(755, 92);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Size = new System.Drawing.Size(992, 556);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Size = new System.Drawing.Size(714, 556);
             this.groupBox3.TabIndex = 20;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Lecturer list";
@@ -286,9 +296,9 @@ namespace TrainingManagement
             this.groupBox1.Controls.Add(this.txtID);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(25, 92);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(700, 271);
             this.groupBox1.TabIndex = 18;
             this.groupBox1.TabStop = false;
@@ -299,10 +309,10 @@ namespace TrainingManagement
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(720, 33);
+            this.label2.Location = new System.Drawing.Point(735, 33);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(272, 24);
+            this.label2.Size = new System.Drawing.Size(339, 29);
             this.label2.TabIndex = 17;
             this.label2.Text = "LECTURER MANAGEMENT";
             // 
@@ -310,13 +320,14 @@ namespace TrainingManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1759, 663);
+            this.ClientSize = new System.Drawing.Size(1788, 938);
+            this.ControlBox = false;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "LecturerManagement";
             this.Text = "LecturerManagement";
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
@@ -352,9 +363,9 @@ namespace TrainingManagement
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnFind;
         private System.Windows.Forms.TextBox txtFind;
-        private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnReload;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
