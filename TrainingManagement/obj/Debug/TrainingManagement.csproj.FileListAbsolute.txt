@@ -73,3 +73,4 @@ C:\Users\Tan Viet\Desktop\Projects\WinForm\Training Management LTS\TrainingManag
 C:\Users\Tan Viet\Desktop\Projects\WinForm\Training Management LTS\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.CopyComplete
 C:\Users\Tan Viet\Desktop\Projects\WinForm\Training Management LTS\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.exe
 C:\Users\Tan Viet\Desktop\Projects\WinForm\Training Management LTS\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.pdb
+C:\Users\Tan Viet\Desktop\Projects\WinForm\Training Management LTS\TrainingManagement\TrainingManagement\obj\Debug\TrainingManagement.csproj.AssemblyReference.cache

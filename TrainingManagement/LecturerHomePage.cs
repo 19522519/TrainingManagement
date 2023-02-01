@@ -61,6 +61,9 @@ namespace TrainingManagement
 
         private void exitsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Login login = new Login();
+            Hide();
+            login.ShowDialog();
             Close();
         }
     }

@@ -87,36 +87,48 @@ namespace TrainingManagement
                         var student = studentController.getStudentByUserId(id);
                         int stuId = student.Id;
                         StudentHomePage studentHomePage = new StudentHomePage(stuId);
-
+                        Hide();
                         studentHomePage.ShowDialog();
+                        Close();
                         break;
+
                     case "Lecturer":
                         // Lấy id lecturer từ user id
                         var lecturer = lecturerController.getLecturerByUserId(id);
                         int lecId = lecturer.ID;
                         LecturerHomePage lecturerHomePage = new LecturerHomePage(lecId);
+                        Hide();
                         lecturerHomePage.ShowDialog();
-
+                        Close();
                         break;
+
                     case "HeadOfTraining":
                         // Lấy id department manager từ user id
                         TrainingManagerHomePage departmentManagerHomePage = new TrainingManagerHomePage();
-                        departmentManagerHomePage.Show();
+                        Hide();
+                        departmentManagerHomePage.ShowDialog();
+                        Close();
                         break;
 
                     case "SEDean":
                         DepartmentHomePage deanHomePage = new DepartmentHomePage("Software Engirneering");
-                        deanHomePage.Show();
+                        Hide();
+                        deanHomePage.ShowDialog();
+                        Close();
                         break;
 
                     case "CSDean":
                         deanHomePage = new DepartmentHomePage("Computer Science");
-                        deanHomePage.Show();
+                        Hide();
+                        deanHomePage.ShowDialog();
+                        Close();
                         break;
 
                     case "ISDean":
                         deanHomePage = new DepartmentHomePage("Information System");
-                        deanHomePage.Show();
+                        Hide();
+                        deanHomePage.ShowDialog();
+                        Close();
                         break;
                 }
 
@@ -135,10 +147,6 @@ namespace TrainingManagement
         {
             ForgotPassword forgotPassword = new ForgotPassword();
             this.Hide();
-            // forgotPassword.TopLevel = false;
-            // forgotPassword.AutoScroll = true;
-            // forgotPassword.Dock = DockStyle.Fill;
-            // forgotPassword.FormBorderStyle = FormBorderStyle.None;
             forgotPassword.ShowDialog();
             this.Close();
         }

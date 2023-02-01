@@ -84,7 +84,6 @@ namespace TrainingManagement.Controller
             student.birth_place = stu.birth_place;
             student.household = stu.household;
             student.is_in_dormitory = student.is_in_dormitory;
-            student.major_id = stu.major_id;
             entities.SaveChanges();
         }
 
