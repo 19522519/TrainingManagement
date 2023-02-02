@@ -97,8 +97,8 @@ namespace TrainingManagement
 
         private void btnTimeable_Click(object sender, EventArgs e)
         {
-            int semester = Convert.ToInt32(cmbSemester.Text);
-            int schoolYear = Convert.ToInt32(cmbSchoolYear.SelectedValue.ToString());
+            string semester = cmbSemester.Text;
+            string schoolYear = cmbSchoolYear.SelectedValue.ToString();
             dgvData.DataSource = lessonController.getAllTimeable(semester, schoolYear, lecId);
         }
     }

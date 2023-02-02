@@ -29,10 +29,6 @@ namespace TrainingManagement
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModuleManagement));
             this.label1 = new System.Windows.Forms.Label();
             this.cmbSchoolYear = new System.Windows.Forms.ComboBox();
@@ -72,6 +68,10 @@ namespace TrainingManagement
             this.label13 = new System.Windows.Forms.Label();
             this.txbName = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.cmbSemester = new System.Windows.Forms.ComboBox();
+            this.txbSchoolYear = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvModuleList)).BeginInit();
@@ -231,23 +231,7 @@ namespace TrainingManagement
             // 
             // dgvModuleList
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvModuleList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvModuleList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvModuleList.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvModuleList.Location = new System.Drawing.Point(0, 160);
             this.dgvModuleList.Name = "dgvModuleList";
             this.dgvModuleList.RowHeadersWidth = 51;
@@ -313,44 +297,44 @@ namespace TrainingManagement
             // txbVisitingLessons
             // 
             this.txbVisitingLessons.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbVisitingLessons.Location = new System.Drawing.Point(299, 232);
+            this.txbVisitingLessons.Location = new System.Drawing.Point(642, 239);
             this.txbVisitingLessons.Margin = new System.Windows.Forms.Padding(4);
             this.txbVisitingLessons.Name = "txbVisitingLessons";
-            this.txbVisitingLessons.Size = new System.Drawing.Size(200, 24);
+            this.txbVisitingLessons.Size = new System.Drawing.Size(130, 24);
             this.txbVisitingLessons.TabIndex = 18;
             // 
             // txbSelfStudyLessons
             // 
             this.txbSelfStudyLessons.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSelfStudyLessons.Location = new System.Drawing.Point(30, 232);
+            this.txbSelfStudyLessons.Location = new System.Drawing.Point(442, 239);
             this.txbSelfStudyLessons.Margin = new System.Windows.Forms.Padding(4);
             this.txbSelfStudyLessons.Name = "txbSelfStudyLessons";
-            this.txbSelfStudyLessons.Size = new System.Drawing.Size(200, 24);
+            this.txbSelfStudyLessons.Size = new System.Drawing.Size(130, 24);
             this.txbSelfStudyLessons.TabIndex = 17;
             // 
             // txbPracticeLessons
             // 
             this.txbPracticeLessons.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbPracticeLessons.Location = new System.Drawing.Point(299, 147);
+            this.txbPracticeLessons.Location = new System.Drawing.Point(233, 239);
             this.txbPracticeLessons.Margin = new System.Windows.Forms.Padding(4);
             this.txbPracticeLessons.Name = "txbPracticeLessons";
-            this.txbPracticeLessons.Size = new System.Drawing.Size(200, 24);
+            this.txbPracticeLessons.Size = new System.Drawing.Size(130, 24);
             this.txbPracticeLessons.TabIndex = 16;
             // 
             // txbTheoryLessons
             // 
             this.txbTheoryLessons.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTheoryLessons.Location = new System.Drawing.Point(30, 147);
+            this.txbTheoryLessons.Location = new System.Drawing.Point(32, 239);
             this.txbTheoryLessons.Margin = new System.Windows.Forms.Padding(4);
             this.txbTheoryLessons.Name = "txbTheoryLessons";
-            this.txbTheoryLessons.Size = new System.Drawing.Size(200, 24);
+            this.txbTheoryLessons.Size = new System.Drawing.Size(130, 24);
             this.txbTheoryLessons.TabIndex = 6;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(296, 210);
+            this.label8.Location = new System.Drawing.Point(639, 217);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(114, 18);
@@ -361,7 +345,7 @@ namespace TrainingManagement
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(26, 210);
+            this.label7.Location = new System.Drawing.Point(438, 217);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(128, 18);
@@ -372,7 +356,7 @@ namespace TrainingManagement
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(296, 125);
+            this.label6.Location = new System.Drawing.Point(230, 217);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(122, 18);
@@ -383,7 +367,7 @@ namespace TrainingManagement
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 125);
+            this.label3.Location = new System.Drawing.Point(29, 217);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 18);
@@ -392,6 +376,10 @@ namespace TrainingManagement
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.cmbSemester);
+            this.groupBox3.Controls.Add(this.txbSchoolYear);
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.txbModuleId);
             this.groupBox3.Controls.Add(this.txbCredits);
             this.groupBox3.Controls.Add(this.label17);
@@ -434,18 +422,18 @@ namespace TrainingManagement
             // txbCredits
             // 
             this.txbCredits.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbCredits.Location = new System.Drawing.Point(572, 204);
+            this.txbCredits.Location = new System.Drawing.Point(32, 147);
             this.txbCredits.Margin = new System.Windows.Forms.Padding(4);
             this.txbCredits.Name = "txbCredits";
             this.txbCredits.ReadOnly = true;
-            this.txbCredits.Size = new System.Drawing.Size(200, 24);
+            this.txbCredits.Size = new System.Drawing.Size(198, 24);
             this.txbCredits.TabIndex = 31;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(569, 182);
+            this.label17.Location = new System.Drawing.Point(29, 125);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(59, 18);
@@ -457,7 +445,7 @@ namespace TrainingManagement
             this.btnDelete.BackColor = System.Drawing.Color.Teal;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(570, 296);
+            this.btnDelete.Location = new System.Drawing.Point(572, 296);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(200, 35);
@@ -485,7 +473,7 @@ namespace TrainingManagement
             this.btnCreate.BackColor = System.Drawing.Color.Teal;
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(30, 296);
+            this.btnCreate.Location = new System.Drawing.Point(32, 296);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(4);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(200, 35);
@@ -496,23 +484,7 @@ namespace TrainingManagement
             // 
             // dgvModule
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvModule.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvModule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvModule.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvModule.Location = new System.Drawing.Point(0, 350);
             this.dgvModule.Name = "dgvModule";
             this.dgvModule.RowHeadersWidth = 51;
@@ -549,7 +521,7 @@ namespace TrainingManagement
             this.txbName.Margin = new System.Windows.Forms.Padding(4);
             this.txbName.Name = "txbName";
             this.txbName.ReadOnly = true;
-            this.txbName.Size = new System.Drawing.Size(471, 24);
+            this.txbName.Size = new System.Drawing.Size(469, 24);
             this.txbName.TabIndex = 15;
             // 
             // label14
@@ -562,6 +534,47 @@ namespace TrainingManagement
             this.label14.Size = new System.Drawing.Size(52, 18);
             this.label14.TabIndex = 13;
             this.label14.Text = "Name:";
+            // 
+            // cmbSemester
+            // 
+            this.cmbSemester.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSemester.FormattingEnabled = true;
+            this.cmbSemester.Location = new System.Drawing.Point(570, 145);
+            this.cmbSemester.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbSemester.Name = "cmbSemester";
+            this.cmbSemester.Size = new System.Drawing.Size(200, 26);
+            this.cmbSemester.TabIndex = 41;
+            // 
+            // txbSchoolYear
+            // 
+            this.txbSchoolYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbSchoolYear.Location = new System.Drawing.Point(300, 147);
+            this.txbSchoolYear.Margin = new System.Windows.Forms.Padding(4);
+            this.txbSchoolYear.Name = "txbSchoolYear";
+            this.txbSchoolYear.Size = new System.Drawing.Size(200, 24);
+            this.txbSchoolYear.TabIndex = 40;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(567, 125);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(76, 18);
+            this.label15.TabIndex = 38;
+            this.label15.Text = "Semester:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(297, 125);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(91, 18);
+            this.label16.TabIndex = 39;
+            this.label16.Text = "School year:";
             // 
             // ModuleManagement
             // 
@@ -627,5 +640,9 @@ namespace TrainingManagement
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.TextBox txbCurriculumId;
         private System.Windows.Forms.TextBox txbModuleId;
+        private System.Windows.Forms.ComboBox cmbSemester;
+        private System.Windows.Forms.TextBox txbSchoolYear;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
     }
 }

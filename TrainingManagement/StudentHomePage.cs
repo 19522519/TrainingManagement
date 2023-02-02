@@ -80,5 +80,22 @@ namespace TrainingManagement
             this.pnlContent.Controls.Add(studentTimetable);
             studentTimetable.Show();
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            foreach (ToolStripMenuItem item in ((ToolStrip)sender).Items)
+            {
+                if (item == e.ClickedItem)
+                {
+                    item.BackColor = Color.White;
+                    item.ForeColor = Color.Black;
+                }
+                else
+                {
+                    item.BackColor = Color.Teal;
+                    item.ForeColor = Color.White;
+                }
+            }
+        }
     }
 }

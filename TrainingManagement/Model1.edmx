@@ -13,8 +13,6 @@
           <Property Name="ID_Class_module" Type="nvarchar" MaxLength="20" />
           <Property Name="start_date" Type="date" />
           <Property Name="end_date" Type="date" />
-          <Property Name="semester" Type="int" />
-          <Property Name="school_year" Type="int" />
           <Property Name="register" Type="nvarchar" MaxLength="50" />
           <Property Name="module_id" Type="int" />
         </EntityType>
@@ -91,6 +89,8 @@
           <Property Name="practice_lessons" Type="int" />
           <Property Name="self_study_lessons" Type="int" />
           <Property Name="visiting_lessons" Type="int" />
+          <Property Name="semester" Type="nvarchar" MaxLength="50" />
+          <Property Name="school_year" Type="nvarchar" MaxLength="50" />
           <Property Name="curriculum_id" Type="int" />
         </EntityType>
         <EntityType Name="module_list">
@@ -593,8 +593,6 @@
           <Property Name="ID_Class_module" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="start_date" Type="DateTime" Precision="0" />
           <Property Name="end_date" Type="DateTime" Precision="0" />
-          <Property Name="semester" Type="Int32" />
-          <Property Name="school_year" Type="Int32" />
           <Property Name="register" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="module_id" Type="Int32" />
           <NavigationProperty Name="module" Relationship="TrainingManagementModel.FK__class_mod__modul__5070F446" FromRole="class_module" ToRole="module" />
@@ -690,6 +688,8 @@
           <Property Name="practice_lessons" Type="Int32" />
           <Property Name="self_study_lessons" Type="Int32" />
           <Property Name="visiting_lessons" Type="Int32" />
+          <Property Name="semester" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="school_year" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="curriculum_id" Type="Int32" />
           <NavigationProperty Name="class_module" Relationship="TrainingManagementModel.FK__class_mod__modul__5070F446" FromRole="module" ToRole="class_module" />
           <NavigationProperty Name="curriculum" Relationship="TrainingManagementModel.FK__module__curricul__4E88ABD4" FromRole="module" ToRole="curriculum" />
@@ -964,8 +964,6 @@
               <MappingFragment StoreEntitySet="class_module">
                 <ScalarProperty Name="module_id" ColumnName="module_id" />
                 <ScalarProperty Name="register" ColumnName="register" />
-                <ScalarProperty Name="school_year" ColumnName="school_year" />
-                <ScalarProperty Name="semester" ColumnName="semester" />
                 <ScalarProperty Name="end_date" ColumnName="end_date" />
                 <ScalarProperty Name="start_date" ColumnName="start_date" />
                 <ScalarProperty Name="ID_Class_module" ColumnName="ID_Class_module" />
@@ -1044,6 +1042,8 @@
             <EntityTypeMapping TypeName="TrainingManagementModel.module">
               <MappingFragment StoreEntitySet="module">
                 <ScalarProperty Name="curriculum_id" ColumnName="curriculum_id" />
+                <ScalarProperty Name="school_year" ColumnName="school_year" />
+                <ScalarProperty Name="semester" ColumnName="semester" />
                 <ScalarProperty Name="visiting_lessons" ColumnName="visiting_lessons" />
                 <ScalarProperty Name="self_study_lessons" ColumnName="self_study_lessons" />
                 <ScalarProperty Name="practice_lessons" ColumnName="practice_lessons" />

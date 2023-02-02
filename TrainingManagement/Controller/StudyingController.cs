@@ -10,18 +10,15 @@ namespace TrainingManagement.Controller
     {
         TrainingManagementEntities entities = new TrainingManagementEntities();
 
-        public dynamic getAllScore(int semester, int schoolYear, int stuId)
+        public dynamic getAllScore(string semester, string schoolYear, int stuId)
         {
             var data = from c in entities.studying
-                       where c.lesson.class_module.semester == semester && c.lesson.class_module.school_year == schoolYear && c.student.id == stuId
+                       where c.lesson.class_module.module.semester.Equals(semester) && c.lesson.class_module.module.school_year.Equals(schoolYear) && c.student.id == stuId
                        select new
                        {
                            Name = c.lesson.class_module.module.name,
                            ModuleCode = c.lesson.class_module.ID_Class_module,
-                           TheoryCredits = c.lesson.class_module.module.theory_lessons,
-                           PracticeCredits = c.lesson.class_module.module.practice_lessons,
-                           SelfStudyCredits = c.lesson.class_module.module.self_study_lessons,
-                           VisitingCredits = c.lesson.class_module.module.visiting_lessons,
+                           Credits = c.lesson.class_module.module.credits,
                            AvgScore = c.score
                        };
             // Cách 2
@@ -45,15 +42,12 @@ namespace TrainingManagement.Controller
         {
             var data = from c in entities.studying
                        where c.student.id == stuId
-                       orderby c.lesson.class_module.school_year ascending
+                       orderby c.lesson.class_module.module.school_year ascending
                        select new
                        {
                            Name = c.lesson.class_module.module.name,
                            ModuleCode = c.lesson.class_module.ID_Class_module,
-                           TheoryCredits = c.lesson.class_module.module.theory_lessons,
-                           PracticeCredits = c.lesson.class_module.module.practice_lessons,
-                           SelfStudyCredits = c.lesson.class_module.module.self_study_lessons,
-                           VisitingCredits = c.lesson.class_module.module.visiting_lessons,
+                           Credits = c.lesson.class_module.module.credits,
                            AvgScore = c.score
                        };
             return data.ToList();
@@ -63,8 +57,8 @@ namespace TrainingManagement.Controller
         {
             var data = entities.studying
                 .Where(x => x.student.id == stuId)
-                .GroupBy(x => x.lesson.class_module.school_year)
-                .Select(g => g.FirstOrDefault().lesson.class_module.school_year)
+                .GroupBy(x => x.lesson.class_module.module.school_year)
+                .Select(g => g.FirstOrDefault().lesson.class_module.module.school_year)
                 .ToList();
             return data;
         }
@@ -97,8 +91,8 @@ namespace TrainingManagement.Controller
                            Id = c.id,
                            TrainingType = c.lesson.class_module.module.curriculum.training_type,
                            TrainingSystem = c.lesson.class_module.module.curriculum.training_system,
-                           Semester = c.lesson.class_module.semester,
-                           SchoolYear = c.lesson.class_module.school_year,
+                           Semester = c.lesson.class_module.module.semester,
+                           SchoolYear = c.lesson.class_module.module.school_year,
                            ClassCode = c.lesson.class_module.ID_Class_module,
                            ClassName = c.lesson.class_module.module.name,
                            Credits = c.lesson.class_module.module.credits,

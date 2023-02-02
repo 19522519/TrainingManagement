@@ -94,7 +94,7 @@ namespace TrainingManagement
             lbStudentCode.Text = "ID: " + studentController.getStudentCodeById(stuId);
 
             loadTimetable();
-            dgvTimetable.DataSource = studentController.getTimetableBasedOnStudentId(stuId, Convert.ToInt32(cmbSchoolYear.Text), Convert.ToInt32(cmbSemester.Text));
+            dgvTimetable.DataSource = studentController.getTimetableBasedOnStudentId(stuId, cmbSchoolYear.Text, cmbSemester.Text);
         }
     }
 }

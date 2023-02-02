@@ -28,6 +28,8 @@ namespace TrainingManagement
         public Nullable<int> practice_lessons { get; set; }
         public Nullable<int> self_study_lessons { get; set; }
         public Nullable<int> visiting_lessons { get; set; }
+        public string semester { get; set; }
+        public string school_year { get; set; }
         public Nullable<int> curriculum_id { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

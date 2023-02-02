@@ -147,15 +147,15 @@ namespace TrainingManagement.Controller
         {
             var data = entities.studying
                 .Where(x => x.id == studentId)
-                .GroupBy(x => x.lesson.class_module.school_year)
-                .Select(g => g.FirstOrDefault().lesson.class_module.school_year);
+                .GroupBy(x => x.lesson.class_module.module.school_year)
+                .Select(g => g.FirstOrDefault().lesson.class_module.module.school_year);
             return data.ToList();
         }
 
-        public dynamic getTimetableBasedOnStudentId(int studentId, int schoolYear, int semester)
+        public dynamic getTimetableBasedOnStudentId(int studentId, string schoolYear, string semester)
         {
             var data = from c in entities.studying
-                       where c.lesson.class_module.school_year == schoolYear && c.lesson.class_module.semester == semester && c.student_id == studentId
+                       where c.lesson.class_module.module.school_year.Equals(schoolYear) && c.lesson.class_module.module.semester.Equals(semester) && c.student_id == studentId
                        select new
                        {
                            ClassCode = c.lesson.class_module.ID_Class_module,

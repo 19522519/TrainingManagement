@@ -41,6 +41,7 @@ namespace TrainingManagement
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Teal;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.curriculumToolStripMenuItem,
@@ -52,9 +53,11 @@ namespace TrainingManagement
             this.menuStrip1.Size = new System.Drawing.Size(1404, 31);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // curriculumToolStripMenuItem
             // 
+            this.curriculumToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.curriculumToolStripMenuItem.Name = "curriculumToolStripMenuItem";
             this.curriculumToolStripMenuItem.Size = new System.Drawing.Size(108, 27);
             this.curriculumToolStripMenuItem.Text = "Curriculum";
@@ -62,6 +65,7 @@ namespace TrainingManagement
             // 
             // moduleToolStripMenuItem
             // 
+            this.moduleToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.moduleToolStripMenuItem.Name = "moduleToolStripMenuItem";
             this.moduleToolStripMenuItem.Size = new System.Drawing.Size(82, 27);
             this.moduleToolStripMenuItem.Text = "Module";
@@ -69,6 +73,7 @@ namespace TrainingManagement
             // 
             // classModuleToolStripMenuItem
             // 
+            this.classModuleToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.classModuleToolStripMenuItem.Name = "classModuleToolStripMenuItem";
             this.classModuleToolStripMenuItem.Size = new System.Drawing.Size(125, 27);
             this.classModuleToolStripMenuItem.Text = "Class Module";
@@ -76,6 +81,7 @@ namespace TrainingManagement
             // 
             // exitToolStripMenuItem
             // 
+            this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(51, 27);
             this.exitToolStripMenuItem.Text = "Exit";

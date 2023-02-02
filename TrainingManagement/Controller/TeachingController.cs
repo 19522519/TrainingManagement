@@ -10,10 +10,10 @@ namespace TrainingManagement.Controller
     {
         TrainingManagementEntities entities = new TrainingManagementEntities();
 
-        public dynamic getAllScore(int semester, int schoolYear, string classMoule)
+        public dynamic getAllScore(string semester, string schoolYear, string classMoule)
         {
             var data = from c in entities.studying
-                       where c.lesson.class_module.semester == semester && c.lesson.class_module.school_year == schoolYear && c.lesson.class_module.ID_Class_module.Equals(classMoule)
+                       where c.lesson.class_module.module.semester.Equals(semester) && c.lesson.class_module.module.school_year.Equals(schoolYear) && c.lesson.class_module.ID_Class_module.Equals(classMoule)
                        select new
                        {
                            ID = c.id,
@@ -31,16 +31,16 @@ namespace TrainingManagement.Controller
         {
             var data = entities.teaching
                 .Where(x => x.lecturer_id == lecId)
-                .GroupBy(x => x.class_module.school_year)
-                .Select(g => g.FirstOrDefault().class_module.school_year)
+                .GroupBy(x => x.class_module.module.school_year)
+                .Select(g => g.FirstOrDefault().class_module.module.school_year)
                 .ToList();
             return data;
         }
 
-        public dynamic getAllClassModule(int semester, int schoolYear, int lecId)
+        public dynamic getAllClassModule(string semester, string schoolYear, int lecId)
         {
             var data = entities.teaching
-                .Where(x => x.class_module.semester == semester && x.class_module.school_year == schoolYear && x.lecturer_id == lecId)
+                .Where(x => x.class_module.module.semester.Equals(semester) && x.class_module.module.school_year.Equals(schoolYear) && x.lecturer_id == lecId)
                 .GroupBy(x => x.class_module.ID_Class_module)
                 .Select(g => g.FirstOrDefault().class_module.ID_Class_module)
                 .ToList();

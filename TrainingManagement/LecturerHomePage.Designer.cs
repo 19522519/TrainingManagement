@@ -43,6 +43,7 @@ namespace TrainingManagement
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Teal;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.classesToolStripMenuItem,
@@ -56,15 +57,18 @@ namespace TrainingManagement
             this.menuStrip1.Size = new System.Drawing.Size(969, 31);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // classesToolStripMenuItem
             // 
+            this.classesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.classesToolStripMenuItem.Name = "classesToolStripMenuItem";
             this.classesToolStripMenuItem.Size = new System.Drawing.Size(78, 27);
             this.classesToolStripMenuItem.Text = "Classes";
             // 
             // timeableToolStripMenuItem
             // 
+            this.timeableToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.timeableToolStripMenuItem.Name = "timeableToolStripMenuItem";
             this.timeableToolStripMenuItem.Size = new System.Drawing.Size(93, 27);
             this.timeableToolStripMenuItem.Text = "Timeable";
@@ -72,12 +76,14 @@ namespace TrainingManagement
             // 
             // confirmModulesToolStripMenuItem
             // 
+            this.confirmModulesToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.confirmModulesToolStripMenuItem.Name = "confirmModulesToolStripMenuItem";
             this.confirmModulesToolStripMenuItem.Size = new System.Drawing.Size(155, 27);
             this.confirmModulesToolStripMenuItem.Text = "Confirm Modules";
             // 
             // profileToolStripMenuItem
             // 
+            this.profileToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.profileToolStripMenuItem.Name = "profileToolStripMenuItem";
             this.profileToolStripMenuItem.Size = new System.Drawing.Size(72, 27);
             this.profileToolStripMenuItem.Text = "Profile";
@@ -85,6 +91,7 @@ namespace TrainingManagement
             // 
             // điểmToolStripMenuItem
             // 
+            this.điểmToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.điểmToolStripMenuItem.Name = "điểmToolStripMenuItem";
             this.điểmToolStripMenuItem.Size = new System.Drawing.Size(66, 27);
             this.điểmToolStripMenuItem.Text = "Score";
@@ -92,6 +99,7 @@ namespace TrainingManagement
             // 
             // exitsToolStripMenuItem
             // 
+            this.exitsToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.exitsToolStripMenuItem.Name = "exitsToolStripMenuItem";
             this.exitsToolStripMenuItem.Size = new System.Drawing.Size(51, 27);
             this.exitsToolStripMenuItem.Text = "Exit";

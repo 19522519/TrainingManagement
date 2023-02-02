@@ -31,7 +31,9 @@ namespace TrainingManagement.Controller
                            TheoryLessons = c.theory_lessons,
                            PracticeLessons = c.practice_lessons,
                            SelfStudyLessons = c.self_study_lessons,
-                           VisitingLessons = c.visiting_lessons
+                           VisitingLessons = c.visiting_lessons,
+                           SchoolYear = c.school_year,
+                           Semester = c.semester
                        };
             return data.ToList();
         }
@@ -58,19 +60,22 @@ namespace TrainingManagement.Controller
             }
         }
 
-        public dynamic getAllModulesBasedOnShoolYear(string schoolYear)
+        public dynamic getAllModulesBasedOnSemesterAndShoolYearAndMajor(string semester, string schoolYear, string major)
         {
             var data = from c in entities.module
-                       where c.curriculum.school_year.Equals(schoolYear)
+                       where c.curriculum.major.name.Equals(major) && c.school_year.Equals(schoolYear) && c.semester.Equals(semester)
                        select new
                        {
                            Id = c.id,
                            Code = c.ID_Module,
                            Name = c.name,
+                           Credits = c.credits,
                            TheoryLessons = c.theory_lessons,
                            PracticeLessons = c.practice_lessons,
                            SelfStudyLessons = c.self_study_lessons,
-                           VisitingLessons = c.visiting_lessons
+                           VisitingLessons = c.visiting_lessons,
+                           SchoolYear = c.school_year,
+                           Semester = c.semester
                        };
             return data.ToList();
         }

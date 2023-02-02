@@ -97,8 +97,8 @@ namespace TrainingManagement
 
         private void btnViewScore_Click(object sender, EventArgs e)
         {
-            int semester = Convert.ToInt32(cmbSemester.Text);
-            int schoolYear = Convert.ToInt32(cmbSchoolYear.SelectedValue.ToString());
+            string semester = cmbSemester.Text;
+            string schoolYear = cmbSchoolYear.SelectedValue.ToString();
             string classModule = Convert.ToString(cmbClassModule.SelectedValue.ToString());
             dgvData.DataSource = teachingController.getAllScore(semester, schoolYear, classModule);
             addBinding();
@@ -114,8 +114,8 @@ namespace TrainingManagement
             };
             teachingController.updateScore(studying);
 
-            int semester = Convert.ToInt32(cmbSemester.Text);
-            int schoolYear = Convert.ToInt32(cmbSchoolYear.SelectedValue.ToString());
+            string semester = cmbSemester.Text;
+            string schoolYear = cmbSchoolYear.SelectedValue.ToString();
             string classModule = Convert.ToString(cmbClassModule.SelectedValue.ToString());
             dgvData.DataSource = teachingController.getAllScore(semester, schoolYear, classModule);
             addBinding();
@@ -124,8 +124,8 @@ namespace TrainingManagement
 
         private void cmbClassModule_Click(object sender, EventArgs e)
         {
-            int semester = Convert.ToInt32(cmbSemester.Text);
-            int schoolYear = Convert.ToInt32(cmbSchoolYear.SelectedValue.ToString());
+            string semester = cmbSemester.Text;
+            string schoolYear = cmbSchoolYear.SelectedValue.ToString();
             cmbClassModule.DataSource = teachingController.getAllClassModule(semester, schoolYear, lecId);
         }
     }

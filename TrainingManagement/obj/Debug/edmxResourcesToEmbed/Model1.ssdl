@@ -8,8 +8,6 @@
     <Property Name="ID_Class_module" Type="nvarchar" MaxLength="20" />
     <Property Name="start_date" Type="date" />
     <Property Name="end_date" Type="date" />
-    <Property Name="semester" Type="int" />
-    <Property Name="school_year" Type="int" />
     <Property Name="register" Type="nvarchar" MaxLength="50" />
     <Property Name="module_id" Type="int" />
   </EntityType>
@@ -86,6 +84,8 @@
     <Property Name="practice_lessons" Type="int" />
     <Property Name="self_study_lessons" Type="int" />
     <Property Name="visiting_lessons" Type="int" />
+    <Property Name="semester" Type="nvarchar" MaxLength="50" />
+    <Property Name="school_year" Type="nvarchar" MaxLength="50" />
     <Property Name="curriculum_id" Type="int" />
   </EntityType>
   <EntityType Name="module_list">

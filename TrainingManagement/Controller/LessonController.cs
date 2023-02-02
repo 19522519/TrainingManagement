@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
 namespace TrainingManagement.Controller
 {
@@ -10,10 +6,10 @@ namespace TrainingManagement.Controller
     {
         TrainingManagementEntities entities = new TrainingManagementEntities();
 
-        public dynamic getAllTimeable(int semester, int schoolYear, int lecId)
+        public dynamic getAllTimeable(string semester, string schoolYear, int lecId)
         {
             var data = from c in entities.lesson
-                       where c.class_module.semester == semester && c.class_module.school_year == schoolYear && c.teaching.lecturer.id == lecId
+                       where c.class_module.module.semester.Equals(semester) && c.class_module.module.school_year.Equals(schoolYear) && c.teaching.lecturer.id == lecId
                        select new
                           {
                               Id = c.id,
@@ -36,8 +32,8 @@ namespace TrainingManagement.Controller
                        select new
                        {
                            Id = c.id,
-                           Semester = c.class_module.semester,
-                           SchoolYear = c.class_module.school_year,
+                           Semester = c.class_module.module.semester,
+                           SchoolYear = c.class_module.module.school_year,
                            ClassCode = c.class_module.ID_Class_module,
                            ClassName = c.class_module.module.name,
                            Day = c.day_in_week,
@@ -51,18 +47,18 @@ namespace TrainingManagement.Controller
             return data.ToList();
         }
 
-        public dynamic getAllLessons(int semester, int schoolYear)
+        public dynamic getAllLessons(string semester, string schoolYear)
         {
             var data = from c in entities.lesson
-                       where c.class_module.semester == semester && c.class_module.school_year == schoolYear
+                       where c.class_module.module.semester.Equals(semester) && c.class_module.module.school_year.Equals(schoolYear)
                        select new
                        {
                            Id = c.id,
                            TrainingType = c.class_module.module.curriculum.training_type,
                            TrainingSystem = c.class_module.module.curriculum.training_system,
                            Curriculum = c.class_module.module.curriculum.name,
-                           Semester = c.class_module.semester,
-                           SchoolYear = c.class_module.school_year,
+                           Semester = c.class_module.module.semester,
+                           SchoolYear = c.class_module.module.school_year,
                            ClassCode = c.class_module.ID_Class_module,
                            ClassName = c.class_module.module.name,
                            Credits = c.class_module.module.credits,
@@ -93,8 +89,8 @@ namespace TrainingManagement.Controller
                            TrainingType = c.class_module.module.curriculum.training_type,
                            TrainingSystem = c.class_module.module.curriculum.training_system,
                            Curriculum = c.class_module.module.curriculum.name,
-                           Semester = c.class_module.semester,
-                           SchoolYear = c.class_module.school_year,
+                           Semester = c.class_module.module.semester,
+                           SchoolYear = c.class_module.module.school_year,
                            ClassCode = c.class_module.ID_Class_module,
                            ClassName = c.class_module.module.name,
                            Credits = c.class_module.module.credits,
@@ -115,24 +111,29 @@ namespace TrainingManagement.Controller
             return data.ToList();
         }
 
-        public dynamic getAllLessonsBasedOnSemesterAndSchoolYear(int semester, int schoolYear, string major)
+        public dynamic getAllLessonsBasedOnSemesterAndSchoolYearAndMajor(string semester, string schoolYear, string major)
         {
             var result = from c in entities.lesson
                          select c;
 
-            if(semester.ToString() != "")
+            if (schoolYear != "")
                 result = from c in entities.lesson
-                         where c.class_module.semester == semester
+                         where c.class_module.module.school_year.Equals(schoolYear)
+                         select c;
+
+            if (semester != "")
+                result = from c in entities.lesson
+                         where c.class_module.module.semester.Equals(semester)
                          select c;
 
             var data = from c in result
-                       where c.class_module.school_year == schoolYear && c.class_module.module.curriculum.major.name.Equals(major)
+                       where c.class_module.module.curriculum.major.name.Equals(major)
                        orderby c.class_module.ID_Class_module ascending
                        select new
                        {
                            Id = c.id,
-                           Semester = c.class_module.semester,
-                           SchoolYear = c.class_module.school_year,
+                           Semester = c.class_module.module.semester,
+                           SchoolYear = c.class_module.module.school_year,
                            ClassCode = c.class_module.ID_Class_module,
                            ClassName = c.class_module.module.name,
                            Day = c.day_in_week,

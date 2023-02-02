@@ -169,8 +169,6 @@
     <Property Name="ID_Class_module" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="start_date" Type="DateTime" Precision="0" />
     <Property Name="end_date" Type="DateTime" Precision="0" />
-    <Property Name="semester" Type="Int32" />
-    <Property Name="school_year" Type="Int32" />
     <Property Name="register" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="module_id" Type="Int32" />
     <NavigationProperty Name="module" Relationship="TrainingManagementModel.FK__class_mod__modul__5070F446" FromRole="class_module" ToRole="module" />
@@ -266,6 +264,8 @@
     <Property Name="practice_lessons" Type="Int32" />
     <Property Name="self_study_lessons" Type="Int32" />
     <Property Name="visiting_lessons" Type="Int32" />
+    <Property Name="semester" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="school_year" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="curriculum_id" Type="Int32" />
     <NavigationProperty Name="class_module" Relationship="TrainingManagementModel.FK__class_mod__modul__5070F446" FromRole="module" ToRole="class_module" />
     <NavigationProperty Name="curriculum" Relationship="TrainingManagementModel.FK__module__curricul__4E88ABD4" FromRole="module" ToRole="curriculum" />

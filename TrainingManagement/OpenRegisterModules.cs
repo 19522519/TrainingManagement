@@ -27,7 +27,7 @@ namespace TrainingManagement
             loadSchoolYear();
 
             loadAllClassModules();
-            dgvClassModules.DataSource = lessonController.getAllLessons(Convert.ToInt32(cmbSemester.Text), Convert.ToInt32(cmbSchoolYear.Text));
+            dgvClassModules.DataSource = lessonController.getAllLessons(cmbSemester.Text, cmbSchoolYear.Text);
             addBidingClassModule();
 
             timer = new Timer();
@@ -174,28 +174,28 @@ namespace TrainingManagement
         private void btnOpen_Click(object sender, EventArgs e)
         {
             var classModuleList = new List<class_module>();
-            foreach (var lesson in lessonController.getAllLessons(Convert.ToInt32(cmbSemester.Text), Convert.ToInt32(cmbSchoolYear.Text))) 
+            foreach (var lesson in lessonController.getAllLessons(cmbSemester.Text, cmbSchoolYear.Text)) 
             {
                 classModuleController.setRegister(lesson.Id, "open");
             }
-            dgvClassModules.DataSource = lessonController.getAllLessons(Convert.ToInt32(cmbSemester.Text), Convert.ToInt32(cmbSchoolYear.Text));
+            dgvClassModules.DataSource = lessonController.getAllLessons(cmbSemester.Text, cmbSchoolYear.Text);
             addBidingClassModule();
             MessageBox.Show("Open class modules with semester: " + cmbSemester.Text + " and school year: " + cmbSchoolYear.Text + " successfully!");
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            dgvClassModules.DataSource = lessonController.getAllLessons(Convert.ToInt32(cmbSemester.Text), Convert.ToInt32(cmbSchoolYear.Text));
+            dgvClassModules.DataSource = lessonController.getAllLessons(cmbSemester.Text, cmbSchoolYear.Text);
             addBidingClassModule();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            foreach (var lesson in lessonController.getAllLessons(Convert.ToInt32(cmbSemester.Text), Convert.ToInt32(cmbSchoolYear.Text)))
+            foreach (var lesson in lessonController.getAllLessons(cmbSemester.Text, cmbSchoolYear.Text))
             {
                 classModuleController.setRegister(lesson.Id, "close");
             }
-            dgvClassModules.DataSource = lessonController.getAllLessons(Convert.ToInt32(cmbSemester.Text), Convert.ToInt32(cmbSchoolYear.Text));
+            dgvClassModules.DataSource = lessonController.getAllLessons(cmbSemester.Text, cmbSchoolYear.Text);
             addBidingClassModule();
             MessageBox.Show("Close class modules with semester: " + cmbSemester.Text + " and school year: " + cmbSchoolYear.Text + " successfully!");
         }
@@ -206,11 +206,11 @@ namespace TrainingManagement
                 timer.Start();
                 // 5s sau đóng dkhp
                 // Thread.Sleep(5000);
-                foreach (var lesson in lessonController.getAllLessons(Convert.ToInt32(cmbSemester.Text), Convert.ToInt32(cmbSchoolYear.Text)))
+                foreach (var lesson in lessonController.getAllLessons(cmbSemester.Text, cmbSchoolYear.Text))
                 {
                     classModuleController.setRegister(lesson.Id, "close");
                 }
-                dgvClassModules.DataSource = lessonController.getAllLessons(Convert.ToInt32(cmbSemester.Text), Convert.ToInt32(cmbSchoolYear.Text));
+                dgvClassModules.DataSource = lessonController.getAllLessons(cmbSemester.Text, cmbSchoolYear.Text);
                 addBidingClassModule();
                 // MessageBox.Show("Close class modules with semester: " + cmbSemester.Text + " and school year: " + cmbSchoolYear.Text + " successfully!");
 

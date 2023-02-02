@@ -29,8 +29,6 @@ namespace TrainingManagement
             right = role;
             changeRoleName();
 
-            cmbDay.SelectedIndex = 0;
-
             loadSchoolYear();
 
             loadLevelOfLecturer();
@@ -40,6 +38,8 @@ namespace TrainingManagement
             loadSemester();
 
             loadDataClassModule();
+
+            loadDay();
         }
 
         // Đổi từ SEDean sang Software Engirneering / CSDean sang Computer Science / ISDean sang Information System
@@ -63,13 +63,25 @@ namespace TrainingManagement
         {
             cmbSchoolYear.DataSource = curriculumController.getAllSchoolYearOnMajor(right);
             cmbSchoolYear.DisplayMember = "SchoolYear";
-            // cmbSchoolYear.SelectedIndex = 0;
+            cmbSchoolYear.SelectedIndex = 0;
         }
 
         void loadLecturer()
         {
             dgvLecturer.DataSource = lecturerController.getAllLecturerBasedOnMajor(right);
             addBidingLecturer();
+        }
+
+        public void loadDay()
+        {
+            cmbDay.Items.Add("Monday");
+            cmbDay.Items.Add("Tuesday");
+            cmbDay.Items.Add("Wednesday");
+            cmbDay.Items.Add("Thursday");
+            cmbDay.Items.Add("Friday");
+            cmbDay.Items.Add("Saturday");
+            cmbDay.Items.Add("Sunday");
+            cmbDay.SelectedIndex = 0;
         }
 
         public void addBidingLecturer()
@@ -84,7 +96,7 @@ namespace TrainingManagement
 
         public void loadDataModule()
         {
-            dgvModule.DataSource = moduleController.getAllModulesBasedOnShoolYear(cmbSchoolYear.Text);
+            dgvModule.DataSource = moduleController.getAllModulesBasedOnSemesterAndShoolYearAndMajor(cmbSemester.Text, cmbSchoolYear.Text, right);
             addBidingModule();
         }
         
@@ -93,11 +105,15 @@ namespace TrainingManagement
             txbModuleId.DataBindings.Clear();
             txbClassModuleCode.DataBindings.Clear();
             txbClassModuleName.DataBindings.Clear();
+            cmbSchoolYear.DataBindings.Clear();
+            cmbSemester.DataBindings.Clear();
 
             txbModuleId.DataBindings.Add("Text", dgvModule.DataSource, "Id", true, DataSourceUpdateMode.Never);
             txbClassModuleCode.DataBindings.Add("Text", dgvModule.DataSource, "Code", true, DataSourceUpdateMode.Never);
             txbClassModuleName.DataBindings.Add("Text", dgvModule.DataSource, "Name", true, DataSourceUpdateMode.Never);
-        } 
+            cmbSchoolYear.DataBindings.Add("Text", dgvModule.DataSource, "SchoolYear", true, DataSourceUpdateMode.Never);
+            cmbSemester.DataBindings.Add("Text", dgvModule.DataSource, "Semester", true, DataSourceUpdateMode.Never);
+        }
 
         public void loadDataClassModule()
         {
@@ -109,7 +125,7 @@ namespace TrainingManagement
         {
             txbLessonId.DataBindings.Clear();
             txbSchoolYear.DataBindings.Clear();
-            cmbSemester.DataBindings.Clear();
+            txbSemester.DataBindings.Clear();
             txbClassModuleCode.DataBindings.Clear();
             txbClassModuleName.DataBindings.Clear();
             cmbDay.DataBindings.Clear();
@@ -122,7 +138,7 @@ namespace TrainingManagement
 
             txbLessonId.DataBindings.Add("Text", dgvClassModule.DataSource, "Id", true, DataSourceUpdateMode.Never);
             txbSchoolYear.DataBindings.Add("Text", dgvClassModule.DataSource, "SchoolYear", true, DataSourceUpdateMode.Never);
-            cmbSemester.DataBindings.Add("Text", dgvClassModule.DataSource, "Semester", true, DataSourceUpdateMode.Never);
+            txbSemester.DataBindings.Add("Text", dgvClassModule.DataSource, "Semester", true, DataSourceUpdateMode.Never);
             txbClassModuleCode.DataBindings.Add("Text", dgvClassModule.DataSource, "ClassCode", true, DataSourceUpdateMode.Never);
             txbClassModuleName.DataBindings.Add("Text", dgvClassModule.DataSource, "ClassName", true, DataSourceUpdateMode.Never);
             cmbDay.DataBindings.Add("Text", dgvClassModule.DataSource, "Day", true, DataSourceUpdateMode.Never);
@@ -154,12 +170,6 @@ namespace TrainingManagement
             addBidingLecturer();
         }
 
-        private void cmbSchoolYear_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            loadDataModule();
-            txbSchoolYear.Text = cmbSchoolYear.Text;
-        }
-
         private void btnCreate_Click(object sender, EventArgs e)
         {
             // Insert class module
@@ -167,9 +177,7 @@ namespace TrainingManagement
             {
                 ID_Class_module = txbClassModuleCode.Text,
                 start_date = dtpStartDate.Value,
-                end_date = dtpEndDate.Value,
-                semester = Convert.ToInt32(cmbSemester.Text),
-                school_year = Convert.ToInt32(txbSchoolYear.Text)
+                end_date = dtpEndDate.Value
             };
             int classModuleId = classModuleController.insertClassModule(Convert.ToInt32(txbModuleId.Text), class_Module);
 
@@ -255,9 +263,7 @@ namespace TrainingManagement
                 id = Convert.ToInt32(txbClassModuleId.Text),
                 ID_Class_module = txbClassModuleCode.Text,
                 start_date = dtpStartDate.Value,
-                end_date = dtpEndDate.Value,
-                semester = Convert.ToInt32(cmbSemester.Text),
-                school_year = Convert.ToInt32(txbSchoolYear.Text)
+                end_date = dtpEndDate.Value
             };
             classModuleController.updateClassModule(Convert.ToInt32(txbModuleId.Text), class_Module);
 
@@ -289,9 +295,13 @@ namespace TrainingManagement
             txbClassroomId.Text = lessonController.findClassroomBasedOnLesson(Convert.ToInt32(txbLessonId.Text)).ToString();
         }
 
-        private void btnSearchClassModule_Click(object sender, EventArgs e)
+        private void btnSearchModule_Click(object sender, EventArgs e)
         {
-            dgvClassModule.DataSource = lessonController.getAllLessonsBasedOnSemesterAndSchoolYear(Convert.ToInt32(cmbSemester.Text), Convert.ToInt32(txbSchoolYear.Text), right);
+            loadDataModule();
+            txbSchoolYear.Text = cmbSchoolYear.Text;
+            txbSemester.Text = cmbSemester.Text;
+
+            dgvClassModule.DataSource = lessonController.getAllLessonsBasedOnSemesterAndSchoolYearAndMajor(cmbSemester.Text, txbSchoolYear.Text, right);
             addBidingClassModule();
         }
     }

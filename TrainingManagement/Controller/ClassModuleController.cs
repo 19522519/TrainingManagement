@@ -51,8 +51,6 @@ namespace TrainingManagement.Controller
         {
             class_module class_Module1 = entities.class_module.Find(class_Module.id);
             class_Module1.ID_Class_module = class_Module.ID_Class_module;
-            class_Module1.school_year = class_Module.school_year;
-            class_Module1.semester = class_Module.semester;
             class_Module1.start_date = class_Module.start_date;
             class_Module1.end_date = class_Module.end_date;
             class_Module1.module_id = moduleId;
@@ -76,8 +74,8 @@ namespace TrainingManagement.Controller
         public dynamic getAllSchoolYear()
         {
             var data = entities.class_module
-                .GroupBy(x => x.school_year)
-                .Select(g => g.FirstOrDefault().school_year);
+                .GroupBy(x => x.module.school_year)
+                .Select(g => g.FirstOrDefault().module.school_year);
             return data.ToList();
         }
     }

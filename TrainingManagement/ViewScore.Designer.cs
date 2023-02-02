@@ -100,6 +100,7 @@ namespace TrainingManagement
             this.btnViewScore.TabIndex = 18;
             this.btnViewScore.Text = "View Score";
             this.btnViewScore.UseVisualStyleBackColor = false;
+            this.btnViewScore.Click += new System.EventHandler(this.btnViewScore_Click);
             // 
             // cmbSchoolYear
             // 
