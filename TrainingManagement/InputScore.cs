@@ -17,7 +17,7 @@ namespace TrainingManagement
         TeachingController teachingController = new TeachingController();
         StudyingController studyingController = new StudyingController();
         int lecId;
-        int stuId;
+        
         public InputScore(int id)
         {
             InitializeComponent();

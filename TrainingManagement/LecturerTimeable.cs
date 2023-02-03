@@ -21,6 +21,7 @@ namespace TrainingManagement
         {
             InitializeComponent();
             lecId = id;
+            lbTimetableTitle.Text = "TIMETABLE SEMESTER " + cmbSemester.Text + " SCHOOL YEAR " + cmbSchoolYear.Text;
             loadSemester();
             loadSchoolYear();
             loadData();
@@ -99,6 +100,7 @@ namespace TrainingManagement
         {
             string semester = cmbSemester.Text;
             string schoolYear = cmbSchoolYear.SelectedValue.ToString();
+            lbTimetableTitle.Text = "TIMETABLE SEMESTER " + cmbSemester.Text + " SCHOOL YEAR " + cmbSchoolYear.Text;
             dgvData.DataSource = lessonController.getAllTimeable(semester, schoolYear, lecId);
         }
     }
