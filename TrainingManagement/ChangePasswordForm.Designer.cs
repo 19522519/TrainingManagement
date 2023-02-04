@@ -74,9 +74,9 @@ namespace TrainingManagement
             this.labelNewPass.ForeColor = System.Drawing.Color.Teal;
             this.labelNewPass.Location = new System.Drawing.Point(165, 80);
             this.labelNewPass.Name = "labelNewPass";
-            this.labelNewPass.Size = new System.Drawing.Size(108, 20);
+            this.labelNewPass.Size = new System.Drawing.Size(112, 20);
             this.labelNewPass.TabIndex = 16;
-            this.labelNewPass.Text = "Mật khẩu mới:";
+            this.labelNewPass.Text = "New password:";
             // 
             // txbNewPass
             // 
@@ -93,9 +93,9 @@ namespace TrainingManagement
             this.labelConfirmNewPass.ForeColor = System.Drawing.Color.Teal;
             this.labelConfirmNewPass.Location = new System.Drawing.Point(165, 148);
             this.labelConfirmNewPass.Name = "labelConfirmNewPass";
-            this.labelConfirmNewPass.Size = new System.Drawing.Size(174, 20);
+            this.labelConfirmNewPass.Size = new System.Drawing.Size(168, 20);
             this.labelConfirmNewPass.TabIndex = 24;
-            this.labelConfirmNewPass.Text = "Xác nhận mật khẩu mới:";
+            this.labelConfirmNewPass.Text = "Confirm new password:";
             // 
             // txbConfirmNewPass
             // 
@@ -112,9 +112,9 @@ namespace TrainingManagement
             this.labelCurrentPass.ForeColor = System.Drawing.Color.Teal;
             this.labelCurrentPass.Location = new System.Drawing.Point(165, 216);
             this.labelCurrentPass.Name = "labelCurrentPass";
-            this.labelCurrentPass.Size = new System.Drawing.Size(174, 20);
+            this.labelCurrentPass.Size = new System.Drawing.Size(133, 20);
             this.labelCurrentPass.TabIndex = 27;
-            this.labelCurrentPass.Text = "Nhập mật khẩu hiện tại:";
+            this.labelCurrentPass.Text = "Current password:";
             // 
             // txbCurrentPass
             // 
@@ -134,7 +134,7 @@ namespace TrainingManagement
             this.btnSaveSecurity.Name = "btnSaveSecurity";
             this.btnSaveSecurity.Size = new System.Drawing.Size(143, 34);
             this.btnSaveSecurity.TabIndex = 29;
-            this.btnSaveSecurity.Text = "Lưu thay đổi";
+            this.btnSaveSecurity.Text = "Save";
             this.btnSaveSecurity.UseVisualStyleBackColor = false;
             this.btnSaveSecurity.Click += new System.EventHandler(this.btnSaveSecurity_Click);
             // 
@@ -147,7 +147,7 @@ namespace TrainingManagement
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(93, 35);
             this.btnExit.TabIndex = 30;
-            this.btnExit.Text = "Thoát";
+            this.btnExit.Text = "Close";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
