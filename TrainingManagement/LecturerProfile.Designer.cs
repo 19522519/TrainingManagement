@@ -130,35 +130,47 @@ namespace TrainingManagement
             // 
             // txtMajor
             // 
+            this.txtMajor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMajor.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMajor.Location = new System.Drawing.Point(329, 207);
             this.txtMajor.Name = "txtMajor";
             this.txtMajor.ReadOnly = true;
-            this.txtMajor.Size = new System.Drawing.Size(456, 22);
+            this.txtMajor.Size = new System.Drawing.Size(456, 20);
             this.txtMajor.TabIndex = 67;
+            this.txtMajor.Text = "abcdef";
             // 
             // txtContract
             // 
+            this.txtContract.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtContract.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContract.Location = new System.Drawing.Point(329, 166);
             this.txtContract.Name = "txtContract";
             this.txtContract.ReadOnly = true;
-            this.txtContract.Size = new System.Drawing.Size(456, 22);
+            this.txtContract.Size = new System.Drawing.Size(456, 20);
             this.txtContract.TabIndex = 68;
+            this.txtContract.Text = "abcdef";
             // 
             // txtLevel
             // 
+            this.txtLevel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLevel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLevel.Location = new System.Drawing.Point(630, 122);
             this.txtLevel.Name = "txtLevel";
             this.txtLevel.ReadOnly = true;
-            this.txtLevel.Size = new System.Drawing.Size(155, 22);
+            this.txtLevel.Size = new System.Drawing.Size(155, 20);
             this.txtLevel.TabIndex = 69;
+            this.txtLevel.Text = "abcdef";
             // 
             // txtName
             // 
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(328, 122);
             this.txtName.Name = "txtName";
             this.txtName.ReadOnly = true;
-            this.txtName.Size = new System.Drawing.Size(155, 22);
+            this.txtName.Size = new System.Drawing.Size(155, 20);
             this.txtName.TabIndex = 70;
+            this.txtName.Text = "abcdef";
             // 
             // listBox2
             // 
@@ -195,11 +207,14 @@ namespace TrainingManagement
             // 
             // txtEmail
             // 
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(328, 334);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
-            this.txtEmail.Size = new System.Drawing.Size(155, 22);
+            this.txtEmail.Size = new System.Drawing.Size(155, 20);
             this.txtEmail.TabIndex = 74;
+            this.txtEmail.Text = "abcdef";
             // 
             // label8
             // 
@@ -214,11 +229,14 @@ namespace TrainingManagement
             // 
             // txtUsername
             // 
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(630, 334);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.ReadOnly = true;
-            this.txtUsername.Size = new System.Drawing.Size(155, 22);
+            this.txtUsername.Size = new System.Drawing.Size(155, 20);
             this.txtUsername.TabIndex = 76;
+            this.txtUsername.Text = "abcdef";
             // 
             // LecturerProfile
             // 

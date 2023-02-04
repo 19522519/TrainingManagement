@@ -13,7 +13,7 @@ namespace TrainingManagement.Controller
         public dynamic getAllScore(string semester, string schoolYear, int stuId)
         {
             var data = from c in entities.studying
-                       where c.lesson.class_module.module.semester.Equals(semester) && c.lesson.class_module.module.school_year.Equals(schoolYear) && c.student.id == stuId
+                       where c.lesson.class_module.module.semester.Equals(semester) && c.lesson.class_module.module.school_year.Equals(schoolYear) && c.student.id == stuId && c.score != null
                        select new
                        {
                            SchoolYear = c.lesson.class_module.module.school_year,
@@ -43,7 +43,7 @@ namespace TrainingManagement.Controller
         public dynamic getAllScore(int stuId)
         {
             var data = from c in entities.studying
-                       where c.student.id == stuId
+                       where c.student.id == stuId && c.score != null
                        orderby c.lesson.class_module.module.school_year ascending
                        select new
                        {

@@ -80,9 +80,10 @@ namespace TrainingManagement
             // 
             // txbNewPass
             // 
+            this.txbNewPass.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbNewPass.Location = new System.Drawing.Point(169, 103);
             this.txbNewPass.Name = "txbNewPass";
-            this.txbNewPass.Size = new System.Drawing.Size(220, 22);
+            this.txbNewPass.Size = new System.Drawing.Size(220, 27);
             this.txbNewPass.TabIndex = 19;
             // 
             // labelConfirmNewPass
@@ -98,9 +99,10 @@ namespace TrainingManagement
             // 
             // txbConfirmNewPass
             // 
+            this.txbConfirmNewPass.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbConfirmNewPass.Location = new System.Drawing.Point(169, 171);
             this.txbConfirmNewPass.Name = "txbConfirmNewPass";
-            this.txbConfirmNewPass.Size = new System.Drawing.Size(220, 22);
+            this.txbConfirmNewPass.Size = new System.Drawing.Size(220, 27);
             this.txbConfirmNewPass.TabIndex = 25;
             // 
             // labelCurrentPass
@@ -116,32 +118,37 @@ namespace TrainingManagement
             // 
             // txbCurrentPass
             // 
+            this.txbCurrentPass.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbCurrentPass.Location = new System.Drawing.Point(169, 239);
             this.txbCurrentPass.Name = "txbCurrentPass";
-            this.txbCurrentPass.Size = new System.Drawing.Size(196, 22);
+            this.txbCurrentPass.Size = new System.Drawing.Size(220, 27);
             this.txbCurrentPass.TabIndex = 28;
             this.txbCurrentPass.UseSystemPasswordChar = true;
             // 
             // btnSaveSecurity
             // 
-            this.btnSaveSecurity.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveSecurity.BackColor = System.Drawing.Color.Teal;
+            this.btnSaveSecurity.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveSecurity.ForeColor = System.Drawing.Color.White;
             this.btnSaveSecurity.Location = new System.Drawing.Point(155, 336);
             this.btnSaveSecurity.Name = "btnSaveSecurity";
             this.btnSaveSecurity.Size = new System.Drawing.Size(143, 34);
             this.btnSaveSecurity.TabIndex = 29;
             this.btnSaveSecurity.Text = "Lưu thay đổi";
-            this.btnSaveSecurity.UseVisualStyleBackColor = true;
+            this.btnSaveSecurity.UseVisualStyleBackColor = false;
             this.btnSaveSecurity.Click += new System.EventHandler(this.btnSaveSecurity_Click);
             // 
             // btnExit
             // 
-            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.BackColor = System.Drawing.Color.Teal;
+            this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(342, 336);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(93, 35);
             this.btnExit.TabIndex = 30;
             this.btnExit.Text = "Thoát";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnShowNewPass
