@@ -47,6 +47,28 @@ namespace TrainingManagement.Controller
             return data;
         }
 
+        public dynamic getAllClassModuleBySemesterAndSchoolYearAndLecturer(string semester, string schoolYear, int lecId)
+        {
+            var data = from c in entities.lesson
+                       where c.class_module.module.semester.Equals(semester) && c.class_module.module.school_year.Equals(schoolYear) && c.teaching.lecturer_id == lecId
+                       select new
+                       {
+                           ClassId = c.class_module.id,
+                           ClassCode = c.class_module.ID_Class_module,
+                           ClassName = c.class_module.module.name,
+                           Status = c.class_module.actual_size == 0 ? "Close" : "Active",
+                           Quantity = c.class_module.actual_size,
+                           StartDate = c.class_module.start_date,
+                           EndDate = c.class_module.end_date,
+                           Day = c.day_in_week,
+                           StartTime = c.start_time,
+                           EndTime = c.end_time,
+                           Room = c.classroom.name,
+                           Register = c.class_module.register
+                       };
+            return data.ToList();
+        }
+
         public void updateScore(studying studying)
         {
             studying ls = entities.studying.Find(studying.id);

@@ -83,5 +83,17 @@ namespace TrainingManagement
                 }
             }
         }
+
+        private void classesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnlContent.Controls.Clear();
+            ClassManagement classManagement = new ClassManagement(lecturerId);
+            classManagement.TopLevel = false;
+            classManagement.AutoScroll = true;
+            classManagement.Dock = DockStyle.Fill;
+            classManagement.FormBorderStyle = FormBorderStyle.None;
+            this.pnlContent.Controls.Add(classManagement);
+            classManagement.Show();
+        }
     }
 }

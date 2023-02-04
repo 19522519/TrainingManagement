@@ -16,6 +16,8 @@ namespace TrainingManagement.Controller
                        where c.lesson.class_module.module.semester.Equals(semester) && c.lesson.class_module.module.school_year.Equals(schoolYear) && c.student.id == stuId
                        select new
                        {
+                           SchoolYear = c.lesson.class_module.module.school_year,
+                           Semester = c.lesson.class_module.module.semester,
                            Name = c.lesson.class_module.module.name,
                            ModuleCode = c.lesson.class_module.ID_Class_module,
                            Credits = c.lesson.class_module.module.credits,
@@ -45,6 +47,8 @@ namespace TrainingManagement.Controller
                        orderby c.lesson.class_module.module.school_year ascending
                        select new
                        {
+                           SchoolYear = c.lesson.class_module.module.school_year,
+                           Semester = c.lesson.class_module.module.semester,
                            Name = c.lesson.class_module.module.name,
                            ModuleCode = c.lesson.class_module.ID_Class_module,
                            Credits = c.lesson.class_module.module.credits,

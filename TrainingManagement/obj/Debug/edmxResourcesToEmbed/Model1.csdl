@@ -169,6 +169,7 @@
     <Property Name="ID_Class_module" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="start_date" Type="DateTime" Precision="0" />
     <Property Name="end_date" Type="DateTime" Precision="0" />
+    <Property Name="actual_size" Type="Int32" />
     <Property Name="register" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="module_id" Type="Int32" />
     <NavigationProperty Name="module" Relationship="TrainingManagementModel.FK__class_mod__modul__5070F446" FromRole="class_module" ToRole="module" />

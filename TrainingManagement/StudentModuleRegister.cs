@@ -242,8 +242,13 @@ namespace TrainingManagement
             {
                 int studyingId = studyingController.insertStudying(stuId, lessonId, studying);
                 loadAllClassModulesRegistered();
-                int classModuleId = lessonController.findClassModuleBasedOnLesson(lessonId);
+
+                int classModuleId = lessonController.findClassModuleBasedOnLesson(lessonId);             
                 string className = classModuleController.getClassModuleById(classModuleId);
+
+                // Update the quantity of class members               
+                classModuleController.setActualSizeByLessonId(lessonId);
+
                 MessageBox.Show("Regiter class module " + className + " successfully!");
             } else
             {

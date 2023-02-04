@@ -32,6 +32,7 @@ namespace TrainingManagement.Controller
         {
             class_Module.module_id = moduleId;
             class_Module.register = "close";
+            class_Module.actual_size = 0;
             entities.class_module.Add(class_Module);
             entities.SaveChanges();
             return class_Module.id;
@@ -62,6 +63,14 @@ namespace TrainingManagement.Controller
             lesson lesson = entities.lesson.Find(lessonId);
             class_module class_Module = lesson.class_module;
             class_Module.register = register;
+            entities.SaveChanges();
+        }
+
+        public void setActualSizeByLessonId(int lessonId)
+        {
+            lesson lesson = entities.lesson.Find(lessonId);
+            class_module class_Module = lesson.class_module;
+            class_Module.actual_size++;
             entities.SaveChanges();
         }
 

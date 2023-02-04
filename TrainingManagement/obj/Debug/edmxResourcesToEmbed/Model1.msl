@@ -6,6 +6,7 @@
         <MappingFragment StoreEntitySet="class_module">
           <ScalarProperty Name="module_id" ColumnName="module_id" />
           <ScalarProperty Name="register" ColumnName="register" />
+          <ScalarProperty Name="actual_size" ColumnName="actual_size" />
           <ScalarProperty Name="end_date" ColumnName="end_date" />
           <ScalarProperty Name="start_date" ColumnName="start_date" />
           <ScalarProperty Name="ID_Class_module" ColumnName="ID_Class_module" />

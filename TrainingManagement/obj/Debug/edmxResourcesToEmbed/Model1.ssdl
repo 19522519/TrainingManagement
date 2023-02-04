@@ -8,6 +8,7 @@
     <Property Name="ID_Class_module" Type="nvarchar" MaxLength="20" />
     <Property Name="start_date" Type="date" />
     <Property Name="end_date" Type="date" />
+    <Property Name="actual_size" Type="int" />
     <Property Name="register" Type="nvarchar" MaxLength="50" />
     <Property Name="module_id" Type="int" />
   </EntityType>
