@@ -210,5 +210,17 @@ namespace TrainingManagement.Controller
             lesson1.classroom_id = classroomId;
             entities.SaveChanges();
         }
+
+        public dynamic calculateStudentRegisterModule(string major, string schoolYear, string semester)
+        {
+            var data = from c in entities.lesson
+                       where c.class_module.module.curriculum.major.name.Equals(major) && c.class_module.module.school_year.Equals(schoolYear) && c.class_module.module.semester.Equals(semester)
+                       select new
+                       {
+                           ClassCode = c.class_module.ID_Class_module,
+                           ActualSize = c.class_module.actual_size,
+                       };
+            return data.ToList();
+        }
     }
 }

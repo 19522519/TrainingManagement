@@ -25,8 +25,6 @@ namespace TrainingManagement.Controller
             return data.ToList();
         }
 
-        
-
         public dynamic getAllSchoolYear(int lecId)
         {
             var data = entities.teaching
@@ -102,6 +100,4 @@ namespace TrainingManagement.Controller
             entities.SaveChanges();
         }
     }
-
-
 }

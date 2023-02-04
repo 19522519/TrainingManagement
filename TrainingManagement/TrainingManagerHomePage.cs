@@ -79,5 +79,17 @@ namespace TrainingManagement
                 }
             }
         }
+
+        private void chartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnlContent.Controls.Clear();
+            Chart chart = new Chart();
+            chart.TopLevel = false;
+            chart.AutoScroll = true;
+            chart.Dock = DockStyle.Fill;
+            chart.FormBorderStyle = FormBorderStyle.None;
+            pnlContent.Controls.Add(chart);
+            chart.Show();
+        }
     }
 }

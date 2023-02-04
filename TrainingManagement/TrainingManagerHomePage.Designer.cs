@@ -36,6 +36,7 @@ namespace TrainingManagement
             this.studentManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlContent = new System.Windows.Forms.Panel();
+            this.chartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +48,7 @@ namespace TrainingManagement
             this.registerModulesToolStripMenuItem,
             this.lecturerManagementToolStripMenuItem,
             this.studentManagementToolStripMenuItem,
+            this.chartToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -97,6 +99,14 @@ namespace TrainingManagement
             this.pnlContent.Size = new System.Drawing.Size(1788, 907);
             this.pnlContent.TabIndex = 1;
             // 
+            // chartToolStripMenuItem
+            // 
+            this.chartToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.chartToolStripMenuItem.Name = "chartToolStripMenuItem";
+            this.chartToolStripMenuItem.Size = new System.Drawing.Size(82, 27);
+            this.chartToolStripMenuItem.Text = "Statistic";
+            this.chartToolStripMenuItem.Click += new System.EventHandler(this.chartToolStripMenuItem_Click);
+            // 
             // TrainingManagerHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -124,6 +134,7 @@ namespace TrainingManagement
         private System.Windows.Forms.ToolStripMenuItem registerModulesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lecturerManagementToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem studentManagementToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem chartToolStripMenuItem;
     }
 }
 
