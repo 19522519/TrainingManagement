@@ -52,47 +52,49 @@ namespace TrainingManagement
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Teal;
             this.label1.Location = new System.Drawing.Point(26, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 18);
+            this.label1.Size = new System.Drawing.Size(136, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Select school year:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Teal;
             this.label2.Location = new System.Drawing.Point(340, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 18);
+            this.label2.Size = new System.Drawing.Size(118, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Select semester:";
             // 
             // cmbSchoolYear
             // 
-            this.cmbSchoolYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSchoolYear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSchoolYear.FormattingEnabled = true;
             this.cmbSchoolYear.Location = new System.Drawing.Point(179, 37);
             this.cmbSchoolYear.Name = "cmbSchoolYear";
-            this.cmbSchoolYear.Size = new System.Drawing.Size(121, 26);
+            this.cmbSchoolYear.Size = new System.Drawing.Size(121, 28);
             this.cmbSchoolYear.TabIndex = 2;
             // 
             // cmbSemester
             // 
-            this.cmbSemester.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSemester.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSemester.FormattingEnabled = true;
             this.cmbSemester.Location = new System.Drawing.Point(474, 37);
             this.cmbSemester.Name = "cmbSemester";
-            this.cmbSemester.Size = new System.Drawing.Size(121, 26);
+            this.cmbSemester.Size = new System.Drawing.Size(121, 28);
             this.cmbSemester.TabIndex = 3;
             // 
             // btnOpen
             // 
             this.btnOpen.BackColor = System.Drawing.Color.Teal;
-            this.btnOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpen.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpen.ForeColor = System.Drawing.Color.White;
-            this.btnOpen.Location = new System.Drawing.Point(485, 90);
+            this.btnOpen.Location = new System.Drawing.Point(488, 90);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(121, 31);
             this.btnOpen.TabIndex = 4;
@@ -103,9 +105,9 @@ namespace TrainingManagement
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.Teal;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(626, 90);
+            this.btnClose.Location = new System.Drawing.Point(635, 90);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(121, 31);
             this.btnClose.TabIndex = 5;
@@ -136,7 +138,7 @@ namespace TrainingManagement
             // btnExportExcel
             // 
             this.btnExportExcel.BackColor = System.Drawing.Color.Teal;
-            this.btnExportExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportExcel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExportExcel.ForeColor = System.Drawing.Color.White;
             this.btnExportExcel.Location = new System.Drawing.Point(341, 90);
             this.btnExportExcel.Name = "btnExportExcel";
@@ -149,7 +151,7 @@ namespace TrainingManagement
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.Teal;
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Location = new System.Drawing.Point(635, 34);
             this.btnSearch.Name = "btnSearch";
@@ -168,6 +170,7 @@ namespace TrainingManagement
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Teal;
             this.label3.Location = new System.Drawing.Point(26, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 18);

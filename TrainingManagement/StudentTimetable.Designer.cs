@@ -46,45 +46,47 @@ namespace TrainingManagement
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Teal;
             this.label1.Location = new System.Drawing.Point(241, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 20);
+            this.label1.Size = new System.Drawing.Size(133, 23);
             this.label1.TabIndex = 0;
             this.label1.Text = "Select semester:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Teal;
             this.label2.Location = new System.Drawing.Point(617, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 20);
+            this.label2.Size = new System.Drawing.Size(152, 23);
             this.label2.TabIndex = 1;
             this.label2.Text = "Select school year:";
             // 
             // cmbSemester
             // 
-            this.cmbSemester.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSemester.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSemester.FormattingEnabled = true;
             this.cmbSemester.Location = new System.Drawing.Point(244, 66);
             this.cmbSemester.Name = "cmbSemester";
-            this.cmbSemester.Size = new System.Drawing.Size(179, 28);
+            this.cmbSemester.Size = new System.Drawing.Size(179, 31);
             this.cmbSemester.TabIndex = 2;
             // 
             // cmbSchoolYear
             // 
-            this.cmbSchoolYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSchoolYear.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSchoolYear.FormattingEnabled = true;
             this.cmbSchoolYear.Location = new System.Drawing.Point(620, 64);
             this.cmbSchoolYear.Name = "cmbSchoolYear";
-            this.cmbSchoolYear.Size = new System.Drawing.Size(179, 28);
+            this.cmbSchoolYear.Size = new System.Drawing.Size(179, 31);
             this.cmbSchoolYear.TabIndex = 3;
             // 
             // btnView
             // 
             this.btnView.BackColor = System.Drawing.Color.Teal;
-            this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnView.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnView.ForeColor = System.Drawing.Color.White;
             this.btnView.Location = new System.Drawing.Point(483, 122);
             this.btnView.Name = "btnView";
@@ -123,22 +125,22 @@ namespace TrainingManagement
             // lbStudentCode
             // 
             this.lbStudentCode.AutoSize = true;
-            this.lbStudentCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStudentCode.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStudentCode.ForeColor = System.Drawing.Color.Teal;
-            this.lbStudentCode.Location = new System.Drawing.Point(432, 243);
+            this.lbStudentCode.Location = new System.Drawing.Point(448, 245);
             this.lbStudentCode.Name = "lbStudentCode";
-            this.lbStudentCode.Size = new System.Drawing.Size(197, 32);
+            this.lbStudentCode.Size = new System.Drawing.Size(191, 38);
             this.lbStudentCode.TabIndex = 12;
             this.lbStudentCode.Text = "ID: 19522519";
             // 
             // lbTimetableTitle
             // 
             this.lbTimetableTitle.AutoSize = true;
-            this.lbTimetableTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTimetableTitle.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTimetableTitle.ForeColor = System.Drawing.Color.Teal;
-            this.lbTimetableTitle.Location = new System.Drawing.Point(197, 187);
+            this.lbTimetableTitle.Location = new System.Drawing.Point(226, 188);
             this.lbTimetableTitle.Name = "lbTimetableTitle";
-            this.lbTimetableTitle.Size = new System.Drawing.Size(654, 32);
+            this.lbTimetableTitle.Size = new System.Drawing.Size(587, 38);
             this.lbTimetableTitle.TabIndex = 13;
             this.lbTimetableTitle.Text = "TIMETABLE SEMETER 1 SCHOOL YEAR 2019";
             // 

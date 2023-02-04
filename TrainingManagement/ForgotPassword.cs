@@ -28,7 +28,7 @@ namespace TrainingManagement
         private void btnSendCode_Click(object sender, EventArgs e)
         {
             if (txtUsername.Text == "")
-                MessageBox.Show("Vui lòng nhập tên người dùng tại ô nhập username!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please enter username!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
             {
                 users user = userController.getUserByUsername(txtUsername.Text);
@@ -63,7 +63,7 @@ namespace TrainingManagement
                     }
                 }
                 else
-                    MessageBox.Show("Tên người dùng chưa đăng ký tài khoản!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Username not register account!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -87,7 +87,7 @@ namespace TrainingManagement
             }
             else
             {
-                MessageBox.Show("Thông báo", "Sai reset code", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Wrong reset code", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

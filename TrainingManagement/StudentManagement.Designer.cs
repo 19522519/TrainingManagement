@@ -81,7 +81,7 @@ namespace TrainingManagement
             this.txtFindStudentId.Location = new System.Drawing.Point(27, 60);
             this.txtFindStudentId.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtFindStudentId.Name = "txtFindStudentId";
-            this.txtFindStudentId.Size = new System.Drawing.Size(404, 22);
+            this.txtFindStudentId.Size = new System.Drawing.Size(404, 30);
             this.txtFindStudentId.TabIndex = 35;
             // 
             // txtEmail
@@ -89,72 +89,80 @@ namespace TrainingManagement
             this.txtEmail.Location = new System.Drawing.Point(31, 234);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(213, 22);
+            this.txtEmail.Size = new System.Drawing.Size(213, 30);
             this.txtEmail.TabIndex = 40;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.Teal;
             this.label15.Location = new System.Drawing.Point(27, 209);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(42, 17);
+            this.label15.Size = new System.Drawing.Size(50, 20);
             this.label15.TabIndex = 41;
-            this.label15.Text = "Email";
+            this.label15.Text = "Email:";
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(351, 545);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(267, 22);
+            this.txtPassword.Size = new System.Drawing.Size(267, 30);
             this.txtPassword.TabIndex = 38;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Teal;
             this.label14.Location = new System.Drawing.Point(347, 521);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(69, 17);
+            this.label14.Size = new System.Drawing.Size(77, 20);
             this.label14.TabIndex = 39;
-            this.label14.Text = "Password";
+            this.label14.Text = "Password:";
             // 
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(31, 545);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(213, 22);
+            this.txtUsername.Size = new System.Drawing.Size(213, 30);
             this.txtUsername.TabIndex = 36;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Teal;
             this.label13.Location = new System.Drawing.Point(27, 521);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(73, 17);
+            this.label13.Size = new System.Drawing.Size(82, 20);
             this.label13.TabIndex = 37;
-            this.label13.Text = "Username";
+            this.label13.Text = "Username:";
             // 
             // txtHousehold
             // 
             this.txtHousehold.Location = new System.Drawing.Point(31, 465);
             this.txtHousehold.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtHousehold.Name = "txtHousehold";
-            this.txtHousehold.Size = new System.Drawing.Size(587, 22);
+            this.txtHousehold.Size = new System.Drawing.Size(587, 30);
             this.txtHousehold.TabIndex = 34;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Teal;
             this.label12.Location = new System.Drawing.Point(29, 441);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(76, 17);
+            this.label12.Size = new System.Drawing.Size(87, 20);
             this.label12.TabIndex = 35;
-            this.label12.Text = "Household";
+            this.label12.Text = "Household:";
             // 
             // btnDelete
             // 
@@ -217,18 +225,20 @@ namespace TrainingManagement
             this.txtBirthPlace.Location = new System.Drawing.Point(351, 310);
             this.txtBirthPlace.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtBirthPlace.Name = "txtBirthPlace";
-            this.txtBirthPlace.Size = new System.Drawing.Size(267, 22);
+            this.txtBirthPlace.Size = new System.Drawing.Size(267, 30);
             this.txtBirthPlace.TabIndex = 32;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Teal;
             this.label10.Location = new System.Drawing.Point(347, 286);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 17);
+            this.label10.Size = new System.Drawing.Size(82, 20);
             this.label10.TabIndex = 33;
-            this.label10.Text = "Birthplace";
+            this.label10.Text = "Birthplace:";
             // 
             // txtFirstName
             // 
@@ -236,7 +246,7 @@ namespace TrainingManagement
             this.txtFirstName.Location = new System.Drawing.Point(441, 159);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(176, 22);
+            this.txtFirstName.Size = new System.Drawing.Size(176, 30);
             this.txtFirstName.TabIndex = 28;
             // 
             // btnFind
@@ -256,18 +266,21 @@ namespace TrainingManagement
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Teal;
             this.label7.Location = new System.Drawing.Point(437, 137);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(76, 17);
+            this.label7.Size = new System.Drawing.Size(87, 20);
             this.label7.TabIndex = 29;
-            this.label7.Text = "First Name";
+            this.label7.Text = "First Name:";
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Teal;
             this.label2.Location = new System.Drawing.Point(704, 27);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -287,10 +300,12 @@ namespace TrainingManagement
             // rdbtnKTX
             // 
             this.rdbtnKTX.AutoSize = true;
+            this.rdbtnKTX.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbtnKTX.ForeColor = System.Drawing.Color.Teal;
             this.rdbtnKTX.Location = new System.Drawing.Point(397, 386);
             this.rdbtnKTX.Margin = new System.Windows.Forms.Padding(4);
             this.rdbtnKTX.Name = "rdbtnKTX";
-            this.rdbtnKTX.Size = new System.Drawing.Size(106, 21);
+            this.rdbtnKTX.Size = new System.Drawing.Size(117, 24);
             this.rdbtnKTX.TabIndex = 26;
             this.rdbtnKTX.TabStop = true;
             this.rdbtnKTX.Text = "Live in dorm";
@@ -303,25 +318,27 @@ namespace TrainingManagement
             this.cmbMajor.Location = new System.Drawing.Point(31, 383);
             this.cmbMajor.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.cmbMajor.Name = "cmbMajor";
-            this.cmbMajor.Size = new System.Drawing.Size(271, 24);
+            this.cmbMajor.Size = new System.Drawing.Size(271, 31);
             this.cmbMajor.TabIndex = 24;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Teal;
             this.label8.Location = new System.Drawing.Point(27, 361);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 17);
+            this.label8.Size = new System.Drawing.Size(55, 20);
             this.label8.TabIndex = 25;
-            this.label8.Text = "Major";
+            this.label8.Text = "Major:";
             // 
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(351, 234);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(267, 22);
+            this.txtPhone.Size = new System.Drawing.Size(267, 30);
             this.txtPhone.TabIndex = 5;
             // 
             // groupBox2
@@ -333,6 +350,8 @@ namespace TrainingManagement
             this.groupBox2.Controls.Add(this.btnFind);
             this.groupBox2.Controls.Add(this.txtFindStudentId);
             this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.Teal;
             this.groupBox2.Location = new System.Drawing.Point(16, 727);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
@@ -345,12 +364,13 @@ namespace TrainingManagement
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(23, 38);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 17);
+            this.label11.Size = new System.Drawing.Size(85, 20);
             this.label11.TabIndex = 34;
-            this.label11.Text = "Student ID";
+            this.label11.Text = "Student ID:";
             // 
             // groupBox1
             // 
@@ -380,6 +400,8 @@ namespace TrainingManagement
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtStudentId);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Teal;
             this.groupBox1.Location = new System.Drawing.Point(16, 94);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
@@ -392,12 +414,14 @@ namespace TrainingManagement
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Teal;
             this.label6.Location = new System.Drawing.Point(347, 209);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 17);
+            this.label6.Size = new System.Drawing.Size(116, 20);
             this.label6.TabIndex = 21;
-            this.label6.Text = "Phone number";
+            this.label6.Text = "Phone number:";
             // 
             // cmbGender
             // 
@@ -406,18 +430,20 @@ namespace TrainingManagement
             this.cmbGender.Location = new System.Drawing.Point(31, 308);
             this.cmbGender.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.cmbGender.Name = "cmbGender";
-            this.cmbGender.Size = new System.Drawing.Size(213, 24);
+            this.cmbGender.Size = new System.Drawing.Size(213, 31);
             this.cmbGender.TabIndex = 4;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Teal;
             this.label5.Location = new System.Drawing.Point(27, 286);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 17);
+            this.label5.Size = new System.Drawing.Size(64, 20);
             this.label5.TabIndex = 6;
-            this.label5.Text = "Gender";
+            this.label5.Text = "Gender:";
             // 
             // txtLastName
             // 
@@ -425,18 +451,20 @@ namespace TrainingManagement
             this.txtLastName.Location = new System.Drawing.Point(223, 159);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(176, 22);
+            this.txtLastName.Size = new System.Drawing.Size(176, 30);
             this.txtLastName.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Teal;
             this.label4.Location = new System.Drawing.Point(219, 137);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 17);
+            this.label4.Size = new System.Drawing.Size(81, 20);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Last name";
+            this.label4.Text = "Last name:";
             // 
             // txtCitizenID
             // 
@@ -444,40 +472,46 @@ namespace TrainingManagement
             this.txtCitizenID.Location = new System.Drawing.Point(441, 78);
             this.txtCitizenID.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtCitizenID.Name = "txtCitizenID";
-            this.txtCitizenID.Size = new System.Drawing.Size(176, 22);
+            this.txtCitizenID.Size = new System.Drawing.Size(176, 30);
             this.txtCitizenID.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Teal;
             this.label3.Location = new System.Drawing.Point(437, 55);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 17);
+            this.label3.Size = new System.Drawing.Size(78, 20);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Citizen ID";
+            this.label3.Text = "Citizen ID:";
             // 
             // txtStudentId
             // 
             this.txtStudentId.Location = new System.Drawing.Point(223, 78);
             this.txtStudentId.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtStudentId.Name = "txtStudentId";
-            this.txtStudentId.Size = new System.Drawing.Size(176, 22);
+            this.txtStudentId.Size = new System.Drawing.Size(176, 30);
             this.txtStudentId.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Teal;
             this.label1.Location = new System.Drawing.Point(219, 55);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 17);
+            this.label1.Size = new System.Drawing.Size(85, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Student ID";
+            this.label1.Text = "Student ID:";
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dgvData);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.Color.Teal;
             this.groupBox3.Location = new System.Drawing.Point(735, 94);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
@@ -501,11 +535,12 @@ namespace TrainingManagement
             // txtId
             // 
             this.txtId.BackColor = System.Drawing.SystemColors.Control;
+            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtId.ForeColor = System.Drawing.SystemColors.Control;
             this.txtId.Location = new System.Drawing.Point(266, 27);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(30, 22);
+            this.txtId.Size = new System.Drawing.Size(30, 15);
             this.txtId.TabIndex = 19;
             // 
             // StudentManagement
