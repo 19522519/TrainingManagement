@@ -63,6 +63,13 @@ namespace TrainingManagement.Controller
             entities.SaveChanges();
         }
 
+        public int insertUser(users users)
+        {
+            entities.users.Add(users);
+            entities.SaveChanges();
+            return users.id;
+        }
+
         public users getUserByUsername(String username)
         {
             var existingUser = entities.users.FirstOrDefault(m => m.username.Equals(username));
@@ -71,6 +78,16 @@ namespace TrainingManagement.Controller
                 return this.getUserById(existingUser.id);
             else
                 return null;
+        }
+
+        public void deleteUser(int userId)
+        {
+            users users = entities.users.Find(userId);
+            if (users != null)
+            {
+                entities.users.Remove(users);
+                entities.SaveChanges();
+            }
         }
     }
 }

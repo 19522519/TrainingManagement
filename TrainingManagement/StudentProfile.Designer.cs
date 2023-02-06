@@ -62,6 +62,8 @@ namespace TrainingManagement
             this.cmbGender = new System.Windows.Forms.ComboBox();
             this.cmbIsInDorm = new System.Windows.Forms.ComboBox();
             this.imgAvatar = new System.Windows.Forms.PictureBox();
+            this.txbImgIndex = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imgAvatar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -402,11 +404,35 @@ namespace TrainingManagement
             this.imgAvatar.TabStop = false;
             this.imgAvatar.Click += new System.EventHandler(this.imgAvatar_Click);
             // 
+            // txbImgIndex
+            // 
+            this.txbImgIndex.BackColor = System.Drawing.SystemColors.Control;
+            this.txbImgIndex.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbImgIndex.ForeColor = System.Drawing.Color.Black;
+            this.txbImgIndex.Location = new System.Drawing.Point(111, 349);
+            this.txbImgIndex.Name = "txbImgIndex";
+            this.txbImgIndex.ReadOnly = true;
+            this.txbImgIndex.Size = new System.Drawing.Size(30, 15);
+            this.txbImgIndex.TabIndex = 89;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Teal;
+            this.label11.Location = new System.Drawing.Point(33, 293);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(186, 41);
+            this.label11.TabIndex = 90;
+            this.label11.Text = "Click the image to change avatar";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // StudentProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 575);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.txbImgIndex);
             this.Controls.Add(this.cmbIsInDorm);
             this.Controls.Add(this.cmbGender);
             this.Controls.Add(this.label17);
@@ -484,5 +510,7 @@ namespace TrainingManagement
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.ComboBox cmbGender;
         private System.Windows.Forms.ComboBox cmbIsInDorm;
+        private System.Windows.Forms.TextBox txbImgIndex;
+        private System.Windows.Forms.Label label11;
     }
 }

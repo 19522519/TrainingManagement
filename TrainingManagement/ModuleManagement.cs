@@ -141,12 +141,6 @@ namespace TrainingManagement
             addBiding();
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            txbModuleName.Text = "";
-            txbModuleCode.Text = "";
-        }
-
         private void btnCreate_Click(object sender, EventArgs e)
         {
             // Create module

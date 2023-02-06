@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TrainingManagement.Controller;
 
 namespace TrainingManagement.Controller
 {
     class StudentController
     {
         TrainingManagementEntities entities = new TrainingManagementEntities();
+        UserController userController = new UserController();
 
         public dynamic getAll()
         {
@@ -35,8 +37,9 @@ namespace TrainingManagement.Controller
             return student.ToList();
         }
 
-        public int insertStudent(student student)
+        public int insertStudent(student student, int userId)
         {
+            student.users_id = userId;
             entities.student.Add(student);
             entities.SaveChanges();
             return student.id;
@@ -73,7 +76,7 @@ namespace TrainingManagement.Controller
             return student.FirstOrDefault();
         }
 
-        public void updateStudent(student stu)
+        public void updateStudent(student stu, users u)
         {
             student student = entities.student.Find(stu.id);
             student.first_name = stu.first_name;
@@ -85,6 +88,32 @@ namespace TrainingManagement.Controller
             student.household = stu.household;
             student.is_in_dormitory = student.is_in_dormitory;
             entities.SaveChanges();
+
+            users users = student.users;
+            users.email = u.email;
+            users.username = u.username;
+            if(u.pass != "")
+                users.pass = u.pass;
+            users.avatar = u.avatar;
+            entities.SaveChanges();
+        }
+
+        public void updateStudentProfile(student stu, users u)
+        {
+            student student = entities.student.Find(stu.id);
+            student.first_name = stu.first_name;
+            student.last_name = stu.last_name;
+            student.gender = stu.gender;
+            student.phone = stu.phone;
+            student.citizen_id = stu.citizen_id;
+            student.birth_place = stu.birth_place;
+            student.household = stu.household;
+            student.is_in_dormitory = student.is_in_dormitory;
+            entities.SaveChanges();
+
+            users users = student.users;
+            users.avatar = u.avatar;
+            entities.SaveChanges();
         }
 
         public int insertLecturer(student student)
@@ -94,7 +123,7 @@ namespace TrainingManagement.Controller
             return student.id;
         }
 
-        public dynamic findStudent(string studentID)
+        public dynamic findStudent(string studentID, string firstName, string major)
         {
             var result = from c in entities.student
                          select c;
@@ -103,7 +132,13 @@ namespace TrainingManagement.Controller
                          where c.ID_Student.Contains(studentID)
                          select c;
 
+            if (firstName != "")
+                result = from c in result
+                         where c.first_name.Contains(firstName)
+                         select c;
+
             var data = from c in result
+                       where c.major.name.Equals(major)
                        select new
                        {
                            Id = c.id,
@@ -129,13 +164,16 @@ namespace TrainingManagement.Controller
         public void deleteStudent(int ID)
         {
             student student = entities.student.Find(ID);
+
+            int userId = student.users_id.Value;
+            userController.deleteUser(userId);
+
             if (student != null)
             {
                 entities.student.Remove(student);
                 entities.SaveChanges();
             }
         }
-
 
         public string getStudentCodeById (int stuId)
         {

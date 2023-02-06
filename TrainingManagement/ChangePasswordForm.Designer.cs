@@ -35,8 +35,6 @@ namespace TrainingManagement
             this.txbNewPass = new System.Windows.Forms.TextBox();
             this.labelConfirmNewPass = new System.Windows.Forms.Label();
             this.txbConfirmNewPass = new System.Windows.Forms.TextBox();
-            this.labelCurrentPass = new System.Windows.Forms.Label();
-            this.txbCurrentPass = new System.Windows.Forms.TextBox();
             this.btnSaveSecurity = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnShowNewPass = new System.Windows.Forms.Button();
@@ -51,9 +49,9 @@ namespace TrainingManagement
             this.listBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(155, 49);
+            this.listBox1.Location = new System.Drawing.Point(155, 70);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(280, 244);
+            this.listBox1.Size = new System.Drawing.Size(280, 196);
             this.listBox1.TabIndex = 14;
             // 
             // labelSecurity
@@ -61,18 +59,18 @@ namespace TrainingManagement
             this.labelSecurity.AutoSize = true;
             this.labelSecurity.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSecurity.ForeColor = System.Drawing.Color.Teal;
-            this.labelSecurity.Location = new System.Drawing.Point(257, 39);
+            this.labelSecurity.Location = new System.Drawing.Point(223, 61);
             this.labelSecurity.Name = "labelSecurity";
-            this.labelSecurity.Size = new System.Drawing.Size(77, 23);
+            this.labelSecurity.Size = new System.Drawing.Size(151, 23);
             this.labelSecurity.TabIndex = 15;
-            this.labelSecurity.Text = "Bảo mật";
+            this.labelSecurity.Text = "Change Password";
             // 
             // labelNewPass
             // 
             this.labelNewPass.AutoSize = true;
             this.labelNewPass.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNewPass.ForeColor = System.Drawing.Color.Teal;
-            this.labelNewPass.Location = new System.Drawing.Point(165, 80);
+            this.labelNewPass.Location = new System.Drawing.Point(165, 101);
             this.labelNewPass.Name = "labelNewPass";
             this.labelNewPass.Size = new System.Drawing.Size(112, 20);
             this.labelNewPass.TabIndex = 16;
@@ -81,7 +79,7 @@ namespace TrainingManagement
             // txbNewPass
             // 
             this.txbNewPass.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbNewPass.Location = new System.Drawing.Point(169, 103);
+            this.txbNewPass.Location = new System.Drawing.Point(169, 124);
             this.txbNewPass.Name = "txbNewPass";
             this.txbNewPass.Size = new System.Drawing.Size(220, 27);
             this.txbNewPass.TabIndex = 19;
@@ -91,7 +89,7 @@ namespace TrainingManagement
             this.labelConfirmNewPass.AutoSize = true;
             this.labelConfirmNewPass.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelConfirmNewPass.ForeColor = System.Drawing.Color.Teal;
-            this.labelConfirmNewPass.Location = new System.Drawing.Point(165, 148);
+            this.labelConfirmNewPass.Location = new System.Drawing.Point(165, 183);
             this.labelConfirmNewPass.Name = "labelConfirmNewPass";
             this.labelConfirmNewPass.Size = new System.Drawing.Size(168, 20);
             this.labelConfirmNewPass.TabIndex = 24;
@@ -100,37 +98,17 @@ namespace TrainingManagement
             // txbConfirmNewPass
             // 
             this.txbConfirmNewPass.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbConfirmNewPass.Location = new System.Drawing.Point(169, 171);
+            this.txbConfirmNewPass.Location = new System.Drawing.Point(169, 206);
             this.txbConfirmNewPass.Name = "txbConfirmNewPass";
             this.txbConfirmNewPass.Size = new System.Drawing.Size(220, 27);
             this.txbConfirmNewPass.TabIndex = 25;
-            // 
-            // labelCurrentPass
-            // 
-            this.labelCurrentPass.AutoSize = true;
-            this.labelCurrentPass.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCurrentPass.ForeColor = System.Drawing.Color.Teal;
-            this.labelCurrentPass.Location = new System.Drawing.Point(165, 216);
-            this.labelCurrentPass.Name = "labelCurrentPass";
-            this.labelCurrentPass.Size = new System.Drawing.Size(133, 20);
-            this.labelCurrentPass.TabIndex = 27;
-            this.labelCurrentPass.Text = "Current password:";
-            // 
-            // txbCurrentPass
-            // 
-            this.txbCurrentPass.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbCurrentPass.Location = new System.Drawing.Point(169, 239);
-            this.txbCurrentPass.Name = "txbCurrentPass";
-            this.txbCurrentPass.Size = new System.Drawing.Size(220, 27);
-            this.txbCurrentPass.TabIndex = 28;
-            this.txbCurrentPass.UseSystemPasswordChar = true;
             // 
             // btnSaveSecurity
             // 
             this.btnSaveSecurity.BackColor = System.Drawing.Color.Teal;
             this.btnSaveSecurity.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveSecurity.ForeColor = System.Drawing.Color.White;
-            this.btnSaveSecurity.Location = new System.Drawing.Point(155, 336);
+            this.btnSaveSecurity.Location = new System.Drawing.Point(155, 313);
             this.btnSaveSecurity.Name = "btnSaveSecurity";
             this.btnSaveSecurity.Size = new System.Drawing.Size(143, 34);
             this.btnSaveSecurity.TabIndex = 29;
@@ -143,7 +121,7 @@ namespace TrainingManagement
             this.btnExit.BackColor = System.Drawing.Color.Teal;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(342, 336);
+            this.btnExit.Location = new System.Drawing.Point(342, 313);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(93, 35);
             this.btnExit.TabIndex = 30;
@@ -154,7 +132,7 @@ namespace TrainingManagement
             // btnShowNewPass
             // 
             this.btnShowNewPass.Image = global::TrainingManagement.Properties.Resources.Show_16px;
-            this.btnShowNewPass.Location = new System.Drawing.Point(395, 101);
+            this.btnShowNewPass.Location = new System.Drawing.Point(395, 126);
             this.btnShowNewPass.Name = "btnShowNewPass";
             this.btnShowNewPass.Size = new System.Drawing.Size(27, 24);
             this.btnShowNewPass.TabIndex = 31;
@@ -164,7 +142,7 @@ namespace TrainingManagement
             // btnShowConfirmNewPass
             // 
             this.btnShowConfirmNewPass.Image = global::TrainingManagement.Properties.Resources.Show_16px;
-            this.btnShowConfirmNewPass.Location = new System.Drawing.Point(395, 171);
+            this.btnShowConfirmNewPass.Location = new System.Drawing.Point(395, 208);
             this.btnShowConfirmNewPass.Name = "btnShowConfirmNewPass";
             this.btnShowConfirmNewPass.Size = new System.Drawing.Size(27, 24);
             this.btnShowConfirmNewPass.TabIndex = 32;
@@ -174,7 +152,7 @@ namespace TrainingManagement
             // btnHideNewPass
             // 
             this.btnHideNewPass.Image = global::TrainingManagement.Properties.Resources.Hide;
-            this.btnHideNewPass.Location = new System.Drawing.Point(395, 101);
+            this.btnHideNewPass.Location = new System.Drawing.Point(395, 126);
             this.btnHideNewPass.Name = "btnHideNewPass";
             this.btnHideNewPass.Size = new System.Drawing.Size(27, 24);
             this.btnHideNewPass.TabIndex = 33;
@@ -184,7 +162,7 @@ namespace TrainingManagement
             // btnHideConfirmNewPass
             // 
             this.btnHideConfirmNewPass.Image = global::TrainingManagement.Properties.Resources.Hide;
-            this.btnHideConfirmNewPass.Location = new System.Drawing.Point(395, 171);
+            this.btnHideConfirmNewPass.Location = new System.Drawing.Point(395, 208);
             this.btnHideConfirmNewPass.Name = "btnHideConfirmNewPass";
             this.btnHideConfirmNewPass.Size = new System.Drawing.Size(27, 24);
             this.btnHideConfirmNewPass.TabIndex = 34;
@@ -203,8 +181,6 @@ namespace TrainingManagement
             this.Controls.Add(this.btnShowNewPass);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnSaveSecurity);
-            this.Controls.Add(this.txbCurrentPass);
-            this.Controls.Add(this.labelCurrentPass);
             this.Controls.Add(this.txbConfirmNewPass);
             this.Controls.Add(this.labelConfirmNewPass);
             this.Controls.Add(this.txbNewPass);
@@ -213,7 +189,6 @@ namespace TrainingManagement
             this.Controls.Add(this.listBox1);
             this.Name = "ChangePasswordForm";
             this.Text = "ChangePasswordForm";
-            this.Load += new System.EventHandler(this.ChangePasswordForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,8 +202,6 @@ namespace TrainingManagement
         private System.Windows.Forms.TextBox txbNewPass;
         private System.Windows.Forms.Label labelConfirmNewPass;
         private System.Windows.Forms.TextBox txbConfirmNewPass;
-        private System.Windows.Forms.Label labelCurrentPass;
-        private System.Windows.Forms.TextBox txbCurrentPass;
         private System.Windows.Forms.Button btnSaveSecurity;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnShowNewPass;

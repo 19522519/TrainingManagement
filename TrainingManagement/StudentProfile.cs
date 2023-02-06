@@ -101,6 +101,11 @@ namespace TrainingManagement
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            users users = new users()
+            {
+                avatar = Convert.ToInt32(txbImgIndex.Text)
+            };
+
             student student = new student()
             {
                 id = stuId,
@@ -114,7 +119,7 @@ namespace TrainingManagement
                 household = txtHousehold.Text,
                 is_in_dormitory = cmbIsInDorm.Text
             };
-            studentController.updateStudent(student);
+            studentController.updateStudentProfile(student, users);
             MessageBox.Show("Save information successfully!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -124,6 +129,7 @@ namespace TrainingManagement
             if (avatarIndex > 5)
                 avatarIndex = 0;
             setAvatar(avatarIndex);
+            txbImgIndex.Text = avatarIndex.ToString();
         }
     }
 }

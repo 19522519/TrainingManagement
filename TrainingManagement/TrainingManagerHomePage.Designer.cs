@@ -34,9 +34,9 @@ namespace TrainingManagement
             this.registerModulesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lecturerManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.studentManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlContent = new System.Windows.Forms.Panel();
-            this.chartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +53,7 @@ namespace TrainingManagement
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1788, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(1874, 31);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -82,6 +82,14 @@ namespace TrainingManagement
             this.studentManagementToolStripMenuItem.Text = "Student Management";
             this.studentManagementToolStripMenuItem.Click += new System.EventHandler(this.studentManagementToolStripMenuItem_Click);
             // 
+            // chartToolStripMenuItem
+            // 
+            this.chartToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.chartToolStripMenuItem.Name = "chartToolStripMenuItem";
+            this.chartToolStripMenuItem.Size = new System.Drawing.Size(82, 27);
+            this.chartToolStripMenuItem.Text = "Statistic";
+            this.chartToolStripMenuItem.Click += new System.EventHandler(this.chartToolStripMenuItem_Click);
+            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.ForeColor = System.Drawing.Color.White;
@@ -96,22 +104,14 @@ namespace TrainingManagement
             this.pnlContent.Location = new System.Drawing.Point(0, 31);
             this.pnlContent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(1788, 907);
+            this.pnlContent.Size = new System.Drawing.Size(1874, 907);
             this.pnlContent.TabIndex = 1;
-            // 
-            // chartToolStripMenuItem
-            // 
-            this.chartToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.chartToolStripMenuItem.Name = "chartToolStripMenuItem";
-            this.chartToolStripMenuItem.Size = new System.Drawing.Size(82, 27);
-            this.chartToolStripMenuItem.Text = "Statistic";
-            this.chartToolStripMenuItem.Click += new System.EventHandler(this.chartToolStripMenuItem_Click);
             // 
             // TrainingManagerHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1788, 938);
+            this.ClientSize = new System.Drawing.Size(1874, 938);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

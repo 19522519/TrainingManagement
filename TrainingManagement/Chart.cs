@@ -40,7 +40,7 @@ namespace TrainingManagement
 
         public void loadMajor()
         {
-            cmbMajor.Items.Add("Software Engirneering");
+            cmbMajor.Items.Add("Software Engineering");
             cmbMajor.Items.Add("Information System");
             cmbMajor.Items.Add("Computer Science");
             cmbMajor.SelectedIndex = 0;

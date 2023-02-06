@@ -48,7 +48,7 @@ namespace TrainingManagement
             // 
             this.ckbShow.AutoSize = true;
             this.ckbShow.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbShow.Location = new System.Drawing.Point(544, 172);
+            this.ckbShow.Location = new System.Drawing.Point(544, 168);
             this.ckbShow.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ckbShow.Name = "ckbShow";
             this.ckbShow.Size = new System.Drawing.Size(67, 24);
@@ -73,7 +73,7 @@ namespace TrainingManagement
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(315, 105);
+            this.txtUsername.Location = new System.Drawing.Point(315, 96);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(297, 27);
@@ -82,7 +82,7 @@ namespace TrainingManagement
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(315, 169);
+            this.txtPassword.Location = new System.Drawing.Point(315, 165);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(221, 27);
@@ -95,7 +95,7 @@ namespace TrainingManagement
             this.labelPassword.BackColor = System.Drawing.SystemColors.Control;
             this.labelPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             this.labelPassword.ForeColor = System.Drawing.Color.Teal;
-            this.labelPassword.Location = new System.Drawing.Point(315, 137);
+            this.labelPassword.Location = new System.Drawing.Point(315, 140);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(82, 23);
             this.labelPassword.TabIndex = 26;
@@ -107,7 +107,7 @@ namespace TrainingManagement
             this.labelUsername.BackColor = System.Drawing.SystemColors.Control;
             this.labelUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             this.labelUsername.ForeColor = System.Drawing.Color.Teal;
-            this.labelUsername.Location = new System.Drawing.Point(315, 70);
+            this.labelUsername.Location = new System.Drawing.Point(315, 71);
             this.labelUsername.Name = "labelUsername";
             this.labelUsername.Size = new System.Drawing.Size(87, 23);
             this.labelUsername.TabIndex = 25;
@@ -118,7 +118,7 @@ namespace TrainingManagement
             this.btnExit.BackColor = System.Drawing.Color.Teal;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(315, 262);
+            this.btnExit.Location = new System.Drawing.Point(315, 271);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(297, 37);
@@ -132,7 +132,7 @@ namespace TrainingManagement
             this.btnLogin.BackColor = System.Drawing.Color.Teal;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(315, 209);
+            this.btnLogin.Location = new System.Drawing.Point(315, 221);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(297, 37);
@@ -159,7 +159,7 @@ namespace TrainingManagement
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(397, 324);
+            this.label1.Location = new System.Drawing.Point(379, 325);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 23);

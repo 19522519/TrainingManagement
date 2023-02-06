@@ -30,6 +30,8 @@ namespace TrainingManagement
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OpenRegisterModules));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,7 +56,7 @@ namespace TrainingManagement
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(26, 40);
+            this.label1.Location = new System.Drawing.Point(165, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 20);
             this.label1.TabIndex = 0;
@@ -65,7 +67,7 @@ namespace TrainingManagement
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(340, 40);
+            this.label2.Location = new System.Drawing.Point(479, 40);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 20);
             this.label2.TabIndex = 1;
@@ -75,7 +77,7 @@ namespace TrainingManagement
             // 
             this.cmbSchoolYear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSchoolYear.FormattingEnabled = true;
-            this.cmbSchoolYear.Location = new System.Drawing.Point(179, 37);
+            this.cmbSchoolYear.Location = new System.Drawing.Point(318, 37);
             this.cmbSchoolYear.Name = "cmbSchoolYear";
             this.cmbSchoolYear.Size = new System.Drawing.Size(121, 28);
             this.cmbSchoolYear.TabIndex = 2;
@@ -84,7 +86,7 @@ namespace TrainingManagement
             // 
             this.cmbSemester.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSemester.FormattingEnabled = true;
-            this.cmbSemester.Location = new System.Drawing.Point(474, 37);
+            this.cmbSemester.Location = new System.Drawing.Point(613, 37);
             this.cmbSemester.Name = "cmbSemester";
             this.cmbSemester.Size = new System.Drawing.Size(121, 28);
             this.cmbSemester.TabIndex = 3;
@@ -94,11 +96,11 @@ namespace TrainingManagement
             this.btnOpen.BackColor = System.Drawing.Color.Teal;
             this.btnOpen.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpen.ForeColor = System.Drawing.Color.White;
-            this.btnOpen.Location = new System.Drawing.Point(488, 90);
+            this.btnOpen.Location = new System.Drawing.Point(703, 96);
             this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(121, 31);
+            this.btnOpen.Size = new System.Drawing.Size(158, 31);
             this.btnOpen.TabIndex = 4;
-            this.btnOpen.Text = "Open";
+            this.btnOpen.Text = "Open modules";
             this.btnOpen.UseVisualStyleBackColor = false;
             this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
@@ -107,22 +109,38 @@ namespace TrainingManagement
             this.btnClose.BackColor = System.Drawing.Color.Teal;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(635, 90);
+            this.btnClose.Location = new System.Drawing.Point(897, 96);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(121, 31);
+            this.btnClose.Size = new System.Drawing.Size(158, 31);
             this.btnClose.TabIndex = 5;
-            this.btnClose.Text = "Close";
+            this.btnClose.Text = "Close modules";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // dgvClassModules
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClassModules.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvClassModules.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvClassModules.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvClassModules.Location = new System.Drawing.Point(1, 141);
             this.dgvClassModules.Name = "dgvClassModules";
             this.dgvClassModules.RowHeadersWidth = 51;
             this.dgvClassModules.RowTemplate.Height = 24;
-            this.dgvClassModules.Size = new System.Drawing.Size(781, 232);
+            this.dgvClassModules.Size = new System.Drawing.Size(1097, 320);
             this.dgvClassModules.TabIndex = 6;
             // 
             // txbLessonId
@@ -140,9 +158,9 @@ namespace TrainingManagement
             this.btnExportExcel.BackColor = System.Drawing.Color.Teal;
             this.btnExportExcel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExportExcel.ForeColor = System.Drawing.Color.White;
-            this.btnExportExcel.Location = new System.Drawing.Point(341, 90);
+            this.btnExportExcel.Location = new System.Drawing.Point(513, 96);
             this.btnExportExcel.Name = "btnExportExcel";
-            this.btnExportExcel.Size = new System.Drawing.Size(121, 31);
+            this.btnExportExcel.Size = new System.Drawing.Size(158, 31);
             this.btnExportExcel.TabIndex = 25;
             this.btnExportExcel.Text = "Export excel";
             this.btnExportExcel.UseVisualStyleBackColor = false;
@@ -153,7 +171,7 @@ namespace TrainingManagement
             this.btnSearch.BackColor = System.Drawing.Color.Teal;
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(635, 34);
+            this.btnSearch.Location = new System.Drawing.Point(774, 34);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(121, 31);
             this.btnSearch.TabIndex = 26;
@@ -206,7 +224,7 @@ namespace TrainingManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 373);
+            this.ClientSize = new System.Drawing.Size(1099, 461);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.nudTimer);
             this.Controls.Add(this.label3);

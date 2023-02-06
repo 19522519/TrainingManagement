@@ -57,11 +57,12 @@ namespace TrainingManagement
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Teal;
             this.label2.Location = new System.Drawing.Point(27, 29);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(260, 32);
+            this.label2.Size = new System.Drawing.Size(261, 32);
             this.label2.TabIndex = 1;
             this.label2.Text = "FORGOT PASSWORD?";
             // 
@@ -103,10 +104,10 @@ namespace TrainingManagement
             this.btnCheckCode.BackColor = System.Drawing.Color.Teal;
             this.btnCheckCode.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheckCode.ForeColor = System.Drawing.Color.White;
-            this.btnCheckCode.Location = new System.Drawing.Point(460, 238);
+            this.btnCheckCode.Location = new System.Drawing.Point(460, 239);
             this.btnCheckCode.Margin = new System.Windows.Forms.Padding(4);
             this.btnCheckCode.Name = "btnCheckCode";
-            this.btnCheckCode.Size = new System.Drawing.Size(139, 30);
+            this.btnCheckCode.Size = new System.Drawing.Size(139, 35);
             this.btnCheckCode.TabIndex = 5;
             this.btnCheckCode.Text = "Authenticate";
             this.btnCheckCode.UseVisualStyleBackColor = false;
@@ -117,10 +118,10 @@ namespace TrainingManagement
             this.btnSendCode.BackColor = System.Drawing.Color.Teal;
             this.btnSendCode.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSendCode.ForeColor = System.Drawing.Color.White;
-            this.btnSendCode.Location = new System.Drawing.Point(460, 181);
+            this.btnSendCode.Location = new System.Drawing.Point(460, 182);
             this.btnSendCode.Margin = new System.Windows.Forms.Padding(4);
             this.btnSendCode.Name = "btnSendCode";
-            this.btnSendCode.Size = new System.Drawing.Size(139, 32);
+            this.btnSendCode.Size = new System.Drawing.Size(139, 35);
             this.btnSendCode.TabIndex = 6;
             this.btnSendCode.Text = "Receive code";
             this.btnSendCode.UseVisualStyleBackColor = false;
@@ -149,7 +150,7 @@ namespace TrainingManagement
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.IndianRed;
+            this.btnLogin.BackColor = System.Drawing.Color.Teal;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(294, 286);
@@ -157,7 +158,7 @@ namespace TrainingManagement
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(96, 37);
             this.btnLogin.TabIndex = 24;
-            this.btnLogin.Text = "Cancel";
+            this.btnLogin.Text = "Close";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 

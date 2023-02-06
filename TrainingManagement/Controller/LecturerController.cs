@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TrainingManagement.Controller;
 
 namespace TrainingManagement.Controller
 {
     class LecturerController
     {
         TrainingManagementEntities entities = new TrainingManagementEntities();
+        UserController userController = new UserController();
 
         public dynamic getAllLecturerBasedOnMajor(String major)
         {
@@ -34,6 +36,9 @@ namespace TrainingManagement.Controller
                                Major = c.major.name,
                                Level = c.level,
                                Contract = c.contract,
+                               Email = c.users.email,
+                               Username = c.users.username,
+                               Passsword = c.users.pass
                            };
             return lecturer.ToList();
         }
@@ -46,8 +51,9 @@ namespace TrainingManagement.Controller
 
       
 
-        public int insertLecturer(lecturer lecturer)
+        public int insertLecturer(lecturer lecturer, int userId)
         {
+            lecturer.users_id = userId;
             entities.lecturer.Add(lecturer);
             entities.SaveChanges();
             return lecturer.id;
@@ -74,8 +80,14 @@ namespace TrainingManagement.Controller
         }
 
 
-        public void updateLecturer(lecturer lecturer)
+        public void updateLecturer(lecturer lecturer, users u)
         {
+            users users = lecturer.users;
+            users.email = u.email;
+            users.username = u.username;
+            users.pass = u.pass;
+            entities.SaveChanges();
+
             lecturer l = entities.lecturer.Find(lecturer.id);
             l.name = lecturer.name;
             l.major_id = lecturer.major_id;
@@ -85,8 +97,12 @@ namespace TrainingManagement.Controller
         }
 
         public void deleteLecturer(int ID)
-        {
+        { 
             lecturer lecturer = entities.lecturer.Find(ID);
+
+            int userId = lecturer.users_id.Value;
+            userController.deleteUser(userId);
+
             if (lecturer != null)
             {
                 entities.lecturer.Remove(lecturer);
@@ -94,16 +110,18 @@ namespace TrainingManagement.Controller
             }
         }
 
-        public dynamic findLecturer(string lecturerName)
+        public dynamic findLecturer(string lecturerName, string major)
         {
             var result = from c in entities.lecturer
                          select c;
+
             if (lecturerName != "")
                 result = from c in result
                          where c.name.Contains(lecturerName)
                          select c;
 
             var data = from c in result
+                       where c.major.name.Equals(major)
                        select new
                        {
                            ID = c.id,

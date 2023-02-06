@@ -68,7 +68,6 @@ namespace TrainingManagement
 
             return str_md5;
         }
-
  
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -111,7 +110,7 @@ namespace TrainingManagement
                         break;
 
                     case "SEDean":
-                        DepartmentHomePage deanHomePage = new DepartmentHomePage("Software Engirneering");
+                        DepartmentHomePage deanHomePage = new DepartmentHomePage("Software Engineering");
                         Hide();
                         deanHomePage.ShowDialog();
                         Close();
