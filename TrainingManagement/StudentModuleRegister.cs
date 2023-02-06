@@ -247,7 +247,7 @@ namespace TrainingManagement
                 string className = classModuleController.getClassModuleById(classModuleId);
 
                 // Update the quantity of class members               
-                classModuleController.setActualSizeByLessonId(lessonId);
+                classModuleController.setActualSizePlusByLessonId(lessonId);
 
                 MessageBox.Show("Regiter class module " + className + " successfully!");
             } else
@@ -261,6 +261,9 @@ namespace TrainingManagement
         private void btnDelete_Click(object sender, EventArgs e)
         {
             studyingController.deleteStudying(Convert.ToInt32(txbStudyingId.Text));
+
+            // Update the quantity of class members               
+            classModuleController.setActualSizePlusByLessonId(Convert.ToInt32(txbStudyingId.Text));
             loadAllClassModulesRegistered();
         }
     }
