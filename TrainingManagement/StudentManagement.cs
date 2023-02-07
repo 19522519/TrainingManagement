@@ -157,6 +157,7 @@ namespace TrainingManagement
                 birth_place = txtBirthPlace.Text,
                 major_id = (int)cmbMajor.SelectedValue,
                 household = txtHousehold.Text,
+                is_in_dormitory = cmbDorm.Text
             };
 
             users users = new users()
@@ -193,7 +194,8 @@ namespace TrainingManagement
                 gender = cmbGender.Text,
                 birth_place = txtBirthPlace.Text,
                 major_id = (int)cmbMajor.SelectedValue,
-                household = txtHousehold.Text            
+                household = txtHousehold.Text,
+                is_in_dormitory = cmbDorm.Text
             };
             studentController.insertStudent(student, userId);
             loadData();

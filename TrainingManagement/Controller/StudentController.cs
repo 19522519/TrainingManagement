@@ -166,13 +166,14 @@ namespace TrainingManagement.Controller
             student student = entities.student.Find(ID);
 
             int userId = student.users_id.Value;
-            userController.deleteUser(userId);
 
             if (student != null)
             {
                 entities.student.Remove(student);
                 entities.SaveChanges();
             }
+
+            userController.deleteUser(userId);
         }
 
         public string getStudentCodeById (int stuId)

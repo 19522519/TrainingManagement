@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using TrainingManagement.Controller;
 
 namespace TrainingManagement.Controller
@@ -82,17 +83,17 @@ namespace TrainingManagement.Controller
 
         public void updateLecturer(lecturer lecturer, users u)
         {
-            users users = lecturer.users;
-            users.email = u.email;
-            users.username = u.username;
-            users.pass = u.pass;
-            entities.SaveChanges();
-
             lecturer l = entities.lecturer.Find(lecturer.id);
             l.name = lecturer.name;
             l.major_id = lecturer.major_id;
             l.level = lecturer.level;
             l.contract = lecturer.contract;
+
+            users users = l.users;
+            users.username = u.username;
+            users.email = u.email;
+            if (u.pass != "")
+                users.pass = u.pass;
             entities.SaveChanges();
         }
 
@@ -101,13 +102,14 @@ namespace TrainingManagement.Controller
             lecturer lecturer = entities.lecturer.Find(ID);
 
             int userId = lecturer.users_id.Value;
-            userController.deleteUser(userId);
 
             if (lecturer != null)
             {
                 entities.lecturer.Remove(lecturer);
                 entities.SaveChanges();
             }
+
+            userController.deleteUser(userId);
         }
 
         public dynamic findLecturer(string lecturerName, string major)
@@ -129,6 +131,9 @@ namespace TrainingManagement.Controller
                            Major = c.major.name,
                            Level = c.level,
                            Contract = c.contract,
+                           Email = c.users.email,
+                           Username = c.users.username,
+                           Passsword = c.users.pass
                        };
             return data.ToList();
         }
@@ -167,7 +172,10 @@ namespace TrainingManagement.Controller
                            Name = c.name,
                            Major = c.major.name,
                            Level = c.level,
-                           Contract = c.contract
+                           Contract = c.contract,
+                           Email = c.users.email,
+                           Username = c.users.username,
+                           Passsword = c.users.pass
                        };
             return data.ToList();
         }

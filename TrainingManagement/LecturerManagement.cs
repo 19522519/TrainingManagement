@@ -131,7 +131,7 @@ namespace TrainingManagement
             {
                 username = txbUsername.Text,
                 email = txbEmail.Text,
-                pass = getMD5(txbPassword.Text)
+                pass = txbPassword.Text != "" ? getMD5(txbPassword.Text) : "",
             };
 
             lecturerController.updateLecturer(lecturer, users);
@@ -179,6 +179,11 @@ namespace TrainingManagement
         private void btnFind_Click(object sender, EventArgs e)
         {
             dgvData.DataSource = lecturerController.findLecturer(txtFind.Text, cmbFindMajor.Text);
+            addBinding();
+        }
+
+        private void dgvData_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
             addBinding();
         }
     }
