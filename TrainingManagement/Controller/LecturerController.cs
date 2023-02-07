@@ -80,7 +80,6 @@ namespace TrainingManagement.Controller
             return lecturer.FirstOrDefault();
         }
 
-
         public void updateLecturer(lecturer lecturer, users u)
         {
             lecturer l = entities.lecturer.Find(lecturer.id);
@@ -89,7 +88,7 @@ namespace TrainingManagement.Controller
             l.level = lecturer.level;
             l.contract = lecturer.contract;
 
-            users users = l.users;
+            users users = entities.users.Find(l.users_id);
             users.username = u.username;
             users.email = u.email;
             if (u.pass != "")

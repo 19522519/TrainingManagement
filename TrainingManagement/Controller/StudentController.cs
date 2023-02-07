@@ -89,7 +89,7 @@ namespace TrainingManagement.Controller
             student.is_in_dormitory = student.is_in_dormitory;
             entities.SaveChanges();
 
-            users users = student.users;
+            users users = entities.users.Find(student.users_id);
             users.email = u.email;
             users.username = u.username;
             if(u.pass != "")
