@@ -50,13 +50,13 @@ namespace TrainingManagement
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(142, 129);
+            this.chart1.Location = new System.Drawing.Point(147, 129);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(647, 370);
+            this.chart1.Size = new System.Drawing.Size(667, 412);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
@@ -137,7 +137,7 @@ namespace TrainingManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(946, 511);
+            this.ClientSize = new System.Drawing.Size(946, 553);
             this.Controls.Add(this.cmbMajor);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnGenerate);
@@ -148,6 +148,7 @@ namespace TrainingManagement
             this.Controls.Add(this.chart1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Chart";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Chart";
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);

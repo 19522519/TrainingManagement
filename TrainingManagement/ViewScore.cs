@@ -33,7 +33,19 @@ namespace TrainingManagement
             loadData();
             dgvData.DataSource = studyingController.getAllScore(stuId);
 
-            lbTimetableTitle.Text = "LEARNING RESULT SEMESTER " + cmbSemester.Text + " SCHOOL YEAR " + cmbSchoolYear.Text;
+            // Calculate marks
+            var data = studyingController.getAllScore(stuId);
+            double score = 0.0;
+            int credits = 0;
+            foreach (var item in data)
+            {
+                score += item.AvgScore * item.Credits;
+                credits += item.Credits;
+            }
+            txbCredits.Text = credits.ToString();
+            txbMarks.Text = (score / credits).ToString();
+
+            lbTimetableTitle.Text = "LEARNING RESULT SEMESTER SCHOOL YEAR";
 
             loadStudentDetail();
         }
@@ -99,7 +111,27 @@ namespace TrainingManagement
 
         private void btnViewScore_Click(object sender, EventArgs e)
         {
+            lbTimetableTitle.Text = "LEARNING RESULT SEMESTER " + cmbSemester.Text + " SCHOOL YEAR " + cmbSchoolYear.Text;
+
             dgvData.DataSource = studyingController.getAllScore(cmbSemester.Text, cmbSchoolYear.Text, stuId);
+
+            // Calculate marks
+            var data = studyingController.getAllScore(cmbSemester.Text, cmbSchoolYear.Text, stuId);
+            double score = 0.0;
+            int credits = 0;
+            foreach (var item in data)
+            {
+                score += item.AvgScore * item.Credits;
+                credits += item.Credits;
+            }
+            txbCredits.Text = credits.ToString();
+            if ((score / credits).ToString().Equals("NaN"))
+            {
+                int n = 0;
+                txbMarks.Text = n.ToString();
+            }
+            else
+                txbMarks.Text = (score / credits).ToString();
         }
 
         private void captureScreen()
@@ -203,8 +235,24 @@ namespace TrainingManagement
                         doc.Add(id);
                         Paragraph birthPlace = new Paragraph("Place of birth: " + student.birth_place);
                         doc.Add(birthPlace);
-                        Paragraph major = new Paragraph("Major: " + student.major.name + "\n\n");
+                        Paragraph major = new Paragraph("Major: " + student.major.name);
                         doc.Add(major);
+
+                        // Calculate marks
+                        var data = studyingController.getAllScore(stuId);
+                        double score = 0.0;
+                        int credits = 0;
+                        foreach (var item in data)
+                        {
+                            score += item.AvgScore * item.Credits;
+                            credits += item.Credits;
+                        }
+                        string creditPrint = credits.ToString();
+                        string markPrint = (score / credits).ToString();
+                        Paragraph credit = new Paragraph("Collected credits: " + creditPrint);
+                        doc.Add(credit);
+                        Paragraph mark = new Paragraph("Average score: " + markPrint + "\n\n");
+                        doc.Add(mark);
 
                         iTextSharp.text.Font font = iTextSharp.text.FontFactory.GetFont(FontFactory.TIMES_BOLD, 12, BaseColor.BLACK);
                         PdfPTable table = new PdfPTable(dgvData.Columns.Count);
@@ -236,6 +284,24 @@ namespace TrainingManagement
                     }
                 }
             }
+        }
+
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            lbTimetableTitle.Text = "LEARNING RESULT SEMESTER SCHOOL YEAR";
+            dgvData.DataSource = studyingController.getAllScore(stuId);
+
+            // Calculate marks
+            var data = studyingController.getAllScore(stuId);
+            double score = 0.0;
+            int credits = 0;
+            foreach (var item in data)
+            {
+                score += item.AvgScore * item.Credits;
+                credits += item.Credits;
+            }
+            txbCredits.Text = credits.ToString();
+            txbMarks.Text = (score / credits).ToString();
         }
     }
 }
