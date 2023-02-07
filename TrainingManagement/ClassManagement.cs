@@ -37,11 +37,6 @@ namespace TrainingManagement
             cmbSchoolYear.DataSource = teachingController.getAllSchoolYear(lecturerId);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            dgvClass.DataSource = teachingController.getAllClassModuleBySemesterAndSchoolYearAndLecturer(cmbSemester.Text, cmbSchoolYear.Text, lecturerId);
-        }
-
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
             SaveFileDialog dialog = new SaveFileDialog();
@@ -82,6 +77,11 @@ namespace TrainingManagement
                 // app.Quit();
                 // MessageBox.Show("Export to file excel successfully!");
             }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            dgvClass.DataSource = teachingController.getAllClassModuleBySemesterAndSchoolYearAndLecturer(cmbSemester.Text, cmbSchoolYear.Text, lecturerId);
         }
     }
 }

@@ -29,6 +29,7 @@ namespace TrainingManagement
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangePasswordForm));
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.labelSecurity = new System.Windows.Forms.Label();
             this.labelNewPass = new System.Windows.Forms.Label();
@@ -187,8 +188,8 @@ namespace TrainingManagement
             this.Controls.Add(this.labelNewPass);
             this.Controls.Add(this.labelSecurity);
             this.Controls.Add(this.listBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ChangePasswordForm";
-            this.Text = "ChangePasswordForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 

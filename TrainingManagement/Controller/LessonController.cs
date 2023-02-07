@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 
 namespace TrainingManagement.Controller
 {
@@ -183,21 +184,23 @@ namespace TrainingManagement.Controller
         public int findLecturerBasedOnLesson(int lessonId)
         {
             lesson lesson = entities.lesson.Find(lessonId);
-            lecturer lecturer = lesson.teaching.lecturer;
+            teaching teaching = entities.teaching.Find(lesson.teaching_id);
+            lecturer lecturer = entities.lecturer.Find(teaching.lecturer_id);
             return lecturer.id;
         }
 
         public int findModuleBasedOnLesson(int lessonId)
         {
             lesson lesson = entities.lesson.Find(lessonId);
-            module module = lesson.class_module.module;
+            class_module class_Module = entities.class_module.Find(lesson.teaching_id);
+            module module = entities.module.Find(class_Module.module_id);
             return module.id;
         }
 
         public int findClassroomBasedOnLesson(int lessonId)
         {
             lesson lesson = entities.lesson.Find(lessonId);
-            classroom classroom = lesson.classroom;
+            classroom classroom = entities.classroom.Find(lesson.classroom_id);
             return classroom.id;
         }
 
