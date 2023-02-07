@@ -55,9 +55,9 @@ namespace TrainingManagement
             this.btnDelete.BackColor = System.Drawing.Color.Teal;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(12, 266);
+            this.btnDelete.Location = new System.Drawing.Point(12, 257);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(126, 29);
+            this.btnDelete.Size = new System.Drawing.Size(126, 35);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -110,7 +110,7 @@ namespace TrainingManagement
             this.dgvClassModules.Name = "dgvClassModules";
             this.dgvClassModules.RowHeadersWidth = 51;
             this.dgvClassModules.RowTemplate.Height = 24;
-            this.dgvClassModules.Size = new System.Drawing.Size(1030, 241);
+            this.dgvClassModules.Size = new System.Drawing.Size(1030, 235);
             this.dgvClassModules.TabIndex = 6;
             // 
             // btnRegister
@@ -118,9 +118,9 @@ namespace TrainingManagement
             this.btnRegister.BackColor = System.Drawing.Color.Teal;
             this.btnRegister.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(12, 277);
+            this.btnRegister.Location = new System.Drawing.Point(12, 271);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(126, 29);
+            this.btnRegister.Size = new System.Drawing.Size(126, 35);
             this.btnRegister.TabIndex = 5;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = false;
@@ -175,7 +175,7 @@ namespace TrainingManagement
             this.dgvClassModulesRegistered.Name = "dgvClassModulesRegistered";
             this.dgvClassModulesRegistered.RowHeadersWidth = 51;
             this.dgvClassModulesRegistered.RowTemplate.Height = 24;
-            this.dgvClassModulesRegistered.Size = new System.Drawing.Size(1030, 230);
+            this.dgvClassModulesRegistered.Size = new System.Drawing.Size(1030, 220);
             this.dgvClassModulesRegistered.TabIndex = 24;
             // 
             // txbStudyingId

@@ -76,12 +76,12 @@ namespace TrainingManagement
 
             DataGridViewTextBoxColumn col7 = new DataGridViewTextBoxColumn();
             col7.DataPropertyName = "StartDay";
-            col7.HeaderText = "Start day";
+            col7.HeaderText = "Start date";
 
 
             DataGridViewTextBoxColumn col8 = new DataGridViewTextBoxColumn();
             col8.DataPropertyName = "EndDay";
-            col8.HeaderText = "End day";
+            col8.HeaderText = "End date";
 
             dgvData.Columns.Add(col0);
             dgvData.Columns.Add(col1);

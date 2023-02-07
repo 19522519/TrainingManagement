@@ -29,6 +29,10 @@ namespace TrainingManagement
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModuleManagement));
             this.label1 = new System.Windows.Forms.Label();
             this.cmbSchoolYear = new System.Windows.Forms.ComboBox();
@@ -83,7 +87,7 @@ namespace TrainingManagement
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Teal;
-            this.label1.Location = new System.Drawing.Point(19, 41);
+            this.label1.Location = new System.Drawing.Point(20, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 20);
@@ -94,10 +98,10 @@ namespace TrainingManagement
             // 
             this.cmbSchoolYear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSchoolYear.FormattingEnabled = true;
-            this.cmbSchoolYear.Location = new System.Drawing.Point(24, 69);
+            this.cmbSchoolYear.Location = new System.Drawing.Point(25, 56);
             this.cmbSchoolYear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbSchoolYear.Name = "cmbSchoolYear";
-            this.cmbSchoolYear.Size = new System.Drawing.Size(224, 28);
+            this.cmbSchoolYear.Size = new System.Drawing.Size(180, 28);
             this.cmbSchoolYear.TabIndex = 1;
             this.cmbSchoolYear.SelectedIndexChanged += new System.EventHandler(this.cmbSchoolYear_SelectedIndexChanged);
             // 
@@ -106,7 +110,7 @@ namespace TrainingManagement
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(325, 41);
+            this.label2.Location = new System.Drawing.Point(273, 28);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 20);
@@ -117,10 +121,10 @@ namespace TrainingManagement
             // 
             this.cmbCurriculum.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCurriculum.FormattingEnabled = true;
-            this.cmbCurriculum.Location = new System.Drawing.Point(328, 69);
+            this.cmbCurriculum.Location = new System.Drawing.Point(276, 56);
             this.cmbCurriculum.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbCurriculum.Name = "cmbCurriculum";
-            this.cmbCurriculum.Size = new System.Drawing.Size(224, 28);
+            this.cmbCurriculum.Size = new System.Drawing.Size(180, 28);
             this.cmbCurriculum.TabIndex = 3;
             this.cmbCurriculum.SelectedIndexChanged += new System.EventHandler(this.cmbCurriculum_SelectedIndexChanged);
             // 
@@ -141,7 +145,7 @@ namespace TrainingManagement
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(590, 211);
+            this.groupBox1.Size = new System.Drawing.Size(481, 176);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Curriculum";
@@ -160,21 +164,21 @@ namespace TrainingManagement
             // txbTrainingType
             // 
             this.txbTrainingType.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTrainingType.Location = new System.Drawing.Point(328, 152);
+            this.txbTrainingType.Location = new System.Drawing.Point(276, 129);
             this.txbTrainingType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbTrainingType.Name = "txbTrainingType";
             this.txbTrainingType.ReadOnly = true;
-            this.txbTrainingType.Size = new System.Drawing.Size(224, 27);
+            this.txbTrainingType.Size = new System.Drawing.Size(180, 27);
             this.txbTrainingType.TabIndex = 19;
             // 
             // txbTrainingSystem
             // 
             this.txbTrainingSystem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTrainingSystem.Location = new System.Drawing.Point(24, 152);
+            this.txbTrainingSystem.Location = new System.Drawing.Point(25, 129);
             this.txbTrainingSystem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbTrainingSystem.Name = "txbTrainingSystem";
             this.txbTrainingSystem.ReadOnly = true;
-            this.txbTrainingSystem.Size = new System.Drawing.Size(224, 27);
+            this.txbTrainingSystem.Size = new System.Drawing.Size(180, 27);
             this.txbTrainingSystem.TabIndex = 20;
             // 
             // label9
@@ -182,7 +186,7 @@ namespace TrainingManagement
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Teal;
-            this.label9.Location = new System.Drawing.Point(19, 125);
+            this.label9.Location = new System.Drawing.Point(20, 102);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(119, 20);
@@ -194,7 +198,7 @@ namespace TrainingManagement
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Teal;
-            this.label10.Location = new System.Drawing.Point(325, 125);
+            this.label10.Location = new System.Drawing.Point(273, 102);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(103, 20);
@@ -211,24 +215,40 @@ namespace TrainingManagement
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Teal;
-            this.groupBox2.Location = new System.Drawing.Point(11, 254);
+            this.groupBox2.Location = new System.Drawing.Point(11, 213);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox2.Size = new System.Drawing.Size(590, 609);
+            this.groupBox2.Size = new System.Drawing.Size(481, 553);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Module";
             // 
             // dgvModuleList
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvModuleList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvModuleList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvModuleList.Location = new System.Drawing.Point(0, 200);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvModuleList.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvModuleList.Location = new System.Drawing.Point(1, 173);
             this.dgvModuleList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvModuleList.Name = "dgvModuleList";
             this.dgvModuleList.RowHeadersWidth = 51;
             this.dgvModuleList.RowTemplate.Height = 24;
-            this.dgvModuleList.Size = new System.Drawing.Size(590, 410);
+            this.dgvModuleList.Size = new System.Drawing.Size(480, 380);
             this.dgvModuleList.TabIndex = 11;
             this.dgvModuleList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvModuleList_CellClick);
             // 
@@ -237,10 +257,10 @@ namespace TrainingManagement
             this.btnSearchModule.BackColor = System.Drawing.Color.Teal;
             this.btnSearchModule.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchModule.ForeColor = System.Drawing.Color.White;
-            this.btnSearchModule.Location = new System.Drawing.Point(171, 132);
+            this.btnSearchModule.Location = new System.Drawing.Point(158, 115);
             this.btnSearchModule.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSearchModule.Name = "btnSearchModule";
-            this.btnSearchModule.Size = new System.Drawing.Size(225, 44);
+            this.btnSearchModule.Size = new System.Drawing.Size(156, 35);
             this.btnSearchModule.TabIndex = 10;
             this.btnSearchModule.Text = "Search";
             this.btnSearchModule.UseVisualStyleBackColor = false;
@@ -249,10 +269,10 @@ namespace TrainingManagement
             // txbModuleCode
             // 
             this.txbModuleCode.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbModuleCode.Location = new System.Drawing.Point(24, 80);
+            this.txbModuleCode.Location = new System.Drawing.Point(25, 64);
             this.txbModuleCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbModuleCode.Name = "txbModuleCode";
-            this.txbModuleCode.Size = new System.Drawing.Size(224, 27);
+            this.txbModuleCode.Size = new System.Drawing.Size(180, 27);
             this.txbModuleCode.TabIndex = 9;
             // 
             // label5
@@ -260,7 +280,7 @@ namespace TrainingManagement
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Teal;
-            this.label5.Location = new System.Drawing.Point(19, 52);
+            this.label5.Location = new System.Drawing.Point(20, 36);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 20);
@@ -270,10 +290,10 @@ namespace TrainingManagement
             // txbModuleName
             // 
             this.txbModuleName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbModuleName.Location = new System.Drawing.Point(327, 80);
+            this.txbModuleName.Location = new System.Drawing.Point(277, 64);
             this.txbModuleName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbModuleName.Name = "txbModuleName";
-            this.txbModuleName.Size = new System.Drawing.Size(224, 27);
+            this.txbModuleName.Size = new System.Drawing.Size(179, 27);
             this.txbModuleName.TabIndex = 8;
             // 
             // label4
@@ -281,7 +301,7 @@ namespace TrainingManagement
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Teal;
-            this.label4.Location = new System.Drawing.Point(323, 52);
+            this.label4.Location = new System.Drawing.Point(273, 36);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 20);
@@ -291,7 +311,7 @@ namespace TrainingManagement
             // txbVisitingLessons
             // 
             this.txbVisitingLessons.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbVisitingLessons.Location = new System.Drawing.Point(722, 299);
+            this.txbVisitingLessons.Location = new System.Drawing.Point(628, 209);
             this.txbVisitingLessons.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbVisitingLessons.Name = "txbVisitingLessons";
             this.txbVisitingLessons.Size = new System.Drawing.Size(146, 27);
@@ -300,7 +320,7 @@ namespace TrainingManagement
             // txbSelfStudyLessons
             // 
             this.txbSelfStudyLessons.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSelfStudyLessons.Location = new System.Drawing.Point(497, 299);
+            this.txbSelfStudyLessons.Location = new System.Drawing.Point(422, 209);
             this.txbSelfStudyLessons.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbSelfStudyLessons.Name = "txbSelfStudyLessons";
             this.txbSelfStudyLessons.Size = new System.Drawing.Size(146, 27);
@@ -309,7 +329,7 @@ namespace TrainingManagement
             // txbPracticeLessons
             // 
             this.txbPracticeLessons.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbPracticeLessons.Location = new System.Drawing.Point(262, 299);
+            this.txbPracticeLessons.Location = new System.Drawing.Point(220, 209);
             this.txbPracticeLessons.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbPracticeLessons.Name = "txbPracticeLessons";
             this.txbPracticeLessons.Size = new System.Drawing.Size(146, 27);
@@ -318,7 +338,7 @@ namespace TrainingManagement
             // txbTheoryLessons
             // 
             this.txbTheoryLessons.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbTheoryLessons.Location = new System.Drawing.Point(36, 299);
+            this.txbTheoryLessons.Location = new System.Drawing.Point(34, 209);
             this.txbTheoryLessons.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbTheoryLessons.Name = "txbTheoryLessons";
             this.txbTheoryLessons.Size = new System.Drawing.Size(146, 27);
@@ -329,7 +349,7 @@ namespace TrainingManagement
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Teal;
-            this.label8.Location = new System.Drawing.Point(719, 271);
+            this.label8.Location = new System.Drawing.Point(625, 181);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(116, 20);
@@ -341,7 +361,7 @@ namespace TrainingManagement
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Teal;
-            this.label7.Location = new System.Drawing.Point(493, 271);
+            this.label7.Location = new System.Drawing.Point(418, 181);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(127, 20);
@@ -353,7 +373,7 @@ namespace TrainingManagement
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Teal;
-            this.label6.Location = new System.Drawing.Point(259, 271);
+            this.label6.Location = new System.Drawing.Point(217, 181);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(119, 20);
@@ -365,7 +385,7 @@ namespace TrainingManagement
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Teal;
-            this.label3.Location = new System.Drawing.Point(33, 271);
+            this.label3.Location = new System.Drawing.Point(31, 181);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 20);
@@ -399,11 +419,11 @@ namespace TrainingManagement
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.Color.Teal;
-            this.groupBox3.Location = new System.Drawing.Point(636, 16);
+            this.groupBox3.Location = new System.Drawing.Point(522, 16);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox3.Size = new System.Drawing.Size(904, 848);
+            this.groupBox3.Size = new System.Drawing.Size(801, 750);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Module List";
@@ -412,19 +432,19 @@ namespace TrainingManagement
             // 
             this.cmbSemester.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSemester.FormattingEnabled = true;
-            this.cmbSemester.Location = new System.Drawing.Point(641, 181);
+            this.cmbSemester.Location = new System.Drawing.Point(594, 128);
             this.cmbSemester.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbSemester.Name = "cmbSemester";
-            this.cmbSemester.Size = new System.Drawing.Size(224, 28);
+            this.cmbSemester.Size = new System.Drawing.Size(180, 28);
             this.cmbSemester.TabIndex = 41;
             // 
             // txbSchoolYear
             // 
             this.txbSchoolYear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbSchoolYear.Location = new System.Drawing.Point(338, 184);
+            this.txbSchoolYear.Location = new System.Drawing.Point(307, 130);
             this.txbSchoolYear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbSchoolYear.Name = "txbSchoolYear";
-            this.txbSchoolYear.Size = new System.Drawing.Size(224, 27);
+            this.txbSchoolYear.Size = new System.Drawing.Size(180, 27);
             this.txbSchoolYear.TabIndex = 40;
             // 
             // label15
@@ -432,7 +452,7 @@ namespace TrainingManagement
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Teal;
-            this.label15.Location = new System.Drawing.Point(638, 156);
+            this.label15.Location = new System.Drawing.Point(591, 103);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(76, 20);
@@ -444,7 +464,7 @@ namespace TrainingManagement
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Teal;
-            this.label16.Location = new System.Drawing.Point(334, 156);
+            this.label16.Location = new System.Drawing.Point(303, 102);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(94, 20);
@@ -465,11 +485,11 @@ namespace TrainingManagement
             // txbCredits
             // 
             this.txbCredits.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbCredits.Location = new System.Drawing.Point(36, 184);
+            this.txbCredits.Location = new System.Drawing.Point(36, 130);
             this.txbCredits.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbCredits.Name = "txbCredits";
             this.txbCredits.ReadOnly = true;
-            this.txbCredits.Size = new System.Drawing.Size(222, 27);
+            this.txbCredits.Size = new System.Drawing.Size(179, 27);
             this.txbCredits.TabIndex = 31;
             // 
             // label17
@@ -477,7 +497,7 @@ namespace TrainingManagement
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Teal;
-            this.label17.Location = new System.Drawing.Point(33, 156);
+            this.label17.Location = new System.Drawing.Point(33, 102);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(60, 20);
@@ -489,10 +509,10 @@ namespace TrainingManagement
             this.btnDelete.BackColor = System.Drawing.Color.Teal;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(644, 370);
+            this.btnDelete.Location = new System.Drawing.Point(594, 261);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(225, 44);
+            this.btnDelete.Size = new System.Drawing.Size(156, 35);
             this.btnDelete.TabIndex = 29;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -503,10 +523,10 @@ namespace TrainingManagement
             this.btnUpdate.BackColor = System.Drawing.Color.Teal;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(338, 370);
+            this.btnUpdate.Location = new System.Drawing.Point(335, 261);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(225, 44);
+            this.btnUpdate.Size = new System.Drawing.Size(156, 35);
             this.btnUpdate.TabIndex = 28;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -517,10 +537,10 @@ namespace TrainingManagement
             this.btnCreate.BackColor = System.Drawing.Color.Teal;
             this.btnCreate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(36, 370);
+            this.btnCreate.Location = new System.Drawing.Point(59, 261);
             this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(225, 44);
+            this.btnCreate.Size = new System.Drawing.Size(156, 35);
             this.btnCreate.TabIndex = 12;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = false;
@@ -528,24 +548,40 @@ namespace TrainingManagement
             // 
             // dgvModule
             // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvModule.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvModule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvModule.Location = new System.Drawing.Point(0, 438);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvModule.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvModule.Location = new System.Drawing.Point(1, 328);
             this.dgvModule.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvModule.Name = "dgvModule";
             this.dgvModule.RowHeadersWidth = 51;
             this.dgvModule.RowTemplate.Height = 24;
-            this.dgvModule.Size = new System.Drawing.Size(906, 409);
+            this.dgvModule.Size = new System.Drawing.Size(800, 422);
             this.dgvModule.TabIndex = 27;
             this.dgvModule.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvModule_CellClick);
             // 
             // txbCode
             // 
             this.txbCode.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbCode.Location = new System.Drawing.Point(35, 71);
+            this.txbCode.Location = new System.Drawing.Point(35, 55);
             this.txbCode.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbCode.Name = "txbCode";
             this.txbCode.ReadOnly = true;
-            this.txbCode.Size = new System.Drawing.Size(224, 27);
+            this.txbCode.Size = new System.Drawing.Size(180, 27);
             this.txbCode.TabIndex = 16;
             // 
             // label13
@@ -553,7 +589,7 @@ namespace TrainingManagement
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Teal;
-            this.label13.Location = new System.Drawing.Point(33, 44);
+            this.label13.Location = new System.Drawing.Point(33, 28);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(48, 20);
@@ -563,11 +599,11 @@ namespace TrainingManagement
             // txbName
             // 
             this.txbName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbName.Location = new System.Drawing.Point(339, 71);
+            this.txbName.Location = new System.Drawing.Point(281, 55);
             this.txbName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbName.Name = "txbName";
             this.txbName.ReadOnly = true;
-            this.txbName.Size = new System.Drawing.Size(527, 27);
+            this.txbName.Size = new System.Drawing.Size(493, 27);
             this.txbName.TabIndex = 15;
             // 
             // label14
@@ -575,7 +611,7 @@ namespace TrainingManagement
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Teal;
-            this.label14.Location = new System.Drawing.Point(335, 44);
+            this.label14.Location = new System.Drawing.Point(277, 28);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(54, 20);
@@ -586,7 +622,7 @@ namespace TrainingManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1555, 879);
+            this.ClientSize = new System.Drawing.Size(1336, 781);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

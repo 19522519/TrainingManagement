@@ -212,12 +212,12 @@ namespace TrainingManagement
             dgvClassModulesRegistered.Columns.Add(col15);
             dgvClassModulesRegistered.Columns.Add(col16);
 
-            dgvClassModulesRegistered.DataSource = studyingController.getAllStudyingWithoutScore();
+            dgvClassModulesRegistered.DataSource = studyingController.getAllStudyingWithoutScore(stuId);
             addBidingClassModuleRegistered();
 
             // Calculate total of credits of class module registered by student
             int totalCredits = 0;
-            foreach (var data in studyingController.getAllStudyingWithoutScore())
+            foreach (var data in studyingController.getAllStudyingWithoutScore(stuId))
             {
                 totalCredits += data.Credits;
             }
@@ -260,10 +260,10 @@ namespace TrainingManagement
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            studyingController.deleteStudying(Convert.ToInt32(txbStudyingId.Text));
-
             // Update the quantity of class members               
-            classModuleController.setActualSizePlusByLessonId(Convert.ToInt32(txbStudyingId.Text));
+            classModuleController.setActualSizeMinusByLessonId(Convert.ToInt32(txbStudyingId.Text));
+
+            studyingController.deleteStudying(Convert.ToInt32(txbStudyingId.Text));
             loadAllClassModulesRegistered();
         }
     }

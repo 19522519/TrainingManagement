@@ -408,7 +408,7 @@ namespace TrainingManagement
             // 
             this.txbImgIndex.BackColor = System.Drawing.SystemColors.Control;
             this.txbImgIndex.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbImgIndex.ForeColor = System.Drawing.Color.Black;
+            this.txbImgIndex.ForeColor = System.Drawing.SystemColors.Control;
             this.txbImgIndex.Location = new System.Drawing.Point(111, 349);
             this.txbImgIndex.Name = "txbImgIndex";
             this.txbImgIndex.ReadOnly = true;

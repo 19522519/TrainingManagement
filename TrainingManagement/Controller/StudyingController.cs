@@ -86,10 +86,11 @@ namespace TrainingManagement.Controller
             }
         }
 
-        public dynamic getAllStudyingWithoutScore()
+        public dynamic getAllStudyingWithoutScore(int studentId)
         {
             var data = from c in entities.studying
-                       where c.score.Value.ToString() == ""
+                           // where c.score.Value.ToString() == ""
+                       where c.lesson.class_module.register.Equals("open") && c.student_id == studentId
                        select new
                        {
                            Id = c.id,

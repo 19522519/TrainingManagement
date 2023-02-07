@@ -69,7 +69,7 @@ namespace TrainingManagement.Controller
         public void setActualSizePlusByLessonId(int lessonId)
         {
             lesson lesson = entities.lesson.Find(lessonId);
-            class_module class_Module = lesson.class_module;
+            class_module class_Module = entities.class_module.Find(lesson.class_module.id);
             class_Module.actual_size++;
             entities.SaveChanges();
         }
@@ -78,8 +78,8 @@ namespace TrainingManagement.Controller
         public void setActualSizeMinusByLessonId(int studyingId)
         {
             studying studying = entities.studying.Find(studyingId);
-            lesson lesson = entities.lesson.Find(studying.lesson_id);
-            class_module class_Module = lesson.class_module;
+            lesson lesson = entities.lesson.Find(studying.lesson.id);
+            class_module class_Module = entities.class_module.Find(lesson.class_module.id);
             class_Module.actual_size--;
             entities.SaveChanges();
         }
