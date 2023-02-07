@@ -55,7 +55,7 @@ namespace TrainingManagement
                     try
                     {
                         smtp.Send(message);
-                        MessageBox.Show("Code sent successfully!");
+                        MessageBox.Show("Code sent successfully! Please check email " + user.email + ".");
                     }
                     catch (Exception ex)
                     {

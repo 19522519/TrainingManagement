@@ -298,7 +298,7 @@ namespace TrainingManagement
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Teal;
-            this.label2.Location = new System.Drawing.Point(708, 22);
+            this.label2.Location = new System.Drawing.Point(675, 22);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(301, 32);
@@ -484,7 +484,7 @@ namespace TrainingManagement
             // 
             this.txbImgIndex.BackColor = System.Drawing.SystemColors.Control;
             this.txbImgIndex.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbImgIndex.ForeColor = System.Drawing.Color.Black;
+            this.txbImgIndex.ForeColor = System.Drawing.SystemColors.Control;
             this.txbImgIndex.Location = new System.Drawing.Point(10, 82);
             this.txbImgIndex.Name = "txbImgIndex";
             this.txbImgIndex.ReadOnly = true;
@@ -518,7 +518,7 @@ namespace TrainingManagement
             // 
             this.txtId.BackColor = System.Drawing.SystemColors.Control;
             this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtId.ForeColor = System.Drawing.Color.Black;
+            this.txtId.ForeColor = System.Drawing.SystemColors.Control;
             this.txtId.Location = new System.Drawing.Point(10, 30);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
@@ -635,7 +635,7 @@ namespace TrainingManagement
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(850, 817);
+            this.groupBox3.Size = new System.Drawing.Size(850, 840);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Student list";
@@ -644,7 +644,7 @@ namespace TrainingManagement
             // 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -659,14 +659,12 @@ namespace TrainingManagement
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvData.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvData.Location = new System.Drawing.Point(0, 31);
-            this.dgvData.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvData.Location = new System.Drawing.Point(0, 36);
             this.dgvData.Name = "dgvData";
             this.dgvData.RowHeadersWidth = 51;
             this.dgvData.RowTemplate.Height = 24;
-            this.dgvData.Size = new System.Drawing.Size(850, 788);
+            this.dgvData.Size = new System.Drawing.Size(850, 804);
             this.dgvData.TabIndex = 0;
-            this.dgvData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellClick);
             // 
             // StudentManagement
             // 
@@ -731,7 +729,6 @@ namespace TrainingManagement
         private System.Windows.Forms.TextBox txtStudentId;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label label9;
@@ -743,5 +740,6 @@ namespace TrainingManagement
         private System.Windows.Forms.TextBox txbFindFirstName;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.PictureBox imgAvatar;
+        private System.Windows.Forms.DataGridView dgvData;
     }
 }
